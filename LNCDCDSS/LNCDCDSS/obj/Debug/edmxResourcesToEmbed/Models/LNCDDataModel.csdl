@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="LNCDDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="LNCDDataModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DoctorAccountSet" EntityType="LNCDDataModel.DoctorAccount" />
+    <EntitySet Name="PatBasicInforSet" EntityType="LNCDDataModel.PatBasicInfor" />
+    <EntitySet Name="PatPhysicalExamSet" EntityType="LNCDDataModel.PatPhysicalExam" />
+    <EntitySet Name="PatMMSESet" EntityType="LNCDDataModel.PatMMSE" />
+    <EntitySet Name="PatMoCASet" EntityType="LNCDDataModel.PatMoCA" />
+    <EntitySet Name="PatADLSet" EntityType="LNCDDataModel.PatADL" />
+    <EntitySet Name="PatCDRSet" EntityType="LNCDDataModel.PatCDR" />
+    <EntitySet Name="PatOtherTestSet" EntityType="LNCDDataModel.PatOtherTest" />
+    <EntitySet Name="PatDiseaseSet" EntityType="LNCDDataModel.PatDisease" />
+    <EntitySet Name="PatGDSSet" EntityType="LNCDDataModel.PatGDS" />
+    <EntitySet Name="VisitRecordSet" EntityType="LNCDDataModel.VisitRecord" />
+    <AssociationSet Name="VisitRecordPatADL" Association="LNCDDataModel.VisitRecordPatADL">
+      <End Role="VisitRecord" EntitySet="VisitRecordSet" />
+      <End Role="PatADL" EntitySet="PatADLSet" />
+    </AssociationSet>
+    <AssociationSet Name="VisitRecordPatMoCA" Association="LNCDDataModel.VisitRecordPatMoCA">
+      <End Role="VisitRecord" EntitySet="VisitRecordSet" />
+      <End Role="PatMoCA" EntitySet="PatMoCASet" />
+    </AssociationSet>
+    <AssociationSet Name="VisitRecordPatOtherTest" Association="LNCDDataModel.VisitRecordPatOtherTest">
+      <End Role="VisitRecord" EntitySet="VisitRecordSet" />
+      <End Role="PatOtherTest" EntitySet="PatOtherTestSet" />
+    </AssociationSet>
+    <AssociationSet Name="VisitRecordPatMMSE" Association="LNCDDataModel.VisitRecordPatMMSE">
+      <End Role="VisitRecord" EntitySet="VisitRecordSet" />
+      <End Role="PatMMSE" EntitySet="PatMMSESet" />
+    </AssociationSet>
+    <AssociationSet Name="VisitRecordPatGDS" Association="LNCDDataModel.VisitRecordPatGDS">
+      <End Role="VisitRecord" EntitySet="VisitRecordSet" />
+      <End Role="PatGDS" EntitySet="PatGDSSet" />
+    </AssociationSet>
+    <EntitySet Name="PatRecentDrugSet" EntityType="LNCDDataModel.PatRecentDrug" />
+    <AssociationSet Name="PatBasicInforPatExam1" Association="LNCDDataModel.PatBasicInforPatExam1">
+      <End Role="PatBasicInfor" EntitySet="PatBasicInforSet" />
+      <End Role="PatExam" EntitySet="PatPhysicalExamSet" />
+    </AssociationSet>
+    <AssociationSet Name="PatBasicInforPatDisease" Association="LNCDDataModel.PatBasicInforPatDisease">
+      <End Role="PatBasicInfor" EntitySet="PatBasicInforSet" />
+      <End Role="PatDisease" EntitySet="PatDiseaseSet" />
+    </AssociationSet>
+    <AssociationSet Name="DoctorAccountPatBasicInfor" Association="LNCDDataModel.DoctorAccountPatBasicInfor">
+      <End Role="DoctorAccount" EntitySet="DoctorAccountSet" />
+      <End Role="PatBasicInfor" EntitySet="PatBasicInforSet" />
+    </AssociationSet>
+    <AssociationSet Name="PatBasicInforVisitRecord" Association="LNCDDataModel.PatBasicInforVisitRecord">
+      <End Role="PatBasicInfor" EntitySet="PatBasicInforSet" />
+      <End Role="VisitRecord" EntitySet="VisitRecordSet" />
+    </AssociationSet>
+    <AssociationSet Name="VisitRecordPatCDR" Association="LNCDDataModel.VisitRecordPatCDR">
+      <End Role="VisitRecord" EntitySet="VisitRecordSet" />
+      <End Role="PatCDR" EntitySet="PatCDRSet" />
+    </AssociationSet>
+    <EntitySet Name="PatLabExamSet" EntityType="LNCDDataModel.PatLabExam" />
+    <AssociationSet Name="VisitRecordPatRecentDrug" Association="LNCDDataModel.VisitRecordPatRecentDrug">
+      <End Role="VisitRecord" EntitySet="VisitRecordSet" />
+      <End Role="PatRecentDrug" EntitySet="PatRecentDrugSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DoctorAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="PatBasicInfor" Relationship="LNCDDataModel.DoctorAccountPatBasicInfor" FromRole="DoctorAccount" ToRole="PatBasicInfor" />
+    <Property Type="String" Name="UserName" Nullable="false" />
+    <Property Type="String" Name="PassWord" Nullable="false" />
+    <Property Type="String" Name="Hospital" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatBasicInfor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="PatExam_1" Relationship="LNCDDataModel.PatBasicInforPatExam1" FromRole="PatBasicInfor" ToRole="PatExam" />
+    <NavigationProperty Name="PatDisease" Relationship="LNCDDataModel.PatBasicInforPatDisease" FromRole="PatBasicInfor" ToRole="PatDisease" />
+    <NavigationProperty Name="DoctorAccount" Relationship="LNCDDataModel.DoctorAccountPatBasicInfor" FromRole="PatBasicInfor" ToRole="DoctorAccount" />
+    <Property Type="Int32" Name="DoctorAccountId" Nullable="false" />
+    <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.PatBasicInforVisitRecord" FromRole="PatBasicInfor" ToRole="VisitRecord" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <Property Type="String" Name="Sex" Nullable="false" />
+    <Property Type="String" Name="Birthday" Nullable="false" />
+    <Property Type="String" Name="Education" Nullable="false" />
+    <Property Type="String" Name="Job" Nullable="false" />
+    <Property Type="String" Name="Address" Nullable="false" />
+    <Property Type="String" Name="Phone" Nullable="false" />
+    <Property Type="String" Name="FamilyMember" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatPhysicalExam">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="PatBasicInfor_1" Relationship="LNCDDataModel.PatBasicInforPatExam1" FromRole="PatExam" ToRole="PatBasicInfor" />
+    <Property Type="String" Name="Height" Nullable="false" />
+    <Property Type="String" Name="Weight" Nullable="false" />
+    <Property Type="String" Name="Waistline" Nullable="false" />
+    <Property Type="String" Name="Hipline" Nullable="false" />
+    <Property Type="String" Name="BloodPressureH" Nullable="false" />
+    <Property Type="String" Name="BloodPressureL" Nullable="false" />
+    <Property Name="B1" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B2" Type="LNCDDataModel.Exam" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatMMSE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatMMSE" FromRole="PatMMSE" ToRole="VisitRecord" />
+    <Property Type="String" Name="M1" Nullable="false" />
+    <Property Type="String" Name="M2" Nullable="false" />
+    <Property Type="String" Name="M3" Nullable="false" />
+    <Property Type="String" Name="M4" Nullable="false" />
+    <Property Type="String" Name="M5" Nullable="false" />
+    <Property Type="String" Name="M6" Nullable="false" />
+    <Property Type="String" Name="M7" Nullable="false" />
+    <Property Type="String" Name="M8" Nullable="false" />
+    <Property Type="String" Name="M9" Nullable="false" />
+    <Property Type="String" Name="M10" Nullable="false" />
+    <Property Type="String" Name="M11" Nullable="false" />
+    <Property Type="String" Name="Total" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatMoCA">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatMoCA" FromRole="PatMoCA" ToRole="VisitRecord" />
+  </EntityType>
+  <EntityType Name="PatADL">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatADL" FromRole="PatADL" ToRole="VisitRecord" />
+    <Property Type="String" Name="A1" Nullable="false" />
+    <Property Type="String" Name="A2" Nullable="false" />
+    <Property Type="String" Name="A3" Nullable="false" />
+    <Property Type="String" Name="A4" Nullable="false" />
+    <Property Type="String" Name="A5" Nullable="false" />
+    <Property Type="String" Name="A6" Nullable="false" />
+    <Property Type="String" Name="A7" Nullable="false" />
+    <Property Type="String" Name="A8" Nullable="false" />
+    <Property Type="String" Name="A9" Nullable="false" />
+    <Property Type="String" Name="A10" Nullable="false" />
+    <Property Type="String" Name="A11" Nullable="false" />
+    <Property Type="String" Name="A12" Nullable="false" />
+    <Property Type="String" Name="A13" Nullable="false" />
+    <Property Type="String" Name="A14" Nullable="false" />
+    <Property Type="String" Name="A15" />
+    <Property Type="String" Name="A16" Nullable="false" />
+    <Property Type="String" Name="A17" Nullable="false" />
+    <Property Type="String" Name="A18" Nullable="false" />
+    <Property Type="String" Name="A19" Nullable="false" />
+    <Property Type="String" Name="A20" Nullable="false" />
+    <Property Type="String" Name="Total" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatCDR">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="C1" Nullable="false" />
+    <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatCDR" FromRole="PatCDR" ToRole="VisitRecord" />
+    <Property Type="String" Name="C2" Nullable="false" />
+    <Property Type="String" Name="C3" Nullable="false" />
+    <Property Type="String" Name="C4" Nullable="false" />
+    <Property Type="String" Name="C5" Nullable="false" />
+    <Property Type="String" Name="Total" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatOtherTest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatOtherTest" FromRole="PatOtherTest" ToRole="VisitRecord" />
+    <Property Type="String" Name="Vocabulary1" Nullable="false" />
+    <Property Type="String" Name="Vocabulary2" Nullable="false" />
+    <Property Type="String" Name="Vocabulary3" Nullable="false" />
+    <Property Type="String" Name="Picture1" Nullable="false" />
+    <Property Type="String" Name="Picture2" Nullable="false" />
+    <Property Type="String" Name="ConnectNumber1" Nullable="false" />
+    <Property Type="String" Name="ConnectNumber2" Nullable="false" />
+    <Property Type="String" Name="Vocabulary4" Nullable="false" />
+    <Property Type="String" Name="VocabularyAnalyse" Nullable="false" />
+    <Property Type="String" Name="Picture3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatDisease">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PatBasicInforId" Nullable="false" />
+    <NavigationProperty Name="PatBasicInfor" Relationship="LNCDDataModel.PatBasicInforPatDisease" FromRole="PatDisease" ToRole="PatBasicInfor" />
+    <Property Type="String" Name="Disease" Nullable="false" />
+    <Property Type="String" Name="Situation" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatGDS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatGDS" FromRole="PatGDS" ToRole="VisitRecord" />
+    <Property Type="String" Name="G1" Nullable="false" />
+    <Property Type="String" Name="G2" Nullable="false" />
+    <Property Type="String" Name="G3" Nullable="false" />
+    <Property Type="String" Name="G4" Nullable="false" />
+    <Property Type="String" Name="G5" Nullable="false" />
+    <Property Type="String" Name="G6" Nullable="false" />
+    <Property Type="String" Name="G7" Nullable="false" />
+    <Property Type="String" Name="G8" Nullable="false" />
+    <Property Type="String" Name="G9" Nullable="false" />
+    <Property Type="String" Name="G10" Nullable="false" />
+    <Property Type="String" Name="G11" Nullable="false" />
+    <Property Type="String" Name="G12" Nullable="false" />
+    <Property Type="String" Name="G13" Nullable="false" />
+    <Property Type="String" Name="G14" Nullable="false" />
+    <Property Type="String" Name="G15" Nullable="false" />
+    <Property Type="String" Name="Total" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VisitRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="PatADL" Relationship="LNCDDataModel.VisitRecordPatADL" FromRole="VisitRecord" ToRole="PatADL" />
+    <NavigationProperty Name="PatMoCA" Relationship="LNCDDataModel.VisitRecordPatMoCA" FromRole="VisitRecord" ToRole="PatMoCA" />
+    <NavigationProperty Name="PatOtherTest" Relationship="LNCDDataModel.VisitRecordPatOtherTest" FromRole="VisitRecord" ToRole="PatOtherTest" />
+    <NavigationProperty Name="PatMMSE" Relationship="LNCDDataModel.VisitRecordPatMMSE" FromRole="VisitRecord" ToRole="PatMMSE" />
+    <NavigationProperty Name="PatGDS" Relationship="LNCDDataModel.VisitRecordPatGDS" FromRole="VisitRecord" ToRole="PatGDS" />
+    <NavigationProperty Name="PatBasicInfor" Relationship="LNCDDataModel.PatBasicInforVisitRecord" FromRole="VisitRecord" ToRole="PatBasicInfor" />
+    <Property Type="Int32" Name="PatBasicInforId" Nullable="false" />
+    <Property Type="String" Name="VisitRecordID" Nullable="false" />
+    <NavigationProperty Name="PatCDR" Relationship="LNCDDataModel.VisitRecordPatCDR" FromRole="VisitRecord" ToRole="PatCDR" />
+    <NavigationProperty Name="PatRecentDrug" Relationship="LNCDDataModel.VisitRecordPatRecentDrug" FromRole="VisitRecord" ToRole="PatRecentDrug" />
+  </EntityType>
+  <Association Name="VisitRecordPatADL">
+    <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />
+    <End Type="LNCDDataModel.PatADL" Role="PatADL" Multiplicity="0..1" />
+  </Association>
+  <Association Name="VisitRecordPatMoCA">
+    <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />
+    <End Type="LNCDDataModel.PatMoCA" Role="PatMoCA" Multiplicity="0..1" />
+  </Association>
+  <Association Name="VisitRecordPatOtherTest">
+    <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />
+    <End Type="LNCDDataModel.PatOtherTest" Role="PatOtherTest" Multiplicity="0..1" />
+  </Association>
+  <Association Name="VisitRecordPatMMSE">
+    <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />
+    <End Type="LNCDDataModel.PatMMSE" Role="PatMMSE" Multiplicity="0..1" />
+  </Association>
+  <Association Name="VisitRecordPatGDS">
+    <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />
+    <End Type="LNCDDataModel.PatGDS" Role="PatGDS" Multiplicity="0..1" />
+  </Association>
+  <EntityType Name="PatRecentDrug">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatRecentDrug" FromRole="PatRecentDrug" ToRole="VisitRecord" />
+    <Property Type="Int32" Name="VisitRecordId" Nullable="false" />
+    <Property Type="String" Name="DrugCatogary" Nullable="false" />
+  </EntityType>
+  <Association Name="PatBasicInforPatExam1">
+    <End Type="LNCDDataModel.PatBasicInfor" Role="PatBasicInfor" Multiplicity="1" />
+    <End Type="LNCDDataModel.PatPhysicalExam" Role="PatExam" Multiplicity="1" />
+  </Association>
+  <Association Name="PatBasicInforPatDisease">
+    <End Type="LNCDDataModel.PatBasicInfor" Role="PatBasicInfor" Multiplicity="1" />
+    <End Type="LNCDDataModel.PatDisease" Role="PatDisease" Multiplicity="1" />
+  </Association>
+  <Association Name="DoctorAccountPatBasicInfor">
+    <End Type="LNCDDataModel.DoctorAccount" Role="DoctorAccount" Multiplicity="1" />
+    <End Type="LNCDDataModel.PatBasicInfor" Role="PatBasicInfor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoctorAccount">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PatBasicInfor">
+        <PropertyRef Name="DoctorAccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PatBasicInforVisitRecord">
+    <End Type="LNCDDataModel.PatBasicInfor" Role="PatBasicInfor" Multiplicity="1" />
+    <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PatBasicInfor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VisitRecord">
+        <PropertyRef Name="PatBasicInforId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VisitRecordPatCDR">
+    <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />
+    <End Type="LNCDDataModel.PatCDR" Role="PatCDR" Multiplicity="0..1" />
+  </Association>
+  <EntityType Name="PatLabExam">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FT3" Nullable="false" />
+    <Property Type="String" Name="FT4" Nullable="false" />
+    <Property Type="String" Name="TT3" Nullable="false" />
+    <Property Type="String" Name="TT4" Nullable="false" />
+    <Property Type="String" Name="TSH" Nullable="false" />
+    <Property Type="String" Name="Folacin" Nullable="false" />
+    <Property Type="String" Name="B12" Nullable="false" />
+    <Property Type="String" Name="Property" Nullable="false" />
+    <Property Type="String" Name="Property_1" Nullable="false" />
+    <Property Type="String" Name="GAfter" Nullable="false" />
+    <Property Type="String" Name="HbAlc" Nullable="false" />
+    <Property Type="String" Name="UricAcid" Nullable="false" />
+    <Property Type="String" Name="Cholesterol" Nullable="false" />
+    <Property Type="String" Name="GanEster" Nullable="false" />
+    <Property Type="String" Name="HDLC" Nullable="false" />
+    <Property Type="String" Name="LDLC" Nullable="false" />
+    <Property Type="String" Name="GOT" Nullable="false" />
+    <Property Type="String" Name="GPT" Nullable="false" />
+    <Property Type="String" Name="BUN" Nullable="false" />
+    <Property Type="String" Name="CR" Nullable="false" />
+    <Property Type="String" Name="Albumin" Nullable="false" />
+    <Property Type="String" Name="RBC" Nullable="false" />
+    <Property Type="String" Name="HB" Nullable="false" />
+    <Property Type="String" Name="PLT" Nullable="false" />
+    <Property Type="String" Name="WBC" Nullable="false" />
+    <Property Type="String" Name="ApoE" Nullable="false" />
+    <Property Type="String" Name="Protein" Nullable="false" />
+    <Property Name="Electrocardiogram" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="Echocardiagraphy" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="EEG" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="CT" Type="LNCDDataModel.Exam" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="Exam">
+    <Property Type="DateTime" Name="Date" Nullable="false" />
+    <Property Type="Boolean" Name="Result" Nullable="false" />
+    <Property Type="String" Name="Note" Nullable="false" />
+  </ComplexType>
+  <Association Name="VisitRecordPatRecentDrug">
+    <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />
+    <End Type="LNCDDataModel.PatRecentDrug" Role="PatRecentDrug" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VisitRecord">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PatRecentDrug">
+        <PropertyRef Name="VisitRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="BodyExam">
+    <Property Type="String" Name="Result" Nullable="false" />
+    <Property Type="String" Name="Note" Nullable="false" />
+  </ComplexType>
+</Schema>

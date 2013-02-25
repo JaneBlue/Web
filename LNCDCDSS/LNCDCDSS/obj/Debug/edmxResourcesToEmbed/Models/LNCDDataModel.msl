@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LNCDDataModelStoreContainer" CdmEntityContainer="LNCDDataModelContainer">
+    <EntitySetMapping Name="DoctorAccountSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.DoctorAccount)">
+        <MappingFragment StoreEntitySet="DoctorAccountSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Hospital" ColumnName="Hospital" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatBasicInforSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatBasicInfor)">
+        <MappingFragment StoreEntitySet="PatBasicInforSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DoctorAccountId" ColumnName="DoctorAccountId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="FamilyMember" ColumnName="FamilyMember" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatPhysicalExamSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatPhysicalExam)">
+        <MappingFragment StoreEntitySet="PatPhysicalExamSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Waistline" ColumnName="Waistline" />
+          <ScalarProperty Name="Hipline" ColumnName="Hipline" />
+          <ScalarProperty Name="BloodPressureH" ColumnName="BloodPressureH" />
+          <ScalarProperty Name="BloodPressureL" ColumnName="BloodPressureL" />
+          <ComplexProperty Name="B1" TypeName="LNCDDataModel.BodyExam">
+            <ScalarProperty Name="Result" ColumnName="B1_Result" />
+            <ScalarProperty Name="Note" ColumnName="B1_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B2" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B2_Date" />
+            <ScalarProperty Name="Result" ColumnName="B2_Result" />
+            <ScalarProperty Name="Note" ColumnName="B2_Note" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatMMSESet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatMMSE)">
+        <MappingFragment StoreEntitySet="PatMMSESet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="M1" ColumnName="M1" />
+          <ScalarProperty Name="M2" ColumnName="M2" />
+          <ScalarProperty Name="M3" ColumnName="M3" />
+          <ScalarProperty Name="M4" ColumnName="M4" />
+          <ScalarProperty Name="M5" ColumnName="M5" />
+          <ScalarProperty Name="M6" ColumnName="M6" />
+          <ScalarProperty Name="M7" ColumnName="M7" />
+          <ScalarProperty Name="M8" ColumnName="M8" />
+          <ScalarProperty Name="M9" ColumnName="M9" />
+          <ScalarProperty Name="M10" ColumnName="M10" />
+          <ScalarProperty Name="M11" ColumnName="M11" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatMoCASet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatMoCA)">
+        <MappingFragment StoreEntitySet="PatMoCASet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatADLSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatADL)">
+        <MappingFragment StoreEntitySet="PatADLSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="A1" ColumnName="A1" />
+          <ScalarProperty Name="A2" ColumnName="A2" />
+          <ScalarProperty Name="A3" ColumnName="A3" />
+          <ScalarProperty Name="A4" ColumnName="A4" />
+          <ScalarProperty Name="A5" ColumnName="A5" />
+          <ScalarProperty Name="A6" ColumnName="A6" />
+          <ScalarProperty Name="A7" ColumnName="A7" />
+          <ScalarProperty Name="A8" ColumnName="A8" />
+          <ScalarProperty Name="A9" ColumnName="A9" />
+          <ScalarProperty Name="A10" ColumnName="A10" />
+          <ScalarProperty Name="A11" ColumnName="A11" />
+          <ScalarProperty Name="A12" ColumnName="A12" />
+          <ScalarProperty Name="A13" ColumnName="A13" />
+          <ScalarProperty Name="A14" ColumnName="A14" />
+          <ScalarProperty Name="A15" ColumnName="A15" />
+          <ScalarProperty Name="A16" ColumnName="A16" />
+          <ScalarProperty Name="A17" ColumnName="A17" />
+          <ScalarProperty Name="A18" ColumnName="A18" />
+          <ScalarProperty Name="A19" ColumnName="A19" />
+          <ScalarProperty Name="A20" ColumnName="A20" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatCDRSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatCDR)">
+        <MappingFragment StoreEntitySet="PatCDRSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="C1" ColumnName="C1" />
+          <ScalarProperty Name="C2" ColumnName="C2" />
+          <ScalarProperty Name="C3" ColumnName="C3" />
+          <ScalarProperty Name="C4" ColumnName="C4" />
+          <ScalarProperty Name="C5" ColumnName="C5" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatOtherTestSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatOtherTest)">
+        <MappingFragment StoreEntitySet="PatOtherTestSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Vocabulary1" ColumnName="Vocabulary1" />
+          <ScalarProperty Name="Vocabulary2" ColumnName="Vocabulary2" />
+          <ScalarProperty Name="Vocabulary3" ColumnName="Vocabulary3" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture1" />
+          <ScalarProperty Name="Picture2" ColumnName="Picture2" />
+          <ScalarProperty Name="ConnectNumber1" ColumnName="ConnectNumber1" />
+          <ScalarProperty Name="ConnectNumber2" ColumnName="ConnectNumber2" />
+          <ScalarProperty Name="Vocabulary4" ColumnName="Vocabulary4" />
+          <ScalarProperty Name="VocabularyAnalyse" ColumnName="VocabularyAnalyse" />
+          <ScalarProperty Name="Picture3" ColumnName="Picture3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatDiseaseSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatDisease)">
+        <MappingFragment StoreEntitySet="PatDiseaseSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PatBasicInforId" ColumnName="PatBasicInforId" />
+          <ScalarProperty Name="Disease" ColumnName="Disease" />
+          <ScalarProperty Name="Situation" ColumnName="Situation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatGDSSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatGDS)">
+        <MappingFragment StoreEntitySet="PatGDSSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="G1" ColumnName="G1" />
+          <ScalarProperty Name="G2" ColumnName="G2" />
+          <ScalarProperty Name="G3" ColumnName="G3" />
+          <ScalarProperty Name="G4" ColumnName="G4" />
+          <ScalarProperty Name="G5" ColumnName="G5" />
+          <ScalarProperty Name="G6" ColumnName="G6" />
+          <ScalarProperty Name="G7" ColumnName="G7" />
+          <ScalarProperty Name="G8" ColumnName="G8" />
+          <ScalarProperty Name="G9" ColumnName="G9" />
+          <ScalarProperty Name="G10" ColumnName="G10" />
+          <ScalarProperty Name="G11" ColumnName="G11" />
+          <ScalarProperty Name="G12" ColumnName="G12" />
+          <ScalarProperty Name="G13" ColumnName="G13" />
+          <ScalarProperty Name="G14" ColumnName="G14" />
+          <ScalarProperty Name="G15" ColumnName="G15" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitRecordSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.VisitRecord)">
+        <MappingFragment StoreEntitySet="VisitRecordSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PatBasicInforId" ColumnName="PatBasicInforId" />
+          <ScalarProperty Name="VisitRecordID" ColumnName="VisitRecordID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatRecentDrugSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatRecentDrug)">
+        <MappingFragment StoreEntitySet="PatRecentDrugSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="VisitRecordId" ColumnName="VisitRecordId" />
+          <ScalarProperty Name="DrugCatogary" ColumnName="DrugCatogary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatLabExamSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatLabExam)">
+        <MappingFragment StoreEntitySet="PatLabExamSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FT3" ColumnName="FT3" />
+          <ScalarProperty Name="FT4" ColumnName="FT4" />
+          <ScalarProperty Name="TT3" ColumnName="TT3" />
+          <ScalarProperty Name="TT4" ColumnName="TT4" />
+          <ScalarProperty Name="TSH" ColumnName="TSH" />
+          <ScalarProperty Name="Folacin" ColumnName="Folacin" />
+          <ScalarProperty Name="B12" ColumnName="B12" />
+          <ScalarProperty Name="Property" ColumnName="Property" />
+          <ScalarProperty Name="Property_1" ColumnName="Property_1" />
+          <ScalarProperty Name="GAfter" ColumnName="GAfter" />
+          <ScalarProperty Name="HbAlc" ColumnName="HbAlc" />
+          <ScalarProperty Name="UricAcid" ColumnName="UricAcid" />
+          <ScalarProperty Name="Cholesterol" ColumnName="Cholesterol" />
+          <ScalarProperty Name="GanEster" ColumnName="GanEster" />
+          <ScalarProperty Name="HDLC" ColumnName="HDLC" />
+          <ScalarProperty Name="LDLC" ColumnName="LDLC" />
+          <ScalarProperty Name="GOT" ColumnName="GOT" />
+          <ScalarProperty Name="GPT" ColumnName="GPT" />
+          <ScalarProperty Name="BUN" ColumnName="BUN" />
+          <ScalarProperty Name="CR" ColumnName="CR" />
+          <ScalarProperty Name="Albumin" ColumnName="Albumin" />
+          <ScalarProperty Name="RBC" ColumnName="RBC" />
+          <ScalarProperty Name="HB" ColumnName="HB" />
+          <ScalarProperty Name="PLT" ColumnName="PLT" />
+          <ScalarProperty Name="WBC" ColumnName="WBC" />
+          <ScalarProperty Name="ApoE" ColumnName="ApoE" />
+          <ScalarProperty Name="Protein" ColumnName="Protein" />
+          <ComplexProperty Name="Electrocardiogram" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="Electrocardiogram_Date" />
+            <ScalarProperty Name="Result" ColumnName="Electrocardiogram_Result" />
+            <ScalarProperty Name="Note" ColumnName="Electrocardiogram_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="Echocardiagraphy" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="Echocardiagraphy_Date" />
+            <ScalarProperty Name="Result" ColumnName="Echocardiagraphy_Result" />
+            <ScalarProperty Name="Note" ColumnName="Echocardiagraphy_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="EEG" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="EEG_Date" />
+            <ScalarProperty Name="Result" ColumnName="EEG_Result" />
+            <ScalarProperty Name="Note" ColumnName="EEG_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="CT" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="CT_Date" />
+            <ScalarProperty Name="Result" ColumnName="CT_Result" />
+            <ScalarProperty Name="Note" ColumnName="CT_Note" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="VisitRecordPatADL" TypeName="LNCDDataModel.VisitRecordPatADL" StoreEntitySet="PatADLSet">
+      <EndProperty Name="VisitRecord">
+        <ScalarProperty Name="Id" ColumnName="VisitRecord_Id" />
+      </EndProperty>
+      <EndProperty Name="PatADL">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VisitRecordPatMoCA" TypeName="LNCDDataModel.VisitRecordPatMoCA" StoreEntitySet="PatMoCASet">
+      <EndProperty Name="VisitRecord">
+        <ScalarProperty Name="Id" ColumnName="VisitRecord_Id" />
+      </EndProperty>
+      <EndProperty Name="PatMoCA">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VisitRecordPatOtherTest" TypeName="LNCDDataModel.VisitRecordPatOtherTest" StoreEntitySet="PatOtherTestSet">
+      <EndProperty Name="VisitRecord">
+        <ScalarProperty Name="Id" ColumnName="VisitRecord_Id" />
+      </EndProperty>
+      <EndProperty Name="PatOtherTest">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VisitRecordPatMMSE" TypeName="LNCDDataModel.VisitRecordPatMMSE" StoreEntitySet="PatMMSESet">
+      <EndProperty Name="VisitRecord">
+        <ScalarProperty Name="Id" ColumnName="VisitRecord_Id" />
+      </EndProperty>
+      <EndProperty Name="PatMMSE">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VisitRecordPatGDS" TypeName="LNCDDataModel.VisitRecordPatGDS" StoreEntitySet="PatGDSSet">
+      <EndProperty Name="VisitRecord">
+        <ScalarProperty Name="Id" ColumnName="VisitRecord_Id" />
+      </EndProperty>
+      <EndProperty Name="PatGDS">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PatBasicInforPatExam1" TypeName="LNCDDataModel.PatBasicInforPatExam1" StoreEntitySet="PatBasicInforSet">
+      <EndProperty Name="PatExam">
+        <ScalarProperty Name="Id" ColumnName="PatExam_1_Id" />
+      </EndProperty>
+      <EndProperty Name="PatBasicInfor">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PatBasicInforPatDisease" TypeName="LNCDDataModel.PatBasicInforPatDisease" StoreEntitySet="PatBasicInforSet">
+      <EndProperty Name="PatDisease">
+        <ScalarProperty Name="Id" ColumnName="PatDisease_Id" />
+      </EndProperty>
+      <EndProperty Name="PatBasicInfor">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VisitRecordPatCDR" TypeName="LNCDDataModel.VisitRecordPatCDR" StoreEntitySet="PatCDRSet">
+      <EndProperty Name="VisitRecord">
+        <ScalarProperty Name="Id" ColumnName="VisitRecord_Id" />
+      </EndProperty>
+      <EndProperty Name="PatCDR">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+background-color:#c0c0c0;
+font-family:Arial, Helvetica, sans-serif;
+padding:0;
+font-size:12px;
+margin:0px auto auto auto;
+color:#000000;
+}
+
+.clear{
+clear:both;
+}
+
+#wrap{
+width:962px;
+height: auto;
+margin:auto;
+background-color:#FFFFFF;
+}
+.header{
+width:962px;
+height:148px;
+background:url(images/header.png) no-repeat center;
+font-size:0;
+}
+.logo{
+padding:0 0 0 30px;
+}
+/*-----------------------------menu-------------------*/
+#menu{
+width:962px;
+height:40px;
+margin:0px 0 0px 0;
+background:url(images/main_bg.png) repeat ;
+top: 80px ;
+}
+#menu ul{
+display:block;
+list-style:none;
+padding:0 0 0 70px;
+margin:0px;
+}
+#menu ul li{
+display:inline;
+padding:0px;
+margin:0px;
+height:30px;
+}
+
+#menu ul li a{
+height:32px;
+display:block;
+padding:8px 10px 0 10px;
+margin:0 4px 0 4px;
+float:left;
+text-decoration:none;
+text-align:center;
+color:#fff;
+font-size:24px;
+line-height:27px;
+
+}
+#menu ul li.selected a{
+height:32px;
+display:block;
+padding:8px 10px 0 10px;
+margin:0px 5px 0 5px;
+float:left;
+text-decoration:none;
+text-align:center ;
+color:#fff;
+font-size:24px;
+line-height:27px;
+
+}
+#menu ul li.selected b
+{
+	width: 40px;
+	height: 40px;
+	float: left;
+	background: url(images/circle-blue.png);
+}
+#menu ul li b
+{
+	width: 40px;
+	height: 40px;
+	float: left;
+	background: url(images/circle-orange.png);
+}
+#line {
+	background: url(images/split.png)repeat-x ;
+	height:12px;
+    font-size:0;
+	
+}
+#direct{
+	height: 27px;
+	background:url(images/main_bg.png) repeat-x center;
+	top: 80px ;
+	font-size:0;
+}
+
+#direct ul{
+	display:block;
+list-style:none;
+padding:0 0 0 70px;
+margin:0px;
+}
+#direct ul li{
+	display:inline;
+padding:0px;
+margin:0px;
+height:27px; 
+}
+#direct ul li a{
+height:27px;
+width: 138px;
+display:block;
+margin:0px 26px  0 0;
+float:left;	
+background:url(images/triangle.png)no-repeat ;
+}
+/*------------------------------------center content--------------------*/
+.center_content{
+width:962px;
+height:670px;
+padding:0px 0 0 0;
+background:url(images/main_bg.png) repeat-x center;
+font-size:0;
+}
+.ocx{
+	width:915px;
+    height:540px;
+	margin-left: 25px;
+}
+/*---------------footer------------------------*/
+.footer{
+height:100px;
+border-top:1px #b2b2b2 dashed;
+background:url(images/foot.png) no-repeat bottom;
+}
+.button{
+	height: 37px;
+	
+	margin:10px 25px 0 0;
+}
+#btn1
+{height: 37px;
+	float: right;
+	width :138px;
+	background: url(images/normal-button.png) no-repeat ;
+}
+
+#btn2
+{
+	float: right;
+	width :138px;	
+}
+

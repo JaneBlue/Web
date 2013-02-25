@@ -1,0 +1,7 @@
+D:\Web\try\LNCDCDSS\LNCDCDSS\bin\LNCDCDSS.dll
+D:\Web\try\LNCDCDSS\LNCDCDSS\bin\LNCDCDSS.pdb
+D:\Web\try\LNCDCDSS\LNCDCDSS\bin\EntityFramework.dll
+D:\Web\try\LNCDCDSS\LNCDCDSS\bin\EntityFramework.xml
+D:\Web\try\LNCDCDSS\LNCDCDSS\obj\Debug\ResolveAssemblyReference.cache
+D:\Web\try\LNCDCDSS\LNCDCDSS\obj\Debug\LNCDCDSS.dll
+D:\Web\try\LNCDCDSS\LNCDCDSS\obj\Debug\LNCDCDSS.pdb
