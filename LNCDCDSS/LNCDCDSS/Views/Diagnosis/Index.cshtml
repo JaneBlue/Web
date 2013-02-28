@@ -2,8 +2,6 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Diagnosis_Layout.cshtml";
 }
-
-<h2>Index</h2>
 <p>
    <object id="Reporter2" 
     classid="clsid:466F909A-0EE1-4F40-A2CA-9906C5E36CB2"   width="920" height="540">
@@ -14,7 +12,7 @@
     $(function () {
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
-        var b = OCX.OpenReport("E:\\Ocxdemo");
+        var b = OCX.OpenReport("D:\\2013CDSS\\TemplateForReporter\\LNCDtemp");
 
         if (b == 0) alert("Return value is 0, success");
         else alert("Failed to create a new report");

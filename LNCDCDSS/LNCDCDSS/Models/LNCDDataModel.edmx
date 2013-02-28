@@ -17,6 +17,7 @@
     <EntitySet Name="VisitRecordSet" EntityType="LNCDDataModel.Store.VisitRecordSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PatRecentDrugSet" EntityType="LNCDDataModel.Store.PatRecentDrugSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PatLabExamSet" EntityType="LNCDDataModel.Store.PatLabExamSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DrugSet" EntityType="LNCDDataModel.Store.DrugSet" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="VisitRecordPatADL" Association="LNCDDataModel.Store.VisitRecordPatADL">
       <End Role="VisitRecord" EntitySet="VisitRecordSet" />
       <End Role="PatADL" EntitySet="PatADLSet" />
@@ -49,9 +50,17 @@
       <End Role="PatBasicInfor" EntitySet="PatBasicInforSet" />
       <End Role="VisitRecord" EntitySet="VisitRecordSet" />
     </AssociationSet>
+    <AssociationSet Name="VisitRecordPatLabExam" Association="LNCDDataModel.Store.VisitRecordPatLabExam">
+      <End Role="VisitRecord" EntitySet="VisitRecordSet" />
+      <End Role="PatLabExam" EntitySet="PatLabExamSet" />
+    </AssociationSet>
     <AssociationSet Name="VisitRecordPatRecentDrug" Association="LNCDDataModel.Store.VisitRecordPatRecentDrug">
       <End Role="VisitRecord" EntitySet="VisitRecordSet" />
       <End Role="PatRecentDrug" EntitySet="PatRecentDrugSet" />
+    </AssociationSet>
+    <AssociationSet Name="PatRecentDrugDrug" Association="LNCDDataModel.Store.PatRecentDrugDrug">
+      <End Role="PatRecentDrug" EntitySet="PatRecentDrugSet" />
+      <End Role="Drug" EntitySet="DrugSet" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="DoctorAccountSet">
@@ -301,8 +310,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="VisitRecordId" Type="int" Nullable="false" />
     <Property Name="DrugCatogary" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VisitRecord_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PatLabExamSet">
     <Key>
@@ -348,6 +357,15 @@
     <Property Name="CT_Date" Type="datetime" Nullable="false" />
     <Property Name="CT_Result" Type="bit" Nullable="false" />
     <Property Name="CT_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VisitRecord_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DrugSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PatRecentDrugId" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="VisitRecordPatADL">
     <End Role="VisitRecord" Type="LNCDDataModel.Store.VisitRecordSet" Multiplicity="1" />
@@ -445,6 +463,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="VisitRecordPatLabExam">
+    <End Role="VisitRecord" Type="LNCDDataModel.Store.VisitRecordSet" Multiplicity="1" />
+    <End Role="PatLabExam" Type="LNCDDataModel.Store.PatLabExamSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VisitRecord">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PatLabExam">
+        <PropertyRef Name="VisitRecord_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="VisitRecordPatRecentDrug">
     <End Role="VisitRecord" Type="LNCDDataModel.Store.VisitRecordSet" Multiplicity="1" />
     <End Role="PatRecentDrug" Type="LNCDDataModel.Store.PatRecentDrugSet" Multiplicity="*" />
@@ -453,7 +483,19 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="PatRecentDrug">
-        <PropertyRef Name="VisitRecordId" />
+        <PropertyRef Name="VisitRecord_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PatRecentDrugDrug">
+    <End Role="PatRecentDrug" Type="LNCDDataModel.Store.PatRecentDrugSet" Multiplicity="1" />
+    <End Role="Drug" Type="LNCDDataModel.Store.DrugSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PatRecentDrug">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Drug">
+        <PropertyRef Name="PatRecentDrugId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -547,6 +589,7 @@
           <Property Type="String" Name="Address" Nullable="false" />
           <Property Type="String" Name="Phone" Nullable="false" />
           <Property Type="String" Name="FamilyMember" Nullable="false" />
+          <Property Type="String" Name="WorkPlace" Nullable="false" />
         </EntityType>
         <EntityType Name="PatPhysicalExam">
           <Key>
@@ -692,6 +735,7 @@
           <Property Name="D20" Type="LNCDDataModel.Exam" Nullable="false" />
           <Property Name="D21" Type="LNCDDataModel.Exam" Nullable="false" />
           <Property Name="ImportantD" Type="LNCDDataModel.Exam" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="false" />
         </EntityType>
         <EntityType Name="VisitRecord">
           <Key>
@@ -710,6 +754,7 @@
           <Property Type="String" Name="RecordNote" Nullable="false" />
           <NavigationProperty Name="PatLabExam" Relationship="LNCDDataModel.VisitRecordPatLabExam" FromRole="VisitRecord" ToRole="PatLabExam" />
           <NavigationProperty Name="PatRecentDrug" Relationship="LNCDDataModel.VisitRecordPatRecentDrug" FromRole="VisitRecord" ToRole="PatRecentDrug" />
+          <Property Type="String" Name="PatAge" Nullable="false" />
         </EntityType>
         <Association Name="VisitRecordPatADL">
           <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />
@@ -1242,6 +1287,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="DrugSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.Drug)">
+        <MappingFragment StoreEntitySet="DrugSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PatRecentDrugId" ColumnName="PatRecentDrugId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <AssociationSetMapping Name="VisitRecordPatADL" TypeName="LNCDDataModel.VisitRecordPatADL" StoreEntitySet="PatADLSet">
       <EndProperty Name="VisitRecord">
         <ScalarProperty Name="Id" ColumnName="VisitRecord_Id" />
@@ -1290,6 +1344,23 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
+    <AssociationSetMapping Name="VisitRecordPatLabExam" TypeName="LNCDDataModel.VisitRecordPatLabExam" StoreEntitySet="PatLabExamSet">
+      <EndProperty Name="VisitRecord">
+        <ScalarProperty Name="Id" ColumnName="VisitRecord_Id" />
+      </EndProperty>
+      <EndProperty Name="PatLabExam">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VisitRecordPatRecentDrug" TypeName="LNCDDataModel.VisitRecordPatRecentDrug" StoreEntitySet="PatRecentDrugSet">
+      <EndProperty Name="VisitRecord">
+        <ScalarProperty Name="Id" ColumnName="VisitRecord_Id" />
+      </EndProperty>
+      <EndProperty Name="PatRecentDrug">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+            <Condition ColumnName="VisitRecord_Id" IsNull="false" />
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>
@@ -1311,61 +1382,61 @@
     <edmx:Diagrams>
       <Diagram Name="LNCDDataModel" >
         <EntityTypeShape EntityType="LNCDDataModel.DoctorAccount" Width="1.5" PointX="0.5" PointY="0.75" Height="1.9700325520833339" />
-        <EntityTypeShape EntityType="LNCDDataModel.PatBasicInfor" Width="1.5" PointX="3.25" PointY="0.5" Height="3.6892097981770826" />
+        <EntityTypeShape EntityType="LNCDDataModel.PatBasicInfor" Width="1.5" PointX="3.25" PointY="0.5" Height="3.8802294921874996" />
         <EntityTypeShape EntityType="LNCDDataModel.PatPhysicalExam" Width="1.5" PointX="8.125" PointY="0.5" Height="5.9814461263020826" />
         <EntityTypeShape EntityType="LNCDDataModel.PatMMSE" Width="1.5" PointX="10.25" PointY="5.375" Height="3.6892097981770817" />
         <EntityTypeShape EntityType="LNCDDataModel.PatMoCA" Width="1.5" PointX="0.625" PointY="3.125" Height="3.3071704101562496" />
         <EntityTypeShape EntityType="LNCDDataModel.PatADL" Width="1.5" PointX="0.5" PointY="7" Height="5.4083870442708335" />
         <EntityTypeShape EntityType="LNCDDataModel.PatOtherTest" Width="1.875" PointX="3.75" PointY="9.25" Height="3.8802294921874996" />
-        <EntityTypeShape EntityType="LNCDDataModel.PatDisease" Width="1.5" PointX="5.625" PointY="0.625" Height="5.7904264322916665" />
-        <EntityTypeShape EntityType="LNCDDataModel.VisitRecord" Width="1.5" PointX="3.625" PointY="5" Height="3.4981901041666656" />
+        <EntityTypeShape EntityType="LNCDDataModel.PatDisease" Width="1.5" PointX="5.625" PointY="0.625" Height="5.9814461263020826" />
+        <EntityTypeShape EntityType="LNCDDataModel.VisitRecord" Width="1.5" PointX="3.625" PointY="5" Height="3.6892097981770817" />
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatADL">
-          <ConnectorPoint PointX="3.625" PointY="7.7490950520833319" />
-          <ConnectorPoint PointX="2" PointY="7.7490950520833319" />
+          <ConnectorPoint PointX="3.625" PointY="7.8446048990885409" />
+          <ConnectorPoint PointX="2" PointY="7.8446048990885409" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatMoCA">
           <ConnectorPoint PointX="3.625" PointY="5.7160852050781248" />
           <ConnectorPoint PointX="2.125" PointY="5.7160852050781248" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatOtherTest">
-          <ConnectorPoint PointX="4.4375" PointY="8.4981901041666656" />
+          <ConnectorPoint PointX="4.4375" PointY="8.6892097981770817" />
           <ConnectorPoint PointX="4.4375" PointY="9.25" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatMMSE">
-          <ConnectorPoint PointX="5.125" PointY="7.0805910515467314" />
-          <ConnectorPoint PointX="10.25" PointY="7.0805910515467314" />
+          <ConnectorPoint PointX="5.125" PointY="7.1782230631510409" />
+          <ConnectorPoint PointX="10.25" PointY="7.1782230631510409" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="LNCDDataModel.PatRecentDrug" Width="1.5" PointX="6.5" PointY="7.875" Height="1.3969734700520835" />
+        <EntityTypeShape EntityType="LNCDDataModel.PatRecentDrug" Width="1.5" PointX="6.625" PointY="7.75" Height="1.7790128580729174" />
         <AssociationConnector Association="LNCDDataModel.PatBasicInforPatExam1">
           <ConnectorPoint PointX="4.75" PointY="0.53125000000000011" />
           <ConnectorPoint PointX="8.125" PointY="0.53125000000000011" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.PatBasicInforPatDisease">
-          <ConnectorPoint PointX="4.75" PointY="2.4071048990885413" />
-          <ConnectorPoint PointX="5.625" PointY="2.4071048990885413" />
+          <ConnectorPoint PointX="4.75" PointY="2.50261474609375" />
+          <ConnectorPoint PointX="5.625" PointY="2.50261474609375" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.DoctorAccountPatBasicInfor">
-          <ConnectorPoint PointX="2" PointY="1.4370475260416664" />
-          <ConnectorPoint PointX="3.25" PointY="1.4370475260416664" />
+          <ConnectorPoint PointX="2" PointY="1.7350162760416672" />
+          <ConnectorPoint PointX="3.25" PointY="1.7350162760416672" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.PatBasicInforVisitRecord">
-          <ConnectorPoint PointX="4.1875" PointY="4.1892097981770826" />
+          <ConnectorPoint PointX="4.1875" PointY="4.3802294921875" />
           <ConnectorPoint PointX="4.1875" PointY="5" />
         </AssociationConnector>
         <EntityTypeShape EntityType="LNCDDataModel.PatLabExam" Width="1.5" PointX="8.375" PointY="9.75" Height="7.1275642903645835" />
-        <AssociationConnector Association="LNCDDataModel.VisitRecordPatLabExam" ManuallyRouted="true">
-          <ConnectorPoint PointX="5.125" PointY="7.5067635511273094" />
-          <ConnectorPoint PointX="9.125" PointY="7.5067635511273094" />
-          <ConnectorPoint PointX="9.125" PointY="9.75" />
+        <AssociationConnector Association="LNCDDataModel.VisitRecordPatLabExam" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.65625" PointY="8.6892097981770817" />
+          <ConnectorPoint PointX="3.65625" PointY="15.130656738281251" />
+          <ConnectorPoint PointX="8.375" PointY="15.130656738281251" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatRecentDrug">
-          <ConnectorPoint PointX="5.125" PointY="8.1865950520833337" />
-          <ConnectorPoint PointX="6.5" PointY="8.1865950520833337" />
+          <ConnectorPoint PointX="5.125" PointY="8.21960489908854" />
+          <ConnectorPoint PointX="6.625" PointY="8.21960489908854" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="LNCDDataModel.Drug" Width="1.5" PointX="6.25" PointY="10.375" Height="1.3969734700520835" />
+        <EntityTypeShape EntityType="LNCDDataModel.Drug" Width="1.5" PointX="6.375" PointY="10.875" Height="1.7790128580729157" />
         <AssociationConnector Association="LNCDDataModel.PatRecentDrugDrug">
-          <ConnectorPoint PointX="7.125" PointY="9.6540128580729174" />
-          <ConnectorPoint PointX="7.125" PointY="10.375" />
+          <ConnectorPoint PointX="7.25" PointY="9.5290128580729174" />
+          <ConnectorPoint PointX="7.25" PointY="10.875" />
         </AssociationConnector>
         </Diagram>
     </edmx:Diagrams>

@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 02/25/2013 10:19:33
--- Generated from EDMX file: D:\Web\try\LNCDCDSS\LNCDCDSS\Models\LNCDDataModel.edmx
+-- Date Created: 02/25/2013 14:10:11
+-- Generated from EDMX file: D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\Models\LNCDDataModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -28,9 +28,6 @@ IF OBJECT_ID(N'[dbo].[FK_VisitRecordPatOtherTest]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_VisitRecordPatMMSE]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[PatMMSESet] DROP CONSTRAINT [FK_VisitRecordPatMMSE];
-GO
-IF OBJECT_ID(N'[dbo].[FK_VisitRecordPatGDS]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[PatGDSSet] DROP CONSTRAINT [FK_VisitRecordPatGDS];
 GO
 IF OBJECT_ID(N'[dbo].[FK_PatBasicInforPatExam1]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[PatBasicInforSet] DROP CONSTRAINT [FK_PatBasicInforPatExam1];
@@ -75,9 +72,6 @@ IF OBJECT_ID(N'[dbo].[PatOtherTestSet]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[PatDiseaseSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PatDiseaseSet];
-GO
-IF OBJECT_ID(N'[dbo].[PatGDSSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[PatGDSSet];
 GO
 IF OBJECT_ID(N'[dbo].[VisitRecordSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[VisitRecordSet];
@@ -324,29 +318,6 @@ CREATE TABLE [dbo].[PatDiseaseSet] (
 );
 GO
 
--- Creating table 'PatGDSSet'
-CREATE TABLE [dbo].[PatGDSSet] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [G1] nvarchar(max)  NOT NULL,
-    [G2] nvarchar(max)  NOT NULL,
-    [G3] nvarchar(max)  NOT NULL,
-    [G4] nvarchar(max)  NOT NULL,
-    [G5] nvarchar(max)  NOT NULL,
-    [G6] nvarchar(max)  NOT NULL,
-    [G7] nvarchar(max)  NOT NULL,
-    [G8] nvarchar(max)  NOT NULL,
-    [G9] nvarchar(max)  NOT NULL,
-    [G10] nvarchar(max)  NOT NULL,
-    [G11] nvarchar(max)  NOT NULL,
-    [G12] nvarchar(max)  NOT NULL,
-    [G13] nvarchar(max)  NOT NULL,
-    [G14] nvarchar(max)  NOT NULL,
-    [G15] nvarchar(max)  NOT NULL,
-    [Total] nvarchar(max)  NOT NULL,
-    [VisitRecord_Id] int  NOT NULL
-);
-GO
-
 -- Creating table 'VisitRecordSet'
 CREATE TABLE [dbo].[VisitRecordSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
@@ -361,8 +332,8 @@ GO
 -- Creating table 'PatRecentDrugSet'
 CREATE TABLE [dbo].[PatRecentDrugSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [VisitRecordId] int  NOT NULL,
-    [DrugCatogary] nvarchar(max)  NOT NULL
+    [DrugCatogary] nvarchar(max)  NOT NULL,
+    [VisitRecord_Id] int  NOT NULL
 );
 GO
 
@@ -407,7 +378,16 @@ CREATE TABLE [dbo].[PatLabExamSet] (
     [EEG_Note] nvarchar(max)  NOT NULL,
     [CT_Date] datetime  NOT NULL,
     [CT_Result] bit  NOT NULL,
-    [CT_Note] nvarchar(max)  NOT NULL
+    [CT_Note] nvarchar(max)  NOT NULL,
+    [VisitRecord_Id] int  NOT NULL
+);
+GO
+
+-- Creating table 'DrugSet'
+CREATE TABLE [dbo].[DrugSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(max)  NOT NULL,
+    [PatRecentDrugId] int  NOT NULL
 );
 GO
 
@@ -463,12 +443,6 @@ ADD CONSTRAINT [PK_PatDiseaseSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'PatGDSSet'
-ALTER TABLE [dbo].[PatGDSSet]
-ADD CONSTRAINT [PK_PatGDSSet]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
 -- Creating primary key on [Id] in table 'VisitRecordSet'
 ALTER TABLE [dbo].[VisitRecordSet]
 ADD CONSTRAINT [PK_VisitRecordSet]
@@ -484,6 +458,12 @@ GO
 -- Creating primary key on [Id] in table 'PatLabExamSet'
 ALTER TABLE [dbo].[PatLabExamSet]
 ADD CONSTRAINT [PK_PatLabExamSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'DrugSet'
+ALTER TABLE [dbo].[DrugSet]
+ADD CONSTRAINT [PK_DrugSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -547,20 +527,6 @@ ON [dbo].[PatMMSESet]
     ([VisitRecord_Id]);
 GO
 
--- Creating foreign key on [VisitRecord_Id] in table 'PatGDSSet'
-ALTER TABLE [dbo].[PatGDSSet]
-ADD CONSTRAINT [FK_VisitRecordPatGDS]
-    FOREIGN KEY ([VisitRecord_Id])
-    REFERENCES [dbo].[VisitRecordSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK_VisitRecordPatGDS'
-CREATE INDEX [IX_FK_VisitRecordPatGDS]
-ON [dbo].[PatGDSSet]
-    ([VisitRecord_Id]);
-GO
-
 -- Creating foreign key on [PatExam_1_Id] in table 'PatBasicInforSet'
 ALTER TABLE [dbo].[PatBasicInforSet]
 ADD CONSTRAINT [FK_PatBasicInforPatExam1]
@@ -617,10 +583,24 @@ ON [dbo].[VisitRecordSet]
     ([PatBasicInforId]);
 GO
 
--- Creating foreign key on [VisitRecordId] in table 'PatRecentDrugSet'
+-- Creating foreign key on [VisitRecord_Id] in table 'PatLabExamSet'
+ALTER TABLE [dbo].[PatLabExamSet]
+ADD CONSTRAINT [FK_VisitRecordPatLabExam]
+    FOREIGN KEY ([VisitRecord_Id])
+    REFERENCES [dbo].[VisitRecordSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_VisitRecordPatLabExam'
+CREATE INDEX [IX_FK_VisitRecordPatLabExam]
+ON [dbo].[PatLabExamSet]
+    ([VisitRecord_Id]);
+GO
+
+-- Creating foreign key on [VisitRecord_Id] in table 'PatRecentDrugSet'
 ALTER TABLE [dbo].[PatRecentDrugSet]
 ADD CONSTRAINT [FK_VisitRecordPatRecentDrug]
-    FOREIGN KEY ([VisitRecordId])
+    FOREIGN KEY ([VisitRecord_Id])
     REFERENCES [dbo].[VisitRecordSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -628,7 +608,21 @@ ADD CONSTRAINT [FK_VisitRecordPatRecentDrug]
 -- Creating non-clustered index for FOREIGN KEY 'FK_VisitRecordPatRecentDrug'
 CREATE INDEX [IX_FK_VisitRecordPatRecentDrug]
 ON [dbo].[PatRecentDrugSet]
-    ([VisitRecordId]);
+    ([VisitRecord_Id]);
+GO
+
+-- Creating foreign key on [PatRecentDrugId] in table 'DrugSet'
+ALTER TABLE [dbo].[DrugSet]
+ADD CONSTRAINT [FK_PatRecentDrugDrug]
+    FOREIGN KEY ([PatRecentDrugId])
+    REFERENCES [dbo].[PatRecentDrugSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PatRecentDrugDrug'
+CREATE INDEX [IX_FK_PatRecentDrugDrug]
+ON [dbo].[DrugSet]
+    ([PatRecentDrugId]);
 GO
 
 -- --------------------------------------------------

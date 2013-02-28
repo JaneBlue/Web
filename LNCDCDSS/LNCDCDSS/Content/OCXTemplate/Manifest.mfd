@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Manifest>
+	<Files_rule_ver>001.001.001</Files_rule_ver>
+	<Template id="20111216000001" description="This is a sample file">
+		<Create module="Designer2" version="3.0.3.4" date_time="2012/01/14 08:57:23"/>
+		<Last_modify module="Designer2" version="3.0.3.4" date_time="2012/01/14 08:57:23"/>
+	</Template>
+	<Composition>
+		<Template_files>
+			<Layout>Layout.ltd</Layout>
+			<Data_source type="main" name="MainSource">MainData.dsd</Data_source>
+			<Value_list>ValueList.vld</Value_list>
+			<Rule>Rule.rls</Rule>
+			<Script>Script.spd</Script>
+		</Template_files>
+	</Composition>
+</Manifest>

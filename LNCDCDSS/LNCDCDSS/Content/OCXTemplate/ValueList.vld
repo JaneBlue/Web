@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Value_lists xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Value_list name="doctor" type="upper"/>
+	<Value_list name="technician" type="upper"/>
+</Value_lists>

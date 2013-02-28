@@ -42,6 +42,7 @@ namespace LNCDCDSS.Models
     
         public int Id { get; set; }
         public int PatBasicInforId { get; set; }
+        public string Description { get; set; }
     
         public Exam D1 { get; set; }
         public Exam D2 { get; set; }

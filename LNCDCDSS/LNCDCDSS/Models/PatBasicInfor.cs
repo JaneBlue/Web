@@ -29,6 +29,7 @@ namespace LNCDCDSS.Models
         public string Address { get; set; }
         public string Phone { get; set; }
         public string FamilyMember { get; set; }
+        public string WorkPlace { get; set; }
     
         public virtual PatPhysicalExam PatExam_1 { get; set; }
         public virtual PatDisease PatDisease { get; set; }

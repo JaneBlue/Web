@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Data_source xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header alias="header">
+        <Login_user>
+            <Login_name style="Text" direction="OnlyIn"/>
+			<User_name style="Text" direction="OnlyIn"/>
+			<User_class style="Text" direction="OnlyIn"/>
+			<User_department style="Text" direction="OnlyIn"/>
+		</Login_user>
+	</Header>
+	<ImplicitInfo>
+        <Study_sq direction="OnlyIn"/>
+		<Sort_group_name direction="OnlyIn"/>
+		<Sort_item_name direction="OnlyIn"/>
+		<Study_instance_uid direction="OnlyIn"/>
+		<Study_date style="Date" direction="OnlyIn"/>
+		<Measurement_group_sq direction="OnlyIn"/>
+		<Template_sq direction="OnlyIn"/>
+		<Report_instance_uid direction="OnlyIn"/>
+		<File_type direction="OnlyIn"/>
+		<Update_login_name direction="OnlyIn"/>
+		<Update_user_name direction="OnlyIn"/>
+		<Update_date style="Date" direction="OnlyIn"/>
+		<Drug_management_number direction="OnlyIn"/>
+	</ImplicitInfo>
+</Data_source>

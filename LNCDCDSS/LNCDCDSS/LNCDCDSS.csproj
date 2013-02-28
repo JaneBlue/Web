@@ -142,6 +142,7 @@
     <Content Include="Content\images\foot.png" />
     <Content Include="Content\images\header.png" />
     <Content Include="Content\images\main_bg.png" />
+    <Content Include="Content\images\menu_bg.png" />
     <Content Include="Content\images\normal-button.png" />
     <Content Include="Content\images\ocx_bg.png" />
     <Content Include="Content\images\split.png" />
@@ -224,6 +225,12 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\OCXTemplate\Layout.ltd" />
+    <None Include="Content\OCXTemplate\MainData.dsd" />
+    <None Include="Content\OCXTemplate\Manifest.mfd" />
+    <None Include="Content\OCXTemplate\Rule.rls" />
+    <None Include="Content\OCXTemplate\Script.spd" />
+    <None Include="Content\OCXTemplate\ValueList.vld" />
     <None Include="Models\LNCDDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>LNCDDataModel.Context.cs</LastGenOutput>
