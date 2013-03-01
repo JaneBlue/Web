@@ -8,15 +8,63 @@
 <div id="content">
 		<div id="query">
 			<h2 class="title">查询病人</h2>
-			
+			 <ul>
+            <li><div class="editor-field">@Html.LabelFor(model => model.Name,"姓名") 
+            @Html.EditorFor(model => model.Name)
+		    </div></li>
+             <li><div class="editor-field">@Html.LabelFor(model => model.Sex, "性别")
+            @Html.EditorFor(model => model.Sex)
+		    </div></li>
+             <li><div class="editor-field"><a>就诊日期</a><input type="date"></input>
+		    </div></li>
+             <li><div class="editor-field"><a>诊断结论</a>@Html.EditorFor(model => model.Sex)
+		    </div></li>
+            </ul>
+            <div class="button"><p>查询病人</p>
+            </div>
+            <div id="detail"><a>详细查询</a><img src="/Content/images/dropdown.png"></img>
+            </div>
 		</div>
 		<div id="entry">
 			<h2 class="title">新病人注册</h2>
-			
-		</div>
-	</div>
+			 <div ID="label">
+             <ul>
+              <li><div class="editor-field"><a>病历号</a>@Html.EditorFor(model => model.Sex)
+		    </div></li>
+             <li><div class="editor-field"><a>住院号</a>@Html.EditorFor(model => model.Sex)
+		    </div></li>
+            <li><div class="editor-field">@Html.LabelFor(model => model.Name,"姓名") 
+            @Html.EditorFor(model => model.Name)
+		    </div></li>
+            
+            <li><div class="editor-field">@Html.LabelFor(model => model.Sex, "性别")
+            @Html.EditorFor(model => model.Sex)
+		    </div></li>
+            
+            <li><div class="editor-field">@Html.LabelFor(model => model.Age, "年龄") 
+            @Html.EditorFor(model => model.Age)</div></li>
+             <li> <div class="editor-field">@Html.LabelFor(model => model.Education, "教育水平")
+            @Html.EditorFor(model => model.Education)
+		    </div></li>
+            <li><div class="editor-field">@Html.LabelFor(model => model.Job, "职业") 
+            @Html.EditorFor(model => model.Job) </div></li>
+          
+            <li><div class="editor-field">@Html.LabelFor(model => model.Phone, "手机")
+            @Html.EditorFor(model => model.Phone)</div></li>
+            
+            <li><div class="editor-field">@Html.LabelFor(model => model.FamilyMember, "家属")  
+            @Html.EditorFor(model => model.FamilyMember)</div></li>
+            <li> <div class="editor-field">@Html.LabelFor(model => model.ChiefDoctor, "主治医师")@Html.EditorFor(model => model.ChiefDoctor)
+		    </div></li> 
+             </div>
+            <div class="button"><p>注册新患者</p>
+            </div>
+	
 	<!-- end content -->
 	<!-- start sidebar -->
+ </div>
+
+ </div>
 	<div id="sidebar">
     <h2> 病人列表</h2>
 		<ul>
@@ -34,3 +82,4 @@
 			
 		</ul>
 	</div>
+    

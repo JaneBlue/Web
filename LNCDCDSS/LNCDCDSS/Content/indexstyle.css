@@ -145,7 +145,8 @@ background:url(images/foot.png) no-repeat bottom;
 	margin:10px 25px 0 0;
 }
 #btn1
-{height: 37px;
+{
+    height: 37px;
 	float: right;
 	width :138px;
 	background: url(images/normal-button.png) no-repeat ;

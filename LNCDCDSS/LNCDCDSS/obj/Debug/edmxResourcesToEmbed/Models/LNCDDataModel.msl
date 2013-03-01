@@ -18,11 +18,12 @@
           <ScalarProperty Name="DoctorAccountId" ColumnName="DoctorAccountId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Sex" ColumnName="Sex" />
-          <ScalarProperty Name="Age" ColumnName="Birthday" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
           <ScalarProperty Name="Education" ColumnName="Education" />
           <ScalarProperty Name="Job" ColumnName="Job" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="FamilyMember" ColumnName="FamilyMember" />
+          <ScalarProperty Name="ChiefDoctor" ColumnName="ChiefDoctor" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -310,6 +311,7 @@
             <ScalarProperty Name="Result" ColumnName="ImportantD_Result" />
             <ScalarProperty Name="Note" ColumnName="ImportantD_Note" />
           </ComplexProperty>
+          <ScalarProperty Name="Description" ColumnName="Description" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -322,6 +324,8 @@
           <ScalarProperty Name="DiagnosisiResult" ColumnName="DiagnosisiResult" />
           <ScalarProperty Name="CDSSDiagnosis" ColumnName="CDSSDiagnosis" />
           <ScalarProperty Name="RecordNote" ColumnName="RecordNote" />
+          <ScalarProperty Name="OutpatientID" ColumnName="OutpatientID" />
+          <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -459,7 +463,6 @@
       <EndProperty Name="PatRecentDrug">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
-      <Condition ColumnName="VisitRecord_Id" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

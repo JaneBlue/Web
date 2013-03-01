@@ -2,7 +2,19 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LoginLayout.cshtml";
 }
 
-<h2>Index</h2>
-@Html.ActionLink("这是一个连接", "Index", "EnterPatInfor")
+
+<h>请登录</h>
+<div id="main">
+
+<ul>
+            <li><div class="editor-field"><a>用户名</a> 
+            <input type ="text"></input></div></li>
+            <li><div class="editor-field"><a>密码</a> 
+            <input type ="text"></input></div></li>
+   </ul>
+   </div>
+    <div class="button"><p>查询病人</p>
+            </div>

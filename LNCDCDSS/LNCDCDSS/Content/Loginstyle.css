@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0;
+	padding: 0;
+	background-color:#c0c0c0;
+	font-size: 13px;
+	color:#000;
+	
+}
+h
+{
+    padding: 50px 0 0 84px;
+    font-size: 24px;
+}
+.head{
+	width: 962px;
+	height: 162px;
+	margin: 0 auto;
+	background: url(images/Login/head.png) no-repeat ;
+}
+.content {
+	width: 960px;
+	margin: 0 auto;
+	height:638px;
+	background: url(images/Login/content.png) no-repeat ;
+}
+.login
+{
+	width: 325px;
+	height: 459px;
+	float: right;
+	margin:40px 60px 0 0;
+	padding:10px 40px 0 0;
+	background: url(images/Login/login.png) no-repeat ;
+}
+.footer {
+	clear: both;
+	width: 962px;
+	height: 118px;
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	background: url(images/Login/footer.png) no-repeat ;
+	
+}
+div.editor-field
+{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+li
+{
+    display:block;
+    text-decoration:none;
+}
+input
+{
+    font-size: 16px;
+    padding:  0;
+    float:right;
+    margin: 2px 0 0 0;
+    
+}
+p
+{
+    margin-top: 9px;
+}
+.button
+{
+    height: 37px;
+	float: left;
+	margin-left:100px;
+	width :138px;
+    background: url(images/normal-button.png) no-repeat ;
+    text-align:center;
+}
+#main
+{
+    margin-top:20px;
+}

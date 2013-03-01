@@ -75,12 +75,12 @@
     <Property Name="DoctorAccountId" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Sex" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Birthday" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Age" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Education" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Job" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Phone" Type="nvarchar(max)" Nullable="false" />
     <Property Name="FamilyMember" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChiefDoctor" Type="nvarchar(max)" Nullable="false" />
     <Property Name="PatExam_1_Id" Type="int" Nullable="false" />
     <Property Name="PatDisease_Id" Type="int" Nullable="false" />
   </EntityType>
@@ -288,6 +288,7 @@
     <Property Name="ImportantD_Date" Type="datetime" Nullable="false" />
     <Property Name="ImportantD_Result" Type="bit" Nullable="false" />
     <Property Name="ImportantD_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="VisitRecordSet">
     <Key>
@@ -299,6 +300,8 @@
     <Property Name="DiagnosisiResult" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CDSSDiagnosis" Type="nvarchar(max)" Nullable="false" />
     <Property Name="RecordNote" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OutpatientID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="HospitalID" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="PatRecentDrugSet">
     <Key>

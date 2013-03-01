@@ -4,16 +4,24 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color:#c0c0c0;
-	font-size: 13px;
+	font-size: 17px;
 	color:#000;
 	
 }
 
-body, th, td, input, textarea, select, option {
+body, th, td,  textarea, select, option {
 	text-transform: lowercase;
 	font-family: Arial, Helvetica, sans-serif. Times, serif;
+	font-size: 18px;
 }
-
+input
+{
+    font-size: 16px;
+    padding:  0;
+    float:right;
+    margin: 8px 0 0 0;
+    
+}
 h1, h2, h3 {
 	font-weight: normal;
 	color: #000000;
@@ -21,24 +29,32 @@ h1, h2, h3 {
 
 h1 {
 	letter-spacing: -2px;
-	font-size: 3em;
+	font-size: 2em;
 }
 
 h2 {
 	letter-spacing: -1px;
-	font-size: 2em;
+	font-size: 24px;
 }
 
 h3 {
 	font-size: 1em;
 }
 
-p, ul, ol {
+ul, ol {
 	line-height: 200%;
 	display:block;
+	padding:0;
 }
-
-
+li
+{
+    display:block;
+    text-decoration:none;
+}
+p
+{
+    margin-top: 9px;
+}
 
 
 
@@ -92,14 +108,21 @@ p, ul, ol {
 #query {
 	padding: 0 0 20px 0;
 	float: left;
-	width: 320px;
+	width: 290px;
+	padding:0 20px 0 20px;
 	
+}
+#detail
+{
+    float:left;
+    
 }
 #entry {
 	float: right;
-	width: 380px;
+	width: 310px;
 	height: 505px;
 	border-left: 2px  solid #c0c0c0 ;
+	padding :0 30px 0 30px;
 }
 
 .title {
@@ -108,9 +131,20 @@ p, ul, ol {
 	
 }
 
+.button
+{
+    height: 37px;
+	float: left;
+	width :138px;
+    background: url(images/normal-button.png) no-repeat ;
+    text-align:center;
+}
 
-
-
+div.editor-field
+{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
 
 
 
@@ -163,11 +197,8 @@ p, ul, ol {
 	margin: 0 auto;
 	padding: 0 0 0 0;
 	background: url(images/foot-2.png) no-repeat ;
-	text-align: center;
 	font-size: smaller;
 	color: #52640A;
 }
 
-#footer a {
-	color: #003300;
-}
+
