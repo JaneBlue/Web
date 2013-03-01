@@ -23,13 +23,12 @@ namespace LNCDCDSS.Models
         public int DoctorAccountId { get; set; }
         public string Name { get; set; }
         public string Sex { get; set; }
-        public string Birthday { get; set; }
+        public string Age { get; set; }
         public string Education { get; set; }
         public string Job { get; set; }
-        public string Address { get; set; }
         public string Phone { get; set; }
         public string FamilyMember { get; set; }
-        public string WorkPlace { get; set; }
+        public string ChiefDoctor { get; set; }
     
         public virtual PatPhysicalExam PatExam_1 { get; set; }
         public virtual PatDisease PatDisease { get; set; }

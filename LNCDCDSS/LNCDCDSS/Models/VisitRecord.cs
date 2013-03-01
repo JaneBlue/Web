@@ -20,7 +20,8 @@ namespace LNCDCDSS.Models
         public string DiagnosisiResult { get; set; }
         public string CDSSDiagnosis { get; set; }
         public string RecordNote { get; set; }
-        public string PatAge { get; set; }
+        public string OutpatientID { get; set; }
+        public string HospitalID { get; set; }
     
         public virtual PatADL PatADL { get; set; }
         public virtual PatMoCA PatMoCA { get; set; }

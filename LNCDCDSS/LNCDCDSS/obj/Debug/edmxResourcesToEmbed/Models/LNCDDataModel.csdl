@@ -80,12 +80,12 @@
     <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.PatBasicInforVisitRecord" FromRole="PatBasicInfor" ToRole="VisitRecord" />
     <Property Type="String" Name="Name" Nullable="false" />
     <Property Type="String" Name="Sex" Nullable="false" />
-    <Property Type="String" Name="Birthday" Nullable="false" />
+    <Property Type="String" Name="Age" Nullable="false" />
     <Property Type="String" Name="Education" Nullable="false" />
     <Property Type="String" Name="Job" Nullable="false" />
-    <Property Type="String" Name="Address" Nullable="false" />
     <Property Type="String" Name="Phone" Nullable="false" />
     <Property Type="String" Name="FamilyMember" Nullable="false" />
+    <Property Type="String" Name="ChiefDoctor" Nullable="false" />
   </EntityType>
   <EntityType Name="PatPhysicalExam">
     <Key>
@@ -231,6 +231,7 @@
     <Property Name="D20" Type="LNCDDataModel.Exam" Nullable="false" />
     <Property Name="D21" Type="LNCDDataModel.Exam" Nullable="false" />
     <Property Name="ImportantD" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="false" />
   </EntityType>
   <EntityType Name="VisitRecord">
     <Key>
@@ -249,6 +250,8 @@
     <Property Type="String" Name="RecordNote" Nullable="false" />
     <NavigationProperty Name="PatLabExam" Relationship="LNCDDataModel.VisitRecordPatLabExam" FromRole="VisitRecord" ToRole="PatLabExam" />
     <NavigationProperty Name="PatRecentDrug" Relationship="LNCDDataModel.VisitRecordPatRecentDrug" FromRole="VisitRecord" ToRole="PatRecentDrug" />
+    <Property Type="String" Name="OutpatientID" Nullable="false" />
+    <Property Type="String" Name="HospitalID" Nullable="false" />
   </EntityType>
   <Association Name="VisitRecordPatADL">
     <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />

@@ -18,10 +18,9 @@
           <ScalarProperty Name="DoctorAccountId" ColumnName="DoctorAccountId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Sex" ColumnName="Sex" />
-          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Age" ColumnName="Birthday" />
           <ScalarProperty Name="Education" ColumnName="Education" />
           <ScalarProperty Name="Job" ColumnName="Job" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="FamilyMember" ColumnName="FamilyMember" />
         </MappingFragment>

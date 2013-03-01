@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0;
+	padding: 0;
+	background-color:#c0c0c0;
+	font-size: 13px;
+	color:#000;
+	
+}
+
+body, th, td, input, textarea, select, option {
+	text-transform: lowercase;
+	font-family: Arial, Helvetica, sans-serif. Times, serif;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+	color: #000000;
+}
+
+h1 {
+	letter-spacing: -2px;
+	font-size: 3em;
+}
+
+h2 {
+	letter-spacing: -1px;
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1em;
+}
+
+p, ul, ol {
+	line-height: 200%;
+	display:block;
+}
+
+
+
+
+
+#wrapper {
+}
+/* Header */
+
+#header {
+	width: 962px;
+	height: 162px;
+	margin: 0 auto;
+	background: url(images/head-FirstPage.png) no-repeat right top;
+}
+
+#header h1, #header p {
+	margin: 0;
+	color: #000000;
+}
+
+#header h1 {
+	
+	padding: 50px 0 0 184px;
+}
+
+#header p {
+	padding-left: 93px;
+	margin-top: -10px;
+}
+#header a {
+	color: #E6B715;
+}
+
+/* Page */
+
+#page {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* Content */
+
+#content {
+	float: right;
+	width: 704px;
+	height:715px;
+	margin: 0;
+	background: url(images/Content.png) no-repeat ;
+	
+}
+
+#query {
+	padding: 0 0 20px 0;
+	float: left;
+	width: 320px;
+	
+}
+#entry {
+	float: right;
+	width: 380px;
+	height: 505px;
+	border-left: 2px  solid #c0c0c0 ;
+}
+
+.title {
+	margin: 0;
+	padding-bottom: 5px;
+	
+}
+
+
+
+
+
+
+
+/* Sidebar */
+
+#sidebar {
+	float: left;
+	width: 256px;
+	height: 715px;
+	background: url(images/sidebar.png) no-repeat ;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li
+{
+	margin: 10px 10px 0 10px;
+	width: 205 px;
+	background-color:#B9DCF2;
+	
+}
+
+#sidebar h2 {
+	text-decoration: none;
+	padding: 0 2px 0 64px;
+	margin:0;
+}
+
+#sidebar a {
+	color: #000000;
+	font-size:20px;
+	margin: 20px;
+}
+
+#sidebar a:hover {
+	text-decoration: none;
+	color: #E6B715;
+}
+
+/* Footer */
+
+#footer {
+	clear: both;
+	width: 962px;
+	height: 118px;
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	background: url(images/foot-2.png) no-repeat ;
+	text-align: center;
+	font-size: smaller;
+	color: #52640A;
+}
+
+#footer a {
+	color: #003300;
+}

@@ -137,6 +137,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\Content.png" />
+    <Content Include="Content\images\foot-2.png" />
+    <Content Include="Content\images\head-FirstPage.png" />
+    <Content Include="Content\images\sidebar.png" />
+    <Content Include="Content\patstyle.css" />
     <Content Include="Content\images\circle-blue.png" />
     <Content Include="Content\images\circle-orange.png" />
     <Content Include="Content\images\foot.png" />

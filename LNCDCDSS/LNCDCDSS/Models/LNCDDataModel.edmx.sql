@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 02/25/2013 14:10:11
+-- Date Created: 03/01/2013 09:09:31
 -- Generated from EDMX file: D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\Models\LNCDDataModel.edmx
 -- --------------------------------------------------
 
@@ -41,8 +41,14 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_PatBasicInforVisitRecord]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[VisitRecordSet] DROP CONSTRAINT [FK_PatBasicInforVisitRecord];
 GO
+IF OBJECT_ID(N'[dbo].[FK_VisitRecordPatLabExam]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PatLabExamSet] DROP CONSTRAINT [FK_VisitRecordPatLabExam];
+GO
 IF OBJECT_ID(N'[dbo].[FK_VisitRecordPatRecentDrug]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[PatRecentDrugSet] DROP CONSTRAINT [FK_VisitRecordPatRecentDrug];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PatRecentDrugDrug]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[DrugSet] DROP CONSTRAINT [FK_PatRecentDrugDrug];
 GO
 
 -- --------------------------------------------------
@@ -82,6 +88,9 @@ GO
 IF OBJECT_ID(N'[dbo].[PatLabExamSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PatLabExamSet];
 GO
+IF OBJECT_ID(N'[dbo].[DrugSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DrugSet];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -102,12 +111,12 @@ CREATE TABLE [dbo].[PatBasicInforSet] (
     [DoctorAccountId] int  NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
     [Sex] nvarchar(max)  NOT NULL,
-    [Birthday] nvarchar(max)  NOT NULL,
+    [Age] nvarchar(max)  NOT NULL,
     [Education] nvarchar(max)  NOT NULL,
     [Job] nvarchar(max)  NOT NULL,
-    [Address] nvarchar(max)  NOT NULL,
     [Phone] nvarchar(max)  NOT NULL,
     [FamilyMember] nvarchar(max)  NOT NULL,
+    [ChiefDoctor] nvarchar(max)  NOT NULL,
     [PatExam_1_Id] int  NOT NULL,
     [PatDisease_Id] int  NOT NULL
 );
@@ -314,7 +323,8 @@ CREATE TABLE [dbo].[PatDiseaseSet] (
     [D21_Note] nvarchar(max)  NOT NULL,
     [ImportantD_Date] datetime  NOT NULL,
     [ImportantD_Result] bit  NOT NULL,
-    [ImportantD_Note] nvarchar(max)  NOT NULL
+    [ImportantD_Note] nvarchar(max)  NOT NULL,
+    [Description] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -325,7 +335,9 @@ CREATE TABLE [dbo].[VisitRecordSet] (
     [VisitRecordID] nvarchar(max)  NOT NULL,
     [DiagnosisiResult] nvarchar(max)  NOT NULL,
     [CDSSDiagnosis] nvarchar(max)  NOT NULL,
-    [RecordNote] nvarchar(max)  NOT NULL
+    [RecordNote] nvarchar(max)  NOT NULL,
+    [OutpatientID] nvarchar(max)  NOT NULL,
+    [HospitalID] nvarchar(max)  NOT NULL
 );
 GO
 
