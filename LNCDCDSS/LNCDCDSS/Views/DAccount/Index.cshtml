@@ -9,12 +9,22 @@
 <h>请登录</h>
 <div id="main">
 
+ @using (Html.BeginForm())
+{  
+    
+
+
+
 <ul>
             <li><div class="editor-field"><a>用户名</a> 
-            <input type ="text"></input></div></li>
+            @Html.EditorFor(model => model.UserName)</div></li>
             <li><div class="editor-field"><a>密码</a> 
-            <input type ="text"></input></div></li>
+            @Html.EditorFor(model => model.PassWord)</div></li>
    </ul>
+     <p><input type="submit" value="登录" /> </p>
+        
+}     
    </div>
-    <div class="button"><p>查询病人</p>
-            </div>
+ 
+ 
+               

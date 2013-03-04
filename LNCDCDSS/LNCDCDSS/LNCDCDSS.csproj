@@ -122,6 +122,7 @@
     <Compile Include="Models\PatMoCA.cs">
       <DependentUpon>LNCDDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PatOperation.cs" />
     <Compile Include="Models\PatOtherTest.cs">
       <DependentUpon>LNCDDataModel.tt</DependentUpon>
     </Compile>

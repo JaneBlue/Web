@@ -64,6 +64,12 @@ input
 p
 {
     margin-top: 9px;
+    height: 37px;
+	float: left;
+	margin-left:100px;
+	width :138px;
+    background: url(images/normal-button.png) no-repeat ;
+    text-align:center;
 }
 .button
 {
