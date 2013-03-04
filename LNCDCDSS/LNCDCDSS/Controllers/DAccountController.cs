@@ -15,21 +15,22 @@ namespace LNCDCDSS.Controllers
        
         public ActionResult Index()
         {
-            return Redirect("/Diagnosis/Index");
+            return View();
         }
         [HttpPost]
-        public ActionResult Index(DoctorAccount dacount)
+        public ActionResult  Index(DoctorAccount dacount)
         {
             var students = from s in DataContainer.DoctorAccountSet.ToList() select s;
-            var student = students.Where(s => s.UserName==dacount.UserName ).FirstOrDefault();
+            var student = students.Where(s => s.UserName==dacount.UserName && s.PassWord==dacount.PassWord).FirstOrDefault();
           if (student!=null)
           {
               return Redirect("/EnterPatInfor/Index");
+ 
           }
           else
             {
-
-                return View(dacount);
+                ViewBag.message = "用户名或密码错误";
+                return View();
             }
           
 

@@ -22,18 +22,20 @@
             </ul>
             <div class="button"><p>查询病人</p>
             </div>
-            <div id="detail"><a>详细查询</a><img src="/Content/images/dropdown.png"></img>
+            <div id="detail"><a>详细查询</a>
             </div>
 		</div>
 		<div id="entry">
 			<h2 class="title">新病人注册</h2>
 			 <div ID="label">
+              @using (Html.BeginForm())
+              {
              <ul>
               <li><div class="editor-field"><a>病历号</a>@Html.EditorFor(model => model.Sex)
 		    </div></li>
              <li><div class="editor-field"><a>住院号</a>@Html.EditorFor(model => model.Sex)
 		    </div></li>
-            <li><div class="editor-field">@Html.LabelFor(model => model.Name,"姓名") 
+            <li><div class="editor-field">@Html.LabelFor(model => model.Name, "姓名") 
             @Html.EditorFor(model => model.Name)
 		    </div></li>
             
@@ -56,15 +58,17 @@
             @Html.EditorFor(model => model.FamilyMember)</div></li>
             <li> <div class="editor-field">@Html.LabelFor(model => model.ChiefDoctor, "主治医师")@Html.EditorFor(model => model.ChiefDoctor)
 		    </div></li> 
-             </div>
-            <div class="button"><p>注册新患者</p>
-            </div>
-	
+            </ul>
+            
+            <p><input type="submit" value="注册新患者" /></p>
+            
+              }
 	<!-- end content -->
 	<!-- start sidebar -->
  </div>
 
  </div>
+  </div>
 	<div id="sidebar">
     <h2> 病人列表</h2>
 		<ul>
@@ -82,4 +86,4 @@
 			
 		</ul>
 	</div>
-    
+   

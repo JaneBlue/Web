@@ -84,3 +84,19 @@ p
 {
     margin-top:20px;
 }
+#msg
+{
+    display:block;
+    font-size :20px;
+    color:Red;
+}
+input[type="submit"]
+{
+     height: 37px;
+	float: left;
+	margin-left:100px;
+	width :138px;
+    background: url(images/normal-button.png) no-repeat ;
+    text-align:center;
+    border:0;
+}
