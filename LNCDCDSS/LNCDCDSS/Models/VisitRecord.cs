@@ -15,7 +15,7 @@ namespace LNCDCDSS.Models
     public partial class VisitRecord
     {
         public int Id { get; set; }
-        public int PatBasicInforId { get; set; }
+        public string PatBasicInforId { get; set; }
         public string VisitRecordID { get; set; }
         public string DiagnosisiResult { get; set; }
         public string CDSSDiagnosis { get; set; }

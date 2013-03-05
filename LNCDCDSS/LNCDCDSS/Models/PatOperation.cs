@@ -12,9 +12,17 @@ namespace LNCDCDSS.Models
         {
             return context.PatBasicInforSet.ToList();
         }
-        public void InsertPat(PatBasicInfor pat)
+        public void InsertPat(PatBasicInfor pat, string PID, string HID)
         {
+            pat.Id = System.Guid.NewGuid().ToString().Replace("-", "");
             context.PatBasicInforSet.Add(pat);
+            
+            VisitRecord r = new VisitRecord();
+            r.PatBasicInforId = pat.Id;
+            r.HospitalID = HID;
+            r.OutpatientID = PID;
+            context.VisitRecordSet.Add(r);
         }
+
     }
 }

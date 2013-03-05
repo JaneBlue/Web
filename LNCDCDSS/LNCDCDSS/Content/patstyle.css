@@ -18,9 +18,10 @@ input
 {
     font-size: 16px;
     padding:  0;
-    float:right;
+    float : right;
     margin: 8px 0 0 0;
-    
+    width:120px;
+   
 }
 h1, h2, h3 {
 	font-weight: normal;
@@ -145,7 +146,16 @@ div.editor-field
     margin-bottom: 10px;
     font-size: 20px;
 }
-
+input[type="submit"]
+{
+     height: 37px;
+	float: left;
+	margin-left:100px;
+	width :138px;
+    background: url(images/normal-button.png) no-repeat ;
+    text-align:center;
+    border:0;
+}
 
 
 /* Sidebar */

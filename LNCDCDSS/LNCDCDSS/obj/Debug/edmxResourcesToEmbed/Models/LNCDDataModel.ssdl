@@ -71,7 +71,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="nvarchar" StoreGeneratedPattern="Identity" Nullable="false" MaxLength="255" />
     <Property Name="DoctorAccountId" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Sex" Type="nvarchar(max)" Nullable="false" />
@@ -295,7 +295,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="PatBasicInforId" Type="int" Nullable="false" />
+    <Property Name="PatBasicInforId" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="VisitRecordID" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DiagnosisiResult" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CDSSDiagnosis" Type="nvarchar(max)" Nullable="false" />

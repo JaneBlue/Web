@@ -7,9 +7,11 @@
 
 <div id="content">
 		<div id="query">
+           @using (Html.BeginForm("Query"))
+           {
 			<h2 class="title">查询病人</h2>
 			 <ul>
-            <li><div class="editor-field">@Html.LabelFor(model => model.Name,"姓名") 
+            <li><div class="editor-field">@Html.LabelFor(model => model.Name, "姓名") 
             @Html.EditorFor(model => model.Name)
 		    </div></li>
              <li><div class="editor-field">@Html.LabelFor(model => model.Sex, "性别")
@@ -20,20 +22,21 @@
              <li><div class="editor-field"><a>诊断结论</a>@Html.EditorFor(model => model.Sex)
 		    </div></li>
             </ul>
-            <div class="button"><p>查询病人</p>
-            </div>
+         
+             <p><input type="submit" value="查询病人" /></p>
             <div id="detail"><a>详细查询</a>
             </div>
+                 }
 		</div>
 		<div id="entry">
 			<h2 class="title">新病人注册</h2>
 			 <div ID="label">
-              @using (Html.BeginForm())
+              @using (Html.BeginForm("Index"))
               {
              <ul>
-              <li><div class="editor-field"><a>病历号</a>@Html.EditorFor(model => model.Sex)
+              <li><div class="editor-field"><a>门诊号</a><input type="text" name="门诊号"/>
 		    </div></li>
-             <li><div class="editor-field"><a>住院号</a>@Html.EditorFor(model => model.Sex)
+             <li><div class="editor-field"><a>住院号</a><input type="text" name="住院号"/>
 		    </div></li>
             <li><div class="editor-field">@Html.LabelFor(model => model.Name, "姓名") 
             @Html.EditorFor(model => model.Name)

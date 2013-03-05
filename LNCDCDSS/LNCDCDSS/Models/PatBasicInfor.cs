@@ -19,7 +19,7 @@ namespace LNCDCDSS.Models
             this.VisitRecord = new HashSet<VisitRecord>();
         }
     
-        public int Id { get; set; }
+        public string Id { get; set; }
         public int DoctorAccountId { get; set; }
         public string Name { get; set; }
         public string Sex { get; set; }

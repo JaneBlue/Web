@@ -76,7 +76,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="nvarchar" StoreGeneratedPattern="Identity" Nullable="false" MaxLength="255" />
     <Property Name="DoctorAccountId" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Sex" Type="nvarchar(max)" Nullable="false" />
@@ -300,7 +300,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="PatBasicInforId" Type="int" Nullable="false" />
+    <Property Name="PatBasicInforId" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="VisitRecordID" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DiagnosisiResult" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CDSSDiagnosis" Type="nvarchar(max)" Nullable="false" />
@@ -578,7 +578,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" MaxLength="255" />
           <NavigationProperty Name="PatExam_1" Relationship="LNCDDataModel.PatBasicInforPatExam1" FromRole="PatBasicInfor" ToRole="PatExam" />
           <NavigationProperty Name="PatDisease" Relationship="LNCDDataModel.PatBasicInforPatDisease" FromRole="PatBasicInfor" ToRole="PatDisease" />
           <NavigationProperty Name="DoctorAccount" Relationship="LNCDDataModel.DoctorAccountPatBasicInfor" FromRole="PatBasicInfor" ToRole="DoctorAccount" />
@@ -743,13 +743,13 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
           <NavigationProperty Name="PatADL" Relationship="LNCDDataModel.VisitRecordPatADL" FromRole="VisitRecord" ToRole="PatADL" />
           <NavigationProperty Name="PatMoCA" Relationship="LNCDDataModel.VisitRecordPatMoCA" FromRole="VisitRecord" ToRole="PatMoCA" />
           <NavigationProperty Name="PatOtherTest" Relationship="LNCDDataModel.VisitRecordPatOtherTest" FromRole="VisitRecord" ToRole="PatOtherTest" />
           <NavigationProperty Name="PatMMSE" Relationship="LNCDDataModel.VisitRecordPatMMSE" FromRole="VisitRecord" ToRole="PatMMSE" />
           <NavigationProperty Name="PatBasicInfor" Relationship="LNCDDataModel.PatBasicInforVisitRecord" FromRole="VisitRecord" ToRole="PatBasicInfor" />
-          <Property Type="Int32" Name="PatBasicInforId" Nullable="false" />
+          <Property Type="String" Name="PatBasicInforId" Nullable="false" MaxLength="255" />
           <Property Type="String" Name="VisitRecordID" Nullable="false" />
           <Property Type="String" Name="DiagnosisiResult" Nullable="false" />
           <Property Type="String" Name="CDSSDiagnosis" Nullable="false" />
@@ -1387,13 +1387,13 @@
     <edmx:Diagrams>
       <Diagram Name="LNCDDataModel" >
         <EntityTypeShape EntityType="LNCDDataModel.DoctorAccount" Width="1.5" PointX="0.5" PointY="0.75" Height="1.9700325520833339" />
-        <EntityTypeShape EntityType="LNCDDataModel.PatBasicInfor" Width="1.5" PointX="3.25" PointY="0.5" Height="3.6892097981770826" />
+        <EntityTypeShape EntityType="LNCDDataModel.PatBasicInfor" Width="2" PointX="3.25" PointY="0.625" Height="3.6892097981770826" />
         <EntityTypeShape EntityType="LNCDDataModel.PatPhysicalExam" Width="1.5" PointX="8.125" PointY="0.5" Height="5.9814461263020826" />
         <EntityTypeShape EntityType="LNCDDataModel.PatMMSE" Width="1.5" PointX="10.25" PointY="5.375" Height="3.6892097981770817" />
         <EntityTypeShape EntityType="LNCDDataModel.PatMoCA" Width="1.5" PointX="0.625" PointY="3.125" Height="3.3071704101562496" />
         <EntityTypeShape EntityType="LNCDDataModel.PatADL" Width="1.5" PointX="0.5" PointY="7" Height="5.4083870442708335" />
         <EntityTypeShape EntityType="LNCDDataModel.PatOtherTest" Width="1.875" PointX="3.75" PointY="9.25" Height="3.8802294921874996" />
-        <EntityTypeShape EntityType="LNCDDataModel.PatDisease" Width="1.5" PointX="5.625" PointY="0.625" Height="5.9814461263020826" />
+        <EntityTypeShape EntityType="LNCDDataModel.PatDisease" Width="1.5" PointX="6.375" PointY="0.625" Height="5.9814461263020826" />
         <EntityTypeShape EntityType="LNCDDataModel.VisitRecord" Width="1.5" PointX="3.625" PointY="5" Height="3.8802294921874996" />
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatADL">
           <ConnectorPoint PointX="3.625" PointY="7.94011474609375" />
@@ -1408,25 +1408,28 @@
           <ConnectorPoint PointX="4.4375" PointY="9.25" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatMMSE">
-          <ConnectorPoint PointX="5.125" PointY="7.1782230631510409" />
-          <ConnectorPoint PointX="10.25" PointY="7.1782230631510409" />
+          <ConnectorPoint PointX="5.125" PointY="7.1782230631510417" />
+          <ConnectorPoint PointX="10.25" PointY="7.1782230631510417" />
         </AssociationConnector>
         <EntityTypeShape EntityType="LNCDDataModel.PatRecentDrug" Width="1.5" PointX="6.625" PointY="7.75" Height="1.7790128580729174" />
         <AssociationConnector Association="LNCDDataModel.PatBasicInforPatExam1">
-          <ConnectorPoint PointX="4.75" PointY="0.53125000000000011" />
-          <ConnectorPoint PointX="8.125" PointY="0.53125000000000011" />
+          <ConnectorPoint PointX="5.25" PointY="0.625" />
+          <ConnectorPoint PointX="5.625" PointY="0.25" />
+          <ConnectorPoint PointX="5.625" PointY="0.125" />
+          <ConnectorPoint PointX="7.75" PointY="0.125" />
+          <ConnectorPoint PointX="8.125" PointY="0.5" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.PatBasicInforPatDisease">
-          <ConnectorPoint PointX="4.75" PointY="2.4071048990885413" />
-          <ConnectorPoint PointX="5.625" PointY="2.4071048990885413" />
+          <ConnectorPoint PointX="5.25" PointY="2.5008573990885421" />
+          <ConnectorPoint PointX="6.375" PointY="2.5008573990885421" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.DoctorAccountPatBasicInfor">
           <ConnectorPoint PointX="2" PointY="1.7350162760416672" />
           <ConnectorPoint PointX="3.25" PointY="1.7350162760416672" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.PatBasicInforVisitRecord">
-          <ConnectorPoint PointX="4.1875" PointY="4.1892097981770826" />
-          <ConnectorPoint PointX="4.1875" PointY="5" />
+          <ConnectorPoint PointX="4.375" PointY="4.3142097981770826" />
+          <ConnectorPoint PointX="4.375" PointY="5" />
         </AssociationConnector>
         <EntityTypeShape EntityType="LNCDDataModel.PatLabExam" Width="1.5" PointX="8.375" PointY="9.75" Height="7.1275642903645835" />
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatLabExam" ManuallyRouted="false">

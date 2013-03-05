@@ -72,7 +72,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" MaxLength="255" />
     <NavigationProperty Name="PatExam_1" Relationship="LNCDDataModel.PatBasicInforPatExam1" FromRole="PatBasicInfor" ToRole="PatExam" />
     <NavigationProperty Name="PatDisease" Relationship="LNCDDataModel.PatBasicInforPatDisease" FromRole="PatBasicInfor" ToRole="PatDisease" />
     <NavigationProperty Name="DoctorAccount" Relationship="LNCDDataModel.DoctorAccountPatBasicInfor" FromRole="PatBasicInfor" ToRole="DoctorAccount" />
@@ -237,13 +237,13 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
     <NavigationProperty Name="PatADL" Relationship="LNCDDataModel.VisitRecordPatADL" FromRole="VisitRecord" ToRole="PatADL" />
     <NavigationProperty Name="PatMoCA" Relationship="LNCDDataModel.VisitRecordPatMoCA" FromRole="VisitRecord" ToRole="PatMoCA" />
     <NavigationProperty Name="PatOtherTest" Relationship="LNCDDataModel.VisitRecordPatOtherTest" FromRole="VisitRecord" ToRole="PatOtherTest" />
     <NavigationProperty Name="PatMMSE" Relationship="LNCDDataModel.VisitRecordPatMMSE" FromRole="VisitRecord" ToRole="PatMMSE" />
     <NavigationProperty Name="PatBasicInfor" Relationship="LNCDDataModel.PatBasicInforVisitRecord" FromRole="VisitRecord" ToRole="PatBasicInfor" />
-    <Property Type="Int32" Name="PatBasicInforId" Nullable="false" />
+    <Property Type="String" Name="PatBasicInforId" Nullable="false" MaxLength="255" />
     <Property Type="String" Name="VisitRecordID" Nullable="false" />
     <Property Type="String" Name="DiagnosisiResult" Nullable="false" />
     <Property Type="String" Name="CDSSDiagnosis" Nullable="false" />

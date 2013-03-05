@@ -118,6 +118,14 @@ width: 138px;
 display:block;
 margin:0px 26px  0 0;
 float:left;	
+
+}
+#direct ul li.active a{
+height:27px;
+width: 138px;
+display:block;
+margin:0px 26px  0 0;
+float:left;	
 background:url(images/triangle.png) no-repeat ;
 }
 /*------------------------------------center content--------------------*/

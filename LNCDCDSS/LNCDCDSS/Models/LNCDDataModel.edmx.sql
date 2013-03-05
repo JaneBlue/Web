@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 03/01/2013 09:09:31
+-- Date Created: 03/05/2013 10:51:02
 -- Generated from EDMX file: D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\Models\LNCDDataModel.edmx
 -- --------------------------------------------------
 
@@ -107,7 +107,7 @@ GO
 
 -- Creating table 'PatBasicInforSet'
 CREATE TABLE [dbo].[PatBasicInforSet] (
-    [Id] int IDENTITY(1,1) NOT NULL,
+    [Id] nvarchar(255)  NOT NULL,
     [DoctorAccountId] int  NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
     [Sex] nvarchar(max)  NOT NULL,
@@ -331,7 +331,7 @@ GO
 -- Creating table 'VisitRecordSet'
 CREATE TABLE [dbo].[VisitRecordSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [PatBasicInforId] int  NOT NULL,
+    [PatBasicInforId] nvarchar(255)  NOT NULL,
     [VisitRecordID] nvarchar(max)  NOT NULL,
     [DiagnosisiResult] nvarchar(max)  NOT NULL,
     [CDSSDiagnosis] nvarchar(max)  NOT NULL,

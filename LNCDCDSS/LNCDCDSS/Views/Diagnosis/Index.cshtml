@@ -13,11 +13,22 @@
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
         var b = OCX.OpenReport("D:\\2013CDSS\\TemplateForReporter\\LNCDtemp");
-
-        if (b == 0) alert("Return value is 0, success");
-        else alert("Failed to create a new report");
         OCX.ShowReport();
+        OCX.ShowThisPage("基本情况");
         // })
-    })
 
+        $(".button").click(function () {
+            var OCX = document.getElementById('Reporter2');
+            var b = OCX.OpenReport("D:\\2013CDSS\\TemplateForReporter\\LNCDtemp");
+
+            $(".selected").next().addClass("selected");
+            var name = $(".selected").last().attr("id");
+            $(".active").next().addClass("active");
+            $(".active").first().removeClass("active");
+            OCX.ShowReport(); 
+            OCX.ShowThisPage(name);
+            
+        });
+    });
+  
 </script>
