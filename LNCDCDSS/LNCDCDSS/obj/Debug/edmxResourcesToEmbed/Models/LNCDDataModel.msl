@@ -109,6 +109,7 @@
             <ScalarProperty Name="Result" ColumnName="B12f_Result" />
             <ScalarProperty Name="Note" ColumnName="B12f_Note" />
           </ComplexProperty>
+          <ScalarProperty Name="PatBasicInforId" ColumnName="PatBasicInforId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -201,115 +202,93 @@
         <MappingFragment StoreEntitySet="PatDiseaseSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="PatBasicInforId" ColumnName="PatBasicInforId" />
-          <ComplexProperty Name="D1" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D1_Date" />
-            <ScalarProperty Name="Result" ColumnName="D1_Result" />
-            <ScalarProperty Name="Note" ColumnName="D1_Note" />
+          <ComplexProperty Name="D1" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D1_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D1_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D2" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D2_Date" />
-            <ScalarProperty Name="Result" ColumnName="D2_Result" />
-            <ScalarProperty Name="Note" ColumnName="D2_Note" />
+          <ComplexProperty Name="D2" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D2_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D2_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D3" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D3_Date" />
-            <ScalarProperty Name="Result" ColumnName="D3_Result" />
-            <ScalarProperty Name="Note" ColumnName="D3_Note" />
+          <ComplexProperty Name="D3" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D3_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D3_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D4" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D4_Date" />
-            <ScalarProperty Name="Result" ColumnName="D4_Result" />
-            <ScalarProperty Name="Note" ColumnName="D4_Note" />
+          <ComplexProperty Name="D4" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D4_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D4_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D5" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D5_Date" />
-            <ScalarProperty Name="Result" ColumnName="D5_Result" />
-            <ScalarProperty Name="Note" ColumnName="D5_Note" />
+          <ComplexProperty Name="D5" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D5_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D5_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D6" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D6_Date" />
-            <ScalarProperty Name="Result" ColumnName="D6_Result" />
-            <ScalarProperty Name="Note" ColumnName="D6_Note" />
+          <ComplexProperty Name="D6" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D6_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D6_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D7" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D7_Date" />
-            <ScalarProperty Name="Result" ColumnName="D7_Result" />
-            <ScalarProperty Name="Note" ColumnName="D7_Note" />
+          <ComplexProperty Name="D7" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D7_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D7_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D8" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D8_Date" />
-            <ScalarProperty Name="Result" ColumnName="D8_Result" />
-            <ScalarProperty Name="Note" ColumnName="D8_Note" />
+          <ComplexProperty Name="D8" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D8_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D8_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D9" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D9_Date" />
-            <ScalarProperty Name="Result" ColumnName="D9_Result" />
-            <ScalarProperty Name="Note" ColumnName="D9_Note" />
+          <ComplexProperty Name="D9" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D9_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D9_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D10" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D10_Date" />
-            <ScalarProperty Name="Result" ColumnName="D10_Result" />
-            <ScalarProperty Name="Note" ColumnName="D10_Note" />
+          <ComplexProperty Name="D10" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D10_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D10_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D11" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D11_Date" />
-            <ScalarProperty Name="Result" ColumnName="D11_Result" />
-            <ScalarProperty Name="Note" ColumnName="D11_Note" />
+          <ComplexProperty Name="D11" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D11_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D11_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D12" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D12_Date" />
-            <ScalarProperty Name="Result" ColumnName="D12_Result" />
-            <ScalarProperty Name="Note" ColumnName="D12_Note" />
+          <ComplexProperty Name="D12" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D12_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D12_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D13" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D13_Date" />
-            <ScalarProperty Name="Result" ColumnName="D13_Result" />
-            <ScalarProperty Name="Note" ColumnName="D13_Note" />
+          <ComplexProperty Name="D13" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D13_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D13_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D14" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D14_Date" />
-            <ScalarProperty Name="Result" ColumnName="D14_Result" />
-            <ScalarProperty Name="Note" ColumnName="D14_Note" />
+          <ComplexProperty Name="D14" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D14_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D14_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D15" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D15_Date" />
-            <ScalarProperty Name="Result" ColumnName="D15_Result" />
-            <ScalarProperty Name="Note" ColumnName="D15_Note" />
+          <ComplexProperty Name="D15" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D15_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D15_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D16" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D16_Date" />
-            <ScalarProperty Name="Result" ColumnName="D16_Result" />
-            <ScalarProperty Name="Note" ColumnName="D16_Note" />
+          <ComplexProperty Name="D16" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D16_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D16_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D17" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D17_Date" />
-            <ScalarProperty Name="Result" ColumnName="D17_Result" />
-            <ScalarProperty Name="Note" ColumnName="D17_Note" />
+          <ComplexProperty Name="D17" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D17_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D17_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D18" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D18_Date" />
-            <ScalarProperty Name="Result" ColumnName="D18_Result" />
-            <ScalarProperty Name="Note" ColumnName="D18_Note" />
+          <ComplexProperty Name="D18" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D18_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D18_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D19" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D19_Date" />
-            <ScalarProperty Name="Result" ColumnName="D19_Result" />
-            <ScalarProperty Name="Note" ColumnName="D19_Note" />
+          <ComplexProperty Name="D19" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D19_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D19_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D20" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D20_Date" />
-            <ScalarProperty Name="Result" ColumnName="D20_Result" />
-            <ScalarProperty Name="Note" ColumnName="D20_Note" />
+          <ComplexProperty Name="D20" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D20_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D20_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="D21" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="D21_Date" />
-            <ScalarProperty Name="Result" ColumnName="D21_Result" />
-            <ScalarProperty Name="Note" ColumnName="D21_Note" />
+          <ComplexProperty Name="D21" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="D21_Name" />
+            <ScalarProperty Name="Situation" ColumnName="D21_Situation" />
           </ComplexProperty>
-          <ComplexProperty Name="ImportantD" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="ImportantD_Date" />
-            <ScalarProperty Name="Result" ColumnName="ImportantD_Result" />
-            <ScalarProperty Name="Note" ColumnName="ImportantD_Note" />
+          <ComplexProperty Name="ImportantD" TypeName="LNCDDataModel.Disease">
+            <ScalarProperty Name="Name" ColumnName="ImportantD_Name" />
+            <ScalarProperty Name="Situation" ColumnName="ImportantD_Situation" />
           </ComplexProperty>
           <ScalarProperty Name="Description" ColumnName="Description" />
         </MappingFragment>
@@ -326,6 +305,7 @@
           <ScalarProperty Name="RecordNote" ColumnName="RecordNote" />
           <ScalarProperty Name="OutpatientID" ColumnName="OutpatientID" />
           <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -429,14 +409,6 @@
         <ScalarProperty Name="Id" ColumnName="VisitRecord_Id" />
       </EndProperty>
       <EndProperty Name="PatMMSE">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="PatBasicInforPatExam1" TypeName="LNCDDataModel.PatBasicInforPatExam1" StoreEntitySet="PatBasicInforSet">
-      <EndProperty Name="PatExam">
-        <ScalarProperty Name="Id" ColumnName="PatExam_1_Id" />
-      </EndProperty>
-      <EndProperty Name="PatBasicInfor">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>

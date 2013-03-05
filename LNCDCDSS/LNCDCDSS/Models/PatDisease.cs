@@ -16,56 +16,56 @@ namespace LNCDCDSS.Models
     {
         public PatDisease()
         {
-            this.D1 = new Exam();
-            this.D2 = new Exam();
-            this.D3 = new Exam();
-            this.D4 = new Exam();
-            this.D5 = new Exam();
-            this.D6 = new Exam();
-            this.D7 = new Exam();
-            this.D8 = new Exam();
-            this.D9 = new Exam();
-            this.D10 = new Exam();
-            this.D11 = new Exam();
-            this.D12 = new Exam();
-            this.D13 = new Exam();
-            this.D14 = new Exam();
-            this.D15 = new Exam();
-            this.D16 = new Exam();
-            this.D17 = new Exam();
-            this.D18 = new Exam();
-            this.D19 = new Exam();
-            this.D20 = new Exam();
-            this.D21 = new Exam();
-            this.ImportantD = new Exam();
+            this.D1 = new Disease();
+            this.D2 = new Disease();
+            this.D3 = new Disease();
+            this.D4 = new Disease();
+            this.D5 = new Disease();
+            this.D6 = new Disease();
+            this.D7 = new Disease();
+            this.D8 = new Disease();
+            this.D9 = new Disease();
+            this.D10 = new Disease();
+            this.D11 = new Disease();
+            this.D12 = new Disease();
+            this.D13 = new Disease();
+            this.D14 = new Disease();
+            this.D15 = new Disease();
+            this.D16 = new Disease();
+            this.D17 = new Disease();
+            this.D18 = new Disease();
+            this.D19 = new Disease();
+            this.D20 = new Disease();
+            this.D21 = new Disease();
+            this.ImportantD = new Disease();
         }
     
         public int Id { get; set; }
-        public int PatBasicInforId { get; set; }
+        public string PatBasicInforId { get; set; }
         public string Description { get; set; }
     
-        public Exam D1 { get; set; }
-        public Exam D2 { get; set; }
-        public Exam D3 { get; set; }
-        public Exam D4 { get; set; }
-        public Exam D5 { get; set; }
-        public Exam D6 { get; set; }
-        public Exam D7 { get; set; }
-        public Exam D8 { get; set; }
-        public Exam D9 { get; set; }
-        public Exam D10 { get; set; }
-        public Exam D11 { get; set; }
-        public Exam D12 { get; set; }
-        public Exam D13 { get; set; }
-        public Exam D14 { get; set; }
-        public Exam D15 { get; set; }
-        public Exam D16 { get; set; }
-        public Exam D17 { get; set; }
-        public Exam D18 { get; set; }
-        public Exam D19 { get; set; }
-        public Exam D20 { get; set; }
-        public Exam D21 { get; set; }
-        public Exam ImportantD { get; set; }
+        public Disease D1 { get; set; }
+        public Disease D2 { get; set; }
+        public Disease D3 { get; set; }
+        public Disease D4 { get; set; }
+        public Disease D5 { get; set; }
+        public Disease D6 { get; set; }
+        public Disease D7 { get; set; }
+        public Disease D8 { get; set; }
+        public Disease D9 { get; set; }
+        public Disease D10 { get; set; }
+        public Disease D11 { get; set; }
+        public Disease D12 { get; set; }
+        public Disease D13 { get; set; }
+        public Disease D14 { get; set; }
+        public Disease D15 { get; set; }
+        public Disease D16 { get; set; }
+        public Disease D17 { get; set; }
+        public Disease D18 { get; set; }
+        public Disease D19 { get; set; }
+        public Disease D20 { get; set; }
+        public Disease D21 { get; set; }
+        public Disease ImportantD { get; set; }
     
         public virtual PatBasicInfor PatBasicInfor { get; set; }
     }

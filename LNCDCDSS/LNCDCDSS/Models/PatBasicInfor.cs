@@ -17,6 +17,7 @@ namespace LNCDCDSS.Models
         public PatBasicInfor()
         {
             this.VisitRecord = new HashSet<VisitRecord>();
+            this.PatPhysicalExam = new HashSet<PatPhysicalExam>();
         }
     
         public string Id { get; set; }
@@ -30,9 +31,9 @@ namespace LNCDCDSS.Models
         public string FamilyMember { get; set; }
         public string ChiefDoctor { get; set; }
     
-        public virtual PatPhysicalExam PatExam_1 { get; set; }
         public virtual PatDisease PatDisease { get; set; }
         public virtual DoctorAccount DoctorAccount { get; set; }
         public virtual ICollection<VisitRecord> VisitRecord { get; set; }
+        public virtual ICollection<PatPhysicalExam> PatPhysicalExam { get; set; }
     }
 }

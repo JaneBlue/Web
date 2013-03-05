@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 03/05/2013 10:51:02
+-- Date Created: 03/05/2013 21:04:39
 -- Generated from EDMX file: D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\Models\LNCDDataModel.edmx
 -- --------------------------------------------------
 
@@ -29,9 +29,6 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_VisitRecordPatMMSE]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[PatMMSESet] DROP CONSTRAINT [FK_VisitRecordPatMMSE];
 GO
-IF OBJECT_ID(N'[dbo].[FK_PatBasicInforPatExam1]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[PatBasicInforSet] DROP CONSTRAINT [FK_PatBasicInforPatExam1];
-GO
 IF OBJECT_ID(N'[dbo].[FK_PatBasicInforPatDisease]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[PatBasicInforSet] DROP CONSTRAINT [FK_PatBasicInforPatDisease];
 GO
@@ -49,6 +46,9 @@ IF OBJECT_ID(N'[dbo].[FK_VisitRecordPatRecentDrug]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_PatRecentDrugDrug]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[DrugSet] DROP CONSTRAINT [FK_PatRecentDrugDrug];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PatBasicInforPatPhysicalExam]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PatPhysicalExamSet] DROP CONSTRAINT [FK_PatBasicInforPatPhysicalExam];
 GO
 
 -- --------------------------------------------------
@@ -117,7 +117,6 @@ CREATE TABLE [dbo].[PatBasicInforSet] (
     [Phone] nvarchar(max)  NOT NULL,
     [FamilyMember] nvarchar(max)  NOT NULL,
     [ChiefDoctor] nvarchar(max)  NOT NULL,
-    [PatExam_1_Id] int  NOT NULL,
     [PatDisease_Id] int  NOT NULL
 );
 GO
@@ -125,48 +124,49 @@ GO
 -- Creating table 'PatPhysicalExamSet'
 CREATE TABLE [dbo].[PatPhysicalExamSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Height] nvarchar(max)  NOT NULL,
-    [Weight] nvarchar(max)  NOT NULL,
-    [Waistline] nvarchar(max)  NOT NULL,
-    [Hipline] nvarchar(max)  NOT NULL,
-    [BloodPressureH] nvarchar(max)  NOT NULL,
-    [BloodPressureL] nvarchar(max)  NOT NULL,
-    [B1_Result] nvarchar(max)  NOT NULL,
-    [B1_Note] nvarchar(max)  NOT NULL,
-    [B2_Result] nvarchar(max)  NOT NULL,
-    [B2_Note] nvarchar(max)  NOT NULL,
-    [B3_Result] nvarchar(max)  NOT NULL,
-    [B3_Note] nvarchar(max)  NOT NULL,
-    [B4_Result] nvarchar(max)  NOT NULL,
-    [B4_Note] nvarchar(max)  NOT NULL,
-    [B5_Result] nvarchar(max)  NOT NULL,
-    [B5_Note] nvarchar(max)  NOT NULL,
-    [B6_Result] nvarchar(max)  NOT NULL,
-    [B6_Note] nvarchar(max)  NOT NULL,
-    [B7_Result] nvarchar(max)  NOT NULL,
-    [B7_Note] nvarchar(max)  NOT NULL,
-    [B8_Result] nvarchar(max)  NOT NULL,
-    [B8_Note] nvarchar(max)  NOT NULL,
-    [B9_Result] nvarchar(max)  NOT NULL,
-    [B9_Note] nvarchar(max)  NOT NULL,
-    [B10_Result] nvarchar(max)  NOT NULL,
-    [B10_Note] nvarchar(max)  NOT NULL,
-    [B11_Result] nvarchar(max)  NOT NULL,
-    [B11_Note] nvarchar(max)  NOT NULL,
-    [B12_Result] nvarchar(max)  NOT NULL,
-    [B12_Note] nvarchar(max)  NOT NULL,
-    [B12a_Result] nvarchar(max)  NOT NULL,
-    [B12a_Note] nvarchar(max)  NOT NULL,
-    [B12b_Result] nvarchar(max)  NOT NULL,
-    [B12b_Note] nvarchar(max)  NOT NULL,
-    [B12c_Result] nvarchar(max)  NOT NULL,
-    [B12c_Note] nvarchar(max)  NOT NULL,
-    [B12d_Result] nvarchar(max)  NOT NULL,
-    [B12d_Note] nvarchar(max)  NOT NULL,
-    [B12e_Result] nvarchar(max)  NOT NULL,
-    [B12e_Note] nvarchar(max)  NOT NULL,
-    [B12f_Result] nvarchar(max)  NOT NULL,
-    [B12f_Note] nvarchar(max)  NOT NULL
+    [Height] nvarchar(max)  NULL,
+    [Weight] nvarchar(max)  NULL,
+    [Waistline] nvarchar(max)  NULL,
+    [Hipline] nvarchar(max)  NULL,
+    [BloodPressureH] nvarchar(max)  NULL,
+    [BloodPressureL] nvarchar(max)  NULL,
+    [B1_Result] nvarchar(max)  NULL,
+    [B1_Note] nvarchar(max)  NULL,
+    [B2_Result] nvarchar(max)  NULL,
+    [B2_Note] nvarchar(max)  NULL,
+    [B3_Result] nvarchar(max)  NULL,
+    [B3_Note] nvarchar(max)  NULL,
+    [B4_Result] nvarchar(max)  NULL,
+    [B4_Note] nvarchar(max)  NULL,
+    [B5_Result] nvarchar(max)  NULL,
+    [B5_Note] nvarchar(max)  NULL,
+    [B6_Result] nvarchar(max)  NULL,
+    [B6_Note] nvarchar(max)  NULL,
+    [B7_Result] nvarchar(max)  NULL,
+    [B7_Note] nvarchar(max)  NULL,
+    [B8_Result] nvarchar(max)  NULL,
+    [B8_Note] nvarchar(max)  NULL,
+    [B9_Result] nvarchar(max)  NULL,
+    [B9_Note] nvarchar(max)  NULL,
+    [B10_Result] nvarchar(max)  NULL,
+    [B10_Note] nvarchar(max)  NULL,
+    [B11_Result] nvarchar(max)  NULL,
+    [B11_Note] nvarchar(max)  NULL,
+    [B12_Result] nvarchar(max)  NULL,
+    [B12_Note] nvarchar(max)  NULL,
+    [B12a_Result] nvarchar(max)  NULL,
+    [B12a_Note] nvarchar(max)  NULL,
+    [B12b_Result] nvarchar(max)  NULL,
+    [B12b_Note] nvarchar(max)  NULL,
+    [B12c_Result] nvarchar(max)  NULL,
+    [B12c_Note] nvarchar(max)  NULL,
+    [B12d_Result] nvarchar(max)  NULL,
+    [B12d_Note] nvarchar(max)  NULL,
+    [B12e_Result] nvarchar(max)  NULL,
+    [B12e_Note] nvarchar(max)  NULL,
+    [B12f_Result] nvarchar(max)  NULL,
+    [B12f_Note] nvarchar(max)  NULL,
+    [PatBasicInforId] nvarchar(255)  NOT NULL
 );
 GO
 
@@ -257,74 +257,52 @@ GO
 -- Creating table 'PatDiseaseSet'
 CREATE TABLE [dbo].[PatDiseaseSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [PatBasicInforId] int  NOT NULL,
-    [D1_Date] datetime  NOT NULL,
-    [D1_Result] bit  NOT NULL,
-    [D1_Note] nvarchar(max)  NOT NULL,
-    [D2_Date] datetime  NOT NULL,
-    [D2_Result] bit  NOT NULL,
-    [D2_Note] nvarchar(max)  NOT NULL,
-    [D3_Date] datetime  NOT NULL,
-    [D3_Result] bit  NOT NULL,
-    [D3_Note] nvarchar(max)  NOT NULL,
-    [D4_Date] datetime  NOT NULL,
-    [D4_Result] bit  NOT NULL,
-    [D4_Note] nvarchar(max)  NOT NULL,
-    [D5_Date] datetime  NOT NULL,
-    [D5_Result] bit  NOT NULL,
-    [D5_Note] nvarchar(max)  NOT NULL,
-    [D6_Date] datetime  NOT NULL,
-    [D6_Result] bit  NOT NULL,
-    [D6_Note] nvarchar(max)  NOT NULL,
-    [D7_Date] datetime  NOT NULL,
-    [D7_Result] bit  NOT NULL,
-    [D7_Note] nvarchar(max)  NOT NULL,
-    [D8_Date] datetime  NOT NULL,
-    [D8_Result] bit  NOT NULL,
-    [D8_Note] nvarchar(max)  NOT NULL,
-    [D9_Date] datetime  NOT NULL,
-    [D9_Result] bit  NOT NULL,
-    [D9_Note] nvarchar(max)  NOT NULL,
-    [D10_Date] datetime  NOT NULL,
-    [D10_Result] bit  NOT NULL,
-    [D10_Note] nvarchar(max)  NOT NULL,
-    [D11_Date] datetime  NOT NULL,
-    [D11_Result] bit  NOT NULL,
-    [D11_Note] nvarchar(max)  NOT NULL,
-    [D12_Date] datetime  NOT NULL,
-    [D12_Result] bit  NOT NULL,
-    [D12_Note] nvarchar(max)  NOT NULL,
-    [D13_Date] datetime  NOT NULL,
-    [D13_Result] bit  NOT NULL,
-    [D13_Note] nvarchar(max)  NOT NULL,
-    [D14_Date] datetime  NOT NULL,
-    [D14_Result] bit  NOT NULL,
-    [D14_Note] nvarchar(max)  NOT NULL,
-    [D15_Date] datetime  NOT NULL,
-    [D15_Result] bit  NOT NULL,
-    [D15_Note] nvarchar(max)  NOT NULL,
-    [D16_Date] datetime  NOT NULL,
-    [D16_Result] bit  NOT NULL,
-    [D16_Note] nvarchar(max)  NOT NULL,
-    [D17_Date] datetime  NOT NULL,
-    [D17_Result] bit  NOT NULL,
-    [D17_Note] nvarchar(max)  NOT NULL,
-    [D18_Date] datetime  NOT NULL,
-    [D18_Result] bit  NOT NULL,
-    [D18_Note] nvarchar(max)  NOT NULL,
-    [D19_Date] datetime  NOT NULL,
-    [D19_Result] bit  NOT NULL,
-    [D19_Note] nvarchar(max)  NOT NULL,
-    [D20_Date] datetime  NOT NULL,
-    [D20_Result] bit  NOT NULL,
-    [D20_Note] nvarchar(max)  NOT NULL,
-    [D21_Date] datetime  NOT NULL,
-    [D21_Result] bit  NOT NULL,
-    [D21_Note] nvarchar(max)  NOT NULL,
-    [ImportantD_Date] datetime  NOT NULL,
-    [ImportantD_Result] bit  NOT NULL,
-    [ImportantD_Note] nvarchar(max)  NOT NULL,
-    [Description] nvarchar(max)  NOT NULL
+    [PatBasicInforId] nvarchar(255)  NOT NULL,
+    [D1_Name] nvarchar(max)  NULL,
+    [D1_Situation] nvarchar(max)  NULL,
+    [D2_Name] nvarchar(max)  NULL,
+    [D2_Situation] nvarchar(max)  NULL,
+    [D3_Name] nvarchar(max)  NULL,
+    [D3_Situation] nvarchar(max)  NULL,
+    [D4_Name] nvarchar(max)  NULL,
+    [D4_Situation] nvarchar(max)  NULL,
+    [D5_Name] nvarchar(max)  NULL,
+    [D5_Situation] nvarchar(max)  NULL,
+    [D6_Name] nvarchar(max)  NULL,
+    [D6_Situation] nvarchar(max)  NULL,
+    [D7_Name] nvarchar(max)  NULL,
+    [D7_Situation] nvarchar(max)  NULL,
+    [D8_Name] nvarchar(max)  NULL,
+    [D8_Situation] nvarchar(max)  NULL,
+    [D9_Name] nvarchar(max)  NULL,
+    [D9_Situation] nvarchar(max)  NULL,
+    [D10_Name] nvarchar(max)  NULL,
+    [D10_Situation] nvarchar(max)  NULL,
+    [D11_Name] nvarchar(max)  NULL,
+    [D11_Situation] nvarchar(max)  NULL,
+    [D12_Name] nvarchar(max)  NULL,
+    [D12_Situation] nvarchar(max)  NULL,
+    [D13_Name] nvarchar(max)  NULL,
+    [D13_Situation] nvarchar(max)  NULL,
+    [D14_Name] nvarchar(max)  NULL,
+    [D14_Situation] nvarchar(max)  NULL,
+    [D15_Name] nvarchar(max)  NULL,
+    [D15_Situation] nvarchar(max)  NULL,
+    [D16_Name] nvarchar(max)  NULL,
+    [D16_Situation] nvarchar(max)  NULL,
+    [D17_Name] nvarchar(max)  NULL,
+    [D17_Situation] nvarchar(max)  NULL,
+    [D18_Name] nvarchar(max)  NULL,
+    [D18_Situation] nvarchar(max)  NULL,
+    [D19_Name] nvarchar(max)  NULL,
+    [D19_Situation] nvarchar(max)  NULL,
+    [D20_Name] nvarchar(max)  NULL,
+    [D20_Situation] nvarchar(max)  NULL,
+    [D21_Name] nvarchar(max)  NULL,
+    [D21_Situation] nvarchar(max)  NULL,
+    [ImportantD_Name] nvarchar(max)  NULL,
+    [ImportantD_Situation] nvarchar(max)  NULL,
+    [Description] nvarchar(max)  NULL
 );
 GO
 
@@ -333,11 +311,12 @@ CREATE TABLE [dbo].[VisitRecordSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [PatBasicInforId] nvarchar(255)  NOT NULL,
     [VisitRecordID] nvarchar(max)  NOT NULL,
-    [DiagnosisiResult] nvarchar(max)  NOT NULL,
-    [CDSSDiagnosis] nvarchar(max)  NOT NULL,
-    [RecordNote] nvarchar(max)  NOT NULL,
-    [OutpatientID] nvarchar(max)  NOT NULL,
-    [HospitalID] nvarchar(max)  NOT NULL
+    [DiagnosisiResult] nvarchar(max)  NULL,
+    [CDSSDiagnosis] nvarchar(max)  NULL,
+    [RecordNote] nvarchar(max)  NULL,
+    [OutpatientID] nvarchar(max)  NULL,
+    [HospitalID] nvarchar(max)  NULL,
+    [VisitDate] datetime  NOT NULL
 );
 GO
 
@@ -539,20 +518,6 @@ ON [dbo].[PatMMSESet]
     ([VisitRecord_Id]);
 GO
 
--- Creating foreign key on [PatExam_1_Id] in table 'PatBasicInforSet'
-ALTER TABLE [dbo].[PatBasicInforSet]
-ADD CONSTRAINT [FK_PatBasicInforPatExam1]
-    FOREIGN KEY ([PatExam_1_Id])
-    REFERENCES [dbo].[PatPhysicalExamSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK_PatBasicInforPatExam1'
-CREATE INDEX [IX_FK_PatBasicInforPatExam1]
-ON [dbo].[PatBasicInforSet]
-    ([PatExam_1_Id]);
-GO
-
 -- Creating foreign key on [PatDisease_Id] in table 'PatBasicInforSet'
 ALTER TABLE [dbo].[PatBasicInforSet]
 ADD CONSTRAINT [FK_PatBasicInforPatDisease]
@@ -635,6 +600,20 @@ ADD CONSTRAINT [FK_PatRecentDrugDrug]
 CREATE INDEX [IX_FK_PatRecentDrugDrug]
 ON [dbo].[DrugSet]
     ([PatRecentDrugId]);
+GO
+
+-- Creating foreign key on [PatBasicInforId] in table 'PatPhysicalExamSet'
+ALTER TABLE [dbo].[PatPhysicalExamSet]
+ADD CONSTRAINT [FK_PatBasicInforPatPhysicalExam]
+    FOREIGN KEY ([PatBasicInforId])
+    REFERENCES [dbo].[PatBasicInforSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PatBasicInforPatPhysicalExam'
+CREATE INDEX [IX_FK_PatBasicInforPatPhysicalExam]
+ON [dbo].[PatPhysicalExamSet]
+    ([PatBasicInforId]);
 GO
 
 -- --------------------------------------------------

@@ -21,7 +21,7 @@ namespace LNCDCDSS.Controllers
         public ActionResult  Index(DoctorAccount dacount)
         {
             var students = from s in DataContainer.DoctorAccountSet.ToList() select s;
-            var student = students.Where(s => s.UserName==dacount.UserName && s.PassWord==dacount.PassWord).FirstOrDefault();
+            var student = students.Where(s => s.UserName == dacount.UserName && s.PassWord == dacount.PassWord).FirstOrDefault();
           if (student!=null)
           {
               return Redirect("/EnterPatInfor/Index");

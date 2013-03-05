@@ -43,6 +43,7 @@ namespace LNCDCDSS.Models
         public string Hipline { get; set; }
         public string BloodPressureH { get; set; }
         public string BloodPressureL { get; set; }
+        public string PatBasicInforId { get; set; }
     
         public BodyExam B1 { get; set; }
         public BodyExam B2 { get; set; }
@@ -63,6 +64,6 @@ namespace LNCDCDSS.Models
         public BodyExam B12e { get; set; }
         public BodyExam B12f { get; set; }
     
-        public virtual PatBasicInfor PatBasicInfor_1 { get; set; }
+        public virtual PatBasicInfor PatBasicInfor { get; set; }
     }
 }

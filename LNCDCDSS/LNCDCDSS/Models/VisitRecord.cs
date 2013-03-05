@@ -22,6 +22,7 @@ namespace LNCDCDSS.Models
         public string RecordNote { get; set; }
         public string OutpatientID { get; set; }
         public string HospitalID { get; set; }
+        public System.DateTime VisitDate { get; set; }
     
         public virtual PatADL PatADL { get; set; }
         public virtual PatMoCA PatMoCA { get; set; }

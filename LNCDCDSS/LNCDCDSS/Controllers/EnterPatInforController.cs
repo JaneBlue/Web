@@ -20,10 +20,10 @@ namespace LNCDCDSS.Controllers
         public ActionResult Index(PatBasicInfor pat)
         {
 
-            //PatOperation pto = new PatOperation();
-            //string HID = Request.Form["住院号"];
-            //string PID = Request.Form["病历号"];
-            //pto.InsertPat(pat, HID, PID);
+            PatOperation pto = new PatOperation();
+            string HID = Request.Form["住院号"];
+            string PID = Request.Form["门诊号"];
+            pto.InsertPat(pat, HID, PID);
 
 
             return Redirect("/Diagnosis/Index");
