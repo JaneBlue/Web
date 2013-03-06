@@ -15,6 +15,11 @@ namespace LNCDCDSS.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public JsonResult Save()
+        {
+          return  this.Json(new { OK = true, Message = "Programer" });  
+        }
 
     }
 }
