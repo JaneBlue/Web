@@ -89,6 +89,7 @@
     <Compile Include="Models\Exam.cs">
       <DependentUpon>LNCDDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\JSTransfer.cs" />
     <Compile Include="Models\LNCDDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -200,6 +201,8 @@
     <Content Include="Scripts\jquery-1.5.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.json-2.4.js" />
+    <Content Include="Scripts\jquery.json-2.4.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />

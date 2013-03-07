@@ -26,6 +26,15 @@ namespace LNCDCDSS.Controllers
             //PatDisease PDisease = new PatDisease();
             //PDisease.Description = "12";
             //vr.InsertPatDisease(PDisease, "0582f3c014d741d79d36bad3a620341e");
+            string jsonStr = Request.Params["postjson"];
+            try{
+                PatMoCA obj = jsonStr.FromJsonTo<PatMoCA>();
+                vr.InsertPatMoca(obj, "0582f3c014d741d79d36bad3a620341e");
+            }
+            catch(Exception  e){
+                int q = 1;
+            }
+            
           return  this.Json(new { OK = true, Message = "保存成功" });  
         }
 

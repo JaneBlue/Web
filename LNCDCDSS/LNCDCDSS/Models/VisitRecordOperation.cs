@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+
 namespace LNCDCDSS.Models
 {
-    public class VisitRecordOperation
+    public   class VisitRecordOperation
     {
         LNCDDataModelContainer context = new LNCDDataModelContainer();
         public void InsertPatPhysicaExam(PatPhysicalExam PExam, string ID)
@@ -90,6 +91,7 @@ namespace LNCDCDSS.Models
             {
                 PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
                 pt.VisitRecord.Last().PatMoCA = pm;
+                context.SaveChanges();
             }
             catch (Exception e)
             {
@@ -127,5 +129,8 @@ namespace LNCDCDSS.Models
         public VisitContent  GetVisitContet(string PatID,int RecordID){
             return null;
         }
+
+       
+
     }
 }

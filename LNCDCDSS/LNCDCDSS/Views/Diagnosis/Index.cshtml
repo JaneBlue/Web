@@ -19,14 +19,15 @@
 
         $(".button").click(function () {
 
-           
+            var thing = {  Id: 2, MC1: 'jquery-json' ,MC2: 'jquery-json',MC3: 'jquery-json',MC4: 'jquery-json',MC5: 'jquery-json',MC6: 'jquery-json',MC7: 'jquery-json',MC8: 'jquery-json',MC9: 'jquery-json',Total: 'jquery-json',};
+            var encoded = $.toJSON(thing);
 
 
             if ($(".selected").last().attr("id") == "辅助诊断") {
                 $.ajax({
                     url: '/Diagnosis/Save',
                     type: "POST",
-                    data: name,
+                    data: { postjson: encoded },
                     success: function (data) {
                         if (data.OK) {
                             window.location.href = '@Url.Action("Index", "EnterPatInfor")';
@@ -51,8 +52,10 @@
                 var b = OCX.OpenReport("D:\\2013CDSS\\TemplateForReporter\\LNCDtemp");
                 OCX.ShowReport();
                 OCX.ShowThisPage(name);
-                var d = "";
-                OCX.GetData("Data_source/PatPhysicalExam/Height",d)
+                if (name == "辅助诊断") {
+                    $("#b1").html("保存");
+                }
+
             }
 
 
