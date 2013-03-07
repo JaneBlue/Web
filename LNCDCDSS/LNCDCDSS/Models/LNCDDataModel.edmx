@@ -206,19 +206,19 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Vocabulary1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Vocabulary2" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Vocabulary3" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Picture1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Picture2" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ConnectNumber1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ConnectNumber2" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Vocabulary4" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="VocabularyAnalyse1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Picture3" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="VocabularyAnalyse2" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PatCDR" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PatGDS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Vocabulary1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Vocabulary2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Vocabulary3" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Picture1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Picture2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ConnectNumber1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ConnectNumber2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Vocabulary4" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VocabularyAnalyse1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Picture3" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VocabularyAnalyse2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PatCDR" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PatGDS" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VisitRecord_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PatDiseaseSet">
@@ -674,19 +674,19 @@
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatOtherTest" FromRole="PatOtherTest" ToRole="VisitRecord" />
-          <Property Type="String" Name="Vocabulary1" Nullable="false" />
-          <Property Type="String" Name="Vocabulary2" Nullable="false" />
-          <Property Type="String" Name="Vocabulary3" Nullable="false" />
-          <Property Type="String" Name="Picture1" Nullable="false" />
-          <Property Type="String" Name="Picture2" Nullable="false" />
-          <Property Type="String" Name="ConnectNumber1" Nullable="false" />
-          <Property Type="String" Name="ConnectNumber2" Nullable="false" />
-          <Property Type="String" Name="Vocabulary4" Nullable="false" />
-          <Property Type="String" Name="VocabularyAnalyse1" Nullable="false" />
-          <Property Type="String" Name="Picture3" Nullable="false" />
-          <Property Type="String" Name="VocabularyAnalyse2" Nullable="false" />
-          <Property Type="String" Name="PatCDR" Nullable="false" />
-          <Property Type="String" Name="PatGDS" Nullable="false" />
+          <Property Type="String" Name="Vocabulary1" Nullable="true" />
+          <Property Type="String" Name="Vocabulary2" Nullable="true" />
+          <Property Type="String" Name="Vocabulary3" Nullable="true" />
+          <Property Type="String" Name="Picture1" Nullable="true" />
+          <Property Type="String" Name="Picture2" Nullable="true" />
+          <Property Type="String" Name="ConnectNumber1" Nullable="true" />
+          <Property Type="String" Name="ConnectNumber2" Nullable="true" />
+          <Property Type="String" Name="Vocabulary4" Nullable="true" />
+          <Property Type="String" Name="VocabularyAnalyse1" Nullable="true" />
+          <Property Type="String" Name="Picture3" Nullable="true" />
+          <Property Type="String" Name="VocabularyAnalyse2" Nullable="true" />
+          <Property Type="String" Name="PatCDR" Nullable="true" />
+          <Property Type="String" Name="PatGDS" Nullable="true" />
         </EntityType>
         <EntityType Name="PatDisease">
           <Key>

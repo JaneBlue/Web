@@ -19,36 +19,43 @@
 
         $(".button").click(function () {
 
-            $.ajax({
-                url: '/Diagnosis/Save',
-                type: "POST",
-                data: "json",
-                success: function (data) {
-                    if (data.OK) {
-                        var OCX = document.getElementById('Reporter2');
-                        var d="";
-                        OCX.GetData("Data_source\PatPhysicalExam\Height",d);
-                        var b = OCX.OpenReport("D:\\2013CDSS\\TemplateForReporter\\LNCDtemp");
-                        $(".selected").next().addClass("selected");
-                        var name = $(".selected").last().attr("id");
-                        $(".active").next().addClass("active");
-                        $(".active").first().removeClass("active");
-                        OCX.ShowReport();
-                        OCX.ShowThisPage(name);
-                    }
-                    else {
-                        document.getElementById("msg").innerHTML = data.Message.toString();
-
-                    }
-
-                },
-                error: function (jqXhr, textStatus, errorThrown) {
-                    alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
-                }
-            });
-
            
-            
+
+
+            if ($(".selected").last().attr("id") == "辅助诊断") {
+                $.ajax({
+                    url: '/Diagnosis/Save',
+                    type: "POST",
+                    data: name,
+                    success: function (data) {
+                        if (data.OK) {
+                            window.location.href = '@Url.Action("Index", "EnterPatInfor")';
+                        }
+                        else {
+                            document.getElementById("msg").innerHTML = data.Message.toString();
+
+                        }
+
+                    },
+                    error: function (jqXhr, textStatus, errorThrown) {
+                        alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
+                    }
+                });
+            }
+            else {
+                $(".selected").next().addClass("selected");
+                var name = $(".selected").last().attr("id");
+                $(".active").next().addClass("active");
+                $(".active").first().removeClass("active");
+                var OCX = document.getElementById('Reporter2');
+                var b = OCX.OpenReport("D:\\2013CDSS\\TemplateForReporter\\LNCDtemp");
+                OCX.ShowReport();
+                OCX.ShowThisPage(name);
+                var d = "";
+                OCX.GetData("Data_source/PatPhysicalExam/Height",d)
+            }
+
+
         });
     });
   

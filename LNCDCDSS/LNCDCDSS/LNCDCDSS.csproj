@@ -135,6 +135,7 @@
     <Compile Include="Models\VisitRecord.cs">
       <DependentUpon>LNCDDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\VisitRecordOperation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

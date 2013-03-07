@@ -201,19 +201,19 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Vocabulary1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Vocabulary2" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Vocabulary3" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Picture1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Picture2" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ConnectNumber1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ConnectNumber2" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Vocabulary4" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="VocabularyAnalyse1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Picture3" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="VocabularyAnalyse2" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PatCDR" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PatGDS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Vocabulary1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Vocabulary2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Vocabulary3" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Picture1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Picture2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ConnectNumber1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ConnectNumber2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Vocabulary4" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VocabularyAnalyse1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Picture3" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VocabularyAnalyse2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PatCDR" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PatGDS" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VisitRecord_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PatDiseaseSet">

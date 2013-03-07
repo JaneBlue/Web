@@ -189,19 +189,19 @@
     </Key>
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatOtherTest" FromRole="PatOtherTest" ToRole="VisitRecord" />
-    <Property Type="String" Name="Vocabulary1" Nullable="false" />
-    <Property Type="String" Name="Vocabulary2" Nullable="false" />
-    <Property Type="String" Name="Vocabulary3" Nullable="false" />
-    <Property Type="String" Name="Picture1" Nullable="false" />
-    <Property Type="String" Name="Picture2" Nullable="false" />
-    <Property Type="String" Name="ConnectNumber1" Nullable="false" />
-    <Property Type="String" Name="ConnectNumber2" Nullable="false" />
-    <Property Type="String" Name="Vocabulary4" Nullable="false" />
-    <Property Type="String" Name="VocabularyAnalyse1" Nullable="false" />
-    <Property Type="String" Name="Picture3" Nullable="false" />
-    <Property Type="String" Name="VocabularyAnalyse2" Nullable="false" />
-    <Property Type="String" Name="PatCDR" Nullable="false" />
-    <Property Type="String" Name="PatGDS" Nullable="false" />
+    <Property Type="String" Name="Vocabulary1" Nullable="true" />
+    <Property Type="String" Name="Vocabulary2" Nullable="true" />
+    <Property Type="String" Name="Vocabulary3" Nullable="true" />
+    <Property Type="String" Name="Picture1" Nullable="true" />
+    <Property Type="String" Name="Picture2" Nullable="true" />
+    <Property Type="String" Name="ConnectNumber1" Nullable="true" />
+    <Property Type="String" Name="ConnectNumber2" Nullable="true" />
+    <Property Type="String" Name="Vocabulary4" Nullable="true" />
+    <Property Type="String" Name="VocabularyAnalyse1" Nullable="true" />
+    <Property Type="String" Name="Picture3" Nullable="true" />
+    <Property Type="String" Name="VocabularyAnalyse2" Nullable="true" />
+    <Property Type="String" Name="PatCDR" Nullable="true" />
+    <Property Type="String" Name="PatGDS" Nullable="true" />
   </EntityType>
   <EntityType Name="PatDisease">
     <Key>

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 03/05/2013 21:04:39
+-- Date Created: 03/06/2013 15:36:38
 -- Generated from EDMX file: D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\Models\LNCDDataModel.edmx
 -- --------------------------------------------------
 
@@ -237,19 +237,19 @@ GO
 -- Creating table 'PatOtherTestSet'
 CREATE TABLE [dbo].[PatOtherTestSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Vocabulary1] nvarchar(max)  NOT NULL,
-    [Vocabulary2] nvarchar(max)  NOT NULL,
-    [Vocabulary3] nvarchar(max)  NOT NULL,
-    [Picture1] nvarchar(max)  NOT NULL,
-    [Picture2] nvarchar(max)  NOT NULL,
-    [ConnectNumber1] nvarchar(max)  NOT NULL,
-    [ConnectNumber2] nvarchar(max)  NOT NULL,
-    [Vocabulary4] nvarchar(max)  NOT NULL,
-    [VocabularyAnalyse1] nvarchar(max)  NOT NULL,
-    [Picture3] nvarchar(max)  NOT NULL,
-    [VocabularyAnalyse2] nvarchar(max)  NOT NULL,
-    [PatCDR] nvarchar(max)  NOT NULL,
-    [PatGDS] nvarchar(max)  NOT NULL,
+    [Vocabulary1] nvarchar(max)  NULL,
+    [Vocabulary2] nvarchar(max)  NULL,
+    [Vocabulary3] nvarchar(max)  NULL,
+    [Picture1] nvarchar(max)  NULL,
+    [Picture2] nvarchar(max)  NULL,
+    [ConnectNumber1] nvarchar(max)  NULL,
+    [ConnectNumber2] nvarchar(max)  NULL,
+    [Vocabulary4] nvarchar(max)  NULL,
+    [VocabularyAnalyse1] nvarchar(max)  NULL,
+    [Picture3] nvarchar(max)  NULL,
+    [VocabularyAnalyse2] nvarchar(max)  NULL,
+    [PatCDR] nvarchar(max)  NULL,
+    [PatGDS] nvarchar(max)  NULL,
     [VisitRecord_Id] int  NOT NULL
 );
 GO
