@@ -9,5 +9,9 @@ namespace LNCDCDSS.Models
     {
         public PatMMSE pme{ get; set; }
         public PatMoCA pma{ get; set; }
+        public PatADL pal{ get; set; }
+        public PatDisease pds { get; set; }
+        public PatOtherTest pot{ get; set; }
+      //  public PatRecentDrug prd { get; set; }
     }
 }
