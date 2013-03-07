@@ -28,8 +28,8 @@ namespace LNCDCDSS.Controllers
             //vr.InsertPatDisease(PDisease, "0582f3c014d741d79d36bad3a620341e");
             string jsonStr = Request.Params["postjson"];
             try{
-                PatMoCA obj = jsonStr.FromJsonTo<PatMoCA>();
-                vr.InsertPatMoca(obj, "0582f3c014d741d79d36bad3a620341e");
+               VisitData obj = jsonStr.FromJsonTo<VisitData>();
+                //vr.InsertPatMoca(obj, "0582f3c014d741d79d36bad3a620341e");
             }
             catch(Exception  e){
                 int q = 1;
