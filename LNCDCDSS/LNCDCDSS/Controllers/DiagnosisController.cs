@@ -28,17 +28,18 @@ namespace LNCDCDSS.Controllers
             //vr.InsertPatDisease(PDisease, "0582f3c014d741d79d36bad3a620341e");
             string jsonStr = Request.Params["postjson"];
             try{
-               VisitData obj = jsonStr.FromJsonTo<VisitData>();
+
+                Tryclass obj = jsonStr.FromJsonTo<Tryclass>();
                 //vr.InsertPatMoca(obj, "0582f3c014d741d79d36bad3a620341e");
                PatRecentDrug pd = new PatRecentDrug();
-               pd.DrugCatogary = "333";
-               pd.Id = 1;
-                List<Drug> dr=new List<Drug>();
-                Drug g1=new Drug();
-                g1.Id=1;
-                g1.Name="12";
-                dr.Add(g1);
-                vr.InsertPatRecentDrug(pd,dr,"0582f3c014d741d79d36bad3a620341e");
+               //pd.DrugCatogary = "333";
+               //pd.Id = 1;
+               // List<Drug> dr=new List<Drug>();
+               // Drug g1=new Drug();
+               // g1.Id=1;
+               // g1.Name="12";
+               // dr.Add(g1);
+               // vr.InsertPatRecentDrug(pd,dr,"0582f3c014d741d79d36bad3a620341e");
             }
             catch(Exception  e){
                 int q = 1;
