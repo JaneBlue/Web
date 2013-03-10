@@ -67,19 +67,245 @@
             if (isNaN(nMC9))
                 nMC9 = 0;
 
-            var nTotal = nMC1 + nMC2 + nMC3 + nMC4 + nMC5 + nMC6 + nMC7 + nMC8 + nMC9;
-            var strTotal = nTotal.toString();
+            var nTotalpma = nMC1 + nMC2 + nMC3 + nMC4 + nMC5 + nMC6 + nMC7 + nMC8 + nMC9;
+            var strTotalpma = nTotalpma.toString();
+
+            //get the data of PatMMSE
+            var strM1 = OCX.GetData("Data_source/PatMMSE/M1");
+            var nM1 = parseInt(strM1);
+            if (isNaN(nM1))
+                nM1 = 0;
+
+            var strM2 = OCX.GetData("Data_source/PatMMSE/M2");
+            var nM2 = parseInt(strM2);
+            if (isNaN(nM2))
+                nM2 = 0;
+
+            var strM3 = OCX.GetData("Data_source/PatMMSE/M3");
+            var nM3 = parseInt(strM3);
+            if (isNaN(nM3))
+                nM3 = 0;
+
+            var strM4 = OCX.GetData("Data_source/PatMMSE/M4");
+            var nM4 = parseInt(strM4);
+            if (isNaN(nM4))
+                nM4 = 0;
+
+            var strM5 = OCX.GetData("Data_source/PatMMSE/M5");
+            var nM5 = parseInt(strM5);
+            if (isNaN(nM5))
+                nM5 = 0;
+
+            var strM6 = OCX.GetData("Data_source/PatMMSE/M6");
+            var nM6 = parseInt(strM6);
+            if (isNaN(nM6))
+                nM6 = 0;
+
+            var strM7 = OCX.GetData("Data_source/PatMMSE/M7");
+            var nM7 = parseInt(strM7);
+            if (isNaN(nM7))
+                nM7 = 0;
+
+            var strM8 = OCX.GetData("Data_source/PatMMSE/M8");
+            var nM8 = parseInt(strM8);
+            if (isNaN(nM8))
+                nM8 = 0;
+
+            var strM9 = OCX.GetData("Data_source/PatMMSE/M9");
+            var nM9 = parseInt(strM9);
+            if (isNaN(nM9))
+                nM9 = 0;
+
+            var strM10 = OCX.GetData("Data_source/PatMMSE/M10");
+            var nM10 = parseInt(strM10);
+            if (isNaN(nM10))
+                nM10 = 0;
+
+            var strM11 = OCX.GetData("Data_source/PatMMSE/M11");
+            var nM11 = parseInt(strM11);
+            if (isNaN(nM11))
+                nM11 = 0;
+
+            var nTotalpme = nM1 + nM2 + nM3 + nM4 + nM5 + nM6 + nM7 + nM8 + nM9 + nM10 + nM11;
+            var strTotalpme = nTotalpme.toString();
+
+            //get the data of PatADL
+            var strA1 = OCX.GetData("Data_source/PatADL/A1");
+            var nA1 = parseInt(strA1);
+            if (isNaN(nA1))
+                nA1 = 0;
+
+            var strA2 = OCX.GetData("Data_source/PatADL/A2");
+            var nA2 = parseInt(strA2);
+            if (isNaN(nA2))
+                nA2 = 0;
+
+            var strA3 = OCX.GetData("Data_source/PatADL/A3");
+            var nA3 = parseInt(strA3);
+            if (isNaN(nA3))
+                nA3 = 0;
+
+            var strA4 = OCX.GetData("Data_source/PatADL/A4");
+            var nA4 = parseInt(strA4);
+            if (isNaN(nA4))
+                nA4 = 0;
+
+            var strA5 = OCX.GetData("Data_source/PatADL/A5");
+            var nA5 = parseInt(strA5);
+            if (isNaN(nA5))
+                nA5 = 0;
+
+            var strA6 = OCX.GetData("Data_source/PatADL/A6");
+            var nA6 = parseInt(strA6);
+            if (isNaN(nA6))
+                nA6 = 0;
+
+            var strA7 = OCX.GetData("Data_source/PatADL/A7");
+            var nA7 = parseInt(strA7);
+            if (isNaN(nA7))
+                nA7 = 0;
+
+            var strA8 = OCX.GetData("Data_source/PatADL/A8");
+            var nA8 = parseInt(strA8);
+            if (isNaN(nA8))
+                nA8 = 0;
+
+            var strA9 = OCX.GetData("Data_source/PatADL/A9");
+            var nA9 = parseInt(strA9);
+            if (isNaN(nA9))
+                nA9 = 0;
+
+            var strA10 = OCX.GetData("Data_source/PatADL/A10");
+            var nA10 = parseInt(strA10);
+            if (isNaN(nA10))
+                nA10 = 0;
+
+            var strA11 = OCX.GetData("Data_source/PatADL/A11");
+            var nA11 = parseInt(strA11);
+            if (isNaN(nA11))
+                nA11 = 0;
+
+            var strA12 = OCX.GetData("Data_source/PatADL/A12");
+            var nA12 = parseInt(strA12);
+            if (isNaN(nA12))
+                nA12 = 0;
+
+            var strA13 = OCX.GetData("Data_source/PatADL/A13");
+            var nA13 = parseInt(strA13);
+            if (isNaN(nA13))
+                nA13 = 0;
+
+            var strA14 = OCX.GetData("Data_source/PatADL/A14");
+            var nA14 = parseInt(strA14);
+            if (isNaN(nA14))
+                nA14 = 0;
+
+            var strA15 = OCX.GetData("Data_source/PatADL/A15");
+            var nA15 = parseInt(strA15);
+            if (isNaN(nA15))
+                nA15 = 0;
+
+            var strA16 = OCX.GetData("Data_source/PatADL/A16");
+            var nA16 = parseInt(strA16);
+            if (isNaN(nA16))
+                nA16 = 0;
+
+            var strA17 = OCX.GetData("Data_source/PatADL/A17");
+            var nA17 = parseInt(strA17);
+            if (isNaN(nA17))
+                nA17 = 0;
+
+            var strA18 = OCX.GetData("Data_source/PatADL/A18");
+            var nA18 = parseInt(strA18);
+            if (isNaN(nA18))
+                nA18 = 0;
+
+            var strA19 = OCX.GetData("Data_source/PatADL/A19");
+            var nA19 = parseInt(strA19);
+            if (isNaN(nA19))
+                nA19 = 0;
+
+            var strA20 = OCX.GetData("Data_source/PatADL/A20");
+            var nA20 = parseInt(strA20);
+            if (isNaN(nA20))
+                nA20 = 0;
+
+            var nTotalpal = nA1 + nA2 + nA3 + nA4 + nA5 + nA6 + nA7 + nA8 + nA9 + nA10 + nA11 + nA12 + nA13 + nA14 + nA15 + nA16 + nA17 + nA18 + nA19 + nA20;
+            var strTotalpal = nTotalpal.toString();
+
+            //get the data of pds
+            var strD1Situation = OCX.GetData("Data_source/PatDisease/D1/Situation");
+            var strD2Situation = OCX.GetData("Data_source/PatDisease/D2/Situation");
+            var strD3Situation = OCX.GetData("Data_source/PatDisease/D3/Situation");
+            var strD4Situation = OCX.GetData("Data_source/PatDisease/D4/Situation");
+            var strD5Situation = OCX.GetData("Data_source/PatDisease/D5/Situation");
+            var strD6Situation = OCX.GetData("Data_source/PatDisease/D6/Situation");
+            var strD7Situation = OCX.GetData("Data_source/PatDisease/D7/Situation");
+            var strD8Situation = OCX.GetData("Data_source/PatDisease/D8/Situation");
+            var strD9Situation = OCX.GetData("Data_source/PatDisease/D9/Situation");
+            var strD10Situation = OCX.GetData("Data_source/PatDisease/D10/Situation");
+            var strD11Situation = OCX.GetData("Data_source/PatDisease/D11/Situation");
+            var strD12Situation = OCX.GetData("Data_source/PatDisease/D12/Situation");
+            var strD13Situation = OCX.GetData("Data_source/PatDisease/D13/Situation");
+            var strD14Situation = OCX.GetData("Data_source/PatDisease/D14/Situation");
+            var strD15Situation = OCX.GetData("Data_source/PatDisease/D15/Situation");
+            var strD16Situation = OCX.GetData("Data_source/PatDisease/D16/Situation");
+            var strD17Situation = OCX.GetData("Data_source/PatDisease/D17/Situation");
+            var strD18Situation = OCX.GetData("Data_source/PatDisease/D18/Situation");
+            var strD19Situation = OCX.GetData("Data_source/PatDisease/D19/Situation");
+            var strD20Situation = OCX.GetData("Data_source/PatDisease/D20/Situation");
+            var strD21Situation = OCX.GetData("Data_source/PatDisease/D21/Situation");
+            var strImportantDSituation = OCX.GetData("Data_source/PatDisease/ImportantD/Situation");
+
+            //get the data of pot
+            var strVocabulary1 = OCX.GetData("Data_source/PatOtherTest/Vocabulary1");
+            var strVocabulary2 = OCX.GetData("Data_source/PatOtherTest/Vocabulary2");
+            var strVocabulary3 = OCX.GetData("Data_source/PatOtherTest/Vocabulary3");
+            var strPicture1 = OCX.GetData("Data_source/PatOtherTest/Picture1");
+            var strPicture2 = OCX.GetData("Data_source/PatOtherTest/Picture2");
+            var strConnectNumber1 = OCX.GetData("Data_source/PatOtherTest/ConnectNumber1");
+            var strConnectNumber2 = OCX.GetData("Data_source/PatOtherTest/ConnectNumber2");
+            var strVocabulary4 = OCX.GetData("Data_source/PatOtherTest/Vocabulary4");
+            var strVocabularyAnalyse1 = OCX.GetData("Data_source/PatOtherTest/VocabularyAnalyse1");
+            var strPicture3 = OCX.GetData("Data_source/PatOtherTest/Picture3");
+            var strVocabularyAnalyse2 = OCX.GetData("Data_source/PatOtherTest/VocabularyAnalyse2");
+            var strPatCDR = OCX.GetData("Data_source/PatOtherTest/PatCDR");
+            var strPatGDS = OCX.GetData("Data_source/PatOtherTest/PatGDS");
 
             var thing = { pma: { Id: 2, MC1: strMC1, MC2: strMC2
             , MC3: strMC3, MC4: strMC4, MC5: strMC5
             , MC6: strMC6, MC7: strMC7, MC8: strMC8
-            , MC9: strMC9, Total: strTotal
+            , MC9: strMC9, Total: strTotalpma
             },
-                pme: { Id: 2, M1: 'jquery-json', M2: 'jquery-json'
-            , M3: 'jquery-json', M4: 'jquery-json', M5: 'jquery-json'
-            , M6: 'jquery-json', M7: 'jquery-json', M8: 'jquery-json'
-            , M9: 'jquery-json', M10: 'jquery-json', M11: 'jquery-json'
-            , Total: 'jquery-json'
+                pme: { Id: 2, M1: strM1, M2: strM2
+            , M3: strM3, M4: strM4, M5: strM5
+            , M6: strM6, M7: strM7, M8: strM8
+            , M9: strM9, M10: strM10, M11: strM11
+            , Total: strTotalpme
+                },
+                pal: { Id: 2, A1: strA1, A2: strA2
+            , A3: strA3, A4: strA4, A5: strA5
+            , A6: strA6, A7: strA7, A8: strA8
+            , A9: strA9, A10: strA10, A11: strA11
+            , A12: strA12, A13: strA13, A14: strA14
+            , A15: strA15, A16: strA16, A17: strA17
+            , A18: strA18, A19: strA19, A20: strA20
+            , Total: strTotalpal
+                },
+                pds: { Id: 2, D1: strD1Situation, D2: strD2Situation
+            , D3: strD3Situation, D4: strD4Situation, D5: strD5Situation
+            , D6: strD6Situation, D7: strD7Situation, D8: strD8Situation
+            , D9: strD9Situation, D10: strD10Situation, D11: strD11Situation
+            , D12: strD12Situation, D13: strD13Situation, D14: strD14Situation
+            , D15: strD15Situation, D16: strD16Situation, D17: strD17Situation
+            , D18: strD18Situation, D19: strD19Situation, D20: strD20Situation
+            , D21: strD21Situation, ImportantD: ImportantDSituation
+                },
+                pot: { Id: 2, Vocabulary1: strVocabulary1, Vocabulary2: strVocabulary2
+            , Vocabulary3: strVocabulary3, Picture1: strPicture1, Picture2: strPicture2
+            , ConnectNumber1: strConnectNumber1, ConnectNumber2: strConnectNumber2, Vocabulary4: strVocabulary4
+            , VocabularyAnalyse1: strVocabularyAnalyse1, Picture3: strPicture3, VocabularyAnalyse2: strVocabularyAnalyse2
+            , PatCDR: strPatCDR, PatGDS: strPatGDS
                 }
             };
             
