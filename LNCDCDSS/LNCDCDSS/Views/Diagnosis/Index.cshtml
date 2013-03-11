@@ -316,6 +316,47 @@
             var strB12fResult = OCX.GetData("Data_source/PatPhysicalExam/B12f/Result");
             var strB12fNote = OCX.GetData("Data_source/PatPhysicalExam/B12f/Note");
 
+            //get the data of ppe
+            var strFT3 = OCX.GetData("Data_source/PatLabExam/FT3");
+            var strFT4 = OCX.GetData("Data_source/PatLabExam/FT4");
+            var strTT3 = OCX.GetData("Data_source/PatLabExam/TT3");
+            var strTT4 = OCX.GetData("Data_source/PatLabExam/TT4");
+            var strTSH = OCX.GetData("Data_source/PatLabExam/TSH");
+            var strFolacin = OCX.GetData("Data_source/PatLabExam/Folacin");
+            var strB12 = OCX.GetData("Data_source/PatLabExam/B12");
+            var strProperty = OCX.GetData("Data_source/PatLabExam/Property");
+            var strProperty_1 = OCX.GetData("Data_source/PatLabExam/Property_1");
+            var strGAfter = OCX.GetData("Data_source/PatLabExam/GAfter");
+            var strHbAlc = OCX.GetData("Data_source/PatLabExam/HbAlc");
+            var strUricAcid = OCX.GetData("Data_source/PatLabExam/UricAcid");
+            var strCholesterol = OCX.GetData("Data_source/PatLabExam/Cholesterol");
+            var strGanEster = OCX.GetData("Data_source/PatLabExam/GanEster");
+            var strHDLC = OCX.GetData("Data_source/PatLabExam/HDLC");
+            var strLDLC = OCX.GetData("Data_source/PatLabExam/LDLC");
+            var strGOT = OCX.GetData("Data_source/PatLabExam/GOT");
+            var strGPT = OCX.GetData("Data_source/PatLabExam/GPT");
+            var strBUN = OCX.GetData("Data_source/PatLabExam/BUN");
+            var strCR = OCX.GetData("Data_source/PatLabExam/CR");
+            var strAlbumin = OCX.GetData("Data_source/PatLabExam/Albumin");
+            var strRBC = OCX.GetData("Data_source/PatLabExam/RBC");
+            var strHB = OCX.GetData("Data_source/PatLabExam/HB");
+            var strPLT = OCX.GetData("Data_source/PatLabExam/PLT");
+            var strWBC = OCX.GetData("Data_source/PatLabExam/WBC");
+            var strApoE = OCX.GetData("Data_source/PatLabExam/ApoE");
+            var strProtein = OCX.GetData("Data_source/PatLabExam/Protein");
+            var strElectrocardiogramDate = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Date");
+            var strElectrocardiogramResult = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Result");
+            var strElectrocardiogramNote = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Note");
+            var strEchocardiagraphyDate = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Date");
+            var strEchocardiagraphyResult = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Result");
+            var strEchocardiagraphyNote = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Note");
+            var strEEGDate = OCX.GetData("Data_source/PatLabExam/EEG/Date");
+            var strEEGResult = OCX.GetData("Data_source/PatLabExam/EEG/Result");
+            var strEEGNote = OCX.GetData("Data_source/PatLabExam/EEG/Note");
+            var strCTDate = OCX.GetData("Data_source/PatLabExam/CT/Date");
+            var strCTResult = OCX.GetData("Data_source/PatLabExam/CT/Result");
+            var strCTNote = OCX.GetData("Data_source/PatLabExam/CT/Note");
+
             var thing = { pma: { Id: 2, MC1: strMC1, MC2: strMC2
             , MC3: strMC3, MC4: strMC4, MC5: strMC5
             , MC6: strMC6, MC7: strMC7, MC8: strMC8
@@ -363,6 +404,18 @@
             , B12b: { Result: strB12bResult, Note: strB12bNote }, B12c: { Result: strB12cResult, Note: strB12cNote }
             , B12d: { Result: strB12dResult, Note: strB12dNote }, B12e: { Result: strB12eResult, Note: strB12eNote }
             , B12f: { Result: strB12fResult, Note: strB12fNote }
+                },
+                ple: { Id: 2, FT3: strFT3, FT4: strFT4, TT3: strTT3, TT4: strTT4, TSH: strTSH
+            , Folacin: strFolacin, B12: strB12, Property: strProperty, Property_1: strProperty_1, GAfter: strGAfter
+            , HbAlc: strHbAlc, UricAcid: strUricAcid, Cholesterol: strCholesterol
+            , GanEster: strGanEster, HDLC: strHDLC, LDLC: strLDLC, GOT: strGOT
+            , GPT: strGPT, BUN: strBUN, CR: strCR
+            , Albumin: strAlbumin, RBC: strRBC, HB: strHB
+            , PLT: strPLT, WBC: strWBC, ApoE: strApoE, Protein: strProtein
+            , Electrocardiogram: { Date: strElectrocardiogramDate, Result: strElectrocardiogramResult, Note: strElectrocardiogramNote }
+            , Echocardiagraphy: { Date: strEchocardiagraphyDate, Result: strEchocardiagraphyResult, Note: strEchocardiagraphyNote }
+            , EEG: { Date: strEEGDate, Result: strEEGResult, Note: strEEGNote }
+            , CT: { Date: strCTDate, Result: strCTResult, Note: strCTNote }
                 }
             };
 
