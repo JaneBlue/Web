@@ -272,6 +272,50 @@
             var strPatCDR = OCX.GetData("Data_source/PatOtherTest/PatCDR");
             var strPatGDS = OCX.GetData("Data_source/PatOtherTest/PatGDS");
 
+            //get the data of ppe
+            var strHeight = OCX.GetData("Data_source/PatPhysicalExam/Height");
+            var strWeight = OCX.GetData("Data_source/PatPhysicalExam/Weight");
+            var strWaistline = OCX.GetData("Data_source/PatPhysicalExam/Waistline");
+            var strHipline = OCX.GetData("Data_source/PatPhysicalExam/Hipline");
+            var strBloodPressureH = OCX.GetData("Data_source/PatPhysicalExam/BloodPressureH");
+            var strBloodPressureL = OCX.GetData("Data_source/PatPhysicalExam/BloodPressureL");
+            var strB1Result = OCX.GetData("Data_source/PatPhysicalExam/B1/Result");
+            var strB1Note = OCX.GetData("Data_source/PatPhysicalExam/B1/Note");
+            var strB2Result = OCX.GetData("Data_source/PatPhysicalExam/B2/Result");
+            var strB2Note = OCX.GetData("Data_source/PatPhysicalExam/B2/Note");
+            var strB3Result = OCX.GetData("Data_source/PatPhysicalExam/B3/Result");
+            var strB3Note = OCX.GetData("Data_source/PatPhysicalExam/B3/Note");
+            var strB4Result = OCX.GetData("Data_source/PatPhysicalExam/B4/Result");
+            var strB4Note = OCX.GetData("Data_source/PatPhysicalExam/B4/Note");
+            var strB5Result = OCX.GetData("Data_source/PatPhysicalExam/B5/Result");
+            var strB5Note = OCX.GetData("Data_source/PatPhysicalExam/B5/Note");
+            var strB6Result = OCX.GetData("Data_source/PatPhysicalExam/B6/Result");
+            var strB6Note = OCX.GetData("Data_source/PatPhysicalExam/B6/Note");
+            var strB7Result = OCX.GetData("Data_source/PatPhysicalExam/B7/Result");
+            var strB7Note = OCX.GetData("Data_source/PatPhysicalExam/B7/Note");
+            var strB8Result = OCX.GetData("Data_source/PatPhysicalExam/B8/Result");
+            var strB8Note = OCX.GetData("Data_source/PatPhysicalExam/B8/Note");
+            var strB9Result = OCX.GetData("Data_source/PatPhysicalExam/B9/Result");
+            var strB9Note = OCX.GetData("Data_source/PatPhysicalExam/B9/Note");
+            var strB10Result = OCX.GetData("Data_source/PatPhysicalExam/B10/Result");
+            var strB10Note = OCX.GetData("Data_source/PatPhysicalExam/B10/Note");
+            var strB11Result = OCX.GetData("Data_source/PatPhysicalExam/B11/Result");
+            var strB11Note = OCX.GetData("Data_source/PatPhysicalExam/B11/Note");
+            var strB12Result = OCX.GetData("Data_source/PatPhysicalExam/B12/Result");
+            var strB12Note = OCX.GetData("Data_source/PatPhysicalExam/B12/Note");
+            var strB12aResult = OCX.GetData("Data_source/PatPhysicalExam/B12a/Result");
+            var strB12aNote = OCX.GetData("Data_source/PatPhysicalExam/B12a/Note");
+            var strB12bResult = OCX.GetData("Data_source/PatPhysicalExam/B12b/Result");
+            var strB12bNote = OCX.GetData("Data_source/PatPhysicalExam/B12b/Note");
+            var strB12cResult = OCX.GetData("Data_source/PatPhysicalExam/B12c/Result");
+            var strB12cNote = OCX.GetData("Data_source/PatPhysicalExam/B12c/Note");
+            var strB12dResult = OCX.GetData("Data_source/PatPhysicalExam/B12d/Result");
+            var strB12dNote = OCX.GetData("Data_source/PatPhysicalExam/B12d/Note");
+            var strB12eResult = OCX.GetData("Data_source/PatPhysicalExam/B12e/Result");
+            var strB12eNote = OCX.GetData("Data_source/PatPhysicalExam/B12e/Note");
+            var strB12fResult = OCX.GetData("Data_source/PatPhysicalExam/B12f/Result");
+            var strB12fNote = OCX.GetData("Data_source/PatPhysicalExam/B12f/Note");
+
             var thing = { pma: { Id: 2, MC1: strMC1, MC2: strMC2
             , MC3: strMC3, MC4: strMC4, MC5: strMC5
             , MC6: strMC6, MC7: strMC7, MC8: strMC8
@@ -306,9 +350,22 @@
             , ConnectNumber1: strConnectNumber1, ConnectNumber2: strConnectNumber2, Vocabulary4: strVocabulary4
             , VocabularyAnalyse1: strVocabularyAnalyse1, Picture3: strPicture3, VocabularyAnalyse2: strVocabularyAnalyse2
             , PatCDR: strPatCDR, PatGDS: strPatGDS
+                },
+                ppe: { Id: 2, Height: strHeight, Weight: strWeight
+            , Waistline: strWaistline, Hipline: strHipline, BloodPressureH: strBloodPressureH
+            , BloodPressureL: strBloodPressureL, B1: { Result: strB1Result, Note: strB1Note }
+            , B2: { Result: strB2Result, Note: strB2Note }, B3: { Result: strB3Result, Note: strB3Note }
+            , B4: { Result: strB4Result, Note: strB4Note }, B5: { Result: strB5Result, Note: strB5Note }
+            , B6: { Result: strB6Result, Note: strB6Note }, B7: { Result: strB7Result, Note: strB7Note }
+            , B8: { Result: strB8Result, Note: strB8Note }, B9: { Result: strB9Result, Note: strB9Note }
+            , B10: { Result: strB10Result, Note: strB10Note }, B11: { Result: strB11Result, Note: strB11Note }
+            , B12: { Result: strB12Result, Note: strB12Note }, B12a: { Result: strB12aResult, Note: strB12aNote }
+            , B12b: { Result: strB12bResult, Note: strB12bNote }, B12c: { Result: strB12cResult, Note: strB12cNote }
+            , B12d: { Result: strB12dResult, Note: strB12dNote }, B12e: { Result: strB12eResult, Note: strB12eNote }
+            , B12f: { Result: strB12fResult, Note: strB12fNote }
                 }
             };
-            
+
             var encoded = $.toJSON(thing);
 
 

@@ -12,6 +12,7 @@ namespace LNCDCDSS.Models
         public PatADL pal{ get; set; }
         public PatDisease pds { get; set; }
         public PatOtherTest pot{ get; set; }
+        public PatPhysicalExam ppe{ get; set; }
       //  public PatRecentDrug prd { get; set; }
     }
 }

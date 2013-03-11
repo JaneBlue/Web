@@ -1349,7 +1349,7 @@
       <Diagram Name="LNCDDataModel" >
         <EntityTypeShape EntityType="LNCDDataModel.DoctorAccount" Width="1.5" PointX="0.5" PointY="0.75" Height="1.9700325520833339" />
         <EntityTypeShape EntityType="LNCDDataModel.PatBasicInfor" Width="2" PointX="3.25" PointY="0.625" Height="3.6892097981770826" />
-        <EntityTypeShape EntityType="LNCDDataModel.PatPhysicalExam" Width="1.5" PointX="8.125" PointY="0.5" Height="5.9814461263020826" />
+        <EntityTypeShape EntityType="LNCDDataModel.PatPhysicalExam" Width="1.875" PointX="8.125" PointY="0.5" Height="6.1724658203125" />
         <EntityTypeShape EntityType="LNCDDataModel.PatMMSE" Width="1.5" PointX="10.25" PointY="5.375" Height="3.6892097981770817" />
         <EntityTypeShape EntityType="LNCDDataModel.PatMoCA" Width="1.5" PointX="0.625" PointY="3.125" Height="3.3071704101562496" />
         <EntityTypeShape EntityType="LNCDDataModel.PatADL" Width="1.5" PointX="0.5" PointY="7" Height="5.4083870442708335" />
@@ -1372,7 +1372,7 @@
           <ConnectorPoint PointX="5.125" PointY="7.4282230631510409" />
           <ConnectorPoint PointX="10.25" PointY="7.4282230631510409" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="LNCDDataModel.PatRecentDrug" Width="1.5" PointX="6.625" PointY="7.75" Height="1.7790128580729174" />
+        <EntityTypeShape EntityType="LNCDDataModel.PatRecentDrug" Width="1.875" PointX="6.625" PointY="7.75" Height="1.7790128580729174" />
         <AssociationConnector Association="LNCDDataModel.PatBasicInforPatDisease">
           <ConnectorPoint PointX="5.25" PointY="2.7196048990885409" />
           <ConnectorPoint PointX="6.125" PointY="2.7196048990885409" />
@@ -1401,8 +1401,8 @@
           <ConnectorPoint PointX="7.25" PointY="10.875" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.PatBasicInforPatPhysicalExam">
-          <ConnectorPoint PointX="5.25" PointY="0.84374999999999944" />
-          <ConnectorPoint PointX="8.125" PointY="0.84374999999999944" />
+          <ConnectorPoint PointX="5.25" PointY="0.84374999999999967" />
+          <ConnectorPoint PointX="8.125" PointY="0.84374999999999967" />
         </AssociationConnector>
         </Diagram>
     </edmx:Diagrams>
