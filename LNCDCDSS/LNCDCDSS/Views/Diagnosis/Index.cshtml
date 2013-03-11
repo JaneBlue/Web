@@ -12,7 +12,7 @@
     $(function () {
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
-        var b = OCX.OpenReport("D:\\2013CDSS\\TemplateForReporter\\LNCDtemp");
+        var b = OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\LNCDtemp");
         OCX.ShowReport();
         OCX.ShowThisPage("基本情况");
         // })
@@ -357,6 +357,93 @@
             var strCTResult = OCX.GetData("Data_source/PatLabExam/CT/Result");
             var strCTNote = OCX.GetData("Data_source/PatLabExam/CT/Note");
 
+            //get the data of drug
+            var strDrugCatogary1 = "抗抑郁/焦虑药";
+            var strDrugCatogary2 = "抗精神病药物";
+            var strDrugCatogary3 = "镇静安眠药";
+            var strDrugCatogary4 = "抗癫痫药物";
+            var strDrugCatogary5 = "帕金森药物";
+            var strDrugCatogary6 = "痴呆药药物";
+            var strDrugCatogary7 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary7");
+            var strDrugCatogary8 = "促进血液循环药物";
+            var strDrugCatogary9 = "扩冠药物";
+            var strDrugCatogary10 = "抗血小板药物";
+            var strDrugCatogary11 = "抗凝药";
+            var strDrugCatogary1Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug1/Name");
+            var strDrugCatogary1Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug2/Name");
+            var strDrugCatogary1Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug3/Name");
+            var strDrugCatogary1Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug4/Name");
+            var strDrugCatogary1Drug5 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug5/Name");
+            var strDrugCatogary1Drug6 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug6/Name");
+            var strDrugCatogary1Drug7 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug7/Name");
+            var strDrugCatogary1Drug8 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug8/Name");
+            if ("" == strDrugCatogary1Drug1 && "" == strDrugCatogary1Drug2 && "" == strDrugCatogary1Drug3
+            && "" == strDrugCatogary1Drug4 && "" == strDrugCatogary1Drug5 && "" == strDrugCatogary1Drug6
+            && "" == strDrugCatogary1Drug7 && "" == strDrugCatogary1Drug8) {
+                strDrugCatogary1 = "";
+            }
+            var strDrugCatogary2Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary2/Drug1/Name");
+            var strDrugCatogary2Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary2/Drug2/Name");
+            if ("" == strDrugCatogary2Drug1 && "" == strDrugCatogary2Drug2) {
+                strDrugCatogary2 = "";
+            }
+            var strDrugCatogary3Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary3/Drug1/Name");
+            var strDrugCatogary3Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary3/Drug2/Name");
+            var strDrugCatogary3Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary3/Drug3/Name");
+            var strDrugCatogary3Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary3/Drug4/Name");
+            var strDrugCatogary3Drug5 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary3/Drug5/Name");
+            if ("" == strDrugCatogary3Drug1 && "" == strDrugCatogary3Drug2 && "" == strDrugCatogary3Drug3
+            && "" == strDrugCatogary3Drug4 && "" == strDrugCatogary3Drug5) {
+                strDrugCatogary3 = "";
+            }
+            var strDrugCatogary4Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary4/Drug1/Name");
+            var strDrugCatogary4Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary4/Drug2/Name");
+            var strDrugCatogary4Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary4/Drug3/Name");
+            var strDrugCatogary4Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary4/Drug4/Name");
+            if ("" == strDrugCatogary4Drug1 && "" == strDrugCatogary4Drug2 && "" == strDrugCatogary4Drug3
+            && "" == strDrugCatogary4Drug4) {
+                strDrugCatogary4 = "";
+            }
+            var strDrugCatogary5Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary5/Drug1/Name");
+            var strDrugCatogary5Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary5/Drug2/Name");
+            var strDrugCatogary5Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary5/Drug3/Name");
+            var strDrugCatogary5Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary5/Drug4/Name");
+            var strDrugCatogary5Drug5 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary5/Drug5/Name");
+            if ("" == strDrugCatogary5Drug1 && "" == strDrugCatogary5Drug2 && "" == strDrugCatogary5Drug3
+            && "" == strDrugCatogary5Drug4 && "" == strDrugCatogary5Drug5) {
+                strDrugCatogary5 = "";
+            }
+            var strDrugCatogary6Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary6/Drug1/Name");
+            var strDrugCatogary6Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary6/Drug2/Name");
+            var strDrugCatogary6Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary6/Drug3/Name");
+            var strDrugCatogary6Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary6/Drug4/Name");
+            if ("" == strDrugCatogary6Drug1 && "" == strDrugCatogary6Drug2 && "" == strDrugCatogary6Drug3
+            && "" == strDrugCatogary6Drug4) {
+                strDrugCatogary6 = "";
+            }
+            var strDrugCatogary8Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary8/Drug1/Name");
+            var strDrugCatogary8Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary8/Drug2/Name");
+            var strDrugCatogary8Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary8/Drug3/Name");
+            if ("" == strDrugCatogary8Drug1 && "" == strDrugCatogary8Drug2 && "" == strDrugCatogary8Drug3) {
+                strDrugCatogary8 = "";
+            }
+            var strDrugCatogary9Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary9/Drug1/Name");
+            if ("" == strDrugCatogary9Drug1) {
+                strDrugCatogary9 = "";
+            }
+            var strDrugCatogary10Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary10/Drug1/Name");
+            var strDrugCatogary10Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary10/Drug2/Name");
+            var strDrugCatogary10Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary10/Drug3/Name");
+            var strDrugCatogary10Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary10/Drug4/Name");
+            if ("" == strDrugCatogary10Drug1 && "" == strDrugCatogary10Drug2 && "" == strDrugCatogary10Drug3
+            && "" == strDrugCatogary10Drug4) {
+                strDrugCatogary10 = "";
+            }
+            var strDrugCatogary11Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary11/Drug1/Name");
+            if ("" == strDrugCatogary11Drug1) {
+                strDrugCatogary11 = "";
+            }
+
             var thing = { pma: { Id: 2, MC1: strMC1, MC2: strMC2
             , MC3: strMC3, MC4: strMC4, MC5: strMC5
             , MC6: strMC6, MC7: strMC7, MC8: strMC8
@@ -384,7 +471,7 @@
             , D12: strD12Situation, D13: strD13Situation, D14: strD14Situation
             , D15: strD15Situation, D16: strD16Situation, D17: strD17Situation
             , D18: strD18Situation, D19: strD19Situation, D20: strD20Situation
-            , D21: strD21Situation, ImportantD: ImportantDSituation
+            , D21: strD21Situation, ImportantD: strImportantDSituation
                 },
                 pot: { Id: 2, Vocabulary1: strVocabulary1, Vocabulary2: strVocabulary2
             , Vocabulary3: strVocabulary3, Picture1: strPicture1, Picture2: strPicture2
@@ -416,7 +503,49 @@
             , Echocardiagraphy: { Date: strEchocardiagraphyDate, Result: strEchocardiagraphyResult, Note: strEchocardiagraphyNote }
             , EEG: { Date: strEEGDate, Result: strEEGResult, Note: strEEGNote }
             , CT: { Date: strCTDate, Result: strCTResult, Note: strCTNote }
+                },
+                prd: [
+                { Id: 1, DrugCatogary: strDrugCatogary1, drug: [{ name: strDrugCatogary1Drug1 }, { name: strDrugCatogary1Drug2 }
+                , { name: strDrugCatogary1Drug3 }, { name: strDrugCatogary1Drug4 }, { name: strDrugCatogary1Drug5 }
+                , { name: strDrugCatogary1Drug6 }, { name: strDrugCatogary1Drug7 }, { name: strDrugCatogary1Drug8}]
                 }
+                ,
+                { Id: 2, DrugCatogary: strDrugCatogary2, drug: [{ name: strDrugCatogary2Drug1 }, { name: strDrugCatogary2Drug2}]
+                }
+                ,
+                { Id: 3, DrugCatogary: strDrugCatogary3, drug: [{ name: strDrugCatogary3Drug1 }, { name: strDrugCatogary3Drug2 }
+                , { name: strDrugCatogary3Drug3 }, { name: strDrugCatogary3Drug4 }, { name: strDrugCatogary3Drug5}]
+                }
+                ,
+                { Id: 4, DrugCatogary: strDrugCatogary4, drug: [{ name: strDrugCatogary4Drug1 }, { name: strDrugCatogary4Drug2 }
+                , { name: strDrugCatogary4Drug3 }, { name: strDrugCatogary4Drug4}]
+                }
+                ,
+                { Id: 5, DrugCatogary: strDrugCatogary5, drug: [{ name: strDrugCatogary5Drug1 }, { name: strDrugCatogary5Drug2 }
+                , { name: strDrugCatogary5Drug3 }, { name: strDrugCatogary5Drug4 }, { name: strDrugCatogary5Drug5}]
+                }
+                ,
+                { Id: 6, DrugCatogary: strDrugCatogary6, drug: [{ name: strDrugCatogary6Drug1 }, { name: strDrugCatogary6Drug2 }
+                , { name: strDrugCatogary6Drug3 }, { name: strDrugCatogary6Drug4}]
+                }
+                ,
+                { Id: 7, DrugCatogary: strDrugCatogary7
+                }
+                ,
+                { Id: 8, DrugCatogary: strDrugCatogary8, drug: [{ name: strDrugCatogary8Drug1 }, { name: strDrugCatogary8Drug2 }
+                , { name: strDrugCatogary8Drug3}]
+                }
+                ,
+                { Id: 9, DrugCatogary: strDrugCatogary9, drug: [{ name: strDrugCatogary9Drug1}]
+                }
+                ,
+                { Id: 10, DrugCatogary: strDrugCatogary10, drug: [{ name: strDrugCatogary10Drug1 }, { name: strDrugCatogary10Drug2 }
+                , { name: strDrugCatogary10Drug3 }, { name: strDrugCatogary10Drug4}]
+                }
+                ,
+                { Id: 11, DrugCatogary: strDrugCatogary11, drug: [{ name: strDrugCatogary11Drug1}]
+                }
+                    ]
             };
 
             var encoded = $.toJSON(thing);
