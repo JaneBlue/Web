@@ -444,6 +444,150 @@
                 strDrugCatogary11 = "";
             }
 
+            //calculate the CDR score
+            var strPatCDRMemory = OCX.GetData("Data_source/PatOtherTest/PatCDR1/Merory");
+            var fMemory = 0;
+            if ("" != strPatCDRMemory) {
+                fMemory = parseFloat(strPatCDRMemory);
+            }
+            var strPatCDROrientation = OCX.GetData("Data_source/PatOtherTest/PatCDR1/Orientation");
+            var fOrientation = 0;
+            if ("" != strPatCDROrientation) {
+                fOrientation = parseFloat(strPatCDROrientation);
+            }
+            var strPatCDRJudgementPloblemSolving = OCX.GetData("Data_source/PatOtherTest/PatCDR1/JudgementPloblemSolving");
+            var fJudgementPloblemSolving = 0;
+            if ("" != strPatCDRJudgementPloblemSolving) {
+                fJudgementPloblemSolving = parseFloat(strPatCDRJudgementPloblemSolving);
+            }
+            var strPatCDRCommunityAffairs = OCX.GetData("Data_source/PatOtherTest/PatCDR1/CommunityAffairs");
+            var fCommunityAffairs = 0;
+            if ("" != strPatCDRCommunityAffairs) {
+                fCommunityAffairs = parseFloat(strPatCDRCommunityAffairs);
+            }
+            var strPatCDRHomeHobbies = OCX.GetData("Data_source/PatOtherTest/PatCDR1/HomeHobbies");
+            var fHomeHobbies = 0;
+            if ("" != strPatCDRHomeHobbies) {
+                fHomeHobbies = parseFloat(strPatCDRHomeHobbies);
+            }
+            var strPatCDRPersonalCare = OCX.GetData("Data_source/PatOtherTest/PatCDR1/PersonalCare");
+            var fPersonalCare = 0;
+            if ("" != strPatCDRPersonalCare) {
+                fPersonalCare = parseFloat(strPatCDRPersonalCare);
+            }
+            var nEquelM = 0;
+            var nGreaterM = 0;
+            var nLessM = 0;
+            var nZero = 0;
+
+            if (Math.abs(fOrientation - fMemory) < 0.1) {//if fOrientation is equel to fMemory
+                ++nEquelM;
+            }
+            else if (fOrientation - fMemory < 0) {//if fOrientation is less than fMemory
+                ++nLessM;
+            }
+            else {//if fOrientation is greater than fMemory
+                ++nGreaterM;
+            }
+
+            if (Math.abs(fJudgementPloblemSolving - fMemory) < 0.1) {
+                ++nEquelM;
+            }
+            else if (fJudgementPloblemSolving - fMemory < 0) {
+                ++nLessM;
+            }
+            else {
+                ++nGreaterM;
+            }
+
+            if (Math.abs(fCommunityAffairs - fMemory) < 0.1) {
+                ++nEquelM;
+            }
+            else if (fCommunityAffairs - fMemory < 0) {
+                ++nLessM;
+            }
+            else {
+                ++nGreaterM;
+            }
+
+            if (Math.abs(fHomeHobbies - fMemory) < 0.1) {
+                ++nEquelM;
+            }
+            else if (fHomeHobbies - fMemory < 0) {
+                ++nLessM;
+            }
+            else {
+                ++nGreaterM;
+            }
+
+            if (Math.abs(fPersonalCare - fMemory) < 0.1) {
+                ++nEquelM;
+            }
+            else if (fPersonalCare - fMemory < 0) {
+                ++nLessM;
+            }
+            else {
+                ++nGreaterM;
+            }
+
+            var fPatCDR = fMemory; //mostly, the score of the CDR is equel to Memory
+            if ((Math.abs(fMemory - 0.5) < 0.1) && (nGreaterM >= 3)) {//当M=0. 5时，如果至少有3个其他项目计分为1或以上，则CDR=1。
+                fPatCDR = 1;
+            }
+            else if ((Math.abs(fMemory) < 0.1) && (nGreaterM >= 2)) {//如果M=0，CDR=0，除非在 2个或以上次要项目存在损害（0. 5或以上），这时CDR=0. 5。
+                fPatCDR = 0.5;
+            }
+
+            if (0 == nGreaterM && nEquelM <= 2) {//次要项目集中在M一侧时，选择离M最近的计分为CDR得分
+                if (Math.abs(fMemory - 0.5) < 0.1) {
+                    fPatCDR = 0;
+                }
+                else if (Math.abs(fMemory - 1) < 0.1) {
+                    fPatCDR = 0.5;
+                }
+                else if (Math.abs(fMemory - 2) < 0.1) {
+                    fPatCDR = 1;
+                }
+                else if (Math.abs(fMemory - 3) < 0.1) {
+                    fPatCDR = 2;
+                }
+            }
+            else if (0 == nLessM && nEquelM <= 2) {//次要项目集中在M一侧时，选择离M最近的计分为CDR得分
+                if (Math.abs(fMemory) < 0.1) {
+                    fPatCDR = 0.5;
+                }
+                else if (Math.abs(fMemory - 0.5) < 0.1) {
+                    fPatCDR = 1;
+                }
+                else if (Math.abs(fMemory - 1) < 0.1) {
+                    fPatCDR = 2;
+                }
+                else if (Math.abs(fMemory - 2) < 0.1) {
+                    fPatCDR = 3;
+                }
+            }
+
+            if (Math.abs(fOrientation) < 0.1) {
+                ++nZero;
+            }
+            if (Math.abs(fJudgementPloblemSolving) < 0.1) {
+                ++nZero;
+            }
+            if (Math.abs(fCommunityAffairs) < 0.1) {
+                ++nZero;
+            }
+            if (Math.abs(fHomeHobbies) < 0.1) {
+                ++nZero;
+            }
+            if (Math.abs(fPersonalCare) < 0.1) {
+                ++nZero;
+            }
+            if (fMemory - 1 > 0.1 && nZero > 2) {//当M=1或以上，CDR不能为0；在这种情况下，当次要项目的大多数为0时，CDR= 0. 5。
+                fPatCDR = 0.5;
+            }
+
+            strPatCDR = fPatCDR.toString();
+
             var thing = { pma: { Id: 2, MC1: strMC1, MC2: strMC2
             , MC3: strMC3, MC4: strMC4, MC5: strMC5
             , MC6: strMC6, MC7: strMC7, MC8: strMC8
