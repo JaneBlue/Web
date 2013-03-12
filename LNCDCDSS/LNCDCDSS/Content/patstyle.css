@@ -211,4 +211,27 @@ input[type="submit"]
 	color: #52640A;
 }
 
-
+#TestResult
+{
+     padding :40px 20px 0 100px;
+    width: 510px;
+    height: 164px;
+    background: url(images/box1.png) no-repeat ;
+    background-position: right;
+}
+#DiagnosisResult
+{
+    padding :40px 20px 0 100px;
+    width: 510px;
+    height: 144px;
+    background: url(images/box2.png) no-repeat ;
+    background-position: right;
+}
+#RecordNote
+{
+    padding :40px 20px 0 100px;
+    width: 510px;
+    height: 144px;
+    background: url(images/box3.png) no-repeat ;
+    background-position: right;
+}
