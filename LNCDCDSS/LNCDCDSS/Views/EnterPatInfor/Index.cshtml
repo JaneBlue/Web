@@ -7,26 +7,26 @@
 
 <div id="content">
 		<div id="query">
-           @using (Html.BeginForm("Query"))
+           @using (Ajax.BeginForm("Query", new AjaxOptions { UpdateTargetId = "sidebar", HttpMethod = "POST", InsertionMode = InsertionMode.Replace }))  
            {
 			<h2 class="title">查询病人</h2>
 			 <ul>
             <li><div class="editor-field">@Html.LabelFor(model => model.Name, "姓名") 
-            @Html.EditorFor(model => model.Name)
+            @Html.TextBox("name")
 		    </div></li>
              <li><div class="editor-field">@Html.LabelFor(model => model.Sex, "性别")
-            @Html.EditorFor(model => model.Sex)
+           @Html.TextBox("sex")
 		    </div></li>
-             <li><div class="editor-field"><a>就诊日期</a><input type="date"></input>
+             <li><div class="editor-field"><a>就诊日期</a><input ID="date" type="date"></input>
 		    </div></li>
-             <li><div class="editor-field"><a>诊断结论</a>@Html.EditorFor(model => model.Sex)
+             <li><div class="editor-field"><lable>诊断结论</lable>   @Html.DropDownList("Diagnosis", String.Empty)
 		    </div></li>
             </ul>
          
              <p><input type="submit" value="查询病人" /></p>
             <div id="detail"><a>详细查询</a>
             </div>
-                 }
+           }
 		</div>
 		<div id="entry">
 			<h2 class="title">新病人注册</h2>
@@ -43,7 +43,7 @@
 		    </div></li>
             
             <li><div class="editor-field">@Html.LabelFor(model => model.Sex, "性别")
-            @Html.EditorFor(model => model.Sex)
+            @Html.RadioButtonFor(model=>model.Sex,true)男  @Html.RadioButtonFor(model=>model.Sex,false)女
 		    </div></li>
             
             <li><div class="editor-field">@Html.LabelFor(model => model.Age, "年龄") 

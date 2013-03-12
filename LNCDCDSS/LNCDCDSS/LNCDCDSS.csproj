@@ -263,6 +263,8 @@
     <Content Include="Views\Shared\Diagnosis_Layout.cshtml" />
     <Content Include="Views\Diagnosis\Index.cshtml" />
     <Content Include="Views\Shared\LoginLayout.cshtml" />
+    <Content Include="Views\EnterPatInfor\ViewRecord.cshtml" />
+    <Content Include="Views\Shared\PatList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

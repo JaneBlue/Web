@@ -14,6 +14,11 @@ namespace LNCDCDSS.Controllers
 
         public ActionResult Index()
         {
+            List<SelectListItem> items = new List<SelectListItem>();
+            items.Add(new SelectListItem { Text = "正常", Value = "29" });
+            items.Add(new SelectListItem { Text = "轻度痴呆", Value = "28" });
+            items.Add(new SelectListItem { Text = "MCI", Value = "24" });
+            this.ViewData["Diagnosis"] = items;
             return View();
         }
         [HttpPost]
@@ -33,7 +38,30 @@ namespace LNCDCDSS.Controllers
         [HttpPost]
         public ActionResult Query()
         {
-            return Redirect("/Diagnosis/Index");
+            string patname = Request["name"];
+            string patsex = Request["sex"];
+            string d = Request["date"];
+            // DateTime dt = DateTime.Parse(Request["date"]);
+            string diagnosisresult = Request["Diagnosis"];
+            // return Redirect("/Diagnosis/Index");
+            List<string> cities = new List<string>(); // List of city names
+            cities.Add("San Diego");                  // String element 1
+            cities.Add("Humboldt");                   // 2
+            cities.Add("Los Angeles");                // 3
+            cities.Add("Auburn");
+            return PartialView("PatList", cities);
+        }
+
+        public ActionResult ViewRecord(string ID)
+        {
+            string t = ID;
+            List<string> cities = new List<string>(); // List of city names
+            cities.Add("San Diego");                  // String element 1
+            cities.Add("Humboldt");                   // 2
+            cities.Add("Los Angeles");                // 3
+            cities.Add("Auburn");
+            ViewBag.Visit = cities;
+            return View(cities);
         }
     }
 }

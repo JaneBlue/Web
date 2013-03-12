@@ -1,0 +1,12 @@
+﻿@model List<string>
+<ul>
+
+@foreach (var item in Model)
+
+{
+    <li>
+ @Html.ActionLink(@item, "ViewRecord", new { id = item })
+  </li>
+}
+
+</ul>

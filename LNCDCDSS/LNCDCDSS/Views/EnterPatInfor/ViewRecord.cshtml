@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "ViewRecord";
+    Layout = "~/Views/Shared/PatLayout.cshtml";
+}
+@model List<string>
+<div id="content">
+</div>
+<div id="sidebar">
+ <h2> 病人列表</h2>
+		<ul>
+			
+			@foreach (var item in Model)
+
+{
+    <li>
+      item.tostring()
+  </li>
+}
+
+		
+			
+		</ul>
+</div>
