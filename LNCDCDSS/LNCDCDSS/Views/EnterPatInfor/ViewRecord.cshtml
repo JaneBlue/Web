@@ -4,6 +4,9 @@
 }
 @model List<string>
 <div id="content">
+<div id ="TestResult"></div>
+<div id ="RecordNote"></div>
+<div id ="DiagnosisResult"></div>
 </div>
 <div id="sidebar">
  <h2> 病人列表</h2>
@@ -13,11 +16,26 @@
 
 {
     <li>
-      item.tostring()
+      @Ajax.ActionLink(@item, "DetailView", new { id = item },new AjaxOptions
+   {
+       UpdateTargetId = "Content",
+       LoadingElementId = "loading",
+       OnSuccess = "Begin"
+   })
   </li>
-}
-
-		
-			
+}			
 		</ul>
 </div>
+
+<script type ="text/javascript">
+  
+        function Begin(data) {
+            //var dataObj = eval("(" + data + ")"); //
+            for (var n = 0; n < data.length; n++) {
+                $("#" + data[n].Name).html(data[n].Contetntext);
+            }
+
+       }
+
+   
+    </script>

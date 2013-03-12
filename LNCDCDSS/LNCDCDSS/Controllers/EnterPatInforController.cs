@@ -63,5 +63,24 @@ namespace LNCDCDSS.Controllers
             ViewBag.Visit = cities;
             return View(cities);
         }
+
+        public ActionResult DetailView(string date)
+        {
+            DetaiInfor a = new DetaiInfor() { Name = "TestResult", Contetntext = "12" };
+            DetaiInfor b = new DetaiInfor() { Name = "RecordNote", Contetntext = "17" };
+            List<DetaiInfor> list = new List<DetaiInfor>();
+            list.Add(a);
+            list.Add(b);
+
+            return Json(list, JsonRequestBehavior.AllowGet); 
+         
+        }
+        public class DetaiInfor
+        {
+            public string Name { set; get; }
+            public string Contetntext { set; get; }
+        }
+
+
     }
 }
