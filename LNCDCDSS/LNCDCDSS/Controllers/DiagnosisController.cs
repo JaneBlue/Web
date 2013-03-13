@@ -10,9 +10,10 @@ namespace LNCDCDSS.Controllers
     {
         //
         // GET: /Diagnosis/
-
-        public ActionResult Index()
+        string PatID = "";
+        public ActionResult Index(string ID)
         {
+            PatID = ID;
             return View();
         }
         [HttpPost]

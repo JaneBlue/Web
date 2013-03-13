@@ -32,7 +32,7 @@ namespace LNCDCDSS.Controllers
             pto.InsertPat(pat, HID, PID);
 
 
-            return Redirect("/Diagnosis/Index");
+            return Redirect("/Diagnosis/Index/"+pat.Id);
 
 
         }
@@ -85,7 +85,7 @@ namespace LNCDCDSS.Controllers
         public ActionResult GoToDiagnosis(string ID)
         {
 
-            return Redirect("/Diagnosis/Index");
+            return Redirect("/Diagnosis/Index/"+ID);
         }
     }
 }
