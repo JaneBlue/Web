@@ -5,13 +5,6 @@ D:\Web\try\LNCDCDSS\LNCDCDSS\bin\EntityFramework.xml
 D:\Web\try\LNCDCDSS\LNCDCDSS\obj\Debug\ResolveAssemblyReference.cache
 D:\Web\try\LNCDCDSS\LNCDCDSS\obj\Debug\LNCDCDSS.dll
 D:\Web\try\LNCDCDSS\LNCDCDSS\obj\Debug\LNCDCDSS.pdb
-D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\bin\LNCDCDSS.dll
-D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\bin\LNCDCDSS.pdb
-D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\bin\EntityFramework.dll
-D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\bin\EntityFramework.xml
-D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\obj\Debug\ResolveAssemblyReference.cache
-D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\obj\Debug\LNCDCDSS.dll
-D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\obj\Debug\LNCDCDSS.pdb
 C:\Users\hudi\Documents\GitHub\Web\LNCDCDSS\LNCDCDSS\bin\LNCDCDSS.dll
 C:\Users\hudi\Documents\GitHub\Web\LNCDCDSS\LNCDCDSS\bin\LNCDCDSS.pdb
 C:\Users\hudi\Documents\GitHub\Web\LNCDCDSS\LNCDCDSS\bin\EntityFramework.dll
@@ -19,3 +12,10 @@ C:\Users\hudi\Documents\GitHub\Web\LNCDCDSS\LNCDCDSS\bin\EntityFramework.xml
 C:\Users\hudi\Documents\GitHub\Web\LNCDCDSS\LNCDCDSS\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\hudi\Documents\GitHub\Web\LNCDCDSS\LNCDCDSS\obj\Debug\LNCDCDSS.dll
 C:\Users\hudi\Documents\GitHub\Web\LNCDCDSS\LNCDCDSS\obj\Debug\LNCDCDSS.pdb
+D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\bin\LNCDCDSS.dll
+D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\bin\LNCDCDSS.pdb
+D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\bin\EntityFramework.dll
+D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\bin\EntityFramework.xml
+D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\obj\Debug\ResolveAssemblyReference.cache
+D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\obj\Debug\LNCDCDSS.dll
+D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\obj\Debug\LNCDCDSS.pdb

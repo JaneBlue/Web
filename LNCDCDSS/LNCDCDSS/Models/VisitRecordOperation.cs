@@ -126,16 +126,68 @@ namespace LNCDCDSS.Models
             return true;
         
         }
-        public class  VisitContent {
-            string[] TestResult;
-            string RecordNote;
-            string DIagnosisResult;
-        }
-        public VisitContent  GetVisitContet(string PatID,int RecordID){
-            return null;
-        }
+      
+        public List<string> GetVisitContet(string RecordID){
+            //PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
 
-       
+            VisitRecord vd = context.VisitRecordSet.Find(RecordID);
+            List<string> conttext = new List<string>();
+            string test = vd.PatADL.Total + vd.PatMMSE.Total;
+            conttext.Add(test);
+            conttext.Add(vd.RecordNote) ;
+            conttext.Add(vd.DiagnosisiResult);
+            return conttext;
+        }
+        
+        public  ICollection< PatBasicInfor> GetPat(List<string>Condition){
+
+             string sql="Select * from dbo.PatBasicInforSet ";
+            if (!(Condition[0] != "" && Condition[1] != "" ))
+            {
+                sql += "where ";
+            if (Condition[0] != "")
+            {
+                sql+=" Name ="+"'"+Condition[0]+"'";
+            }
+            if (Condition[1] != "")
+            {
+                  sql+="Sex ="+Condition[1];
+            }
+            }
+            try
+            {
+                var pats = context.PatBasicInforSet.SqlQuery(sql).ToList();
+                return pats;
+            }
+            catch (System.Exception ex)
+            {
+                string s = ex.Message;
+                return null;
+            }
+             
+          
+              //if (!(Condition[2] != "" && Condition[3] != ""))
+              //{
+
+              //    if (Condition[0] != "")
+              //    {
+              //        sql += "Set Name =" + Condition[0];
+              //    }
+              //    if (Condition[1] != "")
+              //    {
+              //        sql += "Set Sex =" + Condition[1];
+              //    }
+              //}
+        }
+        public List<VisitRecord> GetVistRecord(string PatID){
+            PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
+            List<VisitRecord> visit = new List<VisitRecord>();
+            foreach (VisitRecord vr in pt.VisitRecord)
+            {
+                visit.Add(vr);
+            }
+            return visit;
+        }
 
     }
 }

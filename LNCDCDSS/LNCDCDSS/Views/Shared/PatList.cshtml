@@ -1,11 +1,11 @@
-﻿@model List<string>
+﻿@model   ICollection< LNCDCDSS.Models.PatBasicInfor>
 <ul>
 
 @foreach (var item in Model)
 
 {
     <li>
- @Html.ActionLink(@item, "ViewRecord", new { id = item })
+ @Html.ActionLink(@item.Name, "ViewRecord", new { id = item.Id })
   </li>
 }
 

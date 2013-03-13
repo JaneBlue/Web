@@ -9,6 +9,7 @@ namespace LNCDCDSS.Controllers
 {
     public class EnterPatInforController : Controller
     {
+        VisitRecordOperation visitop = new VisitRecordOperation();
         //
         // GET: /EnterPatInfor/
 
@@ -40,34 +41,32 @@ namespace LNCDCDSS.Controllers
         {
             string patname = Request["name"];
             string patsex = Request["sex"];
-            string d = Request["date"];
-            // DateTime dt = DateTime.Parse(Request["date"]);
+            string date = Request["date"];
             string diagnosisresult = Request["Diagnosis"];
+            List<string> query = new List<string>();
+            query.Add(patname);
+            query.Add(patsex);
+            query.Add(date);
+            query.Add(diagnosisresult);
+            
+           ICollection<PatBasicInfor> pts= visitop.GetPat(query);
             // return Redirect("/Diagnosis/Index");
-            List<string> cities = new List<string>(); // List of city names
-            cities.Add("San Diego");                  // String element 1
-            cities.Add("Humboldt");                   // 2
-            cities.Add("Los Angeles");                // 3
-            cities.Add("Auburn");
-            return PartialView("PatList", cities);
+           
+            return PartialView("PatList", pts);
         }
 
         public ActionResult ViewRecord(string ID)
         {
             string t = ID;
-            List<string> cities = new List<string>(); // List of city names
-            cities.Add("San Diego");                  // String element 1
-            cities.Add("Humboldt");                   // 2
-            cities.Add("Los Angeles");                // 3
-            cities.Add("Auburn");
-            ViewBag.Visit = cities;
-            return View(cities);
+           List<VisitRecord>vrecord= visitop.GetVistRecord(t);
+            return View(vrecord);
         }
 
-        public ActionResult DetailView(string date)
+        public ActionResult DetailView(string data)
         {
-            DetaiInfor a = new DetaiInfor() { Name = "TestResult", Contetntext = "12" };
-            DetaiInfor b = new DetaiInfor() { Name = "RecordNote", Contetntext = "17" };
+            List<string> text = visitop.GetVisitContet(data);
+            DetaiInfor a = new DetaiInfor() { Name = "TestResult", Contetntext = text[1]};
+            DetaiInfor b = new DetaiInfor() { Name = "RecordNote", Contetntext =text[2] };
             List<DetaiInfor> list = new List<DetaiInfor>();
             list.Add(a);
             list.Add(b);

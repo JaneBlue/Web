@@ -2,7 +2,7 @@
     ViewBag.Title = "ViewRecord";
     Layout = "~/Views/Shared/PatLayout.cshtml";
 }
-@model List<string>
+@model List<LNCDCDSS.Models.VisitRecord>
 <div id="content">
 <h2 class="title">认知检查</h2>
 <div id ="TestResult"></div>
@@ -19,7 +19,7 @@
 
 {
     <li>
-      @Ajax.ActionLink(@item, "DetailView", new { id = item },new AjaxOptions
+      @Ajax.ActionLink(@item.VisitDate.Date.ToString(), "DetailView", new { id = item.Id },new AjaxOptions
    {
        UpdateTargetId = "Content",
        LoadingElementId = "loading",
