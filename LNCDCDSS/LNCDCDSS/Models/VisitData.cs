@@ -15,6 +15,6 @@ namespace LNCDCDSS.Models
         public PatPhysicalExam ppe{ get; set; }
         public PatLabExam ple{ get; set; }
         public List<PatRecentDrug> prd{ get; set; }
-        public List<Drug> drug{ get; set; }
+        //public List<Drug> drug{ get; set; }
     }
 }
