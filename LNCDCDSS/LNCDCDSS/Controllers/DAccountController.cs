@@ -16,7 +16,7 @@ namespace LNCDCDSS.Controllers
         public ActionResult Index()
         {
            // return View();
-            return Redirect("/Diagnosis/Index");
+            return Redirect("/EnterPatInfor/Index");
         }
         [HttpPost]
         public ActionResult  Index(DoctorAccount dacount)

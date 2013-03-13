@@ -48,31 +48,33 @@ namespace LNCDCDSS.Controllers
             query.Add(patsex);
             query.Add(date);
             query.Add(diagnosisresult);
-            
-           ICollection<PatBasicInfor> pts= visitop.GetPat(query);
+
+            ICollection<PatBasicInfor> pts = visitop.GetPat(query);
             // return Redirect("/Diagnosis/Index");
-           
+
             return PartialView("PatList", pts);
         }
 
         public ActionResult ViewRecord(string ID)
         {
             string t = ID;
-           List<VisitRecord>vrecord= visitop.GetVistRecord(t);
+            List<VisitRecord> vrecord = visitop.GetVistRecord(t);
             return View(vrecord);
         }
 
-        public ActionResult DetailView(string data)
+        public ActionResult DetailView(int ID)
         {
-            List<string> text = visitop.GetVisitContet(data);
-            DetaiInfor a = new DetaiInfor() { Name = "TestResult", Contetntext = text[1]};
-            DetaiInfor b = new DetaiInfor() { Name = "RecordNote", Contetntext =text[2] };
+            List<string> text = visitop.GetVisitContet(ID.ToString());
+            DetaiInfor a = new DetaiInfor() { Name = "TestResult", Contetntext = text[0] };
+            DetaiInfor b = new DetaiInfor() { Name = "RecordNote", Contetntext = text[1] };
+            DetaiInfor c = new DetaiInfor() { Name = "DiagnosisResult", Contetntext = text[2] };
+            DetaiInfor e = new DetaiInfor() { Name = "PatID", Contetntext = text[2] };
             List<DetaiInfor> list = new List<DetaiInfor>();
             list.Add(a);
             list.Add(b);
+            list.Add(c);
+            return Json(list, JsonRequestBehavior.AllowGet);
 
-            return Json(list, JsonRequestBehavior.AllowGet); 
-         
         }
         public class DetaiInfor
         {
@@ -80,6 +82,10 @@ namespace LNCDCDSS.Controllers
             public string Contetntext { set; get; }
         }
 
+        public ActionResult GoToDiagnosis(string ID)
+        {
 
+            return Redirect("/Diagnosis/Index");
+        }
     }
 }

@@ -10,6 +10,9 @@
 <div id ="RecordNote"></div>
 <h2 class="title">诊断</h2>
 <div id ="DiagnosisResult"></div>
+<div class="button">
+
+</div>
 </div>
 <div id="sidebar">
  <h2> 病人列表</h2>
@@ -31,14 +34,16 @@
 </div>
 
 <script type ="text/javascript">
-  
-        function Begin(data) {
-            //var dataObj = eval("(" + data + ")"); //
-            for (var n = 0; n < data.length; n++) {
-                $("#" + data[n].Name).html(data[n].Contetntext);
-            }
 
-       }
-
-   
+    function Begin(data) {
+        //var dataObj = eval("(" + data + ")"); //
+        for (var n = 0; n < data.length; n++) {
+            $("#" + data[n].Name).html(data[n].Contetntext);
+        }
+    }
+    $(function () {
+        $(".button").click(function () {
+            window.location.href = '@Url.Action("GoToDiagnosis", "EnterPatInfor", new { id = Model[0].PatBasicInforId }, null)';
+        })
+    });
     </script>
