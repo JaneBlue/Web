@@ -89,6 +89,7 @@
     <Compile Include="Models\Exam.cs">
       <DependentUpon>LNCDDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\JsonHelper.cs" />
     <Compile Include="Models\JSTransfer.cs" />
     <Compile Include="Models\LNCDDataModel.Context.cs">
       <AutoGen>True</AutoGen>

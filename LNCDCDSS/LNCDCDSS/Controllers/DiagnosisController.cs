@@ -29,7 +29,7 @@ namespace LNCDCDSS.Controllers
             string jsonStr = Request.Params["postjson"];
             try{
 
-                VisitData obj = jsonStr.FromJsonTo<VisitData>();
+                VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
                 //vr.InsertPatMoca(obj, "0582f3c014d741d79d36bad3a620341e");
                PatRecentDrug pd = new PatRecentDrug();
                //pd.DrugCatogary = "333";

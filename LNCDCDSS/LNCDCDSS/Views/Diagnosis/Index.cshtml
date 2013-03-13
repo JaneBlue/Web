@@ -344,17 +344,54 @@
             var strWBC = OCX.GetData("Data_source/PatLabExam/WBC");
             var strApoE = OCX.GetData("Data_source/PatLabExam/ApoE");
             var strProtein = OCX.GetData("Data_source/PatLabExam/Protein");
-            var strElectrocardiogramDate = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Date");
-            var strElectrocardiogramResult = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Result");
+            var strElectrocardiogramDateOrg = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Date");
+            if ("/////" == strElectrocardiogramDateOrg) {
+                strElectrocardiogramDateOrg = "0001/01/01///";
+            }
+            var strElectrocardiogramDate = strElectrocardiogramDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
+
+            var strElectrocardiogramResultOrg = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Result");
+            var strElectrocardiogramResult = false;
+            if ("正常" == strElectrocardiogramResultOrg) {
+                strElectrocardiogramResult = true;
+            }
             var strElectrocardiogramNote = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Note");
-            var strEchocardiagraphyDate = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Date");
-            var strEchocardiagraphyResult = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Result");
+            var strEchocardiagraphyDateOrg = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Date");
+            if ("/////" == strEchocardiagraphyDateOrg) {
+                strEchocardiagraphyDateOrg = "0001/01/01///";
+            }
+            var strEchocardiagraphyDate = strEchocardiagraphyDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
+
+            var strEchocardiagraphyResultOrg = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Result");
+            var strEchocardiagraphyResult = false;
+            if ("正常" == strEchocardiagraphyResultOrg) {
+                strEchocardiagraphyResult = true;
+            }
+
             var strEchocardiagraphyNote = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Note");
-            var strEEGDate = OCX.GetData("Data_source/PatLabExam/EEG/Date");
-            var strEEGResult = OCX.GetData("Data_source/PatLabExam/EEG/Result");
+            var strEEGDateOrg = OCX.GetData("Data_source/PatLabExam/EEG/Date");
+            if ("/////" == strEEGDateOrg) {
+                strEEGDateOrg = "0001/01/01///";
+            }
+            var strEEGDate = strEEGDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
+
+            var strEEGResultOrg = OCX.GetData("Data_source/PatLabExam/EEG/Result");
+            var strEEGResult = false;
+            if ("正常" == strEEGResultOrg) {
+                strEEGResult = true;
+            }
             var strEEGNote = OCX.GetData("Data_source/PatLabExam/EEG/Note");
-            var strCTDate = OCX.GetData("Data_source/PatLabExam/CT/Date");
-            var strCTResult = OCX.GetData("Data_source/PatLabExam/CT/Result");
+            var strCTDateOrg = OCX.GetData("Data_source/PatLabExam/CT/Date");
+            if ("/////" == strCTDateOrg) {
+                strCTDateOrg = "0001/01/01///";
+            }
+            var strCTDate = strCTDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
+
+            var strCTResultOrg = OCX.GetData("Data_source/PatLabExam/CT/Result");
+            var strCTResult = false;
+            if ("正常" == strCTResultOrg) {
+                strCTResult = true;
+            }
             var strCTNote = OCX.GetData("Data_source/PatLabExam/CT/Note");
 
             //get the data of drug
