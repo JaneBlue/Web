@@ -134,9 +134,44 @@ namespace LNCDCDSS.Models
             VisitRecord vd = context.VisitRecordSet.Find(recordId);
             List<string> conttext = new List<string>();
             // string test = vd.PatADL.Total + vd.PatMMSE.Total;
+
             try
             {
                 string test = "";
+                if (vd.PatMMSE != null)
+                {
+                    test += "MMSE=" + vd.PatMMSE.Total;
+                }
+                if (vd.PatMoCA != null)
+                {
+                    test += "MoCA= " + vd.PatMoCA.Total;
+                }
+                if (vd.PatOtherTest != null)
+                {
+                    test += "CDR= " + vd.PatOtherTest.PatCDR;
+                }
+                if (vd.PatOtherTest != null)
+                {
+                    test += "GDS= " + vd.PatOtherTest.PatGDS;
+                }
+                if (vd.PatADL != null)
+                {
+                    test += "ADL= " + vd.PatADL.Total;
+                }
+                if (vd.PatOtherTest != null)
+                {
+                    test += "词语学习1= " + vd.PatOtherTest.Vocabulary1;
+                    test += "词语学习2= " + vd.PatOtherTest.Vocabulary2;
+                    test += "词语学习3= " + vd.PatOtherTest.Vocabulary3;
+                    test += " 延迟记忆= " + vd.PatOtherTest.Vocabulary4;
+                    test += "原词辨认 =" + vd.PatOtherTest.VocabularyAnalyse1;
+                    test += "新词辨认 =" + vd.PatOtherTest.VocabularyAnalyse2;
+                    test += "图形复制 =" + vd.PatOtherTest.Picture1;
+                    test += "即刻回忆 =" + vd.PatOtherTest.Picture2;
+                    test += "延迟回忆 =" + vd.PatOtherTest.Picture3;
+                    test += "连线A =" + vd.PatOtherTest.ConnectNumber1;
+                    test += "连线B =" + vd.PatOtherTest.ConnectNumber2;
+                }
                 conttext.Add(test);
                 conttext.Add(vd.RecordNote);
                 conttext.Add(vd.DiagnosisiResult);
