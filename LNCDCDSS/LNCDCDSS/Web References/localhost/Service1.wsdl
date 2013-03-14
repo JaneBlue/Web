@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="DoInference">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputDataValue" type="tns:InputData" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InputData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="timeorientation" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="placeorientation" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Languageimmediaterecall" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Attentionandcalculation" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="shortmemory" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="namingobjects" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="languageretell" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="readingcomprehension" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="languageunderstanding" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="languageexpression" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="drawgraph" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Visualspaceandexecutiveability" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="naming" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="memory" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="attention" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="language" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="animalnumber" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="abstractability" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MoCadelayrecall" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="orientaion" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhysicalSelfmaintenance" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="grippingability" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="word1" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="word2" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="word3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="wordaverage" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="worddelayrecall" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="originalwordrecognition" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Newwordrecognize" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="graphcopy" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="graphimmediaterecall" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="graphdelayrecall" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="lineA" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="lineB" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="GDS" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CDR" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="strResult" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DoInferenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoInferenceResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoTraining">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InputDataValue" type="tns:InputData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoTrainingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoTrainingResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DoInferenceSoapIn">
+    <wsdl:part name="parameters" element="tns:DoInference" />
+  </wsdl:message>
+  <wsdl:message name="DoInferenceSoapOut">
+    <wsdl:part name="parameters" element="tns:DoInferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoTrainingSoapIn">
+    <wsdl:part name="parameters" element="tns:DoTraining" />
+  </wsdl:message>
+  <wsdl:message name="DoTrainingSoapOut">
+    <wsdl:part name="parameters" element="tns:DoTrainingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="DoInference">
+      <wsdl:input message="tns:DoInferenceSoapIn" />
+      <wsdl:output message="tns:DoInferenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoTraining">
+      <wsdl:input message="tns:DoTrainingSoapIn" />
+      <wsdl:output message="tns:DoTrainingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoInference">
+      <soap:operation soapAction="http://tempuri.org/DoInference" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoTraining">
+      <soap:operation soapAction="http://tempuri.org/DoTraining" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoInference">
+      <soap12:operation soapAction="http://tempuri.org/DoInference" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoTraining">
+      <soap12:operation soapAction="http://tempuri.org/DoTraining" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:22238/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:22238/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
