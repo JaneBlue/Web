@@ -27,92 +27,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PatPhysicalExamSet">
-      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatPhysicalExam)">
-        <MappingFragment StoreEntitySet="PatPhysicalExamSet">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Height" ColumnName="Height" />
-          <ScalarProperty Name="Weight" ColumnName="Weight" />
-          <ScalarProperty Name="Waistline" ColumnName="Waistline" />
-          <ScalarProperty Name="Hipline" ColumnName="Hipline" />
-          <ScalarProperty Name="BloodPressureH" ColumnName="BloodPressureH" />
-          <ScalarProperty Name="BloodPressureL" ColumnName="BloodPressureL" />
-          <ComplexProperty Name="B1" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B1_Result" />
-            <ScalarProperty Name="Note" ColumnName="B1_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B2" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B2_Result" />
-            <ScalarProperty Name="Note" ColumnName="B2_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B3" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B3_Result" />
-            <ScalarProperty Name="Note" ColumnName="B3_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B4" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B4_Result" />
-            <ScalarProperty Name="Note" ColumnName="B4_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B5" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B5_Result" />
-            <ScalarProperty Name="Note" ColumnName="B5_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B6" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B6_Result" />
-            <ScalarProperty Name="Note" ColumnName="B6_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B7" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B7_Result" />
-            <ScalarProperty Name="Note" ColumnName="B7_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B8" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B8_Result" />
-            <ScalarProperty Name="Note" ColumnName="B8_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B9" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B9_Result" />
-            <ScalarProperty Name="Note" ColumnName="B9_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B10" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B10_Result" />
-            <ScalarProperty Name="Note" ColumnName="B10_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B11" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B11_Result" />
-            <ScalarProperty Name="Note" ColumnName="B11_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B12" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B12_Result" />
-            <ScalarProperty Name="Note" ColumnName="B12_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B12a" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B12a_Result" />
-            <ScalarProperty Name="Note" ColumnName="B12a_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B12b" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B12b_Result" />
-            <ScalarProperty Name="Note" ColumnName="B12b_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B12c" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B12c_Result" />
-            <ScalarProperty Name="Note" ColumnName="B12c_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B12d" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B12d_Result" />
-            <ScalarProperty Name="Note" ColumnName="B12d_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B12e" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B12e_Result" />
-            <ScalarProperty Name="Note" ColumnName="B12e_Note" />
-          </ComplexProperty>
-          <ComplexProperty Name="B12f" TypeName="LNCDDataModel.BodyExam">
-            <ScalarProperty Name="Result" ColumnName="B12f_Result" />
-            <ScalarProperty Name="Note" ColumnName="B12f_Note" />
-          </ComplexProperty>
-          <ScalarProperty Name="PatBasicInforId" ColumnName="PatBasicInforId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="PatMMSESet">
       <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatMMSE)">
         <MappingFragment StoreEntitySet="PatMMSESet">
@@ -309,14 +223,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PatRecentDrugSet">
-      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatRecentDrug)">
-        <MappingFragment StoreEntitySet="PatRecentDrugSet">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="DrugCatogary" ColumnName="DrugCatogary" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="PatLabExamSet">
       <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatLabExam)">
         <MappingFragment StoreEntitySet="PatLabExamSet">
@@ -371,12 +277,122 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="PatRecentDrugSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatRecentDrug)">
+        <MappingFragment StoreEntitySet="PatRecentDrugSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Drugcatogary" ColumnName="Drugcatogary" />
+          <ScalarProperty Name="VisitRecordId" ColumnName="VisitRecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="DrugSet">
       <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.Drug)">
         <MappingFragment StoreEntitySet="DrugSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="PatRecentDrugId" ColumnName="PatRecentDrugId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatPhysicalExamSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LNCDDataModel.PatPhysicalExam)">
+        <MappingFragment StoreEntitySet="PatPhysicalExamSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Hipline" ColumnName="Hipline" />
+          <ScalarProperty Name="BloodPressureH" ColumnName="BloodPressureH" />
+          <ScalarProperty Name="BloddPressureL" ColumnName="BloddPressureL" />
+          <ComplexProperty Name="B1" TypeName="LNCDDataModel.BodyExam">
+            <ScalarProperty Name="Result" ColumnName="B1_Result" />
+            <ScalarProperty Name="Note" ColumnName="B1_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B2" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B2_Date" />
+            <ScalarProperty Name="Result" ColumnName="B2_Result" />
+            <ScalarProperty Name="Note" ColumnName="B2_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B3" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B3_Date" />
+            <ScalarProperty Name="Result" ColumnName="B3_Result" />
+            <ScalarProperty Name="Note" ColumnName="B3_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B4" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B4_Date" />
+            <ScalarProperty Name="Result" ColumnName="B4_Result" />
+            <ScalarProperty Name="Note" ColumnName="B4_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B5" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B5_Date" />
+            <ScalarProperty Name="Result" ColumnName="B5_Result" />
+            <ScalarProperty Name="Note" ColumnName="B5_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B6" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B6_Date" />
+            <ScalarProperty Name="Result" ColumnName="B6_Result" />
+            <ScalarProperty Name="Note" ColumnName="B6_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B7" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B7_Date" />
+            <ScalarProperty Name="Result" ColumnName="B7_Result" />
+            <ScalarProperty Name="Note" ColumnName="B7_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B8" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B8_Date" />
+            <ScalarProperty Name="Result" ColumnName="B8_Result" />
+            <ScalarProperty Name="Note" ColumnName="B8_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B9" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B9_Date" />
+            <ScalarProperty Name="Result" ColumnName="B9_Result" />
+            <ScalarProperty Name="Note" ColumnName="B9_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B10" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B10_Date" />
+            <ScalarProperty Name="Result" ColumnName="B10_Result" />
+            <ScalarProperty Name="Note" ColumnName="B10_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B11" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B11_Date" />
+            <ScalarProperty Name="Result" ColumnName="B11_Result" />
+            <ScalarProperty Name="Note" ColumnName="B11_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B12" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B12_Date" />
+            <ScalarProperty Name="Result" ColumnName="B12_Result" />
+            <ScalarProperty Name="Note" ColumnName="B12_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B12a" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B12a_Date" />
+            <ScalarProperty Name="Result" ColumnName="B12a_Result" />
+            <ScalarProperty Name="Note" ColumnName="B12a_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B12b" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B12b_Date" />
+            <ScalarProperty Name="Result" ColumnName="B12b_Result" />
+            <ScalarProperty Name="Note" ColumnName="B12b_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B12c" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B12c_Date" />
+            <ScalarProperty Name="Result" ColumnName="B12c_Result" />
+            <ScalarProperty Name="Note" ColumnName="B12c_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B12d" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B12d_Date" />
+            <ScalarProperty Name="Result" ColumnName="B12d_Result" />
+            <ScalarProperty Name="Note" ColumnName="B12d_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B12e" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B12e_Date" />
+            <ScalarProperty Name="Result" ColumnName="B12e_Result" />
+            <ScalarProperty Name="Note" ColumnName="B12e_Note" />
+          </ComplexProperty>
+          <ComplexProperty Name="B12f" TypeName="LNCDDataModel.Exam">
+            <ScalarProperty Name="Date" ColumnName="B12f_Date" />
+            <ScalarProperty Name="Result" ColumnName="B12f_Result" />
+            <ScalarProperty Name="Note" ColumnName="B12f_Note" />
+          </ComplexProperty>
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -428,11 +444,11 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="VisitRecordPatRecentDrug" TypeName="LNCDDataModel.VisitRecordPatRecentDrug" StoreEntitySet="PatRecentDrugSet">
-      <EndProperty Name="VisitRecord">
-        <ScalarProperty Name="Id" ColumnName="VisitRecord_Id" />
+    <AssociationSetMapping Name="PatBasicInforPatPhysicalExam" TypeName="LNCDDataModel.PatBasicInforPatPhysicalExam" StoreEntitySet="PatBasicInforSet">
+      <EndProperty Name="PatPhysicalExam">
+        <ScalarProperty Name="Id" ColumnName="PatPhysicalExam_Id" />
       </EndProperty>
-      <EndProperty Name="PatRecentDrug">
+      <EndProperty Name="PatBasicInfor">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>

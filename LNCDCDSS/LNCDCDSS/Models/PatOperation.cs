@@ -22,8 +22,8 @@ namespace LNCDCDSS.Models
                 pat.DoctorAccountId = 1;
                 PatPhysicalExam pexam = new PatPhysicalExam();
                 pexam.Id = 1;
-                pexam.PatBasicInforId = pat.Id;
-                pat.PatPhysicalExam.Add(pexam);
+                //pexam.PatBasicInforId = pat.Id;
+                pat.PatPhysicalExam = pexam;
                 PatDisease pdisease = new PatDisease();
                 pdisease.Id = 1;
                 pdisease.PatBasicInforId = pat.Id;

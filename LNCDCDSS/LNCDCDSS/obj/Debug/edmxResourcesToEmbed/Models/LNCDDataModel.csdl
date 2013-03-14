@@ -3,7 +3,6 @@
   <EntityContainer Name="LNCDDataModelContainer" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="DoctorAccountSet" EntityType="LNCDDataModel.DoctorAccount" />
     <EntitySet Name="PatBasicInforSet" EntityType="LNCDDataModel.PatBasicInfor" />
-    <EntitySet Name="PatPhysicalExamSet" EntityType="LNCDDataModel.PatPhysicalExam" />
     <EntitySet Name="PatMMSESet" EntityType="LNCDDataModel.PatMMSE" />
     <EntitySet Name="PatMoCASet" EntityType="LNCDDataModel.PatMoCA" />
     <EntitySet Name="PatADLSet" EntityType="LNCDDataModel.PatADL" />
@@ -26,7 +25,6 @@
       <End Role="VisitRecord" EntitySet="VisitRecordSet" />
       <End Role="PatMMSE" EntitySet="PatMMSESet" />
     </AssociationSet>
-    <EntitySet Name="PatRecentDrugSet" EntityType="LNCDDataModel.PatRecentDrug" />
     <AssociationSet Name="PatBasicInforPatDisease" Association="LNCDDataModel.PatBasicInforPatDisease">
       <End Role="PatBasicInfor" EntitySet="PatBasicInforSet" />
       <End Role="PatDisease" EntitySet="PatDiseaseSet" />
@@ -44,6 +42,7 @@
       <End Role="VisitRecord" EntitySet="VisitRecordSet" />
       <End Role="PatLabExam" EntitySet="PatLabExamSet" />
     </AssociationSet>
+    <EntitySet Name="PatRecentDrugSet" EntityType="LNCDDataModel.PatRecentDrug" />
     <AssociationSet Name="VisitRecordPatRecentDrug" Association="LNCDDataModel.VisitRecordPatRecentDrug">
       <End Role="VisitRecord" EntitySet="VisitRecordSet" />
       <End Role="PatRecentDrug" EntitySet="PatRecentDrugSet" />
@@ -53,6 +52,7 @@
       <End Role="PatRecentDrug" EntitySet="PatRecentDrugSet" />
       <End Role="Drug" EntitySet="DrugSet" />
     </AssociationSet>
+    <EntitySet Name="PatPhysicalExamSet" EntityType="LNCDDataModel.PatPhysicalExam" />
     <AssociationSet Name="PatBasicInforPatPhysicalExam" Association="LNCDDataModel.PatBasicInforPatPhysicalExam">
       <End Role="PatBasicInfor" EntitySet="PatBasicInforSet" />
       <End Role="PatPhysicalExam" EntitySet="PatPhysicalExamSet" />
@@ -86,38 +86,6 @@
     <Property Type="String" Name="FamilyMember" Nullable="false" />
     <Property Type="String" Name="ChiefDoctor" Nullable="false" />
     <NavigationProperty Name="PatPhysicalExam" Relationship="LNCDDataModel.PatBasicInforPatPhysicalExam" FromRole="PatBasicInfor" ToRole="PatPhysicalExam" />
-  </EntityType>
-  <EntityType Name="PatPhysicalExam">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="Height" Nullable="true" />
-    <Property Type="String" Name="Weight" Nullable="true" />
-    <Property Type="String" Name="Waistline" Nullable="true" />
-    <Property Type="String" Name="Hipline" Nullable="true" />
-    <Property Type="String" Name="BloodPressureH" Nullable="true" />
-    <Property Type="String" Name="BloodPressureL" Nullable="true" />
-    <Property Name="B1" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B2" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B3" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B4" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B5" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B6" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B7" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B8" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B9" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B10" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B11" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B12" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B12a" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B12b" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B12c" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B12d" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B12e" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B12f" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <NavigationProperty Name="PatBasicInfor" Relationship="LNCDDataModel.PatBasicInforPatPhysicalExam" FromRole="PatPhysicalExam" ToRole="PatBasicInfor" />
-    <Property Type="String" Name="PatBasicInforId" Nullable="false" MaxLength="255" />
   </EntityType>
   <EntityType Name="PatMMSE">
     <Key>
@@ -250,10 +218,10 @@
     <Property Type="String" Name="CDSSDiagnosis" Nullable="true" />
     <Property Type="String" Name="RecordNote" Nullable="true" />
     <NavigationProperty Name="PatLabExam" Relationship="LNCDDataModel.VisitRecordPatLabExam" FromRole="VisitRecord" ToRole="PatLabExam" />
-    <NavigationProperty Name="PatRecentDrug" Relationship="LNCDDataModel.VisitRecordPatRecentDrug" FromRole="VisitRecord" ToRole="PatRecentDrug" />
     <Property Type="String" Name="OutpatientID" Nullable="true" />
     <Property Type="String" Name="HospitalID" Nullable="true" />
     <Property Type="DateTime" Name="VisitDate" Nullable="false" />
+    <NavigationProperty Name="PatRecentDrug" Relationship="LNCDDataModel.VisitRecordPatRecentDrug" FromRole="VisitRecord" ToRole="PatRecentDrug" />
   </EntityType>
   <Association Name="VisitRecordPatADL">
     <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />
@@ -271,15 +239,6 @@
     <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />
     <End Type="LNCDDataModel.PatMMSE" Role="PatMMSE" Multiplicity="0..1" />
   </Association>
-  <EntityType Name="PatRecentDrug">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="DrugCatogary" Nullable="false" />
-    <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatRecentDrug" FromRole="PatRecentDrug" ToRole="VisitRecord" />
-    <NavigationProperty Name="Drug" Relationship="LNCDDataModel.PatRecentDrugDrug" FromRole="PatRecentDrug" ToRole="Drug" />
-  </EntityType>
   <Association Name="PatBasicInforPatDisease">
     <End Type="LNCDDataModel.PatBasicInfor" Role="PatBasicInfor" Multiplicity="1" />
     <End Type="LNCDDataModel.PatDisease" Role="PatDisease" Multiplicity="1" />
@@ -364,9 +323,27 @@
     <End Type="LNCDDataModel.PatLabExam" Role="PatLabExam" Multiplicity="0..1" />
   </Association>
   <ComplexType Name="ComplexType1" />
+  <EntityType Name="PatRecentDrug">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Drugcatogary" Nullable="false" />
+    <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatRecentDrug" FromRole="PatRecentDrug" ToRole="VisitRecord" />
+    <Property Type="Int32" Name="VisitRecordId" Nullable="false" />
+    <NavigationProperty Name="Drug" Relationship="LNCDDataModel.PatRecentDrugDrug" FromRole="PatRecentDrug" ToRole="Drug" />
+  </EntityType>
   <Association Name="VisitRecordPatRecentDrug">
     <End Type="LNCDDataModel.VisitRecord" Role="VisitRecord" Multiplicity="1" />
-    <End Type="LNCDDataModel.PatRecentDrug" Role="PatRecentDrug" Multiplicity="0..1" />
+    <End Type="LNCDDataModel.PatRecentDrug" Role="PatRecentDrug" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VisitRecord">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PatRecentDrug">
+        <PropertyRef Name="VisitRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
   <EntityType Name="Drug">
     <Key>
@@ -389,16 +366,38 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="PatPhysicalExam">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Height" Nullable="false" />
+    <Property Type="String" Name="Weight" Nullable="false" />
+    <Property Type="String" Name="Hipline" Nullable="false" />
+    <Property Type="String" Name="BloodPressureH" Nullable="false" />
+    <Property Type="String" Name="BloddPressureL" Nullable="false" />
+    <Property Name="B1" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B2" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B3" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B4" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B5" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B6" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B7" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B8" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B9" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B10" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B11" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B12" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B12a" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B12b" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B12c" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B12d" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B12e" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B12f" Type="LNCDDataModel.Exam" Nullable="false" />
+    <NavigationProperty Name="PatBasicInfor" Relationship="LNCDDataModel.PatBasicInforPatPhysicalExam" FromRole="PatPhysicalExam" ToRole="PatBasicInfor" />
+  </EntityType>
   <Association Name="PatBasicInforPatPhysicalExam">
     <End Type="LNCDDataModel.PatBasicInfor" Role="PatBasicInfor" Multiplicity="1" />
-    <End Type="LNCDDataModel.PatPhysicalExam" Role="PatPhysicalExam" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="PatBasicInfor">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="PatPhysicalExam">
-        <PropertyRef Name="PatBasicInforId" />
-      </Dependent>
-    </ReferentialConstraint>
+    <End Type="LNCDDataModel.PatPhysicalExam" Role="PatPhysicalExam" Multiplicity="1" />
   </Association>
 </Schema>

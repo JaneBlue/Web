@@ -3,16 +3,16 @@
   <EntityContainer Name="LNCDDataModelStoreContainer">
     <EntitySet Name="DoctorAccountSet" EntityType="LNCDDataModel.Store.DoctorAccountSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PatBasicInforSet" EntityType="LNCDDataModel.Store.PatBasicInforSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="PatPhysicalExamSet" EntityType="LNCDDataModel.Store.PatPhysicalExamSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PatMMSESet" EntityType="LNCDDataModel.Store.PatMMSESet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PatMoCASet" EntityType="LNCDDataModel.Store.PatMoCASet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PatADLSet" EntityType="LNCDDataModel.Store.PatADLSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PatOtherTestSet" EntityType="LNCDDataModel.Store.PatOtherTestSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PatDiseaseSet" EntityType="LNCDDataModel.Store.PatDiseaseSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="VisitRecordSet" EntityType="LNCDDataModel.Store.VisitRecordSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="PatRecentDrugSet" EntityType="LNCDDataModel.Store.PatRecentDrugSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PatLabExamSet" EntityType="LNCDDataModel.Store.PatLabExamSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PatRecentDrugSet" EntityType="LNCDDataModel.Store.PatRecentDrugSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DrugSet" EntityType="LNCDDataModel.Store.DrugSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PatPhysicalExamSet" EntityType="LNCDDataModel.Store.PatPhysicalExamSet" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="VisitRecordPatADL" Association="LNCDDataModel.Store.VisitRecordPatADL">
       <End Role="VisitRecord" EntitySet="VisitRecordSet" />
       <End Role="PatADL" EntitySet="PatADLSet" />
@@ -82,55 +82,7 @@
     <Property Name="FamilyMember" Type="nvarchar(max)" Nullable="false" />
     <Property Name="ChiefDoctor" Type="nvarchar(max)" Nullable="false" />
     <Property Name="PatDisease_Id" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="PatPhysicalExamSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Height" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="Weight" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="Waistline" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="Hipline" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="BloodPressureH" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="BloodPressureL" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B1_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B1_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B2_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B2_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B3_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B3_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B4_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B4_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B5_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B5_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B6_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B6_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B7_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B7_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B8_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B8_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B9_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B9_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B10_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B10_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B11_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B11_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12a_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12a_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12b_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12b_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12c_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12c_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12d_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12d_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12e_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12e_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12f_Result" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B12f_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="PatBasicInforId" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="PatPhysicalExam_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PatMMSESet">
     <Key>
@@ -282,14 +234,6 @@
     <Property Name="HospitalID" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VisitDate" Type="datetime" Nullable="false" />
   </EntityType>
-  <EntityType Name="PatRecentDrugSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="DrugCatogary" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="VisitRecord_Id" Type="int" Nullable="false" />
-  </EntityType>
   <EntityType Name="PatLabExamSet">
     <Key>
       <PropertyRef Name="Id" />
@@ -336,6 +280,14 @@
     <Property Name="CT_Note" Type="nvarchar(max)" Nullable="false" />
     <Property Name="VisitRecord_Id" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="PatRecentDrugSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Drugcatogary" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VisitRecordId" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="DrugSet">
     <Key>
       <PropertyRef Name="Id" />
@@ -343,6 +295,70 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="PatRecentDrugId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatPhysicalExamSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Height" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Weight" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Hipline" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BloodPressureH" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BloddPressureL" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B1_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B1_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B2_Date" Type="datetime" Nullable="false" />
+    <Property Name="B2_Result" Type="bit" Nullable="false" />
+    <Property Name="B2_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B3_Date" Type="datetime" Nullable="false" />
+    <Property Name="B3_Result" Type="bit" Nullable="false" />
+    <Property Name="B3_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B4_Date" Type="datetime" Nullable="false" />
+    <Property Name="B4_Result" Type="bit" Nullable="false" />
+    <Property Name="B4_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B5_Date" Type="datetime" Nullable="false" />
+    <Property Name="B5_Result" Type="bit" Nullable="false" />
+    <Property Name="B5_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B6_Date" Type="datetime" Nullable="false" />
+    <Property Name="B6_Result" Type="bit" Nullable="false" />
+    <Property Name="B6_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B7_Date" Type="datetime" Nullable="false" />
+    <Property Name="B7_Result" Type="bit" Nullable="false" />
+    <Property Name="B7_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B8_Date" Type="datetime" Nullable="false" />
+    <Property Name="B8_Result" Type="bit" Nullable="false" />
+    <Property Name="B8_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B9_Date" Type="datetime" Nullable="false" />
+    <Property Name="B9_Result" Type="bit" Nullable="false" />
+    <Property Name="B9_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B10_Date" Type="datetime" Nullable="false" />
+    <Property Name="B10_Result" Type="bit" Nullable="false" />
+    <Property Name="B10_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B11_Date" Type="datetime" Nullable="false" />
+    <Property Name="B11_Result" Type="bit" Nullable="false" />
+    <Property Name="B11_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B12_Date" Type="datetime" Nullable="false" />
+    <Property Name="B12_Result" Type="bit" Nullable="false" />
+    <Property Name="B12_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B12a_Date" Type="datetime" Nullable="false" />
+    <Property Name="B12a_Result" Type="bit" Nullable="false" />
+    <Property Name="B12a_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B12b_Date" Type="datetime" Nullable="false" />
+    <Property Name="B12b_Result" Type="bit" Nullable="false" />
+    <Property Name="B12b_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B12c_Date" Type="datetime" Nullable="false" />
+    <Property Name="B12c_Result" Type="bit" Nullable="false" />
+    <Property Name="B12c_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B12d_Date" Type="datetime" Nullable="false" />
+    <Property Name="B12d_Result" Type="bit" Nullable="false" />
+    <Property Name="B12d_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B12e_Date" Type="datetime" Nullable="false" />
+    <Property Name="B12e_Result" Type="bit" Nullable="false" />
+    <Property Name="B12e_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B12f_Date" Type="datetime" Nullable="false" />
+    <Property Name="B12f_Result" Type="bit" Nullable="false" />
+    <Property Name="B12f_Note" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <Association Name="VisitRecordPatADL">
     <End Role="VisitRecord" Type="LNCDDataModel.Store.VisitRecordSet" Multiplicity="1" />
@@ -448,7 +464,7 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="PatRecentDrug">
-        <PropertyRef Name="VisitRecord_Id" />
+        <PropertyRef Name="VisitRecordId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -465,14 +481,14 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="PatBasicInforPatPhysicalExam">
-    <End Role="PatBasicInfor" Type="LNCDDataModel.Store.PatBasicInforSet" Multiplicity="1" />
-    <End Role="PatPhysicalExam" Type="LNCDDataModel.Store.PatPhysicalExamSet" Multiplicity="*" />
+    <End Role="PatBasicInfor" Type="LNCDDataModel.Store.PatBasicInforSet" Multiplicity="*" />
+    <End Role="PatPhysicalExam" Type="LNCDDataModel.Store.PatPhysicalExamSet" Multiplicity="1" />
     <ReferentialConstraint>
-      <Principal Role="PatBasicInfor">
+      <Principal Role="PatPhysicalExam">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="PatPhysicalExam">
-        <PropertyRef Name="PatBasicInforId" />
+      <Dependent Role="PatBasicInfor">
+        <PropertyRef Name="PatPhysicalExam_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
