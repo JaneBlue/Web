@@ -37,42 +37,46 @@ namespace LNCDCDSS.Controllers
 
                 //
                 localhost.InputData InputDataValue = new localhost.InputData();
-                InputDataValue.timeorientation = 5; //double.Parse(TextBox1.Text);
-                InputDataValue.placeorientation = 5; //double.Parse(TextBox2.Text);
-                InputDataValue.Languageimmediaterecall = 3; //double.Parse(TextBox3.Text);
-                InputDataValue.Attentionandcalculation = 5; //double.Parse(TextBox4.Text);
-                InputDataValue.shortmemory = 2;// double.Parse(TextBox5.Text);
-                InputDataValue.namingobjects = 2;// double.Parse(TextBox6.Text);
-                InputDataValue.languageretell = 1;// double.Parse(TextBox7.Text);
-                InputDataValue.readingcomprehension = 3;// double.Parse(TextBox8.Text);
-                InputDataValue.languageunderstanding = 1;// double.Parse(TextBox9.Text);
-                InputDataValue.languageexpression = 1;// double.Parse(TextBox10.Text);
-                InputDataValue.drawgraph = 1;// double.Parse(TextBox11.Text);
-                InputDataValue.Visualspaceandexecutiveability = 5;// double.Parse(TextBox12.Text);
-                InputDataValue.naming = 3;// double.Parse(TextBox13.Text);
-                InputDataValue.memory = 0;// double.Parse(TextBox14.Text);
-                InputDataValue.attention = 6;// double.Parse(TextBox15.Text);
-                InputDataValue.language = 3;// double.Parse(TextBox16.Text);
-                InputDataValue.animalnumber = 16;// double.Parse(TextBox17.Text);
-                InputDataValue.abstractability = 2;// double.Parse(TextBox18.Text);
-                InputDataValue.MoCadelayrecall = 3;// double.Parse(TextBox19.Text);
-                InputDataValue.orientaion = 4;//double.Parse(TextBox20.Text);
-                InputDataValue.PhysicalSelfmaintenance = 6;// double.Parse(TextBox21.Text);
-                InputDataValue.grippingability = 10;// double.Parse(TextBox22.Text);
-                InputDataValue.word1 = 11;// double.Parse(TextBox23.Text);
-                InputDataValue.word2 = 5;// double.Parse(TextBox24.Text);
-                InputDataValue.word3 = 7;// double.Parse(TextBox25.Text);
-                InputDataValue.wordaverage = 5;// double.Parse(TextBox26.Text);
-                InputDataValue.worddelayrecall = 5;// double.Parse(TextBox27.Text);
-                InputDataValue.originalwordrecognition = 9;// double.Parse(TextBox28.Text);
-                InputDataValue.Newwordrecognize = 10;// double.Parse(TextBox29.Text);
-                InputDataValue.graphcopy = 16;// double.Parse(TextBox30.Text);
-                InputDataValue.graphimmediaterecall = 16;// double.Parse(TextBox31.Text);
-                InputDataValue.graphdelayrecall = 16;// double.Parse(TextBox32.Text);
-                InputDataValue.lineA = 49;// double.Parse(TextBox33.Text);
-                InputDataValue.lineB = 112;// double.Parse(TextBox34.Text);
-                InputDataValue.GDS = 10;// double.Parse(TextBox35.Text);
-                InputDataValue.CDR = 0;// double.Parse(TextBox36.Text);
+                InputDataValue.timeorientation = System.Convert.ToDouble(obj.pme.M1); //M1
+                InputDataValue.placeorientation = System.Convert.ToDouble(obj.pme.M2); //M2
+                InputDataValue.Languageimmediaterecall = System.Convert.ToDouble(obj.pme.M3); //M3
+                InputDataValue.Attentionandcalculation = System.Convert.ToDouble(obj.pme.M4); //M4
+                InputDataValue.shortmemory = System.Convert.ToDouble(obj.pme.M5);//M5
+                InputDataValue.namingobjects = System.Convert.ToDouble(obj.pme.M6);//M6
+                InputDataValue.languageretell = System.Convert.ToDouble(obj.pme.M7);//M7
+                InputDataValue.readingcomprehension = System.Convert.ToDouble(obj.pme.M8);//M8
+                InputDataValue.languageunderstanding = System.Convert.ToDouble(obj.pme.M9);//M9
+                InputDataValue.languageexpression = System.Convert.ToDouble(obj.pme.M10);//M10
+                InputDataValue.drawgraph = System.Convert.ToDouble(obj.pme.M11);//M11
+                InputDataValue.Visualspaceandexecutiveability = System.Convert.ToDouble(obj.pma.MC1);//MC1
+                InputDataValue.naming = System.Convert.ToDouble(obj.pma.MC2);//MC2
+                InputDataValue.memory = System.Convert.ToDouble(obj.pma.MC3);//MC3
+                InputDataValue.attention = System.Convert.ToDouble(obj.pma.MC4);//MC4
+                InputDataValue.language = System.Convert.ToDouble(obj.pma.MC5);//MC5
+                InputDataValue.animalnumber = System.Convert.ToDouble(obj.pma.MC6);//MC6
+                InputDataValue.abstractability = System.Convert.ToDouble(obj.pma.MC7);//MC7
+                InputDataValue.MoCadelayrecall = System.Convert.ToDouble(obj.pma.MC8);//MC8
+                InputDataValue.orientaion = System.Convert.ToDouble(obj.pma.MC9);//MC9
+                InputDataValue.PhysicalSelfmaintenance = System.Convert.ToDouble(obj.pal.A1) + System.Convert.ToDouble(obj.pal.A2) + System.Convert.ToDouble(obj.pal.A3) + System.Convert.ToDouble(obj.pal.A4)
+                                                        + System.Convert.ToDouble(obj.pal.A5) + System.Convert.ToDouble(obj.pal.A6) + System.Convert.ToDouble(obj.pal.A7) + System.Convert.ToDouble(obj.pal.A8)
+                                                        + System.Convert.ToDouble(obj.pal.A9) + System.Convert.ToDouble(obj.pal.A10);//A1+...+A10
+                InputDataValue.grippingability = System.Convert.ToDouble(obj.pal.A11) + System.Convert.ToDouble(obj.pal.A12) + System.Convert.ToDouble(obj.pal.A13) + System.Convert.ToDouble(obj.pal.A14)
+                                                        + System.Convert.ToDouble(obj.pal.A15) + System.Convert.ToDouble(obj.pal.A16) + System.Convert.ToDouble(obj.pal.A17) + System.Convert.ToDouble(obj.pal.A18)
+                                                        + System.Convert.ToDouble(obj.pal.A19) + System.Convert.ToDouble(obj.pal.A20);//A11+...+A20
+                InputDataValue.word1 = System.Convert.ToDouble(obj.pot.Vocabulary1);//Vocabulary1
+                InputDataValue.word2 = System.Convert.ToDouble(obj.pot.Vocabulary2);
+                InputDataValue.word3 = System.Convert.ToDouble(obj.pot.Vocabulary3);
+                InputDataValue.wordaverage = (InputDataValue.word1 + InputDataValue.word2 + InputDataValue.word3) / 3;
+                InputDataValue.worddelayrecall = System.Convert.ToDouble(obj.pot.Vocabulary4);
+                InputDataValue.originalwordrecognition = System.Convert.ToDouble(obj.pot.VocabularyAnalyse1);
+                InputDataValue.Newwordrecognize = System.Convert.ToDouble(obj.pot.VocabularyAnalyse2);
+                InputDataValue.graphcopy = System.Convert.ToDouble(obj.pot.Picture1);
+                InputDataValue.graphimmediaterecall = System.Convert.ToDouble(obj.pot.Picture2);
+                InputDataValue.graphdelayrecall = System.Convert.ToDouble(obj.pot.Picture3);
+                InputDataValue.lineA = System.Convert.ToDouble(obj.pot.ConnectNumber1);
+                InputDataValue.lineB = System.Convert.ToDouble(obj.pot.ConnectNumber2);
+                InputDataValue.GDS = System.Convert.ToDouble(obj.pot.PatGDS);
+                InputDataValue.CDR = System.Convert.ToDouble(obj.pot.PatCDR);
 
                 localhost.Service1 b = new localhost.Service1();
                 string strResult = null;

@@ -234,8 +234,8 @@
           <ScalarProperty Name="TSH" ColumnName="TSH" />
           <ScalarProperty Name="Folacin" ColumnName="Folacin" />
           <ScalarProperty Name="B12" ColumnName="B12" />
-          <ScalarProperty Name="Property" ColumnName="Property" />
-          <ScalarProperty Name="Property_1" ColumnName="Property_1" />
+          <ScalarProperty Name="TBG" ColumnName="TBG" />
+          <ScalarProperty Name="EmptyG" ColumnName="EmptyG" />
           <ScalarProperty Name="GAfter" ColumnName="GAfter" />
           <ScalarProperty Name="HbAlc" ColumnName="HbAlc" />
           <ScalarProperty Name="UricAcid" ColumnName="UricAcid" />
