@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 03/14/2013 17:16:24
--- Generated from EDMX file: D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\Models\LNCDDataModel.edmx
+-- Date Created: 03/14/2013 21:39:14
+-- Generated from EDMX file: D:\2013cdss\Web\LNCDCDSS\LNCDCDSS\Models\LNCDDataModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -302,18 +302,18 @@ CREATE TABLE [dbo].[PatLabExamSet] (
     [WBC] nvarchar(max)  NULL,
     [ApoE] nvarchar(max)  NULL,
     [Protein] nvarchar(max)  NULL,
-    [Electrocardiogram_Date] datetime  NOT NULL,
-    [Electrocardiogram_Result] nvarchar(max)  NOT NULL,
-    [Electrocardiogram_Note] nvarchar(max)  NOT NULL,
-    [Echocardiagraphy_Date] datetime  NOT NULL,
-    [Echocardiagraphy_Result] nvarchar(max)  NOT NULL,
-    [Echocardiagraphy_Note] nvarchar(max)  NOT NULL,
-    [EEG_Date] datetime  NOT NULL,
-    [EEG_Result] nvarchar(max)  NOT NULL,
-    [EEG_Note] nvarchar(max)  NOT NULL,
-    [CT_Date] datetime  NOT NULL,
-    [CT_Result] nvarchar(max)  NOT NULL,
-    [CT_Note] nvarchar(max)  NOT NULL,
+    [Electrocardiogram_Date] datetime  NULL,
+    [Electrocardiogram_Result] nvarchar(max)  NULL,
+    [Electrocardiogram_Note] nvarchar(max)  NULL,
+    [Echocardiagraphy_Date] datetime  NULL,
+    [Echocardiagraphy_Result] nvarchar(max)  NULL,
+    [Echocardiagraphy_Note] nvarchar(max)  NULL,
+    [EEG_Date] datetime  NULL,
+    [EEG_Result] nvarchar(max)  NULL,
+    [EEG_Note] nvarchar(max)  NULL,
+    [CT_Date] datetime  NULL,
+    [CT_Result] nvarchar(max)  NULL,
+    [CT_Note] nvarchar(max)  NULL,
     [VisitRecord_Id] int  NOT NULL
 );
 GO
