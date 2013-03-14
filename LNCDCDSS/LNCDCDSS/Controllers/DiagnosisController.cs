@@ -8,8 +8,6 @@ namespace LNCDCDSS.Controllers
 {
     public class DiagnosisController : Controller
     {
-        //
-        // GET: /Diagnosis/
         string PatID = "";
         public ActionResult Index(string ID)
         {
@@ -20,27 +18,17 @@ namespace LNCDCDSS.Controllers
         public JsonResult Save()
         {
             VisitRecordOperation vr = new VisitRecordOperation();
-            //PatOtherTest po = new PatOtherTest();
-            //po.Id = 1;
-            //po.PatCDR = "123";
-            //vr.InsertPatotherTest(po, 1);
-            //PatDisease PDisease = new PatDisease();
-            //PDisease.Description = "12";
-            //vr.InsertPatDisease(PDisease, "0582f3c014d741d79d36bad3a620341e");
             string jsonStr = Request.Params["postjson"];
             try{
-
                 VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
-                //vr.InsertPatMoca(obj, "0582f3c014d741d79d36bad3a620341e");
-               PatRecentDrug pd = new PatRecentDrug();
-               //pd.DrugCatogary = "333";
-               //pd.Id = 1;
-               // List<Drug> dr=new List<Drug>();
-               // Drug g1=new Drug();
-               // g1.Id=1;
-               // g1.Name="12";
-               // dr.Add(g1);
-               // vr.InsertPatRecentDrug(pd,dr,"0582f3c014d741d79d36bad3a620341e");
+                vr.InsertPatADL(obj.pal, PatID);
+                vr.InsertPatDisease(obj.pds, PatID);
+                vr.InsertPatLabExam(obj.ple, PatID);
+                vr.InsertPatMMSE(obj.pme, PatID);
+                vr.InsertPatMoca(obj.pma, PatID);
+                vr.InsertPatotherTest(obj.pot, PatID);
+                vr.InsertPatPhysicaExam(obj.ppe, PatID);
+                vr.InsertPatRecentDrug(obj.prd, PatID);
             }
             catch(Exception  e){
                 int q = 1;

@@ -48,7 +48,7 @@ namespace LNCDCDSS.Models
                 string a = e.InnerException.Message;
             }
         }
-        public void InsertPatotherTest(PatOtherTest Ptext, int ID)
+        public void InsertPatotherTest(PatOtherTest Ptext, string ID)
         {
             try
             {

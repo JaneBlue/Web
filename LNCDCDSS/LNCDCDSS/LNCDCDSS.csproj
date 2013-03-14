@@ -134,7 +134,6 @@
     <Compile Include="Models\PatRecentDrug.cs">
       <DependentUpon>LNCDDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Tryclass.cs" />
     <Compile Include="Models\VisitData.cs" />
     <Compile Include="Models\VisitRecord.cs">
       <DependentUpon>LNCDDataModel.tt</DependentUpon>
