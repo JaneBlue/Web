@@ -8,7 +8,7 @@ namespace LNCDCDSS.Controllers
 {
     public class DiagnosisController : Controller
     {
-        string PatID = "";
+        string PatID;
         public ActionResult Index(string ID)
         {
             PatID = ID;
@@ -19,10 +19,15 @@ namespace LNCDCDSS.Controllers
         {
             VisitRecordOperation vr = new VisitRecordOperation();
             string jsonStr = Request.Params["postjson"];
+            PatID = "1bbfd6ec79c34ff185525179e39766df";
             try{
                 VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
-                vr.InsertPatADL(obj.pal, PatID);
-                vr.InsertPatDisease(obj.pds, PatID);
+                if (obj.pal.Total != "0")
+                {
+                    vr.InsertPatADL(obj.pal, PatID);
+                }
+           
+              //  vr.InsertPatDisease(obj.pds, PatID);
                 vr.InsertPatLabExam(obj.ple, PatID);
                 vr.InsertPatMMSE(obj.pme, PatID);
                 vr.InsertPatMoca(obj.pma, PatID);

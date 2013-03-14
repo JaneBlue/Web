@@ -129,12 +129,12 @@
     </Key>
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatADL" FromRole="PatADL" ToRole="VisitRecord" />
-    <Property Type="String" Name="A1" Nullable="false" />
-    <Property Type="String" Name="A2" Nullable="false" />
-    <Property Type="String" Name="A3" Nullable="false" />
-    <Property Type="String" Name="A4" Nullable="false" />
-    <Property Type="String" Name="A5" Nullable="false" />
-    <Property Type="String" Name="A6" Nullable="false" />
+    <Property Type="String" Name="A1" Nullable="true" />
+    <Property Type="String" Name="A2" Nullable="true" />
+    <Property Type="String" Name="A3" Nullable="true" />
+    <Property Type="String" Name="A4" Nullable="true" />
+    <Property Type="String" Name="A5" Nullable="true" />
+    <Property Type="String" Name="A6" Nullable="true" />
     <Property Type="String" Name="A7" Nullable="false" />
     <Property Type="String" Name="A8" Nullable="false" />
     <Property Type="String" Name="A9" Nullable="false" />

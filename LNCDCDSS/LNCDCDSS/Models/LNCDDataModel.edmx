@@ -94,18 +94,18 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="M1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="M2" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="M3" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="M4" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="M5" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="M6" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="M7" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="M8" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="M9" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="M10" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="M11" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Total" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="M1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="M2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="M3" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="M4" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="M5" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="M6" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="M7" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="M8" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="M9" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="M10" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="M11" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Total" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VisitRecord_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PatMoCASet">
@@ -113,16 +113,16 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MC1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="MC2" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="MC3" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="MC4" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="MC5" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="MC6" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="MC7" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="MC8" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="MC9" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Total" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MC1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MC2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MC3" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MC4" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MC5" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MC6" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MC7" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MC8" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MC9" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Total" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VisitRecord_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PatADLSet">
@@ -130,27 +130,27 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="A1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A2" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A3" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A4" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A5" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A6" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A7" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A8" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A9" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A10" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A11" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A12" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A13" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A14" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="A1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A3" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A4" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A5" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A6" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A7" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A8" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A9" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A10" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A11" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A12" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A13" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A14" Type="nvarchar(max)" Nullable="true" />
     <Property Name="A15" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="A16" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A17" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A18" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A19" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A20" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Total" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="A16" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A17" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A18" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A19" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="A20" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Total" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VisitRecord_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PatOtherTestSet">
@@ -244,33 +244,33 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FT3" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="FT4" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="TT3" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="TT4" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="TSH" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Folacin" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B12" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Property" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Property_1" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="GAfter" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="HbAlc" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="UricAcid" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Cholesterol" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="GanEster" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="HDLC" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="LDLC" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="GOT" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="GPT" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="BUN" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CR" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Albumin" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="RBC" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="HB" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PLT" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="WBC" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ApoE" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Protein" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FT3" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FT4" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TT3" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TT4" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TSH" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Folacin" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TBG" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="EmptyG" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GAfter" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="HbAlc" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UricAcid" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Cholesterol" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GanEster" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="HDLC" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="LDLC" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GOT" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GPT" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BUN" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CR" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Albumin" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="RBC" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="HB" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PLT" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="WBC" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ApoE" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Protein" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Electrocardiogram_Date" Type="datetime" Nullable="false" />
     <Property Name="Electrocardiogram_Result" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Electrocardiogram_Note" Type="nvarchar(max)" Nullable="false" />
@@ -577,18 +577,18 @@
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatMMSE" FromRole="PatMMSE" ToRole="VisitRecord" />
-          <Property Type="String" Name="M1" Nullable="false" />
-          <Property Type="String" Name="M2" Nullable="false" />
-          <Property Type="String" Name="M3" Nullable="false" />
-          <Property Type="String" Name="M4" Nullable="false" />
-          <Property Type="String" Name="M5" Nullable="false" />
-          <Property Type="String" Name="M6" Nullable="false" />
-          <Property Type="String" Name="M7" Nullable="false" />
-          <Property Type="String" Name="M8" Nullable="false" />
-          <Property Type="String" Name="M9" Nullable="false" />
-          <Property Type="String" Name="M10" Nullable="false" />
-          <Property Type="String" Name="M11" Nullable="false" />
-          <Property Type="String" Name="Total" Nullable="false" />
+          <Property Type="String" Name="M1" Nullable="true" />
+          <Property Type="String" Name="M2" Nullable="true" />
+          <Property Type="String" Name="M3" Nullable="true" />
+          <Property Type="String" Name="M4" Nullable="true" />
+          <Property Type="String" Name="M5" Nullable="true" />
+          <Property Type="String" Name="M6" Nullable="true" />
+          <Property Type="String" Name="M7" Nullable="true" />
+          <Property Type="String" Name="M8" Nullable="true" />
+          <Property Type="String" Name="M9" Nullable="true" />
+          <Property Type="String" Name="M10" Nullable="true" />
+          <Property Type="String" Name="M11" Nullable="true" />
+          <Property Type="String" Name="Total" Nullable="true" />
         </EntityType>
         <EntityType Name="PatMoCA">
           <Key>
@@ -596,16 +596,16 @@
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatMoCA" FromRole="PatMoCA" ToRole="VisitRecord" />
-          <Property Type="String" Name="MC1" Nullable="false" />
-          <Property Type="String" Name="MC2" Nullable="false" />
-          <Property Type="String" Name="MC3" Nullable="false" />
-          <Property Type="String" Name="MC4" Nullable="false" />
-          <Property Type="String" Name="MC5" Nullable="false" />
-          <Property Type="String" Name="MC6" Nullable="false" />
-          <Property Type="String" Name="MC7" Nullable="false" />
-          <Property Type="String" Name="MC8" Nullable="false" />
-          <Property Type="String" Name="MC9" Nullable="false" />
-          <Property Type="String" Name="Total" Nullable="false" />
+          <Property Type="String" Name="MC1" Nullable="true" />
+          <Property Type="String" Name="MC2" Nullable="true" />
+          <Property Type="String" Name="MC3" Nullable="true" />
+          <Property Type="String" Name="MC4" Nullable="true" />
+          <Property Type="String" Name="MC5" Nullable="true" />
+          <Property Type="String" Name="MC6" Nullable="true" />
+          <Property Type="String" Name="MC7" Nullable="true" />
+          <Property Type="String" Name="MC8" Nullable="true" />
+          <Property Type="String" Name="MC9" Nullable="true" />
+          <Property Type="String" Name="Total" Nullable="true" />
         </EntityType>
         <EntityType Name="PatADL">
           <Key>
@@ -613,27 +613,27 @@
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatADL" FromRole="PatADL" ToRole="VisitRecord" />
-          <Property Type="String" Name="A1" Nullable="false" />
-          <Property Type="String" Name="A2" Nullable="false" />
-          <Property Type="String" Name="A3" Nullable="false" />
-          <Property Type="String" Name="A4" Nullable="false" />
-          <Property Type="String" Name="A5" Nullable="false" />
-          <Property Type="String" Name="A6" Nullable="false" />
-          <Property Type="String" Name="A7" Nullable="false" />
-          <Property Type="String" Name="A8" Nullable="false" />
-          <Property Type="String" Name="A9" Nullable="false" />
-          <Property Type="String" Name="A10" Nullable="false" />
-          <Property Type="String" Name="A11" Nullable="false" />
-          <Property Type="String" Name="A12" Nullable="false" />
-          <Property Type="String" Name="A13" Nullable="false" />
-          <Property Type="String" Name="A14" Nullable="false" />
-          <Property Type="String" Name="A15" />
-          <Property Type="String" Name="A16" Nullable="false" />
-          <Property Type="String" Name="A17" Nullable="false" />
-          <Property Type="String" Name="A18" Nullable="false" />
-          <Property Type="String" Name="A19" Nullable="false" />
-          <Property Type="String" Name="A20" Nullable="false" />
-          <Property Type="String" Name="Total" Nullable="false" />
+          <Property Type="String" Name="A1" Nullable="true" />
+          <Property Type="String" Name="A2" Nullable="true" />
+          <Property Type="String" Name="A3" Nullable="true" />
+          <Property Type="String" Name="A4" Nullable="true" />
+          <Property Type="String" Name="A5" Nullable="true" />
+          <Property Type="String" Name="A6" Nullable="true" />
+          <Property Type="String" Name="A7" Nullable="true" />
+          <Property Type="String" Name="A8" Nullable="true" />
+          <Property Type="String" Name="A9" Nullable="true" />
+          <Property Type="String" Name="A10" Nullable="true" />
+          <Property Type="String" Name="A11" Nullable="true" />
+          <Property Type="String" Name="A12" Nullable="true" />
+          <Property Type="String" Name="A13" Nullable="true" />
+          <Property Type="String" Name="A14" Nullable="true" />
+          <Property Type="String" Name="A15" Nullable="true" />
+          <Property Type="String" Name="A16" Nullable="true" />
+          <Property Type="String" Name="A17" Nullable="true" />
+          <Property Type="String" Name="A18" Nullable="true" />
+          <Property Type="String" Name="A19" Nullable="true" />
+          <Property Type="String" Name="A20" Nullable="true" />
+          <Property Type="String" Name="Total" Nullable="true" />
         </EntityType>
         <EntityType Name="PatOtherTest">
           <Key>
@@ -756,33 +756,33 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="FT3" Nullable="false" />
-          <Property Type="String" Name="FT4" Nullable="false" />
-          <Property Type="String" Name="TT3" Nullable="false" />
-          <Property Type="String" Name="TT4" Nullable="false" />
-          <Property Type="String" Name="TSH" Nullable="false" />
-          <Property Type="String" Name="Folacin" Nullable="false" />
-          <Property Type="String" Name="B12" Nullable="false" />
-          <Property Type="String" Name="Property" Nullable="false" />
-          <Property Type="String" Name="Property_1" Nullable="false" />
-          <Property Type="String" Name="GAfter" Nullable="false" />
-          <Property Type="String" Name="HbAlc" Nullable="false" />
-          <Property Type="String" Name="UricAcid" Nullable="false" />
-          <Property Type="String" Name="Cholesterol" Nullable="false" />
-          <Property Type="String" Name="GanEster" Nullable="false" />
-          <Property Type="String" Name="HDLC" Nullable="false" />
-          <Property Type="String" Name="LDLC" Nullable="false" />
-          <Property Type="String" Name="GOT" Nullable="false" />
-          <Property Type="String" Name="GPT" Nullable="false" />
-          <Property Type="String" Name="BUN" Nullable="false" />
-          <Property Type="String" Name="CR" Nullable="false" />
-          <Property Type="String" Name="Albumin" Nullable="false" />
-          <Property Type="String" Name="RBC" Nullable="false" />
-          <Property Type="String" Name="HB" Nullable="false" />
-          <Property Type="String" Name="PLT" Nullable="false" />
-          <Property Type="String" Name="WBC" Nullable="false" />
-          <Property Type="String" Name="ApoE" Nullable="false" />
-          <Property Type="String" Name="Protein" Nullable="false" />
+          <Property Type="String" Name="FT3" Nullable="true" />
+          <Property Type="String" Name="FT4" Nullable="true" />
+          <Property Type="String" Name="TT3" Nullable="true" />
+          <Property Type="String" Name="TT4" Nullable="true" />
+          <Property Type="String" Name="TSH" Nullable="true" />
+          <Property Type="String" Name="Folacin" Nullable="true" />
+          <Property Type="String" Name="B12" Nullable="true" />
+          <Property Type="String" Name="TBG" Nullable="true" />
+          <Property Type="String" Name="EmptyG" Nullable="true" />
+          <Property Type="String" Name="GAfter" Nullable="true" />
+          <Property Type="String" Name="HbAlc" Nullable="true" />
+          <Property Type="String" Name="UricAcid" Nullable="true" />
+          <Property Type="String" Name="Cholesterol" Nullable="true" />
+          <Property Type="String" Name="GanEster" Nullable="true" />
+          <Property Type="String" Name="HDLC" Nullable="true" />
+          <Property Type="String" Name="LDLC" Nullable="true" />
+          <Property Type="String" Name="GOT" Nullable="true" />
+          <Property Type="String" Name="GPT" Nullable="true" />
+          <Property Type="String" Name="BUN" Nullable="true" />
+          <Property Type="String" Name="CR" Nullable="true" />
+          <Property Type="String" Name="Albumin" Nullable="true" />
+          <Property Type="String" Name="RBC" Nullable="true" />
+          <Property Type="String" Name="HB" Nullable="true" />
+          <Property Type="String" Name="PLT" Nullable="true" />
+          <Property Type="String" Name="WBC" Nullable="true" />
+          <Property Type="String" Name="ApoE" Nullable="true" />
+          <Property Type="String" Name="Protein" Nullable="true" />
           <Property Name="Electrocardiogram" Type="LNCDDataModel.Exam" Nullable="false" />
           <Property Name="Echocardiagraphy" Type="LNCDDataModel.Exam" Nullable="false" />
           <Property Name="EEG" Type="LNCDDataModel.Exam" Nullable="false" />
@@ -1123,8 +1123,8 @@
           <ScalarProperty Name="TSH" ColumnName="TSH" />
           <ScalarProperty Name="Folacin" ColumnName="Folacin" />
           <ScalarProperty Name="B12" ColumnName="B12" />
-          <ScalarProperty Name="Property" ColumnName="Property" />
-          <ScalarProperty Name="Property_1" ColumnName="Property_1" />
+          <ScalarProperty Name="TBG" ColumnName="TBG" />
+          <ScalarProperty Name="EmptyG" ColumnName="EmptyG" />
           <ScalarProperty Name="GAfter" ColumnName="GAfter" />
           <ScalarProperty Name="HbAlc" ColumnName="HbAlc" />
           <ScalarProperty Name="UricAcid" ColumnName="UricAcid" />

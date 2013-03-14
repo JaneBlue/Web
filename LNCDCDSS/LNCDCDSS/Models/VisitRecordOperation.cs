@@ -27,6 +27,7 @@ namespace LNCDCDSS.Models
             try
             {
                 PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
+                pdisease.PatBasicInforId = "123";
                 pt.PatDisease = pdisease;
                 context.SaveChanges();
             }

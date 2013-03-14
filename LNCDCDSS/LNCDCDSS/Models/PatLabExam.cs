@@ -30,8 +30,8 @@ namespace LNCDCDSS.Models
         public string TSH { get; set; }
         public string Folacin { get; set; }
         public string B12 { get; set; }
-        public string Property { get; set; }
-        public string Property_1 { get; set; }
+        public string TBG { get; set; }
+        public string EmptyG { get; set; }
         public string GAfter { get; set; }
         public string HbAlc { get; set; }
         public string UricAcid { get; set; }
