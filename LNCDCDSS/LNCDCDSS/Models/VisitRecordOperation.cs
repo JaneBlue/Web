@@ -11,21 +11,23 @@ namespace LNCDCDSS.Models
         LNCDDataModelContainer context = new LNCDDataModelContainer();
         public void InsertPatPhysicaExam(PatPhysicalExam PExam, string ID)
         {
-            PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
-
+            try
+            {
+                PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
+                pt.PatPhysicalExam = PExam;
+                context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                string a = e.InnerException.Message;
+            }
         }
         public void InsertPatDisease(PatDisease pdisease, string ID)
         {
             try
             {
                 PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
-
-                pdisease.Id = 1;
-                pdisease.PatBasicInforId = ID;
                 pt.PatDisease = pdisease;
-                pdisease.Description = "125";
-                context.Entry(pt.PatDisease).CurrentValues.SetValues(pdisease);
-                // pt.PatDisease.Description = "123";
                 context.SaveChanges();
             }
             catch (Exception e)
@@ -39,6 +41,7 @@ namespace LNCDCDSS.Models
             {
                 PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
                 pt.VisitRecord.Last().PatLabExam = Plab;
+                context.SaveChanges();
             }
             catch (Exception e)
             {
@@ -50,10 +53,7 @@ namespace LNCDCDSS.Models
             try
             {
                 VisitRecord pt = context.VisitRecordSet.Find(ID);
-
-                pt.PatOtherTest.Picture1 = "12";
-                //  pt.PatOtherTest = Ptext;
-                //context.Entry(pt).CurrentValues.SetValues(pt);
+                pt.PatOtherTest = Ptext;
                 context.SaveChanges();
             }
             catch (Exception e)
@@ -67,6 +67,7 @@ namespace LNCDCDSS.Models
             {
                 PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
                 pt.VisitRecord.Last().PatADL = pl;
+                context.SaveChanges();
             }
             catch (Exception e)
             {
@@ -79,6 +80,7 @@ namespace LNCDCDSS.Models
             {
                 PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
                 pt.VisitRecord.Last().PatMMSE = pmm;
+                context.SaveChanges();
             }
             catch (Exception e)
             {
