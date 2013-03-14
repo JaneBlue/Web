@@ -225,6 +225,11 @@ namespace LNCDCDSS.Models
             }
             return visit;
         }
-
+        public void AddNewRecord(string PatID, VisitRecord nvisit)
+        {
+            PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
+            nvisit.PatBasicInforId = PatID;
+            pt.VisitRecord.Add(nvisit);
+        }
     }
 }

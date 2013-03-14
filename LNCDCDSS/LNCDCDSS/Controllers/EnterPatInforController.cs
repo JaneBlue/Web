@@ -84,7 +84,9 @@ namespace LNCDCDSS.Controllers
 
         public ActionResult GoToDiagnosis(string ID)
         {
+            VisitRecord vr = new VisitRecord();
 
+            visitop.AddNewRecord(ID, vr);
             return Redirect("/Diagnosis/Index/"+ID);
         }
     }
