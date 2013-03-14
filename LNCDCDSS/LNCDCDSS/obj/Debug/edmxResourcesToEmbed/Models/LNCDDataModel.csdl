@@ -307,7 +307,7 @@
   </EntityType>
   <ComplexType Name="Exam">
     <Property Type="DateTime" Name="Date" Nullable="false" />
-    <Property Type="Boolean" Name="Result" Nullable="false" />
+    <Property Type="String" Name="Result" Nullable="false" />
     <Property Type="String" Name="Note" Nullable="false" />
   </ComplexType>
   <ComplexType Name="BodyExam">
@@ -371,29 +371,29 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="Height" Nullable="false" />
-    <Property Type="String" Name="Weight" Nullable="false" />
-    <Property Type="String" Name="Hipline" Nullable="false" />
-    <Property Type="String" Name="BloodPressureH" Nullable="false" />
-    <Property Type="String" Name="BloddPressureL" Nullable="false" />
+    <Property Type="String" Name="Height" Nullable="true" />
+    <Property Type="String" Name="Weight" Nullable="true" />
+    <Property Type="String" Name="Hipline" Nullable="true" />
+    <Property Type="String" Name="BloodPressureH" Nullable="true" />
+    <Property Type="String" Name="BloddPressureL" Nullable="true" />
     <Property Name="B1" Type="LNCDDataModel.BodyExam" Nullable="false" />
-    <Property Name="B2" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B3" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B4" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B5" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B6" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B7" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B8" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B9" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B10" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B11" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B12" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B12a" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B12b" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B12c" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B12d" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B12e" Type="LNCDDataModel.Exam" Nullable="false" />
-    <Property Name="B12f" Type="LNCDDataModel.Exam" Nullable="false" />
+    <Property Name="B2" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B3" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B4" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B5" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B6" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B7" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B8" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B9" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B10" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B11" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B12" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B12a" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B12b" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B12c" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B12d" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B12e" Type="LNCDDataModel.BodyExam" Nullable="false" />
+    <Property Name="B12f" Type="LNCDDataModel.BodyExam" Nullable="false" />
     <NavigationProperty Name="PatBasicInfor" Relationship="LNCDDataModel.PatBasicInforPatPhysicalExam" FromRole="PatPhysicalExam" ToRole="PatBasicInfor" />
   </EntityType>
   <Association Name="PatBasicInforPatPhysicalExam">

@@ -21,11 +21,11 @@ namespace LNCDCDSS.Models
                 pat.Id = System.Guid.NewGuid().ToString().Replace("-", "");
                 pat.DoctorAccountId = 1;
                 PatPhysicalExam pexam = new PatPhysicalExam();
-                pexam.Id = 1;
+                // pexam.Id = 1;
                 //pexam.PatBasicInforId = pat.Id;
                 pat.PatPhysicalExam = pexam;
                 PatDisease pdisease = new PatDisease();
-                pdisease.Id = 1;
+                // pdisease.Id = 1;
                 pdisease.PatBasicInforId = pat.Id;
                 pat.PatDisease = pdisease;
 
@@ -43,9 +43,15 @@ namespace LNCDCDSS.Models
 
                 context.SaveChanges();
             }
-            catch (Exception e)
+            catch (DbEntityValidationException dbEx)
             {
-                string a = e.Message.ToString();
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        Trace.TraceInformation("Property: {0} Error: {1}", validationError.PropertyName, validationError.ErrorMessage);
+                    }
+                }
             }
         }
 

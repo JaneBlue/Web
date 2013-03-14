@@ -272,16 +272,16 @@
     <Property Name="ApoE" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Protein" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Electrocardiogram_Date" Type="datetime" Nullable="false" />
-    <Property Name="Electrocardiogram_Result" Type="bit" Nullable="false" />
+    <Property Name="Electrocardiogram_Result" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Electrocardiogram_Note" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Echocardiagraphy_Date" Type="datetime" Nullable="false" />
-    <Property Name="Echocardiagraphy_Result" Type="bit" Nullable="false" />
+    <Property Name="Echocardiagraphy_Result" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Echocardiagraphy_Note" Type="nvarchar(max)" Nullable="false" />
     <Property Name="EEG_Date" Type="datetime" Nullable="false" />
-    <Property Name="EEG_Result" Type="bit" Nullable="false" />
+    <Property Name="EEG_Result" Type="nvarchar(max)" Nullable="false" />
     <Property Name="EEG_Note" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CT_Date" Type="datetime" Nullable="false" />
-    <Property Name="CT_Result" Type="bit" Nullable="false" />
+    <Property Name="CT_Result" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CT_Note" Type="nvarchar(max)" Nullable="false" />
     <Property Name="VisitRecord_Id" Type="int" Nullable="false" />
   </EntityType>
@@ -306,64 +306,47 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Height" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Weight" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Hipline" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="BloodPressureH" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="BloddPressureL" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Height" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Weight" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Hipline" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BloodPressureH" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BloddPressureL" Type="nvarchar(max)" Nullable="true" />
     <Property Name="B1_Result" Type="nvarchar(max)" Nullable="true" />
     <Property Name="B1_Note" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="B2_Date" Type="datetime" Nullable="false" />
-    <Property Name="B2_Result" Type="bit" Nullable="false" />
-    <Property Name="B2_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B3_Date" Type="datetime" Nullable="false" />
-    <Property Name="B3_Result" Type="bit" Nullable="false" />
-    <Property Name="B3_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B4_Date" Type="datetime" Nullable="false" />
-    <Property Name="B4_Result" Type="bit" Nullable="false" />
-    <Property Name="B4_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B5_Date" Type="datetime" Nullable="false" />
-    <Property Name="B5_Result" Type="bit" Nullable="false" />
-    <Property Name="B5_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B6_Date" Type="datetime" Nullable="false" />
-    <Property Name="B6_Result" Type="bit" Nullable="false" />
-    <Property Name="B6_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B7_Date" Type="datetime" Nullable="false" />
-    <Property Name="B7_Result" Type="bit" Nullable="false" />
-    <Property Name="B7_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B8_Date" Type="datetime" Nullable="false" />
-    <Property Name="B8_Result" Type="bit" Nullable="false" />
-    <Property Name="B8_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B9_Date" Type="datetime" Nullable="false" />
-    <Property Name="B9_Result" Type="bit" Nullable="false" />
-    <Property Name="B9_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B10_Date" Type="datetime" Nullable="false" />
-    <Property Name="B10_Result" Type="bit" Nullable="false" />
-    <Property Name="B10_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B11_Date" Type="datetime" Nullable="false" />
-    <Property Name="B11_Result" Type="bit" Nullable="false" />
-    <Property Name="B11_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B12_Date" Type="datetime" Nullable="false" />
-    <Property Name="B12_Result" Type="bit" Nullable="false" />
-    <Property Name="B12_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B12a_Date" Type="datetime" Nullable="false" />
-    <Property Name="B12a_Result" Type="bit" Nullable="false" />
-    <Property Name="B12a_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B12b_Date" Type="datetime" Nullable="false" />
-    <Property Name="B12b_Result" Type="bit" Nullable="false" />
-    <Property Name="B12b_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B12c_Date" Type="datetime" Nullable="false" />
-    <Property Name="B12c_Result" Type="bit" Nullable="false" />
-    <Property Name="B12c_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B12d_Date" Type="datetime" Nullable="false" />
-    <Property Name="B12d_Result" Type="bit" Nullable="false" />
-    <Property Name="B12d_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B12e_Date" Type="datetime" Nullable="false" />
-    <Property Name="B12e_Result" Type="bit" Nullable="false" />
-    <Property Name="B12e_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B12f_Date" Type="datetime" Nullable="false" />
-    <Property Name="B12f_Result" Type="bit" Nullable="false" />
-    <Property Name="B12f_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="B2_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B2_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B3_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B3_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B4_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B4_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B5_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B5_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B6_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B6_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B7_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B7_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B8_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B8_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B9_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B9_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B10_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B10_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B11_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B11_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12a_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12a_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12b_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12b_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12c_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12c_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12d_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12d_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12e_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12e_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12f_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="B12f_Note" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <Association Name="VisitRecordPatADL">
     <End Role="VisitRecord" Type="LNCDDataModel.Store.VisitRecordSet" Multiplicity="1" />
@@ -808,7 +791,7 @@
         </EntityType>
         <ComplexType Name="Exam" >
           <Property Type="DateTime" Name="Date" Nullable="false" />
-          <Property Type="Boolean" Name="Result" Nullable="false" />
+          <Property Type="String" Name="Result" Nullable="false" />
           <Property Type="String" Name="Note" Nullable="false" />
         </ComplexType>
         <ComplexType Name="BodyExam" >
@@ -872,29 +855,29 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Height" Nullable="false" />
-          <Property Type="String" Name="Weight" Nullable="false" />
-          <Property Type="String" Name="Hipline" Nullable="false" />
-          <Property Type="String" Name="BloodPressureH" Nullable="false" />
-          <Property Type="String" Name="BloddPressureL" Nullable="false" />
+          <Property Type="String" Name="Height" Nullable="true" />
+          <Property Type="String" Name="Weight" Nullable="true" />
+          <Property Type="String" Name="Hipline" Nullable="true" />
+          <Property Type="String" Name="BloodPressureH" Nullable="true" />
+          <Property Type="String" Name="BloddPressureL" Nullable="true" />
           <Property Name="B1" Type="LNCDDataModel.BodyExam" Nullable="false" />
-          <Property Name="B2" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B3" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B4" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B5" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B6" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B7" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B8" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B9" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B10" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B11" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B12" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B12a" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B12b" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B12c" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B12d" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B12e" Type="LNCDDataModel.Exam" Nullable="false" />
-          <Property Name="B12f" Type="LNCDDataModel.Exam" Nullable="false" />
+          <Property Name="B2" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B3" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B4" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B5" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B6" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B7" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B8" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B9" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B10" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B11" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B12" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B12a" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B12b" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B12c" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B12d" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B12e" Type="LNCDDataModel.BodyExam" Nullable="false" />
+          <Property Name="B12f" Type="LNCDDataModel.BodyExam" Nullable="false" />
           <NavigationProperty Name="PatBasicInfor" Relationship="LNCDDataModel.PatBasicInforPatPhysicalExam" FromRole="PatPhysicalExam" ToRole="PatBasicInfor" />
         </EntityType>
         <Association Name="PatBasicInforPatPhysicalExam">
@@ -1214,88 +1197,71 @@
             <ScalarProperty Name="Result" ColumnName="B1_Result" />
             <ScalarProperty Name="Note" ColumnName="B1_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B2" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B2_Date" />
+          <ComplexProperty Name="B2" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B2_Result" />
             <ScalarProperty Name="Note" ColumnName="B2_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B3" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B3_Date" />
+          <ComplexProperty Name="B3" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B3_Result" />
             <ScalarProperty Name="Note" ColumnName="B3_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B4" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B4_Date" />
+          <ComplexProperty Name="B4" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B4_Result" />
             <ScalarProperty Name="Note" ColumnName="B4_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B5" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B5_Date" />
+          <ComplexProperty Name="B5" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B5_Result" />
             <ScalarProperty Name="Note" ColumnName="B5_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B6" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B6_Date" />
+          <ComplexProperty Name="B6" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B6_Result" />
             <ScalarProperty Name="Note" ColumnName="B6_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B7" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B7_Date" />
+          <ComplexProperty Name="B7" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B7_Result" />
             <ScalarProperty Name="Note" ColumnName="B7_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B8" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B8_Date" />
+          <ComplexProperty Name="B8" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B8_Result" />
             <ScalarProperty Name="Note" ColumnName="B8_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B9" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B9_Date" />
+          <ComplexProperty Name="B9" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B9_Result" />
             <ScalarProperty Name="Note" ColumnName="B9_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B10" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B10_Date" />
+          <ComplexProperty Name="B10" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B10_Result" />
             <ScalarProperty Name="Note" ColumnName="B10_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B11" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B11_Date" />
+          <ComplexProperty Name="B11" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B11_Result" />
             <ScalarProperty Name="Note" ColumnName="B11_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12_Date" />
+          <ComplexProperty Name="B12" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12_Result" />
             <ScalarProperty Name="Note" ColumnName="B12_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12a" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12a_Date" />
+          <ComplexProperty Name="B12a" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12a_Result" />
             <ScalarProperty Name="Note" ColumnName="B12a_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12b" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12b_Date" />
+          <ComplexProperty Name="B12b" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12b_Result" />
             <ScalarProperty Name="Note" ColumnName="B12b_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12c" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12c_Date" />
+          <ComplexProperty Name="B12c" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12c_Result" />
             <ScalarProperty Name="Note" ColumnName="B12c_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12d" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12d_Date" />
+          <ComplexProperty Name="B12d" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12d_Result" />
             <ScalarProperty Name="Note" ColumnName="B12d_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12e" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12e_Date" />
+          <ComplexProperty Name="B12e" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12e_Result" />
             <ScalarProperty Name="Note" ColumnName="B12e_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12f" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12f_Date" />
+          <ComplexProperty Name="B12f" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12f_Result" />
             <ScalarProperty Name="Note" ColumnName="B12f_Note" />
           </ComplexProperty>
@@ -1383,7 +1349,7 @@
         <EntityTypeShape EntityType="LNCDDataModel.PatMMSE" Width="1.5" PointX="10.25" PointY="5.375" Height="3.6892097981770817" />
         <EntityTypeShape EntityType="LNCDDataModel.PatMoCA" Width="1.5" PointX="0.625" PointY="3.125" Height="3.3071704101562496" />
         <EntityTypeShape EntityType="LNCDDataModel.PatADL" Width="1.5" PointX="0.5" PointY="7" Height="5.4083870442708335" />
-        <EntityTypeShape EntityType="LNCDDataModel.PatOtherTest" Width="1.875" PointX="3.75" PointY="9.25" Height="3.8802294921874996" />
+        <EntityTypeShape EntityType="LNCDDataModel.PatOtherTest" Width="1.875" PointX="4.125" PointY="10.375" Height="3.8802294921874996" />
         <EntityTypeShape EntityType="LNCDDataModel.PatDisease" Width="1.5" PointX="6.125" PointY="1.125" Height="5.9814461263020826" />
         <EntityTypeShape EntityType="LNCDDataModel.VisitRecord" Width="1.5" PointX="3.625" PointY="5" Height="4.0712491861979156" />
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatADL">
@@ -1395,8 +1361,8 @@
           <ConnectorPoint PointX="2.125" PointY="5.7160852050781248" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatOtherTest">
-          <ConnectorPoint PointX="4.4375" PointY="9.0712491861979156" />
-          <ConnectorPoint PointX="4.4375" PointY="9.25" />
+          <ConnectorPoint PointX="4.625" PointY="9.0712491861979156" />
+          <ConnectorPoint PointX="4.625" PointY="10.375" />
         </AssociationConnector>
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatMMSE">
           <ConnectorPoint PointX="5.125" PointY="7.3657230631510409" />
@@ -1414,21 +1380,21 @@
           <ConnectorPoint PointX="4.375" PointY="4.3142097981770826" />
           <ConnectorPoint PointX="4.375" PointY="5" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="LNCDDataModel.PatLabExam" Width="1.5" PointX="8.375" PointY="9.75" Height="7.1275642903645835" />
+        <EntityTypeShape EntityType="LNCDDataModel.PatLabExam" Width="1.5" PointX="7.125" PointY="10.625" Height="7.3185839843750031" />
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatLabExam" ManuallyRouted="false">
-          <ConnectorPoint PointX="5.125" PointY="7.5891140315755212" />
-          <ConnectorPoint PointX="9.78125" PointY="7.5891140315755212" />
-          <ConnectorPoint PointX="9.78125" PointY="9.75" />
+          <ConnectorPoint PointX="3.84375" PointY="9.0712491861979156" />
+          <ConnectorPoint PointX="3.84375" PointY="16.130656738281253" />
+          <ConnectorPoint PointX="7.125" PointY="16.130656738281253" />
         </AssociationConnector>
         <EntityTypeShape EntityType="LNCDDataModel.PatRecentDrug" Width="1.5" PointX="6.875" PointY="7.625" Height="1.3969734700520835" />
         <AssociationConnector Association="LNCDDataModel.VisitRecordPatRecentDrug">
           <ConnectorPoint PointX="5.125" PointY="8.3481245930989587" />
           <ConnectorPoint PointX="6.875" PointY="8.3481245930989587" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="LNCDDataModel.Drug" Width="1.5" PointX="8.625" PointY="8.25" Height="1.3969734700520835" />
+        <EntityTypeShape EntityType="LNCDDataModel.Drug" Width="1.5" PointX="9.125" PointY="9" Height="1.7790128580729157" />
         <AssociationConnector Association="LNCDDataModel.PatRecentDrugDrug">
-          <ConnectorPoint PointX="8.375" PointY="8.9225162760416659" />
-          <ConnectorPoint PointX="8.625" PointY="8.9225162760416659" />
+          <ConnectorPoint PointX="8.375" PointY="9.2975162760416659" />
+          <ConnectorPoint PointX="9.125" PointY="9.2975162760416659" />
         </AssociationConnector>
         <EntityTypeShape EntityType="LNCDDataModel.PatPhysicalExam" Width="1.5" PointX="8.375" PointY="0.75" Height="5.59940673828125" />
         <AssociationConnector Association="LNCDDataModel.PatBasicInforPatPhysicalExam">

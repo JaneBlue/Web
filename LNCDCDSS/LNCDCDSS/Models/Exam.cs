@@ -14,7 +14,7 @@ namespace LNCDCDSS.Models
     public partial class Exam
     {
         public System.DateTime Date { get; set; }
-        public bool Result { get; set; }
+        public string Result { get; set; }
         public string Note { get; set; }
     }
 }

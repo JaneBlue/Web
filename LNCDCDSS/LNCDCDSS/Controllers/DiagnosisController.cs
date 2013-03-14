@@ -31,7 +31,7 @@ namespace LNCDCDSS.Controllers
                 vr.InsertPatRecentDrug(obj.prd, PatID);
             }
             catch(Exception  e){
-                int q = 1;
+                return this.Json(new { OK = false, Message = "保存失败" });  
             }
             
           return  this.Json(new { OK = true, Message = "保存成功" });  

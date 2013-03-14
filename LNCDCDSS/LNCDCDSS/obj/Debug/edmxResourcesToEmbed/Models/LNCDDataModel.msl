@@ -308,88 +308,71 @@
             <ScalarProperty Name="Result" ColumnName="B1_Result" />
             <ScalarProperty Name="Note" ColumnName="B1_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B2" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B2_Date" />
+          <ComplexProperty Name="B2" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B2_Result" />
             <ScalarProperty Name="Note" ColumnName="B2_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B3" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B3_Date" />
+          <ComplexProperty Name="B3" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B3_Result" />
             <ScalarProperty Name="Note" ColumnName="B3_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B4" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B4_Date" />
+          <ComplexProperty Name="B4" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B4_Result" />
             <ScalarProperty Name="Note" ColumnName="B4_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B5" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B5_Date" />
+          <ComplexProperty Name="B5" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B5_Result" />
             <ScalarProperty Name="Note" ColumnName="B5_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B6" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B6_Date" />
+          <ComplexProperty Name="B6" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B6_Result" />
             <ScalarProperty Name="Note" ColumnName="B6_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B7" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B7_Date" />
+          <ComplexProperty Name="B7" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B7_Result" />
             <ScalarProperty Name="Note" ColumnName="B7_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B8" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B8_Date" />
+          <ComplexProperty Name="B8" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B8_Result" />
             <ScalarProperty Name="Note" ColumnName="B8_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B9" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B9_Date" />
+          <ComplexProperty Name="B9" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B9_Result" />
             <ScalarProperty Name="Note" ColumnName="B9_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B10" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B10_Date" />
+          <ComplexProperty Name="B10" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B10_Result" />
             <ScalarProperty Name="Note" ColumnName="B10_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B11" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B11_Date" />
+          <ComplexProperty Name="B11" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B11_Result" />
             <ScalarProperty Name="Note" ColumnName="B11_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12_Date" />
+          <ComplexProperty Name="B12" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12_Result" />
             <ScalarProperty Name="Note" ColumnName="B12_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12a" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12a_Date" />
+          <ComplexProperty Name="B12a" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12a_Result" />
             <ScalarProperty Name="Note" ColumnName="B12a_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12b" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12b_Date" />
+          <ComplexProperty Name="B12b" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12b_Result" />
             <ScalarProperty Name="Note" ColumnName="B12b_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12c" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12c_Date" />
+          <ComplexProperty Name="B12c" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12c_Result" />
             <ScalarProperty Name="Note" ColumnName="B12c_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12d" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12d_Date" />
+          <ComplexProperty Name="B12d" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12d_Result" />
             <ScalarProperty Name="Note" ColumnName="B12d_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12e" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12e_Date" />
+          <ComplexProperty Name="B12e" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12e_Result" />
             <ScalarProperty Name="Note" ColumnName="B12e_Note" />
           </ComplexProperty>
-          <ComplexProperty Name="B12f" TypeName="LNCDDataModel.Exam">
-            <ScalarProperty Name="Date" ColumnName="B12f_Date" />
+          <ComplexProperty Name="B12f" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B12f_Result" />
             <ScalarProperty Name="Note" ColumnName="B12f_Note" />
           </ComplexProperty>
