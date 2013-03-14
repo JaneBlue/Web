@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 03/06/2013 15:36:38
+-- Date Created: 03/13/2013 21:04:28
 -- Generated from EDMX file: D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\Models\LNCDDataModel.edmx
 -- --------------------------------------------------
 
@@ -48,7 +48,7 @@ IF OBJECT_ID(N'[dbo].[FK_PatRecentDrugDrug]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[DrugSet] DROP CONSTRAINT [FK_PatRecentDrugDrug];
 GO
 IF OBJECT_ID(N'[dbo].[FK_PatBasicInforPatPhysicalExam]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[PatPhysicalExamSet] DROP CONSTRAINT [FK_PatBasicInforPatPhysicalExam];
+    ALTER TABLE [dbo].[PatBasicInforSet] DROP CONSTRAINT [FK_PatBasicInforPatPhysicalExam];
 GO
 
 -- --------------------------------------------------
@@ -60,9 +60,6 @@ IF OBJECT_ID(N'[dbo].[DoctorAccountSet]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[PatBasicInforSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PatBasicInforSet];
-GO
-IF OBJECT_ID(N'[dbo].[PatPhysicalExamSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[PatPhysicalExamSet];
 GO
 IF OBJECT_ID(N'[dbo].[PatMMSESet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PatMMSESet];
@@ -82,14 +79,17 @@ GO
 IF OBJECT_ID(N'[dbo].[VisitRecordSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[VisitRecordSet];
 GO
-IF OBJECT_ID(N'[dbo].[PatRecentDrugSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[PatRecentDrugSet];
-GO
 IF OBJECT_ID(N'[dbo].[PatLabExamSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PatLabExamSet];
 GO
+IF OBJECT_ID(N'[dbo].[PatRecentDrugSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PatRecentDrugSet];
+GO
 IF OBJECT_ID(N'[dbo].[DrugSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[DrugSet];
+GO
+IF OBJECT_ID(N'[dbo].[PatPhysicalExamSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PatPhysicalExamSet];
 GO
 
 -- --------------------------------------------------
@@ -117,56 +117,8 @@ CREATE TABLE [dbo].[PatBasicInforSet] (
     [Phone] nvarchar(max)  NOT NULL,
     [FamilyMember] nvarchar(max)  NOT NULL,
     [ChiefDoctor] nvarchar(max)  NOT NULL,
-    [PatDisease_Id] int  NOT NULL
-);
-GO
-
--- Creating table 'PatPhysicalExamSet'
-CREATE TABLE [dbo].[PatPhysicalExamSet] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [Height] nvarchar(max)  NULL,
-    [Weight] nvarchar(max)  NULL,
-    [Waistline] nvarchar(max)  NULL,
-    [Hipline] nvarchar(max)  NULL,
-    [BloodPressureH] nvarchar(max)  NULL,
-    [BloodPressureL] nvarchar(max)  NULL,
-    [B1_Result] nvarchar(max)  NULL,
-    [B1_Note] nvarchar(max)  NULL,
-    [B2_Result] nvarchar(max)  NULL,
-    [B2_Note] nvarchar(max)  NULL,
-    [B3_Result] nvarchar(max)  NULL,
-    [B3_Note] nvarchar(max)  NULL,
-    [B4_Result] nvarchar(max)  NULL,
-    [B4_Note] nvarchar(max)  NULL,
-    [B5_Result] nvarchar(max)  NULL,
-    [B5_Note] nvarchar(max)  NULL,
-    [B6_Result] nvarchar(max)  NULL,
-    [B6_Note] nvarchar(max)  NULL,
-    [B7_Result] nvarchar(max)  NULL,
-    [B7_Note] nvarchar(max)  NULL,
-    [B8_Result] nvarchar(max)  NULL,
-    [B8_Note] nvarchar(max)  NULL,
-    [B9_Result] nvarchar(max)  NULL,
-    [B9_Note] nvarchar(max)  NULL,
-    [B10_Result] nvarchar(max)  NULL,
-    [B10_Note] nvarchar(max)  NULL,
-    [B11_Result] nvarchar(max)  NULL,
-    [B11_Note] nvarchar(max)  NULL,
-    [B12_Result] nvarchar(max)  NULL,
-    [B12_Note] nvarchar(max)  NULL,
-    [B12a_Result] nvarchar(max)  NULL,
-    [B12a_Note] nvarchar(max)  NULL,
-    [B12b_Result] nvarchar(max)  NULL,
-    [B12b_Note] nvarchar(max)  NULL,
-    [B12c_Result] nvarchar(max)  NULL,
-    [B12c_Note] nvarchar(max)  NULL,
-    [B12d_Result] nvarchar(max)  NULL,
-    [B12d_Note] nvarchar(max)  NULL,
-    [B12e_Result] nvarchar(max)  NULL,
-    [B12e_Note] nvarchar(max)  NULL,
-    [B12f_Result] nvarchar(max)  NULL,
-    [B12f_Note] nvarchar(max)  NULL,
-    [PatBasicInforId] nvarchar(255)  NOT NULL
+    [PatDisease_Id] int  NOT NULL,
+    [PatPhysicalExam_Id] int  NOT NULL
 );
 GO
 
@@ -320,14 +272,6 @@ CREATE TABLE [dbo].[VisitRecordSet] (
 );
 GO
 
--- Creating table 'PatRecentDrugSet'
-CREATE TABLE [dbo].[PatRecentDrugSet] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [DrugCatogary] nvarchar(max)  NOT NULL,
-    [VisitRecord_Id] int  NOT NULL
-);
-GO
-
 -- Creating table 'PatLabExamSet'
 CREATE TABLE [dbo].[PatLabExamSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
@@ -374,11 +318,83 @@ CREATE TABLE [dbo].[PatLabExamSet] (
 );
 GO
 
+-- Creating table 'PatRecentDrugSet'
+CREATE TABLE [dbo].[PatRecentDrugSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Drugcatogary] nvarchar(max)  NOT NULL,
+    [VisitRecordId] int  NOT NULL
+);
+GO
+
 -- Creating table 'DrugSet'
 CREATE TABLE [dbo].[DrugSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
     [PatRecentDrugId] int  NOT NULL
+);
+GO
+
+-- Creating table 'PatPhysicalExamSet'
+CREATE TABLE [dbo].[PatPhysicalExamSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Height] nvarchar(max)  NOT NULL,
+    [Weight] nvarchar(max)  NOT NULL,
+    [Hipline] nvarchar(max)  NOT NULL,
+    [BloodPressureH] nvarchar(max)  NOT NULL,
+    [BloddPressureL] nvarchar(max)  NOT NULL,
+    [B1_Result] nvarchar(max)  NULL,
+    [B1_Note] nvarchar(max)  NULL,
+    [B2_Date] datetime  NOT NULL,
+    [B2_Result] bit  NOT NULL,
+    [B2_Note] nvarchar(max)  NOT NULL,
+    [B3_Date] datetime  NOT NULL,
+    [B3_Result] bit  NOT NULL,
+    [B3_Note] nvarchar(max)  NOT NULL,
+    [B4_Date] datetime  NOT NULL,
+    [B4_Result] bit  NOT NULL,
+    [B4_Note] nvarchar(max)  NOT NULL,
+    [B5_Date] datetime  NOT NULL,
+    [B5_Result] bit  NOT NULL,
+    [B5_Note] nvarchar(max)  NOT NULL,
+    [B6_Date] datetime  NOT NULL,
+    [B6_Result] bit  NOT NULL,
+    [B6_Note] nvarchar(max)  NOT NULL,
+    [B7_Date] datetime  NOT NULL,
+    [B7_Result] bit  NOT NULL,
+    [B7_Note] nvarchar(max)  NOT NULL,
+    [B8_Date] datetime  NOT NULL,
+    [B8_Result] bit  NOT NULL,
+    [B8_Note] nvarchar(max)  NOT NULL,
+    [B9_Date] datetime  NOT NULL,
+    [B9_Result] bit  NOT NULL,
+    [B9_Note] nvarchar(max)  NOT NULL,
+    [B10_Date] datetime  NOT NULL,
+    [B10_Result] bit  NOT NULL,
+    [B10_Note] nvarchar(max)  NOT NULL,
+    [B11_Date] datetime  NOT NULL,
+    [B11_Result] bit  NOT NULL,
+    [B11_Note] nvarchar(max)  NOT NULL,
+    [B12_Date] datetime  NOT NULL,
+    [B12_Result] bit  NOT NULL,
+    [B12_Note] nvarchar(max)  NOT NULL,
+    [B12a_Date] datetime  NOT NULL,
+    [B12a_Result] bit  NOT NULL,
+    [B12a_Note] nvarchar(max)  NOT NULL,
+    [B12b_Date] datetime  NOT NULL,
+    [B12b_Result] bit  NOT NULL,
+    [B12b_Note] nvarchar(max)  NOT NULL,
+    [B12c_Date] datetime  NOT NULL,
+    [B12c_Result] bit  NOT NULL,
+    [B12c_Note] nvarchar(max)  NOT NULL,
+    [B12d_Date] datetime  NOT NULL,
+    [B12d_Result] bit  NOT NULL,
+    [B12d_Note] nvarchar(max)  NOT NULL,
+    [B12e_Date] datetime  NOT NULL,
+    [B12e_Result] bit  NOT NULL,
+    [B12e_Note] nvarchar(max)  NOT NULL,
+    [B12f_Date] datetime  NOT NULL,
+    [B12f_Result] bit  NOT NULL,
+    [B12f_Note] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -395,12 +411,6 @@ GO
 -- Creating primary key on [Id] in table 'PatBasicInforSet'
 ALTER TABLE [dbo].[PatBasicInforSet]
 ADD CONSTRAINT [PK_PatBasicInforSet]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
--- Creating primary key on [Id] in table 'PatPhysicalExamSet'
-ALTER TABLE [dbo].[PatPhysicalExamSet]
-ADD CONSTRAINT [PK_PatPhysicalExamSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -440,21 +450,27 @@ ADD CONSTRAINT [PK_VisitRecordSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'PatRecentDrugSet'
-ALTER TABLE [dbo].[PatRecentDrugSet]
-ADD CONSTRAINT [PK_PatRecentDrugSet]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
 -- Creating primary key on [Id] in table 'PatLabExamSet'
 ALTER TABLE [dbo].[PatLabExamSet]
 ADD CONSTRAINT [PK_PatLabExamSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
+-- Creating primary key on [Id] in table 'PatRecentDrugSet'
+ALTER TABLE [dbo].[PatRecentDrugSet]
+ADD CONSTRAINT [PK_PatRecentDrugSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
 -- Creating primary key on [Id] in table 'DrugSet'
 ALTER TABLE [dbo].[DrugSet]
 ADD CONSTRAINT [PK_DrugSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'PatPhysicalExamSet'
+ALTER TABLE [dbo].[PatPhysicalExamSet]
+ADD CONSTRAINT [PK_PatPhysicalExamSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -574,10 +590,10 @@ ON [dbo].[PatLabExamSet]
     ([VisitRecord_Id]);
 GO
 
--- Creating foreign key on [VisitRecord_Id] in table 'PatRecentDrugSet'
+-- Creating foreign key on [VisitRecordId] in table 'PatRecentDrugSet'
 ALTER TABLE [dbo].[PatRecentDrugSet]
 ADD CONSTRAINT [FK_VisitRecordPatRecentDrug]
-    FOREIGN KEY ([VisitRecord_Id])
+    FOREIGN KEY ([VisitRecordId])
     REFERENCES [dbo].[VisitRecordSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -585,7 +601,7 @@ ADD CONSTRAINT [FK_VisitRecordPatRecentDrug]
 -- Creating non-clustered index for FOREIGN KEY 'FK_VisitRecordPatRecentDrug'
 CREATE INDEX [IX_FK_VisitRecordPatRecentDrug]
 ON [dbo].[PatRecentDrugSet]
-    ([VisitRecord_Id]);
+    ([VisitRecordId]);
 GO
 
 -- Creating foreign key on [PatRecentDrugId] in table 'DrugSet'
@@ -602,18 +618,18 @@ ON [dbo].[DrugSet]
     ([PatRecentDrugId]);
 GO
 
--- Creating foreign key on [PatBasicInforId] in table 'PatPhysicalExamSet'
-ALTER TABLE [dbo].[PatPhysicalExamSet]
+-- Creating foreign key on [PatPhysicalExam_Id] in table 'PatBasicInforSet'
+ALTER TABLE [dbo].[PatBasicInforSet]
 ADD CONSTRAINT [FK_PatBasicInforPatPhysicalExam]
-    FOREIGN KEY ([PatBasicInforId])
-    REFERENCES [dbo].[PatBasicInforSet]
+    FOREIGN KEY ([PatPhysicalExam_Id])
+    REFERENCES [dbo].[PatPhysicalExamSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_PatBasicInforPatPhysicalExam'
 CREATE INDEX [IX_FK_PatBasicInforPatPhysicalExam]
-ON [dbo].[PatPhysicalExamSet]
-    ([PatBasicInforId]);
+ON [dbo].[PatBasicInforSet]
+    ([PatPhysicalExam_Id]);
 GO
 
 -- --------------------------------------------------

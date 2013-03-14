@@ -14,6 +14,11 @@ namespace LNCDCDSS.Models
     
     public partial class VisitRecord
     {
+        public VisitRecord()
+        {
+            this.PatRecentDrug = new HashSet<PatRecentDrug>();
+        }
+    
         public int Id { get; set; }
         public string PatBasicInforId { get; set; }
         public string VisitRecordID { get; set; }
@@ -30,6 +35,6 @@ namespace LNCDCDSS.Models
         public virtual PatMMSE PatMMSE { get; set; }
         public virtual PatBasicInfor PatBasicInfor { get; set; }
         public virtual PatLabExam PatLabExam { get; set; }
-        public virtual PatRecentDrug PatRecentDrug { get; set; }
+        public virtual ICollection<PatRecentDrug> PatRecentDrug { get; set; }
     }
 }

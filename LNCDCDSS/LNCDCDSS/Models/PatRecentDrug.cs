@@ -20,7 +20,8 @@ namespace LNCDCDSS.Models
         }
     
         public int Id { get; set; }
-        public string DrugCatogary { get; set; }
+        public string Drugcatogary { get; set; }
+        public int VisitRecordId { get; set; }
     
         public virtual VisitRecord VisitRecord { get; set; }
         public virtual ICollection<Drug> Drug { get; set; }

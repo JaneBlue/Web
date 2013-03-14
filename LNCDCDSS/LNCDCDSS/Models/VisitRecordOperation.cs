@@ -105,21 +105,21 @@ namespace LNCDCDSS.Models
         /// <param name="ID"></param>
         public void InsertPatRecentDrug(PatRecentDrug PRdrug, List<Drug> drug, string ID)
         {
-            try
-            {
-                PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
-                pt.VisitRecord.Last().PatRecentDrug = PRdrug;
-                foreach (Drug d in drug)
-                {
-                    d.PatRecentDrugId = pt.VisitRecord.Last().PatRecentDrug.Id;
-                    pt.VisitRecord.Last().PatRecentDrug.Drug.Add(d);
-                }
-                context.SaveChanges();
-            }
-            catch (Exception e)
-            {
-                string a = e.InnerException.Message;
-            }
+            //try
+            //{
+            //    PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
+            //    pt.VisitRecord.Last().PatRecentDrug = PRdrug;
+            //    foreach (Drug d in drug)
+            //    {
+            //        d.PatRecentDrugId = pt.VisitRecord.Last().PatRecentDrug.Id;
+            //        pt.VisitRecord.Last().PatRecentDrug.Drug.Add(d);
+            //    }
+            //    context.SaveChanges();
+            //}
+            //catch (Exception e)
+            //{
+            //    string a = e.InnerException.Message;
+            //}
         }
 
         public bool UpdateVisitRecord()

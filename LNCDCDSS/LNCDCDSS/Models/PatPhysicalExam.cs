@@ -17,52 +17,50 @@ namespace LNCDCDSS.Models
         public PatPhysicalExam()
         {
             this.B1 = new BodyExam();
-            this.B2 = new BodyExam();
-            this.B3 = new BodyExam();
-            this.B4 = new BodyExam();
-            this.B5 = new BodyExam();
-            this.B6 = new BodyExam();
-            this.B7 = new BodyExam();
-            this.B8 = new BodyExam();
-            this.B9 = new BodyExam();
-            this.B10 = new BodyExam();
-            this.B11 = new BodyExam();
-            this.B12 = new BodyExam();
-            this.B12a = new BodyExam();
-            this.B12b = new BodyExam();
-            this.B12c = new BodyExam();
-            this.B12d = new BodyExam();
-            this.B12e = new BodyExam();
-            this.B12f = new BodyExam();
+            this.B2 = new Exam();
+            this.B3 = new Exam();
+            this.B4 = new Exam();
+            this.B5 = new Exam();
+            this.B6 = new Exam();
+            this.B7 = new Exam();
+            this.B8 = new Exam();
+            this.B9 = new Exam();
+            this.B10 = new Exam();
+            this.B11 = new Exam();
+            this.B12 = new Exam();
+            this.B12a = new Exam();
+            this.B12b = new Exam();
+            this.B12c = new Exam();
+            this.B12d = new Exam();
+            this.B12e = new Exam();
+            this.B12f = new Exam();
         }
     
         public int Id { get; set; }
         public string Height { get; set; }
         public string Weight { get; set; }
-        public string Waistline { get; set; }
         public string Hipline { get; set; }
         public string BloodPressureH { get; set; }
-        public string BloodPressureL { get; set; }
-        public string PatBasicInforId { get; set; }
+        public string BloddPressureL { get; set; }
     
         public BodyExam B1 { get; set; }
-        public BodyExam B2 { get; set; }
-        public BodyExam B3 { get; set; }
-        public BodyExam B4 { get; set; }
-        public BodyExam B5 { get; set; }
-        public BodyExam B6 { get; set; }
-        public BodyExam B7 { get; set; }
-        public BodyExam B8 { get; set; }
-        public BodyExam B9 { get; set; }
-        public BodyExam B10 { get; set; }
-        public BodyExam B11 { get; set; }
-        public BodyExam B12 { get; set; }
-        public BodyExam B12a { get; set; }
-        public BodyExam B12b { get; set; }
-        public BodyExam B12c { get; set; }
-        public BodyExam B12d { get; set; }
-        public BodyExam B12e { get; set; }
-        public BodyExam B12f { get; set; }
+        public Exam B2 { get; set; }
+        public Exam B3 { get; set; }
+        public Exam B4 { get; set; }
+        public Exam B5 { get; set; }
+        public Exam B6 { get; set; }
+        public Exam B7 { get; set; }
+        public Exam B8 { get; set; }
+        public Exam B9 { get; set; }
+        public Exam B10 { get; set; }
+        public Exam B11 { get; set; }
+        public Exam B12 { get; set; }
+        public Exam B12a { get; set; }
+        public Exam B12b { get; set; }
+        public Exam B12c { get; set; }
+        public Exam B12d { get; set; }
+        public Exam B12e { get; set; }
+        public Exam B12f { get; set; }
     
         public virtual PatBasicInfor PatBasicInfor { get; set; }
     }

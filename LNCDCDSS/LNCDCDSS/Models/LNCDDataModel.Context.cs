@@ -27,15 +27,15 @@ namespace LNCDCDSS.Models
     
         public DbSet<DoctorAccount> DoctorAccountSet { get; set; }
         public DbSet<PatBasicInfor> PatBasicInforSet { get; set; }
-        public DbSet<PatPhysicalExam> PatPhysicalExamSet { get; set; }
         public DbSet<PatMMSE> PatMMSESet { get; set; }
         public DbSet<PatMoCA> PatMoCASet { get; set; }
         public DbSet<PatADL> PatADLSet { get; set; }
         public DbSet<PatOtherTest> PatOtherTestSet { get; set; }
         public DbSet<PatDisease> PatDiseaseSet { get; set; }
         public DbSet<VisitRecord> VisitRecordSet { get; set; }
-        public DbSet<PatRecentDrug> PatRecentDrugSet { get; set; }
         public DbSet<PatLabExam> PatLabExamSet { get; set; }
+        public DbSet<PatRecentDrug> PatRecentDrugSet { get; set; }
         public DbSet<Drug> DrugSet { get; set; }
+        public DbSet<PatPhysicalExam> PatPhysicalExamSet { get; set; }
     }
 }
