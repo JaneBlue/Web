@@ -306,9 +306,9 @@
     <NavigationProperty Name="VisitRecord" Relationship="LNCDDataModel.VisitRecordPatLabExam" FromRole="PatLabExam" ToRole="VisitRecord" />
   </EntityType>
   <ComplexType Name="Exam">
-    <Property Type="DateTime" Name="Date" Nullable="false" />
-    <Property Type="String" Name="Result" Nullable="false" />
-    <Property Type="String" Name="Note" Nullable="false" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="Result" Nullable="true" />
+    <Property Type="String" Name="Note" Nullable="true" />
   </ComplexType>
   <ComplexType Name="BodyExam">
     <Property Type="String" Name="Result" Nullable="true" />

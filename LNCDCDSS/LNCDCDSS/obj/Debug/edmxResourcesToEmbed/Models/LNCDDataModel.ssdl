@@ -266,18 +266,18 @@
     <Property Name="WBC" Type="nvarchar(max)" Nullable="true" />
     <Property Name="ApoE" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Protein" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="Electrocardiogram_Date" Type="datetime" Nullable="false" />
-    <Property Name="Electrocardiogram_Result" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Electrocardiogram_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Echocardiagraphy_Date" Type="datetime" Nullable="false" />
-    <Property Name="Echocardiagraphy_Result" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Echocardiagraphy_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="EEG_Date" Type="datetime" Nullable="false" />
-    <Property Name="EEG_Result" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="EEG_Note" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CT_Date" Type="datetime" Nullable="false" />
-    <Property Name="CT_Result" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CT_Note" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Electrocardiogram_Date" Type="datetime" Nullable="true" />
+    <Property Name="Electrocardiogram_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Electrocardiogram_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Echocardiagraphy_Date" Type="datetime" Nullable="true" />
+    <Property Name="Echocardiagraphy_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Echocardiagraphy_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="EEG_Date" Type="datetime" Nullable="true" />
+    <Property Name="EEG_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="EEG_Note" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CT_Date" Type="datetime" Nullable="true" />
+    <Property Name="CT_Result" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CT_Note" Type="nvarchar(max)" Nullable="true" />
     <Property Name="VisitRecord_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PatRecentDrugSet">
