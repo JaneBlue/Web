@@ -346,7 +346,7 @@
             var strProtein = OCX.GetData("Data_source/PatLabExam/Protein");
             var strElectrocardiogramDateOrg = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Date");
             if ("/////" == strElectrocardiogramDateOrg) {
-                strElectrocardiogramDateOrg = "0001/01/01///";
+                strElectrocardiogramDateOrg = "1753/01/01///";
             }
             var strElectrocardiogramDate = strElectrocardiogramDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
 
@@ -355,7 +355,7 @@
             var strElectrocardiogramNote = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Note");
             var strEchocardiagraphyDateOrg = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Date");
             if ("/////" == strEchocardiagraphyDateOrg) {
-                strEchocardiagraphyDateOrg = "0001/01/01///";
+                strEchocardiagraphyDateOrg = "1753/01/01///";
             }
             var strEchocardiagraphyDate = strEchocardiagraphyDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
 
@@ -364,7 +364,7 @@
             var strEchocardiagraphyNote = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Note");
             var strEEGDateOrg = OCX.GetData("Data_source/PatLabExam/EEG/Date");
             if ("/////" == strEEGDateOrg) {
-                strEEGDateOrg = "0001/01/01///";
+                strEEGDateOrg = "1753/01/01///";
             }
             var strEEGDate = strEEGDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
 
@@ -373,7 +373,7 @@
             var strEEGNote = OCX.GetData("Data_source/PatLabExam/EEG/Note");
             var strCTDateOrg = OCX.GetData("Data_source/PatLabExam/CT/Date");
             if ("/////" == strCTDateOrg) {
-                strCTDateOrg = "0001/01/01///";
+                strCTDateOrg = "1753/01/01///";
             }
             var strCTDate = strCTDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
 
