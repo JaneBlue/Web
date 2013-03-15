@@ -130,6 +130,7 @@ namespace LNCDCDSS.Models
 
         public bool UpdateVisitRecord()
         {
+
             return true;
 
         }
@@ -238,11 +239,18 @@ namespace LNCDCDSS.Models
             }
             return visit;
         }
-        public void AddNewRecord(string PatID, VisitRecord nvisit)
+        public void AddNewRecord(string PatID)
         {
+            
+            
             PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
-            nvisit.PatBasicInforId = PatID;
-            pt.VisitRecord.Add(nvisit);
+
+            VisitRecord vr = new VisitRecord();
+            vr.VisitRecordID = pt.VisitRecord.Last().VisitRecordID;
+            vr.VisitDate = DateTime.Now;
+            vr.PatBasicInforId = PatID;
+            pt.VisitRecord.Add(vr);
+            context.SaveChanges();
         }
 
        

@@ -27,12 +27,13 @@ namespace LNCDCDSS.Controllers
 
 
                     vr.InsertPatDisease(obj.pds, PatID);
-              //  vr.InsertPatLabExam(obj.ple, PatID);
-              //  vr.InsertPatMMSE(obj.pme, PatID);
-             //   vr.InsertPatMoca(obj.pma, PatID);
-             //   vr.InsertPatotherTest(obj.pot, PatID);
-             vr.InsertPatPhysicaExam(obj.ppe, PatID);
-                vr.InsertPatRecentDrug(obj.prd, PatID);
+                    vr.InsertPatLabExam(obj.ple, PatID);
+                    vr.InsertPatMMSE(obj.pme, PatID);
+                    vr.InsertPatMoca(obj.pma, PatID);
+                    vr.InsertPatotherTest(obj.pot, PatID);
+           
+                // vr.InsertPatPhysicaExam(obj.ppe, PatID);
+                //vr.InsertPatRecentDrug(obj.prd, PatID);
 
                 //
                 localhost.InputData InputDataValue = new localhost.InputData();
