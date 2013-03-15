@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
-
+using System.Diagnostics;
+using System.Data.Entity.Validation;
 namespace LNCDCDSS.Models
 {
     public class VisitRecordOperation
@@ -14,7 +15,9 @@ namespace LNCDCDSS.Models
             try
             {
                 PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
-                pt.PatPhysicalExam = PExam;
+              //  pt.PatPhysicalExam = PExam;
+             //   pt.PatPhysicalExam.B1=PExam.B1;
+                ObjectMapper.CopyProperties(PExam, pt.PatPhysicalExam);
                 context.SaveChanges();
             }
             catch (Exception e)
@@ -28,7 +31,10 @@ namespace LNCDCDSS.Models
             {
                 PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
                 pdisease.PatBasicInforId = "123";
-                pt.PatDisease = pdisease;
+                pdisease.PatBasicInforId = ID;
+                pdisease.Id =pt.PatDisease.Id;
+                ObjectMapper.CopyProperties(pdisease, pt.PatDisease);
+              //  pt.PatDisease = pdisease;
                 context.SaveChanges();
             }
             catch (Exception e)
@@ -41,6 +47,7 @@ namespace LNCDCDSS.Models
             try
             {
                 PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
+
                 pt.VisitRecord.Last().PatLabExam = Plab;
                 context.SaveChanges();
             }
@@ -109,9 +116,15 @@ namespace LNCDCDSS.Models
                 pt.VisitRecord.Last().PatRecentDrug = PRdrug;
                 context.SaveChanges();
             }
-            catch (Exception e)
+            catch (DbEntityValidationException dbEx)
             {
-                string a = e.InnerException.Message;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        Trace.TraceInformation("Property: {0} Error: {1}", validationError.PropertyName, validationError.ErrorMessage);
+                    }
+                }
             }
         }
 
@@ -231,5 +244,7 @@ namespace LNCDCDSS.Models
             nvisit.PatBasicInforId = PatID;
             pt.VisitRecord.Add(nvisit);
         }
+
+       
     }
 }

@@ -106,6 +106,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LNCDDataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ObjectMapper.cs" />
     <Compile Include="Models\PatADL.cs">
       <DependentUpon>LNCDDataModel.tt</DependentUpon>
     </Compile>
