@@ -134,7 +134,7 @@ width:962px;
 height:670px;
 padding:0px 0 0 0;
 background:url(images/main_bg.png) repeat-x center;
-font-size:0;
+font-size:20px;
 }
 .ocx{
 	width:915px;
@@ -158,8 +158,17 @@ background:url(images/foot.png) no-repeat bottom;
 	float: right;
 	width :138px;
 	background: url(images/normal-button.png) no-repeat ;
+   text-align:center;
 }
 
+#btn1:hover
+{
+     background: url(images/hover-button.png) no-repeat ;
+}
+#btn1:active
+{
+     background: url(images/click-button.png) no-repeat ;
+}
 #btn2
 {
 	float: right;

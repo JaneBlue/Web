@@ -140,7 +140,14 @@ p
     background: url(images/normal-button.png) no-repeat ;
     text-align:center;
 }
-
+.button:hover
+{
+     background: url(images/hover-button.png) no-repeat ;
+}
+.button.active
+{
+     background: url(images/click-button.png) no-repeat ;
+}
 div.editor-field
 {
     margin-bottom: 10px;
@@ -157,6 +164,14 @@ input[type="submit"]
     border:0;
 }
 
+input[type="submit"]:hover
+{
+     background: url(images/hover-button.png) no-repeat ;
+}
+input[type="submit"]:active
+{
+     background: url(images/click-button.png) no-repeat ;
+}
 
 /* Sidebar */
 

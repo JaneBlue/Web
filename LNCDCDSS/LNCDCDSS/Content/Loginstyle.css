@@ -4,7 +4,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color:#c0c0c0;
-	font-size: 13px;
+	font-size: 20px;
 	color:#000;
 	
 }
@@ -25,12 +25,17 @@ h
 	height:638px;
 	background: url(images/Login/content.png) no-repeat ;
 }
+ul, ol {
+	line-height: 170%;
+	display:block;
+	
+}
 .login
 {
-	width: 325px;
-	height: 459px;
+	width: 365px;
+	height: 436px;
 	float: right;
-	margin:130px 36px 0 0;
+	margin:130px 26px 0 0;
 	background: url(images/Login/login.png) no-repeat ;
 }
 .footer {
@@ -44,13 +49,14 @@ h
 }
 div.editor-field
 {
-    margin-bottom: 10px;
+    padding: 50px 20px 0 0
     font-size: 20px;
 }
 li
 {
     display:block;
     text-decoration:none;
+    font-size:22px;
 }
 input
 {
@@ -70,24 +76,21 @@ p
     background: url(images/normal-button.png) no-repeat ;
     text-align:center;
 }
-.button
-{
-    height: 37px;
-	float: left;
-	margin-left:100px;
-	width :138px;
-    background: url(images/normal-button.png) no-repeat ;
-    text-align:center;
-}
+
 #main
 {
-    margin-top:20px;
+    margin:70px 20px 0 0;
+    height :120px;
 }
 #msg
 {
+    height :30px;
+    width :300px;
     display:block;
     font-size :20px;
     color:Red;
+    float :left;
+    margin-left:120px;
 }
 input[type="submit"]
 {
@@ -98,4 +101,12 @@ input[type="submit"]
     background: url(images/normal-button.png) no-repeat ;
     text-align:center;
     border:0;
+}
+input[type="submit"]:hover
+{
+     background: url(images/hover-button.png) no-repeat ;
+}
+input[type="submit"]:active
+{
+     background: url(images/click-button.png) no-repeat ;
 }

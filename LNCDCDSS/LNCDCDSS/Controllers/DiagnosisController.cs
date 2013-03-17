@@ -22,8 +22,8 @@ namespace LNCDCDSS.Controllers
             string  PatID =this.TempData["PatID"].ToString();
             try{
                 VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
-              
-                    vr.InsertPatADL(obj.pal, PatID);
+
+                 vr.InsertPatADL(obj.pal, PatID);
 
 
                     vr.InsertPatDisease(obj.pds, PatID);
