@@ -31,9 +31,9 @@ namespace LNCDCDSS.Controllers
                     vr.InsertPatMMSE(obj.pme, PatID);
                     vr.InsertPatMoca(obj.pma, PatID);
                     vr.InsertPatotherTest(obj.pot, PatID);
-           
-                // vr.InsertPatPhysicaExam(obj.ppe, PatID);
-                //vr.InsertPatRecentDrug(obj.prd, PatID);
+                    vr.UpdateVisitRecord(obj.vsr,PatID);
+               vr.InsertPatPhysicaExam(obj.ppe, PatID);
+               vr.InsertPatRecentDrug(obj.prd, PatID);
 
                 //
                

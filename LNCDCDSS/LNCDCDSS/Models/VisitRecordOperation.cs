@@ -128,9 +128,12 @@ namespace LNCDCDSS.Models
             }
         }
 
-        public bool UpdateVisitRecord()
+        public bool UpdateVisitRecord(VisitRecord vsr, string ID)
         {
-
+            PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
+            pt.VisitRecord.Last().CDSSDiagnosis=vsr.CDSSDiagnosis;
+            pt.VisitRecord.Last().DiagnosisiResult = vsr.CDSSDiagnosis;
+            pt.VisitRecord.Last().RecordNote = vsr.RecordNote;
             return true;
 
         }

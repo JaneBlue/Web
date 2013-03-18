@@ -16,9 +16,9 @@ namespace LNCDCDSS.Controllers
         public ActionResult Index()
         {
             List<SelectListItem> items = new List<SelectListItem>();
-            items.Add(new SelectListItem { Text = "正常", Value = "29" });
-            items.Add(new SelectListItem { Text = "轻度痴呆", Value = "28" });
-            items.Add(new SelectListItem { Text = "MCI", Value = "24" });
+            items.Add(new SelectListItem { Text = "正常", Value = "正常" });
+            items.Add(new SelectListItem { Text = "AD", Value = "AD" });
+            items.Add(new SelectListItem { Text = "MCI", Value = "MCI" });
             this.ViewData["Diagnosis"] = items;
             return View();
         }
