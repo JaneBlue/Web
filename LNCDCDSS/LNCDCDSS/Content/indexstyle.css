@@ -159,7 +159,14 @@ background:url(images/foot.png) no-repeat bottom;
 	width :138px;
 	background: url(images/normal-button.png) no-repeat ;
 }
-
+#btn1:hover
+{
+     background: url(images/hover-button.png) no-repeat ;
+}
+#btn1:active
+{
+     background: url(images/click-button.png) no-repeat ;
+}
 #btn2
 {
 	float: right;

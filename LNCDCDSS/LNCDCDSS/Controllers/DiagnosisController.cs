@@ -197,9 +197,9 @@ namespace LNCDCDSS.Controllers
                     InputDataValue.CDR = System.Convert.ToDouble(obj.pot.PatCDR);
                 }
 
-                localhost.Service1 b = new localhost.Service1();
+             localhost.Service1 b = new localhost.Service1();
 
-           
+            
 
                 b.DoInference(InputDataValue, ref strResult);
             }
