@@ -613,18 +613,23 @@
 
             strPatCDR = fPatCDR.toString();
 
-            var thing = { pma: { Id: 2, MC1: strMC1, MC2: strMC2
+            //get the record data
+            var strDiagnosisiResult = OCX.GetData("Data_source/VisitRecord/DiagnosisiResult");
+            var strRecordNote = OCX.GetData("Data_source/VisitRecord/RecordNote");
+            var strCDSSDiagnosis = OCX.GetData("Data_source/VisitRecord/CDSSDiagnosis");
+
+            var thing = { pma: { MC1: strMC1, MC2: strMC2
             , MC3: strMC3, MC4: strMC4, MC5: strMC5
             , MC6: strMC6, MC7: strMC7, MC8: strMC8
             , MC9: strMC9, Total: strTotalpma
             },
-                pme: { Id: 2, M1: strM1, M2: strM2
+                pme: { M1: strM1, M2: strM2
             , M3: strM3, M4: strM4, M5: strM5
             , M6: strM6, M7: strM7, M8: strM8
             , M9: strM9, M10: strM10, M11: strM11
             , Total: strTotalpme
                 },
-                pal: { Id: 2, A1: strA1, A2: strA2
+                pal: { A1: strA1, A2: strA2
             , A3: strA3, A4: strA4, A5: strA5
             , A6: strA6, A7: strA7, A8: strA8
             , A9: strA9, A10: strA10, A11: strA11
@@ -633,7 +638,7 @@
             , A18: strA18, A19: strA19, A20: strA20
             , Total: strTotalpal
                 },
-                pds: { Id: 2, D1: { Situation: strD1Situation }, D2: { Situation: strD2Situation }
+                pds: { D1: { Situation: strD1Situation }, D2: { Situation: strD2Situation }
             , D3: { Situation: strD3Situation }, D4: { Situation: strD4Situation }, D5: { Situation: strD5Situation }
             , D6: { Situation: strD6Situation }, D7: { Situation: strD7Situation }, D8: { Situation: strD8Situation }
             , D9: { Situation: strD9Situation }, D10: { Situation: strD10Situation }, D11: { Situation: strD11Situation }
@@ -642,13 +647,13 @@
             , D18: { Situation: strD18Situation }, D19: { Situation: strD19Situation }, D20: { Situation: strD20Situation }
             , D21: { Situation: strD21Situation }, ImportantD: { Situation: strImportantDSituation }, Description: strDescription
                 },
-                pot: { Id: 2, Vocabulary1: strVocabulary1, Vocabulary2: strVocabulary2
+                pot: { Vocabulary1: strVocabulary1, Vocabulary2: strVocabulary2
             , Vocabulary3: strVocabulary3, Picture1: strPicture1, Picture2: strPicture2
             , ConnectNumber1: strConnectNumber1, ConnectNumber2: strConnectNumber2, Vocabulary4: strVocabulary4
             , VocabularyAnalyse1: strVocabularyAnalyse1, Picture3: strPicture3, VocabularyAnalyse2: strVocabularyAnalyse2
             , PatCDR: strPatCDR, PatGDS: strPatGDS
                 },
-                ppe: { Id: 2, Height: strHeight, Weight: strWeight
+                ppe: { Height: strHeight, Weight: strWeight
             , Waistline: strWaistline, Hipline: strHipline, BloodPressureH: strBloodPressureH
             , BloodPressureL: strBloodPressureL, B1: { Result: strB1Result, Note: strB1Note }
             , B2: { Result: strB2Result, Note: strB2Note }, B3: { Result: strB3Result, Note: strB3Note }
@@ -661,7 +666,7 @@
             , B12d: { Result: strB12dResult, Note: strB12dNote }, B12e: { Result: strB12eResult, Note: strB12eNote }
             , B12f: { Result: strB12fResult, Note: strB12fNote }
                 },
-                ple: { Id: 2, FT3: strFT3, FT4: strFT4, TT3: strTT3, TT4: strTT4, TSH: strTSH
+                ple: { FT3: strFT3, FT4: strFT4, TT3: strTT3, TT4: strTT4, TSH: strTSH
             , Folacin: strFolacin, B12: strB12, TBG: strTBG, EmptyG: strEmptyG, GAfter: strGAfter
             , HbAlc: strHbAlc, UricAcid: strUricAcid, Cholesterol: strCholesterol
             , GanEster: strGanEster, HDLC: strHDLC, LDLC: strLDLC, GOT: strGOT
@@ -674,47 +679,50 @@
             , CT: { Date: strCTDate, Result: strCTResult, Note: strCTNote }
                 },
                 prd: [
-                { Id: 1, DrugCatogary: strDrugCatogary1, Drug: [{ Name: strDrugCatogary1Drug1 }, { Name: strDrugCatogary1Drug2 }
+                { DrugCatogary: strDrugCatogary1, Drug: [{ Name: strDrugCatogary1Drug1 }, { Name: strDrugCatogary1Drug2 }
                 , { Name: strDrugCatogary1Drug3 }, { Name: strDrugCatogary1Drug4 }, { Name: strDrugCatogary1Drug5 }
                 , { Name: strDrugCatogary1Drug6 }, { Name: strDrugCatogary1Drug7 }, { Name: strDrugCatogary1Drug8}]
                 }
                 ,
-                { Id: 2, DrugCatogary: strDrugCatogary2, Drug: [{ Name: strDrugCatogary2Drug1 }, { Name: strDrugCatogary2Drug2}]
+                { DrugCatogary: strDrugCatogary2, Drug: [{ Name: strDrugCatogary2Drug1 }, { Name: strDrugCatogary2Drug2}]
                 }
                 ,
-                { Id: 3, DrugCatogary: strDrugCatogary3, Drug: [{ Name: strDrugCatogary3Drug1 }, { Name: strDrugCatogary3Drug2 }
+                { DrugCatogary: strDrugCatogary3, Drug: [{ Name: strDrugCatogary3Drug1 }, { Name: strDrugCatogary3Drug2 }
                 , { Name: strDrugCatogary3Drug3 }, { Name: strDrugCatogary3Drug4 }, { Name: strDrugCatogary3Drug5}]
                 }
                 ,
-                { Id: 4, DrugCatogary: strDrugCatogary4, Drug: [{ Name: strDrugCatogary4Drug1 }, { Name: strDrugCatogary4Drug2 }
+                { DrugCatogary: strDrugCatogary4, Drug: [{ Name: strDrugCatogary4Drug1 }, { Name: strDrugCatogary4Drug2 }
                 , { Name: strDrugCatogary4Drug3 }, { Name: strDrugCatogary4Drug4}]
                 }
                 ,
-                { Id: 5, DrugCatogary: strDrugCatogary5, Drug: [{ Name: strDrugCatogary5Drug1 }, { Name: strDrugCatogary5Drug2 }
+                { DrugCatogary: strDrugCatogary5, Drug: [{ Name: strDrugCatogary5Drug1 }, { Name: strDrugCatogary5Drug2 }
                 , { Name: strDrugCatogary5Drug3 }, { Name: strDrugCatogary5Drug4 }, { Name: strDrugCatogary5Drug5}]
                 }
                 ,
-                { Id: 6, DrugCatogary: strDrugCatogary6, Drug: [{ Name: strDrugCatogary6Drug1 }, { Name: strDrugCatogary6Drug2 }
+                { DrugCatogary: strDrugCatogary6, Drug: [{ Name: strDrugCatogary6Drug1 }, { Name: strDrugCatogary6Drug2 }
                 , { Name: strDrugCatogary6Drug3 }, { Name: strDrugCatogary6Drug4}]
                 }
                 ,
-                { Id: 7, DrugCatogary: strDrugCatogary7
+                { DrugCatogary: strDrugCatogary7
                 }
                 ,
-                { Id: 8, DrugCatogary: strDrugCatogary8, Drug: [{ Name: strDrugCatogary8Drug1 }, { Name: strDrugCatogary8Drug2 }
+                { DrugCatogary: strDrugCatogary8, Drug: [{ Name: strDrugCatogary8Drug1 }, { Name: strDrugCatogary8Drug2 }
                 , { Name: strDrugCatogary8Drug3}]
                 }
                 ,
-                { Id: 9, DrugCatogary: strDrugCatogary9, Drug: [{ Name: strDrugCatogary9Drug1}]
+                { DrugCatogary: strDrugCatogary9, Drug: [{ Name: strDrugCatogary9Drug1}]
                 }
                 ,
-                { Id: 10, DrugCatogary: strDrugCatogary10, Drug: [{ Name: strDrugCatogary10Drug1 }, { Name: strDrugCatogary10Drug2 }
+                { DrugCatogary: strDrugCatogary10, Drug: [{ Name: strDrugCatogary10Drug1 }, { Name: strDrugCatogary10Drug2 }
                 , { Name: strDrugCatogary10Drug3 }, { Name: strDrugCatogary10Drug4}]
                 }
                 ,
-                { Id: 11, DrugCatogary: strDrugCatogary11, Drug: [{ Name: strDrugCatogary11Drug1}]
+                { DrugCatogary: strDrugCatogary11, Drug: [{ Name: strDrugCatogary11Drug1}]
                 }
-                    ]
+                    ],
+                vsr: { DiagnosisiResult: strDiagnosisiResult, CDSSDiagnosis: strCDSSDiagnosis
+                , RecordNote: strRecordNote
+                }
             };
 
             var encoded = $.toJSON(thing);
