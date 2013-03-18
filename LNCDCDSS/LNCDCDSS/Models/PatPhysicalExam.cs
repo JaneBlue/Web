@@ -41,7 +41,7 @@ namespace LNCDCDSS.Models
         public string Weight { get; set; }
         public string Hipline { get; set; }
         public string BloodPressureH { get; set; }
-        public string BloddPressureL { get; set; }
+        public string BloodPressureL { get; set; }
     
         public BodyExam B1 { get; set; }
         public BodyExam B2 { get; set; }

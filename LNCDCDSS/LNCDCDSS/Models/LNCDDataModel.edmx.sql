@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 03/14/2013 21:39:14
--- Generated from EDMX file: D:\2013cdss\Web\LNCDCDSS\LNCDCDSS\Models\LNCDDataModel.edmx
+-- Date Created: 03/18/2013 15:53:33
+-- Generated from EDMX file: D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\Models\LNCDDataModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -341,7 +341,7 @@ CREATE TABLE [dbo].[PatPhysicalExamSet] (
     [Weight] nvarchar(max)  NULL,
     [Hipline] nvarchar(max)  NULL,
     [BloodPressureH] nvarchar(max)  NULL,
-    [BloddPressureL] nvarchar(max)  NULL,
+    [BloodPressureL] nvarchar(max)  NULL,
     [B1_Result] nvarchar(max)  NULL,
     [B1_Note] nvarchar(max)  NULL,
     [B2_Result] nvarchar(max)  NULL,

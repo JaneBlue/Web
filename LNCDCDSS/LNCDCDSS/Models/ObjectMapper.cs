@@ -43,6 +43,31 @@ namespace LNCDCDSS.Models
              }
          }
 
+        public static void CopyFrontProperties(object source, object target)
+        {
+            var sourceType = source.GetType();
+            var targetType = target.GetType();
+            var mapperProperties = GetMapperProperties(sourceType, targetType);
+
+            for (int index = 0, count = mapperProperties.Count; index < count; index++)
+            {
+                var property = mapperProperties[index];
+                if (property.SourceProperty.Name != "VisitRecord")
+                {
+                    if (property.SourceProperty.GetValue(source, null).ToString() != "") // 不能改变原有ID
+                    {
+                        var sourceValue = property.SourceProperty.GetValue(source, null);
+                        property.TargetProperty.SetValue(target, sourceValue, null);
+                    }
+                    else
+                    {
+                        property.TargetProperty.SetValue(target, "0", null);
+                    }
+
+                }
+            }
+        }
+
          public class PropertyMapper
      {
          /// <summary>

@@ -310,7 +310,7 @@
     <Property Name="Weight" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Hipline" Type="nvarchar(max)" Nullable="true" />
     <Property Name="BloodPressureH" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="BloddPressureL" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BloodPressureL" Type="nvarchar(max)" Nullable="true" />
     <Property Name="B1_Result" Type="nvarchar(max)" Nullable="true" />
     <Property Name="B1_Note" Type="nvarchar(max)" Nullable="true" />
     <Property Name="B2_Result" Type="nvarchar(max)" Nullable="true" />
@@ -859,7 +859,7 @@
           <Property Type="String" Name="Weight" Nullable="true" />
           <Property Type="String" Name="Hipline" Nullable="true" />
           <Property Type="String" Name="BloodPressureH" Nullable="true" />
-          <Property Type="String" Name="BloddPressureL" Nullable="true" />
+          <Property Type="String" Name="BloodPressureL" Nullable="true" />
           <Property Name="B1" Type="LNCDDataModel.BodyExam" Nullable="false" />
           <Property Name="B2" Type="LNCDDataModel.BodyExam" Nullable="false" />
           <Property Name="B3" Type="LNCDDataModel.BodyExam" Nullable="false" />
@@ -1192,7 +1192,7 @@
           <ScalarProperty Name="Weight" ColumnName="Weight" />
           <ScalarProperty Name="Hipline" ColumnName="Hipline" />
           <ScalarProperty Name="BloodPressureH" ColumnName="BloodPressureH" />
-          <ScalarProperty Name="BloddPressureL" ColumnName="BloddPressureL" />
+          <ScalarProperty Name="BloodPressureL" ColumnName="BloodPressureL" />
           <ComplexProperty Name="B1" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B1_Result" />
             <ScalarProperty Name="Note" ColumnName="B1_Note" />
