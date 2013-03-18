@@ -256,6 +256,7 @@
             var strD20Situation = OCX.GetData("Data_source/PatDisease/D20/Situation");
             var strD21Situation = OCX.GetData("Data_source/PatDisease/D21/Situation");
             var strImportantDSituation = OCX.GetData("Data_source/PatDisease/ImportantD/Situation");
+            var strDescription = OCX.GetData("Data_source/PatDisease/Description");
 
             //get the data of pot
             var strVocabulary1 = OCX.GetData("Data_source/PatOtherTest/Vocabulary1");
@@ -639,7 +640,7 @@
             , D12: { Situation: strD12Situation }, D13: { Situation: strD13Situation }, D14: { Situation: strD14Situation }
             , D15: { Situation: strD15Situation }, D16: { Situation: strD16Situation }, D17: { Situation: strD17Situation }
             , D18: { Situation: strD18Situation }, D19: { Situation: strD19Situation }, D20: { Situation: strD20Situation }
-            , D21: { Situation: strD21Situation }, ImportantD: { Situation: strImportantDSituation }
+            , D21: { Situation: strD21Situation }, ImportantD: { Situation: strImportantDSituation }, Description: strDescription
                 },
                 pot: { Id: 2, Vocabulary1: strVocabulary1, Vocabulary2: strVocabulary2
             , Vocabulary3: strVocabulary3, Picture1: strPicture1, Picture2: strPicture2
