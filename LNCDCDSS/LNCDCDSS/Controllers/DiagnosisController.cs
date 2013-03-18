@@ -36,6 +36,22 @@ namespace LNCDCDSS.Controllers
                 //vr.InsertPatRecentDrug(obj.prd, PatID);
 
                 //
+               
+            }
+            catch(Exception  e){
+                return this.Json(new { OK = false, Message = "保存失败" });  
+            }
+            
+          return  this.Json(new { OK = true, Message = "保存成功" });  
+        }
+        [HttpPost]
+        public JsonResult CDSSdiagnosis()
+        {
+            string strResult = null;
+            try
+            {
+                string jsonStr = Request.Params["postjson"];
+                VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
                 localhost.InputData InputDataValue = new localhost.InputData();
                 InputDataValue.timeorientation = System.Convert.ToDouble(obj.pme.M1); //M1
                 InputDataValue.placeorientation = System.Convert.ToDouble(obj.pme.M2); //M2
@@ -79,15 +95,15 @@ namespace LNCDCDSS.Controllers
                 InputDataValue.CDR = System.Convert.ToDouble(obj.pot.PatCDR);
 
                 localhost.Service1 b = new localhost.Service1();
-                string strResult = null;
+
                 b.DoInference(InputDataValue, ref strResult);
             }
-            catch(Exception  e){
-                return this.Json(new { OK = false, Message = "保存失败" });  
+            catch (Exception e)
+            {
+                return this.Json(new { OK = false, Message = "推理出错" });
             }
-            
-          return  this.Json(new { OK = true, Message = "保存成功" });  
-        }
 
+            return this.Json(new { OK = true, Message = strResult });
+        }
     }
 }

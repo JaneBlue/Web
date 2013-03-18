@@ -749,6 +749,24 @@
                 OCX.ShowReport();
                 OCX.ShowThisPage(name);
                 if (name == "辅助诊断") {
+                    $.ajax({
+                        url: '/Diagnosis/CDSSdiagnosis',
+                        type: "POST",
+                        data: { postjson: encoded },
+                        success: function (data) {
+                            if (data.OK) {
+                                window.location.href = '@Url.Action("Index", "EnterPatInfor")';
+                            }
+                            else {
+                                document.getElementById("msg").innerHTML = data.Message.toString();
+
+                            }
+
+                        },
+                        error: function (jqXhr, textStatus, errorThrown) {
+                            alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
+                        }
+                    });
                     $("#b1").html("保存");
                 }
 
