@@ -135,11 +135,14 @@ p
 .button
 {
     height: 37px;
-	float: left;
+	float: right;
+	margin:10px 70px 0 20px;
+	padding-top:9px;
 	width :138px;
     background: url(images/normal-button.png) no-repeat ;
     text-align:center;
 }
+
 .button:hover
 {
      background: url(images/hover-button.png) no-repeat ;
@@ -148,6 +151,8 @@ p
 {
      background: url(images/click-button.png) no-repeat ;
 }
+
+
 div.editor-field
 {
     margin-bottom: 10px;

@@ -145,25 +145,24 @@ namespace LNCDCDSS.Models
             try
             {
                 string test = "";
-                if (vd.PatMMSE != null)
-                {
+              
                     test += "MMSE=" + vd.PatMMSE.Total;
-                }
+              
                 if (vd.PatMoCA != null)
                 {
-                    test += "MoCA= " + vd.PatMoCA.Total;
+                    test += "               MoCA= " + vd.PatMoCA.Total;
                 }
                 if (vd.PatOtherTest != null)
                 {
-                    test += "CDR= " + vd.PatOtherTest.PatCDR;
+                    test += "               CDR= " + vd.PatOtherTest.PatCDR;
                 }
                 if (vd.PatOtherTest != null)
                 {
-                    test += "GDS= " + vd.PatOtherTest.PatGDS;
+                    test += "                GDS= " + vd.PatOtherTest.PatGDS;
                 }
                 if (vd.PatADL != null)
                 {
-                    test += "ADL= " + vd.PatADL.Total;
+                    test += "               ADL= " + vd.PatADL.Total;
                 }
                 if (vd.PatOtherTest != null)
                 {

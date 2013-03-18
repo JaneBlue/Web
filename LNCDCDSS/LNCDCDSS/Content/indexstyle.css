@@ -134,7 +134,7 @@ width:962px;
 height:670px;
 padding:0px 0 0 0;
 background:url(images/main_bg.png) repeat-x center;
-font-size:0;
+font-size:20px;
 }
 .ocx{
 	width:915px;
@@ -157,7 +157,9 @@ background:url(images/foot.png) no-repeat bottom;
     height: 37px;
 	float: right;
 	width :138px;
+	padding-top:9px;
 	background: url(images/normal-button.png) no-repeat ;
+	text-align:center;
 }
 #btn1:hover
 {
