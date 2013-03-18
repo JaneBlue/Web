@@ -305,7 +305,7 @@
     <Property Name="Weight" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Hipline" Type="nvarchar(max)" Nullable="true" />
     <Property Name="BloodPressureH" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="BloddPressureL" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BloodPressureL" Type="nvarchar(max)" Nullable="true" />
     <Property Name="B1_Result" Type="nvarchar(max)" Nullable="true" />
     <Property Name="B1_Note" Type="nvarchar(max)" Nullable="true" />
     <Property Name="B2_Result" Type="nvarchar(max)" Nullable="true" />

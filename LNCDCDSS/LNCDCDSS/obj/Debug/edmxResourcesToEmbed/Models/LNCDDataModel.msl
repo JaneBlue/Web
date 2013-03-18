@@ -303,7 +303,7 @@
           <ScalarProperty Name="Weight" ColumnName="Weight" />
           <ScalarProperty Name="Hipline" ColumnName="Hipline" />
           <ScalarProperty Name="BloodPressureH" ColumnName="BloodPressureH" />
-          <ScalarProperty Name="BloddPressureL" ColumnName="BloddPressureL" />
+          <ScalarProperty Name="BloodPressureL" ColumnName="BloodPressureL" />
           <ComplexProperty Name="B1" TypeName="LNCDDataModel.BodyExam">
             <ScalarProperty Name="Result" ColumnName="B1_Result" />
             <ScalarProperty Name="Note" ColumnName="B1_Note" />
