@@ -49,7 +49,7 @@ namespace LNCDCDSS.Controllers
             query.Add(date);
             query.Add(diagnosisresult);
 
-            ICollection<PatBasicInfor> pts = visitop.GetPat(query);
+           List<PatBasicInfor> pts = visitop.GetPat(query);
             // return Redirect("/Diagnosis/Index");
 
             return PartialView("PatList", pts);

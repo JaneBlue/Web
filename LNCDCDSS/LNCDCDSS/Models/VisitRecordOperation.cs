@@ -190,46 +190,49 @@ namespace LNCDCDSS.Models
             return conttext;
         }
 
-        public ICollection<PatBasicInfor> GetPat(List<string> Condition)
+        public List<PatBasicInfor> GetPat(List<string> Condition)
         {
-
-            string sql = "Select * from dbo.PatBasicInforSet ";
-            if (!(Condition[0] != "" && Condition[1] != ""))
-            {
-                sql += "where ";
-                if (Condition[0] != "")
-                {
-                    sql += " Name =" + "'" + Condition[0] + "'";
-                }
-                if (Condition[1] != "")
-                {
-                    sql += "Sex =" + Condition[1];
-                }
-            }
+            List<PatBasicInfor> pat = new List<PatBasicInfor>();
+            var pats = from p in context.PatBasicInforSet.ToList()
+                      where (string.IsNullOrEmpty(Condition[0]) ? true : p.Name == Condition[0])
+                     &&(string.IsNullOrEmpty(Condition[1])?true: p.Sex == Condition[1])
+                     && (string.IsNullOrEmpty(Condition[2]) ? true : p.VisitRecord.Last().VisitDate == DateTime.Parse(Condition[2]))
+                     && (string.IsNullOrEmpty(Condition[3]) ? true : p.VisitRecord.Last().DiagnosisiResult == Condition[3])
+                     select p;
+            //var pats = from s in  context.PatBasicInforSet select s;
+            //if (!string.IsNullOrEmpty(Condition[0]))
+            //{
+            //    pats = pats.Where(a => a.Name == Condition[0]);
+            //}
+            //if (!string.IsNullOrEmpty(Condition[1]))
+            //{
+            //    pats = pats.Where(a => a.Sex == Condition[1]);
+            //}
+            //if (!string.IsNullOrEmpty(Condition[2]))
+            //{
+            //    pats = pats.Where(a => a.VisitRecord.Last().VisitDate == DateTime.Parse(Condition[2]));
+            //}
+            //if (!string.IsNullOrEmpty(Condition[3]))
+            //{
+            //    pats = pats.Where(a => a.VisitRecord.Last().DiagnosisiResult == Condition[3]);
+            //}
             try
             {
-                var pats = context.PatBasicInforSet.SqlQuery(sql).ToList();
-                return pats;
+            //pats.ToList();
+          
+           
+             
+                foreach (PatBasicInfor pt in pats)
+                {
+                    pat.Add(pt);
+                }
             }
-            catch (System.Exception ex)
+            catch(Exception e)
             {
-                string s = ex.Message;
-                return null;
+                string error = e.Message;
+               
             }
-
-
-            //if (!(Condition[2] != "" && Condition[3] != ""))
-            //{
-
-            //    if (Condition[0] != "")
-            //    {
-            //        sql += "Set Name =" + Condition[0];
-            //    }
-            //    if (Condition[1] != "")
-            //    {
-            //        sql += "Set Sex =" + Condition[1];
-            //    }
-            //}
+            return pat;
         }
         public List<VisitRecord> GetVistRecord(string PatID)
         {
