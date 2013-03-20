@@ -353,7 +353,7 @@
             var strElectrocardiogramDate = strElectrocardiogramDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
 
             var strElectrocardiogramResult = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Result");
-   
+
             var strElectrocardiogramNote = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Note");
             var strEchocardiagraphyDateOrg = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Date");
             if ("/////" == strEchocardiagraphyDateOrg) {
@@ -371,7 +371,7 @@
             var strEEGDate = strEEGDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
 
             var strEEGResult = OCX.GetData("Data_source/PatLabExam/EEG/Result");
-           
+
             var strEEGNote = OCX.GetData("Data_source/PatLabExam/EEG/Note");
             var strCTDateOrg = OCX.GetData("Data_source/PatLabExam/CT/Date");
             if ("/////" == strCTDateOrg) {
@@ -380,7 +380,7 @@
             var strCTDate = strCTDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
 
             var strCTResult = OCX.GetData("Data_source/PatLabExam/CT/Result");
-            
+
             var strCTNote = OCX.GetData("Data_source/PatLabExam/CT/Note");
 
             //get the data of drug
@@ -390,7 +390,11 @@
             var strDrugCatogary4 = "抗癫痫药物";
             var strDrugCatogary5 = "帕金森药物";
             var strDrugCatogary6 = "痴呆药药物";
-            var strDrugCatogary7 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary7");
+            var strDrugCatogary7 = "";
+            var strDrugCatogary7If = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary7");
+            if ("是" == strDrugCatogary7If) {
+                strDrugCatogary7 = "消炎镇痛药";
+            }
             var strDrugCatogary8 = "促进血液循环药物";
             var strDrugCatogary9 = "扩冠药物";
             var strDrugCatogary10 = "抗血小板药物";
@@ -765,7 +769,7 @@
                         data: { postjson: encoded },
                         success: function (data) {
                             if (data.OK) {
-                                OCX.SetData("Data_source/VisitRecord/CDSSDiagnosis",data.Message);
+                                OCX.SetData("Data_source/VisitRecord/CDSSDiagnosis", data.Message);
                             }
                             else {
                                 document.getElementById("msg").innerHTML = data.Message.toString();
