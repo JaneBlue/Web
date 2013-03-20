@@ -60,8 +60,8 @@ namespace LNCDCDSS.Models
         {
             try
             {
-                VisitRecord pt = context.VisitRecordSet.Find(ID);
-                pt.PatOtherTest = Ptext;
+                PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
+                pt.VisitRecord.Last().PatOtherTest = Ptext;
                 context.SaveChanges();
             }
             catch (Exception e)
