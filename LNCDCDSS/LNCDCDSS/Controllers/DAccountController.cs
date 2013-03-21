@@ -16,8 +16,7 @@ namespace LNCDCDSS.Controllers
         public ActionResult Index()
         {
           return View();
-            //return Redirect("/Diagnosis/Index");
-       //     return Redirect("/EnterPatInfor/Index");
+       
         }
         [HttpPost]
         public ActionResult  Index(DoctorAccount dacount)
@@ -26,7 +25,7 @@ namespace LNCDCDSS.Controllers
             var student = students.Where(s => s.UserName == dacount.UserName && s.PassWord == dacount.PassWord).FirstOrDefault();
           if (student!=null)
           {
-              return Redirect("/EnterPatInfor/Index");
+              return RedirectToAction("Index","EnterPatInfor");
  
           }
           else

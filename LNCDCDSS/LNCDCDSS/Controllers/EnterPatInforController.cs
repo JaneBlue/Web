@@ -31,8 +31,8 @@ namespace LNCDCDSS.Controllers
             string PID = Request.Form["门诊号"];
             pto.InsertPat(pat, HID, PID);
 
-
-            return Redirect("/Diagnosis/Index/"+pat.Id);
+            return RedirectToAction("Index", "Diagnosis", new { ID = pat.Id });
+         //   return Redirect("/Diagnosis/Index/"+pat.Id);
 
 
         }
@@ -87,7 +87,7 @@ namespace LNCDCDSS.Controllers
             
 
             visitop.AddNewRecord(ID);
-            return Redirect("/Diagnosis/Index/"+ID);
+            return RedirectToAction("Index", "Diagnosis", new { ID = ID });
         }
     }
 }
