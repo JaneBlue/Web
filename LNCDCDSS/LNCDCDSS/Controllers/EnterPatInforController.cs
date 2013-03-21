@@ -36,7 +36,7 @@ namespace LNCDCDSS.Controllers
 
 
         }
-        [HttpPost]
+  
         public ActionResult Query()
         {
             string patname = Request["name"];
@@ -50,9 +50,9 @@ namespace LNCDCDSS.Controllers
             query.Add(diagnosisresult);
 
            List<PatBasicInfor> pts = visitop.GetPat(query);
-            // return Redirect("/Diagnosis/Index");
-
-            return PartialView("PatList", pts);
+        
+         //  return Json(pts, JsonRequestBehavior.AllowGet);
+           return PartialView("PatList", pts);
         }
 
         public ActionResult ViewRecord(string ID)
