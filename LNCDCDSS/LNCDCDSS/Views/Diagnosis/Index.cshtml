@@ -623,6 +623,11 @@
             var strRecordNote = OCX.GetData("Data_source/VisitRecord/RecordNote");
             var strCDSSDiagnosis = OCX.GetData("Data_source/VisitRecord/CDSSDiagnosis");
 
+            //set OCX the data
+            OCX.SetData("Data_source/PatMMSE/Total", strTotalpme);
+            OCX.SetData("Data_source/PatMoCA/Total", strTotalpma);
+            OCX.SetData("Data_source/PatOtherTest/PatCDR1", strPatCDR);
+
             var thing = { pma: { MC1: strMC1, MC2: strMC2
             , MC3: strMC3, MC4: strMC4, MC5: strMC5
             , MC6: strMC6, MC7: strMC7, MC8: strMC8
