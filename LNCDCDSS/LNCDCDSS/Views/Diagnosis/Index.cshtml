@@ -765,6 +765,10 @@
                 $(".active").first().removeClass("active");
                 //var OCX = document.getElementById('Reporter2');
                 //var b = OCX.OpenReport("D:\\2013CDSS\\TemplateForReporter\\LNCDtemp");
+
+                //set the CDSSDiagnoses default result
+                OCX.SetData("Data_source/VisitRecord/CDSSDiagnosis", "正在推理中。。。");
+
                 OCX.ShowReport();
                 OCX.ShowThisPage(name);
                 if (name == "辅助诊断") {
