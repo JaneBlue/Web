@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace LNCDCDSS.localhost {
+namespace LNCDCDSS.WebReference {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -26,8 +26,8 @@ namespace LNCDCDSS.localhost {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Web.Services.WebServiceBindingAttribute(Name="Service1Soap", Namespace="http://tempuri.org/")]
-    public partial class Service1 : System.Web.Services.Protocols.SoapHttpClientProtocol {
+    [System.Web.Services.WebServiceBindingAttribute(Name="InferenceServiceSoap", Namespace="http://ADMCI.org/")]
+    public partial class InferenceService : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback DoInferenceOperationCompleted;
         
@@ -36,8 +36,8 @@ namespace LNCDCDSS.localhost {
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
-        public Service1() {
-            this.Url = global::LNCDCDSS.Properties.Settings.Default.LNCDCDSS_localhost_Service1;
+        public InferenceService() {
+            this.Url = global::LNCDCDSS.Properties.Settings.Default.LNCDCDSS_WebReference_InferenceService;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
@@ -78,28 +78,31 @@ namespace LNCDCDSS.localhost {
         public event DoTrainingCompletedEventHandler DoTrainingCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoInference", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public bool DoInference(InputData InputDataValue, ref string strResult) {
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://ADMCI.org/DoInference", RequestNamespace="http://ADMCI.org/", ResponseNamespace="http://ADMCI.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public bool DoInference(InputData InputDataValue, ref string strResult, ref double dProbalily) {
             object[] results = this.Invoke("DoInference", new object[] {
                         InputDataValue,
-                        strResult});
+                        strResult,
+                        dProbalily});
             strResult = ((string)(results[1]));
+            dProbalily = ((double)(results[2]));
             return ((bool)(results[0]));
         }
         
         /// <remarks/>
-        public void DoInferenceAsync(InputData InputDataValue, string strResult) {
-            this.DoInferenceAsync(InputDataValue, strResult, null);
+        public void DoInferenceAsync(InputData InputDataValue, string strResult, double dProbalily) {
+            this.DoInferenceAsync(InputDataValue, strResult, dProbalily, null);
         }
         
         /// <remarks/>
-        public void DoInferenceAsync(InputData InputDataValue, string strResult, object userState) {
+        public void DoInferenceAsync(InputData InputDataValue, string strResult, double dProbalily, object userState) {
             if ((this.DoInferenceOperationCompleted == null)) {
                 this.DoInferenceOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoInferenceOperationCompleted);
             }
             this.InvokeAsync("DoInference", new object[] {
                         InputDataValue,
-                        strResult}, this.DoInferenceOperationCompleted, userState);
+                        strResult,
+                        dProbalily}, this.DoInferenceOperationCompleted, userState);
         }
         
         private void OnDoInferenceOperationCompleted(object arg) {
@@ -110,7 +113,7 @@ namespace LNCDCDSS.localhost {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoTraining", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://ADMCI.org/DoTraining", RequestNamespace="http://ADMCI.org/", ResponseNamespace="http://ADMCI.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool DoTraining(InputData InputDataValue) {
             object[] results = this.Invoke("DoTraining", new object[] {
                         InputDataValue});
@@ -162,7 +165,7 @@ namespace LNCDCDSS.localhost {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ADMCI.org/")]
     public partial class InputData {
         
         private double timeorientationField;
@@ -640,6 +643,14 @@ namespace LNCDCDSS.localhost {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public double dProbalily {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((double)(this.results[2]));
             }
         }
     }

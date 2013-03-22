@@ -48,11 +48,12 @@ namespace LNCDCDSS.Controllers
         public JsonResult CDSSdiagnosis()
         {
             string strResult = null;
+            double dProbalily = 0.0f;
             try
             {
                 string jsonStr = Request.Params["postjson"];
                 VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
-                localhost.InputData InputDataValue = new localhost.InputData();
+                WebReference.InputData InputDataValue = new WebReference.InputData();
                 if (obj.pme.M1 != "")
                 {
                     InputDataValue.timeorientation = System.Convert.ToDouble(obj.pme.M1); //M1
@@ -197,11 +198,11 @@ namespace LNCDCDSS.Controllers
                     InputDataValue.CDR = System.Convert.ToDouble(obj.pot.PatCDR);
                 }
 
-             localhost.Service1 b = new localhost.Service1();
+                WebReference.InferenceService b = new WebReference.InferenceService();
 
             
 
-                b.DoInference(InputDataValue, ref strResult);
+                b.DoInference(InputDataValue, ref strResult, ref dProbalily);
             }
             catch (Exception e)
             {

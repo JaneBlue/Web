@@ -26,10 +26,10 @@ namespace LNCDCDSS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:22238/Service1.asmx")]
-        public string LNCDCDSS_localhost_Service1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.3.9/InferenceWebservice/InferenceService.asmx")]
+        public string LNCDCDSS_WebReference_InferenceService {
             get {
-                return ((string)(this["LNCDCDSS_localhost_Service1"]));
+                return ((string)(this["LNCDCDSS_WebReference_InferenceService"]));
             }
         }
     }
