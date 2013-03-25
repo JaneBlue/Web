@@ -187,13 +187,17 @@ input[type="submit"]:active
 	background: url(images/sidebar.png) no-repeat ;
 }
 
-#sidebar ul {
+#List
+{
+    height:615px;
+}
+#List ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-#sidebar li
+#List li
 {
 	margin: 10px 10px 0 10px;
 	width: 205 px;
@@ -201,19 +205,19 @@ input[type="submit"]:active
 	
 }
 
-#sidebar h2 {
+#List h2 {
 	text-decoration: none;
 	padding: 0 2px 0 64px;
 	margin:0;
 }
 
-#sidebar a {
+#List a {
 	color: #000000;
 	font-size:20px;
 	margin: 20px;
 }
 
-#sidebar a:hover {
+#List a:hover {
 	text-decoration: none;
 	color: #E6B715;
 }

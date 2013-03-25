@@ -15,8 +15,8 @@ namespace LNCDCDSS.Models
             try
             {
                 PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
-              //  pt.PatPhysicalExam = PExam;
-             //   pt.PatPhysicalExam.B1=PExam.B1;
+                //  pt.PatPhysicalExam = PExam;
+                //   pt.PatPhysicalExam.B1=PExam.B1;
                 ObjectMapper.CopyProperties(PExam, pt.PatPhysicalExam);
                 context.SaveChanges();
             }
@@ -32,9 +32,9 @@ namespace LNCDCDSS.Models
                 PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
                 pdisease.PatBasicInforId = "123";
                 pdisease.PatBasicInforId = ID;
-                pdisease.Id =pt.PatDisease.Id;
+                pdisease.Id = pt.PatDisease.Id;
                 ObjectMapper.CopyProperties(pdisease, pt.PatDisease);
-              //  pt.PatDisease = pdisease;
+                //  pt.PatDisease = pdisease;
                 context.SaveChanges();
             }
             catch (Exception e)
@@ -131,7 +131,7 @@ namespace LNCDCDSS.Models
         public bool UpdateVisitRecord(VisitRecord vsr, string ID)
         {
             PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
-            pt.VisitRecord.Last().CDSSDiagnosis=vsr.CDSSDiagnosis;
+            pt.VisitRecord.Last().CDSSDiagnosis = vsr.CDSSDiagnosis;
             pt.VisitRecord.Last().DiagnosisiResult = vsr.CDSSDiagnosis;
             pt.VisitRecord.Last().RecordNote = vsr.RecordNote;
             return true;
@@ -148,9 +148,10 @@ namespace LNCDCDSS.Models
             try
             {
                 string test = "";
-              
+                if (vd.PatMMSE != null)
+                {
                     test += "MMSE=" + vd.PatMMSE.Total;
-              
+                }
                 if (vd.PatMoCA != null)
                 {
                     test += "               MoCA= " + vd.PatMoCA.Total;
@@ -194,11 +195,11 @@ namespace LNCDCDSS.Models
         {
             List<PatBasicInfor> pat = new List<PatBasicInfor>();
             var pats = from p in context.PatBasicInforSet.ToList()
-                      where (string.IsNullOrEmpty(Condition[0]) ? true : p.Name == Condition[0])
-                     &&(string.IsNullOrEmpty(Condition[1])?true: p.Sex == Condition[1])
-                     && (string.IsNullOrEmpty(Condition[2]) ? true : p.VisitRecord.Last().VisitDate == DateTime.Parse(Condition[2]))
-                     && (string.IsNullOrEmpty(Condition[3]) ? true : p.VisitRecord.Last().DiagnosisiResult == Condition[3])
-                     select p;
+                       where (string.IsNullOrEmpty(Condition[0]) ? true : p.Name == Condition[0])
+                      && (string.IsNullOrEmpty(Condition[1]) ? true : p.Sex == Condition[1])
+                      && (string.IsNullOrEmpty(Condition[2]) ? true : p.VisitRecord.Last().VisitDate == DateTime.Parse(Condition[2]))
+                      && (string.IsNullOrEmpty(Condition[3]) ? true : p.VisitRecord.Last().DiagnosisiResult == Condition[3])
+                       select p;
             //var pats = from s in  context.PatBasicInforSet select s;
             //if (!string.IsNullOrEmpty(Condition[0]))
             //{
@@ -218,19 +219,19 @@ namespace LNCDCDSS.Models
             //}
             try
             {
-            //pats.ToList();
-          
-           
-             
+                //pats.ToList();
+
+
+
                 foreach (PatBasicInfor pt in pats)
                 {
                     pat.Add(pt);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 string error = e.Message;
-               
+
             }
             return pat;
         }
@@ -246,8 +247,8 @@ namespace LNCDCDSS.Models
         }
         public void AddNewRecord(string PatID)
         {
-            
-            
+
+
             PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
 
             VisitRecord vr = new VisitRecord();
@@ -257,7 +258,46 @@ namespace LNCDCDSS.Models
             pt.VisitRecord.Add(vr);
             context.SaveChanges();
         }
+        public bool DeleteRecord(string PatID, string RecordID)
+        {
+            try
+            {
 
-       
+                var record = from p in context.VisitRecordSet.ToList()
+                             where (p.PatBasicInfor.Id == PatID) && (p.Id == int.Parse(RecordID))
+                             select p;
+                VisitRecord r = record.First();
+                if (r.PatADL != null)
+                {
+                    context.PatADLSet.Remove(r.PatADL);
+                }
+                if (r.PatMMSE != null)
+                {
+                    context.PatMMSESet.Remove(r.PatMMSE);
+                }
+                if (r.PatMoCA != null)
+                {
+                    context.PatMoCASet.Remove(r.PatMoCA);
+                }
+                if (r.PatOtherTest != null)
+                {
+                    context.PatOtherTestSet.Remove(r.PatOtherTest);
+                }
+                if (r.PatLabExam != null)
+                {
+                    context.PatLabExamSet.Remove(r.PatLabExam);
+                }
+
+                context.VisitRecordSet.Remove(r);
+                context.SaveChanges();
+                return true;
+            }
+            catch (System.Exception ex)
+            {
+                return false;
+
+            }
+        }
+
     }
 }

@@ -10,7 +10,7 @@
 <div id ="RecordNote"></div>
 <h2 class="title">诊断</h2>
 <div id ="DiagnosisResult"></div>
-<div class="button">
+<div ID="diagnosis" class="button">
 <a> 开始问诊</a>
 </div>
 <div ID=“delete” class="button">
@@ -18,35 +18,92 @@
 </div>
 </div>
 <div id="sidebar">
- <h2> 病人列表</h2>
-		<ul>
+       <div id="List">
+        <h2> 病人列表</h2>
+		<ul class="paging">
 			
 			@foreach (var item in Model)
 
-{
-    <li>
-      @Ajax.ActionLink(@item.VisitDate.Date.ToString(), "DetailView", new { id = item.Id },new AjaxOptions
-   {
-       UpdateTargetId = "Content",
-       LoadingElementId = "loading",
-       OnSuccess = "Begin"
-   })
-  </li>
-}			
+              {
+                    <li>
+                      @Ajax.ActionLink(@item.VisitDate.Date.ToString(), "DetailView", new { id = item.Id },new AjaxOptions
+                   {
+                       UpdateTargetId = "Content",
+                       LoadingElementId = "loading",
+                       OnSuccess = "ShowView"
+                    
+                   })
+                  </li>
+                }			
 		</ul>
+       </div>
+        <div class="pagination">
+            <a href="#" class="first" data-action="first">&laquo;</a>
+            <a href="#" class="previous" data-action="previous">&lsaquo;</a>
+            <input type="text" readonly="readonly" data-max-page="40" />
+            <a href="#" class="next" data-action="next">&rsaquo;</a>
+            <a href="#" class="last" data-action="last">&raquo;</a>
+        </div>
 </div>
 
 <script type ="text/javascript">
-
-    function Begin(data) {
+    var patid = "";
+    function ShowView(data) {
         //var dataObj = eval("(" + data + ")"); //
-        for (var n = 0; n < data.length; n++) {
+        patid = data[0].Contetntext;
+        for (var n = 1; n < data.length; n++) {
             $("#" + data[n].Name).html(data[n].Contetntext);
         }
     }
+
     $(function () {
-        $(".button").click(function () {
+        $("#diagnosis").click(function () {
             window.location.href = '@Url.Action("GoToDiagnosis", "EnterPatInfor", new { id = Model[0].PatBasicInforId }, null)';
         })
+
     });
+    $(function () {
+        $("#delete").click(function () {
+
+            $.ajax({
+                url: '/EnterPatInfor/DeleteRecord',
+                type: "POST",
+                data: { id: patid },
+                success: function (data) {
+                    if (data.OK) {
+
+                    }
+                    else {
+                        alert("删除失败");
+
+                    }
+
+                },
+                error: function (jqXhr, textStatus, errorThrown) {
+                    alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
+                }
+            });
+        })
+    });
+    $(document).ready(function () {
+
+        $(".paging").find("li").hide();
+        $(".paging li:lt(12)").addClass("current").show();
+        var num = Math.ceil($(".paging li").length / 12);
+        $('.pagination').jqPagination({
+            max_page: num,
+            paged: function (page) {
+                $(".current").hide();
+                var start = (page - 1) * 12;
+                for (var i = 0; i < 12; i++) {
+
+                    $(".paging li:eq(" + start + ")").addClass("current").show();
+                    start = start + 1;
+                }
+                // do something with the page variable
+
+            }
+        })
+    });
+
     </script>
