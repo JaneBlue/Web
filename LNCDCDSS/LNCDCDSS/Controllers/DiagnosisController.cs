@@ -206,10 +206,10 @@ namespace LNCDCDSS.Controllers
             }
             catch (Exception e)
             {
-                return this.Json(new { OK = false, Message = "推理出错" });
+                return this.Json(new { OK = false, Message = "         " + "推理出错" });
             }
 
-            return this.Json(new { OK = true, Message = strResult });
+            return this.Json(new { OK = true, Message = "         " + strResult + "              相似度:" + (dProbalily * 100).ToString() + "%" });
         }
     }
 }
