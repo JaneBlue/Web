@@ -67,7 +67,7 @@ p
 	width: 962px;
 	height: 162px;
 	margin: 0 auto;
-	background: url(images/head-FirstPage.png) no-repeat right top;
+	background: url(images/head.png) no-repeat right top;
 }
 
 #header h1, #header p {
@@ -120,10 +120,10 @@ p
 }
 #entry {
 	float: right;
-	width: 310px;
+	width: 270px;
 	height: 505px;
 	border-left: 2px  solid #c0c0c0 ;
-	padding :0 30px 0 30px;
+	padding :0 50px 0 20px;
 }
 
 .title {

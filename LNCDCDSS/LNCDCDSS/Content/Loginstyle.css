@@ -15,7 +15,7 @@ h
 }
 .head{
 	width: 962px;
-	height: 187px;
+	height: 182px;
 	margin: 0 auto;
 	background: url(images/Login/head.png) no-repeat ;
 }
@@ -32,10 +32,10 @@ ul, ol {
 }
 .login
 {
-	width: 365px;
+	width: 335px;
 	height: 436px;
 	float: right;
-	margin:130px 26px 0 0;
+	margin:100px 20px 0 0;
 	background: url(images/Login/login.png) no-repeat ;
 }
 .footer {

@@ -19,7 +19,7 @@
 </div>
 <div id="sidebar">
        <div id="List">
-        <h2> 病人列表</h2>
+        <h2> 记录列表</h2>
 		<ul class="paging">
 			
 			@foreach (var item in Model)
@@ -69,6 +69,7 @@
                 url: '/EnterPatInfor/DeleteRecord',
                 type: "POST",
                 data: { id: patid },
+               
                 success: function (data) {
                     if (data.OK) {
 
@@ -83,6 +84,7 @@
                     alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
                 }
             });
+
         })
     });
     $(document).ready(function () {
