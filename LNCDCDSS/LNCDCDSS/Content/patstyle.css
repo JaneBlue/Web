@@ -146,12 +146,16 @@ p
 .button:hover
 {
      background: url(images/hover-button.png) no-repeat ;
+      cursor:pointer;
 }
 .button.active
 {
      background: url(images/click-button.png) no-repeat ;
 }
-
+.button a:hover
+{
+    cursor:pointer;
+}
 
 div.editor-field
 {

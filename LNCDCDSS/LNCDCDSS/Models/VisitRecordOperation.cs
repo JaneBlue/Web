@@ -200,29 +200,10 @@ namespace LNCDCDSS.Models
                       && (string.IsNullOrEmpty(Condition[2]) ? true : p.VisitRecord.Last().VisitDate == DateTime.Parse(Condition[2]))
                       && (string.IsNullOrEmpty(Condition[3]) ? true : p.VisitRecord.Last().DiagnosisiResult == Condition[3])
                        select p;
-            //var pats = from s in  context.PatBasicInforSet select s;
-            //if (!string.IsNullOrEmpty(Condition[0]))
-            //{
-            //    pats = pats.Where(a => a.Name == Condition[0]);
-            //}
-            //if (!string.IsNullOrEmpty(Condition[1]))
-            //{
-            //    pats = pats.Where(a => a.Sex == Condition[1]);
-            //}
-            //if (!string.IsNullOrEmpty(Condition[2]))
-            //{
-            //    pats = pats.Where(a => a.VisitRecord.Last().VisitDate == DateTime.Parse(Condition[2]));
-            //}
-            //if (!string.IsNullOrEmpty(Condition[3]))
-            //{
-            //    pats = pats.Where(a => a.VisitRecord.Last().DiagnosisiResult == Condition[3]);
-            //}
+          
             try
             {
-                //pats.ToList();
-
-
-
+               
                 foreach (PatBasicInfor pt in pats)
                 {
                     pat.Add(pt);
@@ -292,7 +273,7 @@ namespace LNCDCDSS.Models
                 context.SaveChanges();
                 return true;
             }
-            catch (System.Exception ex)
+            catch (System.Exception e)
             {
                 return false;
 
