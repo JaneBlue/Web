@@ -7,7 +7,7 @@
 
 <div id="content">
 		<div id="query">
-           @using (Ajax.BeginForm("Query", new AjaxOptions { UpdateTargetId = "sidebar", HttpMethod = "POST", InsertionMode = InsertionMode.Replace }))  
+           @using (Ajax.BeginForm("Query", new AjaxOptions { UpdateTargetId = "List", HttpMethod = "POST", InsertionMode = InsertionMode.Replace }))  
            {
 			<h2 class="title">查询病人</h2>
 			 <ul>
@@ -74,6 +74,6 @@
 	<div id="sidebar">
     <div id="List">
     <h2> 病人列表</h2>
-	
+	</div>
 	</div>
    
