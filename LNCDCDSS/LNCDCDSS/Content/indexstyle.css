@@ -152,7 +152,7 @@ background:url(images/foot.png) no-repeat bottom;
 	font-size: 20px;
 	margin:10px 25px 0 0;
 }
-#btn1
+.btn
 {
     height: 37px;
 	float: right;
@@ -161,17 +161,16 @@ background:url(images/foot.png) no-repeat bottom;
 	background: url(images/normal-button.png) no-repeat ;
 	text-align:center;
 }
-#btn1:hover
+.btn:hover
 {
      background: url(images/hover-button.png) no-repeat ;
 }
-#btn1:active
+.btn:active
 {
      background: url(images/click-button.png) no-repeat ;
 }
-#btn2
+.btn a
 {
-	float: right;
-	width :138px;	
+    cursor:default;
 }
 

@@ -12,16 +12,30 @@
     $(function () {
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
-        //var b = OCX.OpenReport("D:\\2013cdss\\TemplateForReporter\\LNCDtemp");
-        var b = OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\LNCDtemp");
+        var b = OCX.OpenReport("D:\\2013cdss\\TemplateForReporter\\LNCDtemp");
+        // var b = OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\LNCDtemp");
         OCX.ShowReport();
         OCX.ShowThisPage("基本情况");
         // })
-
-        $(".button").click(function () {
+        $("#btn2").hide();
+        $("#btn2").click(function () {
+            $(".selected").last().removeClass("selected");
+            var name = $(".selected").last().attr("id");
+            $(".active").prev().addClass("active");
+            $(".active").last().removeClass("active");
+            OCX.ShowReport();
+            OCX.ShowThisPage(name);
+            if (name == "基本情况") {
+                $("#btn2").hide();
+            }
+            if (name == "临床检查") {
+                $("#b1").html("下一步");
+            }
+        });
+        $("#btn1").click(function () {
 
             //var thing = { pma: [ { Id: 2, MC1: 'jquery-json', MC2: 'jquery-json', MC3: 'jquery-json', MC4: 'jquery-json', MC5: 'jquery-json', MC6: 'jquery-json', MC7: 'jquery-json', MC8: 'jquery-json', MC9: 'jquery-json', Total: 'jquery-json' }, { Id: 3, MC1: 'jquery-json', MC2: 'jquery-json', MC3: 'jquery-json', MC4: 'jquery-json', MC5: 'jquery-json', MC6: 'jquery-json', MC7: 'jquery-json', MC8: 'jquery-json', MC9: 'jquery-json', Total: 'jquery-json'} ] };
-
+            $("#btn2").show();
             //get the data of PatMoCA
             var strMC1 = OCX.GetData("Data_source/PatMoCA/MC1");
             var nMC1 = parseInt(strMC1);
