@@ -6,12 +6,12 @@ body {
 	background-color:#c0c0c0;
 	font-size: 17px;
 	color:#000;
-	
+	font-family: Tahoma,Helvetica,arial,sans-serif;
 }
 
 body, th, td,  textarea, option {
 	text-transform: lowercase;
-	font-family: Arial, Helvetica, sans-serif. Times, serif;
+	
 	font-size: 18px;
 }
 input, select

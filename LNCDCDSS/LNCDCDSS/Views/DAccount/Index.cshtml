@@ -16,11 +16,13 @@
 
 
 <ul>
-            <li><div class="editor-field"><a>用户名</a> 
-            @Html.EditorFor(model => model.UserName)</div></li>
-            <li><div class="editor-field"><a>密码</a> 
-            @Html.PasswordFor(model => model.PassWord)</div></li>
+            <li><span>用户名</span> 
+            @Html.EditorFor(model => model.UserName)</li>
+            <li><span>密码</span> 
+            @Html.PasswordFor(model => model.PassWord)</li>
    </ul>
+    
+     
      <input class="button" type="submit" value="登录" /> 
       
 
@@ -29,5 +31,5 @@
      
 } 
 </div> 
- <div id="msg">@ViewBag.Message</div>
+  <div id="msg">@ViewBag.Message</div>
                
