@@ -5,7 +5,7 @@ body {
 	padding: 0;
 	background-color:#c0c0c0;
 	font-size: 17px;
-	color:#000;
+	color:#076FA2;
 	font-family: Tahoma,Helvetica,arial,sans-serif;
 }
 
@@ -78,6 +78,7 @@ p
 	float: left;
 	width: 270px;
 	padding:0 20px 0 20px;
+	color :#000;
 	
 }
 #detail
@@ -91,6 +92,7 @@ p
 	height: 505px;
 	border-left: 2px  solid #c0c0c0 ;
 	padding :0 50px 0 20px;
+	color:#000;
 }
 input
 {
@@ -149,7 +151,7 @@ font-size: 18px;
 
 
 .title {
-	margin: 0;
+	margin: 0 0 0 10px;
 	padding-bottom: 5px;
 	
 }
@@ -163,6 +165,7 @@ font-size: 18px;
 	width :138px;
     background: url(images/normal-button.png) no-repeat ;
     text-align:center;
+    color: #000;
 }
 
 .button:hover
