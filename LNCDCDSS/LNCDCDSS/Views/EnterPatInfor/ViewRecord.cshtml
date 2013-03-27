@@ -4,57 +4,81 @@
 }
 @model List<LNCDCDSS.Models.VisitRecord>
 <div id="content">
-    <h2 class="title">认知检查</h2>
-    <div id ="TestResult"></div>
-    <h2 class="title">主诉</h2>
-    <div id ="RecordNote"></div>
-    <h2 class="title">诊断</h2>
-    <div id ="DiagnosisResult"></div>
-    <div ID="diagnosis" class="button">
-    <a> 开始问诊</a>
+<div id="ViewContent">
+    <h2 class="title">
+        认知检查</h2>
+    <div id="TestResult">
     </div>
-    <div ID="delete" class="button">
-    <a> 删除记录</a>
-</div>
+    <h2 class="title">
+        主诉</h2>
+    <div id="RecordNote">
+    </div>
+    <h2 class="title">
+        诊断</h2>
+    <div id="DiagnosisResult">
+    </div>
+    <div id="diagnosis" class="button">
+        <a>开始问诊</a>
+    </div>
+    <div id="delete" class="button">
+        <a>删除记录</a>
+    </div>
+    </div>
 </div>
 <div id="sidebar">
-       <div id="List">
-        <h2> 记录列表</h2>
-		<ul class="paging">
-			
-			@foreach (var item in Model)
-
-              {
-                    <li>
-                      @Ajax.ActionLink(@item.VisitDate.Date.ToString("yyyy-MM-dd"), "DetailView", new { id = item.Id },new AjaxOptions
-                   {
-                       UpdateTargetId = "Content",
-                       LoadingElementId = "loading",
-                       OnSuccess = "ShowView"
-                    
-                   })
-                  </li>
-                }			
-		</ul>
-       </div>
-        <div class="pagination">
-            <a href="#" class="first" data-action="first">&laquo;</a>
-            <a href="#" class="previous" data-action="previous">&lsaquo;</a>
-            <input type="text" readonly="readonly" data-max-page="40" />
-            <a href="#" class="next" data-action="next">&rsaquo;</a>
-            <a href="#" class="last" data-action="last">&raquo;</a>
-        </div>
+    <div id="List">
+        <h2>
+            记录列表</h2>
+        <ul class="paging">
+            @foreach (var item in Model)
+            {
+                <li><a href="#"  id="@item.Id">@item.VisitDate.Date.ToString("yyyy-MM-dd")</a>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="pagination">
+        <a href="#" class="first" data-action="first">&laquo;</a> <a href="#" class="previous"
+            data-action="previous">&lsaquo;</a>
+        <input type="text" readonly="readonly" data-max-page="40" />
+        <a href="#" class="next" data-action="next">&rsaquo;</a> <a href="#" class="last"
+            data-action="last">&raquo;</a>
+    </div>
 </div>
+<script type="text/javascript">
+    $(function () {
 
-<script type ="text/javascript">
-    var patid = "";
-    function ShowView(data) {
-        //var dataObj = eval("(" + data + ")"); //
-       // patid = data[0].Contetntext;
-        for (var n = 0; n < data.length; n++) {
-            $("#" + data[n].Name).html(data[n].Contetntext);
-        }
-    }
+        $(" li  a").click(function () {
+
+            var recordToDelete = $(this).attr("id");
+
+            if (recordToDelete != '') {
+
+                // Perform the ajax post
+                $.ajax({
+                    url: '/EnterPatInfor/DetailView',
+                    type: "POST",
+                    data: { id: recordToDelete },
+                    success: function (data) {
+                        // Successful requests get here
+                        // Update the page elements
+                        for (var n = 0; n < data.length; n++) {
+                            $("#" + data[n].Name).html(data[n].Contetntext);
+                        }
+                        $(".CurrentView").parent().css("background-color", "#B9DCF2");
+                        $(".CurrentView").removeClass("CurrentView");
+                        $('#' + recordToDelete).addClass("CurrentView");
+                        $(".CurrentView").parent().css("background-color", "#B9DBE2");
+                        $("#ViewContent").show();
+                    },
+                    error: function (jqXhr, textStatus, errorThrown) {
+                        alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
+                    }
+                });
+            }
+        })
+
+    });
 
     $(function () {
         $("#diagnosis").click(function () {
@@ -68,11 +92,12 @@
             $.ajax({
                 url: '/EnterPatInfor/DeleteRecord',
                 type: "POST",
-                data: { id: patid },
-               
+
+
                 success: function (data) {
                     if (data.OK) {
-
+                        $('#' + data.Message).parent().hide();
+                        $("#ViewContent").hide();
                     }
                     else {
                         alert("删除失败");
@@ -88,7 +113,7 @@
         })
     });
     $(document).ready(function () {
-
+        $("#ViewContent").hide();
         $(".paging").find("li").hide();
         $(".paging li:lt(12)").addClass("current").show();
         var num = Math.ceil($(".paging li").length / 12);
@@ -108,4 +133,4 @@
         })
     });
 
-    </script>
+</script>

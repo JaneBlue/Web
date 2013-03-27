@@ -220,10 +220,11 @@ input[type="submit"]:active
 	margin: 0;
 	padding: 10px 20px 0 20px;
 	list-style: none;
+	
 }
 
 #List li
-{
+{ 
 	background-color:#B9DCF2;
     padding: 8px 10px 0 10px ;
     margin-bottom:10px;
@@ -232,7 +233,10 @@ input[type="submit"]:active
 	text-align: center;
 	
 }
-
+.CurrentView
+{
+    
+}
 #List h2 {
 	text-decoration: none;
 	padding: 2px 0 0 0;
@@ -241,7 +245,7 @@ input[type="submit"]:active
 }
 
 #List a {
-	color:#076FA2;
+	color: #076FA2;
 	font-size:18px;
 	text-decoration: none;
 

@@ -92,11 +92,12 @@ namespace LNCDCDSS.Controllers
         }
         public ActionResult DeleteRecord()
         {
+
+            // string jsonStr = Request.Params["postjson"];
+            string PatID = this.TempData["PatID"].ToString();
+            string RecordID = this.TempData["recordID"].ToString();
             try
             {
-                // string jsonStr = Request.Params["postjson"];
-                string PatID = this.TempData["PatID"].ToString();
-                string RecordID = this.TempData["recordID"].ToString();
                 visitop.DeleteRecord(PatID, RecordID);
             }
             catch (Exception e)
@@ -104,7 +105,7 @@ namespace LNCDCDSS.Controllers
                 return this.Json(new { OK = false, Message = "删除失败" });
             }
 
-            return this.Json(new { OK = true, Message = "删除成功" });
+            return this.Json(new { OK = true, Message = RecordID });
         }
     }
 }
