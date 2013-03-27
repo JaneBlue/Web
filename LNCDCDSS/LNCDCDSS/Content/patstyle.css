@@ -230,6 +230,7 @@ input[type="submit"]:active
 	width: 195px;
 	height:30px;
 	text-align: center;
+	
 }
 
 #List h2 {
@@ -242,7 +243,7 @@ input[type="submit"]:active
 #List a {
 	color:#076FA2;
 	font-size:18px;
-	
+	text-decoration: none;
 
 }
 

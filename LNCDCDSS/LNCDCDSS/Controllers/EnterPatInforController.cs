@@ -65,7 +65,7 @@ namespace LNCDCDSS.Controllers
 
         public ActionResult DetailView(int ID)
         {
-            List<string> text = visitop.GetVisitContet(ID.ToString());
+            List<string> text = visitop.GetVisitContent(ID.ToString());
             DetaiInfor a = new DetaiInfor() { Name = "TestResult", Contetntext = text[0] };
             DetaiInfor b = new DetaiInfor() { Name = "RecordNote", Contetntext = text[1] };
             DetaiInfor c = new DetaiInfor() { Name = "DiagnosisResult", Contetntext = text[2] };

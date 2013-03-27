@@ -138,7 +138,7 @@ namespace LNCDCDSS.Models
 
         }
 
-        public List<string> GetVisitContet(string RecordID)
+        public List<string> GetVisitContent(string RecordID)
         {
             int recordId = int.Parse(RecordID);
             VisitRecord vd = context.VisitRecordSet.Find(recordId);
@@ -224,6 +224,7 @@ namespace LNCDCDSS.Models
             {
                 visit.Add(vr);
             }
+            visit.Reverse();
             return visit;
         }
         public void AddNewRecord(string PatID)

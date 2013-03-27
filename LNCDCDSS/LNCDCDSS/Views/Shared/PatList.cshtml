@@ -5,8 +5,9 @@
 @foreach (var item in Model)
 
 {
+
     <li>
- @Html.ActionLink(@item.Name, "ViewRecord", new { id = item.Id })
+ @Html.ActionLink(@item.Name+"   "+@item.Sex , "ViewRecord", new { id = item.Id })
   </li>
 }
 
