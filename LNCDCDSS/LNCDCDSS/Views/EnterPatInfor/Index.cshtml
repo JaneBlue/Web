@@ -4,23 +4,31 @@
     ViewBag.Title = "GetPatient";
     Layout = "~/Views/Shared/PatLayout.cshtml";
 }
-
+ @{
+     var items = new SelectList(new[]
+        { 
+            new SelectListItem {Text = "", Value = ""},
+            new SelectListItem {Text = "男", Value = "男"},
+            new SelectListItem {Text = "女", Value = "女"},
+             
+        }, "Text", "Value");
+    }
 <div id="content">
 		<div id="query">
-           @using (Ajax.BeginForm("Query", new AjaxOptions { UpdateTargetId = "List", HttpMethod = "POST", InsertionMode = InsertionMode.Replace }))  
+           @using (Ajax.BeginForm("Query", new AjaxOptions { UpdateTargetId = "List", HttpMethod = "POST", InsertionMode = InsertionMode.Replace }))
            {
 			<h2 class="title">查询病人</h2>
 			 <ul>
-            <li><div class="editor-field">@Html.LabelFor(model => model.Name, "姓名") 
+            <li><span>姓名</span>
             @Html.TextBox("name")
-		    </div></li>
-             <li><div class="editor-field">@Html.LabelFor(model => model.Sex, "性别")
-           @Html.TextBox("sex")
-		    </div></li>
-             <li><div class="editor-field"><a>就诊日期</a><input ID="date" type="date"></input>
-		    </div></li>
-             <li><div class="editor-field"><lable>诊断结论</lable>   @Html.DropDownList("Diagnosis", String.Empty)
-		    </div></li>
+		   </li>
+             <li><span>性别</span>
+           @Html.DropDownList("sex", @items)
+		    </li>
+             <li><span>就诊日期</span><input ID="date" type="date"></input>
+		    </li>
+             <li><span>诊断结论</span>   @Html.DropDownList("Diagnosis", String.Empty)
+		    </li>
             </ul>
          
              <p><input type="submit" value="查询病人" /></p>
@@ -33,43 +41,26 @@
               @using (Html.BeginForm("Index"))
               {
              <ul>
-              <li><div class="editor-field"><a>门诊号</a><input type="text" name="门诊号"/>
-		    </div></li>
-             <li><div class="editor-field"><a>住院号</a><input type="text" name="住院号"/>
-		    </div></li>
-            <li><div class="editor-field">@Html.LabelFor(model => model.Name, "姓名") 
-            @Html.EditorFor(model => model.Name)
-		    </div></li>
+              <li><span>门诊号</span><input type="text" name="门诊号"/></li>
+             <li><span>住院号</span><input type="text" name="住院号"/></li>
+            <li><span>姓名</span>@Html.EditorFor(model => model.Name)</li>
+            <li><span>性别</span>@Html.DropDownListFor(model => model.Sex, @items) </li>
             
-            <li><div class="editor-field">@Html.LabelFor(model => model.Sex, "性别")
-            @Html.EditorFor(model => model.Sex) 
-		    </div></li>
-            
-            <li><div class="editor-field">@Html.LabelFor(model => model.Age, "年龄") 
-            @Html.EditorFor(model => model.Age)</div></li>
-             <li> <div class="editor-field">@Html.LabelFor(model => model.Education, "教育水平")
-            @Html.EditorFor(model => model.Education)
-		    </div></li>
-            <li><div class="editor-field">@Html.LabelFor(model => model.Job, "职业") 
-            @Html.EditorFor(model => model.Job) </div></li>
-          
-            <li><div class="editor-field">@Html.LabelFor(model => model.Phone, "手机")
-            @Html.EditorFor(model => model.Phone)</div></li>
-            
-            <li><div class="editor-field">@Html.LabelFor(model => model.FamilyMember, "家属")  
-            @Html.EditorFor(model => model.FamilyMember)</div></li>
-            <li> <div class="editor-field">@Html.LabelFor(model => model.ChiefDoctor, "主治医师")@Html.EditorFor(model => model.ChiefDoctor)
-		    </div></li> 
+            <li><span>年龄</span> @Html.EditorFor(model => model.Age)</li>
+             <li> <span>教育水平</span>@Html.EditorFor(model => model.Education)</li>
+            <li><span>职业</span>@Html.EditorFor(model => model.Job) </li>    
+            <li><span>手机</span>@Html.EditorFor(model => model.Phone)</li>
+            <li><span>家属</span> @Html.EditorFor(model => model.FamilyMember)</li>
+            <li><span>主治医师</span>@Html.EditorFor(model => model.ChiefDoctor) </li> 
             </ul>
             
             <p><input type="submit" value="注册新患者" /></p>
             
               }
-	<!-- end content -->
-	<!-- start sidebar -->
- </div>
+              </div>
+             <div><span class="error" id="login_msg">用户名或密码错误</span></div>
 
- </div>
+           </div>
   </div>
 	<div id="sidebar">
     <div id="List">

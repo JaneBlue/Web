@@ -26,7 +26,7 @@
 
               {
                     <li>
-                      @Ajax.ActionLink(@item.VisitDate.Date.ToString(), "DetailView", new { id = item.Id },new AjaxOptions
+                      @Ajax.ActionLink(@item.VisitDate.Date.ToString("yyyy-MM-dd"), "DetailView", new { id = item.Id },new AjaxOptions
                    {
                        UpdateTargetId = "Content",
                        LoadingElementId = "loading",
