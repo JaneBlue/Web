@@ -6,7 +6,7 @@ body {
 	background-color:#c0c0c0;
 	font-size: 17px;
 	color:#076FA2;
-	font-family: Tahoma,Helvetica,arial,sans-serif;
+	font-family: "Microsoft YaHei",Î¢ÈíÑÅºÚ,Tahoma,Helvetica,arial,sans-serif;
 }
 
 body, th, td,  textarea, option {
@@ -90,7 +90,7 @@ p
 	float: right;
 	width: 290px;
 	height: 505px;
-	border-left: 2px  solid #c0c0c0 ;
+	border-left: 2px  solid #D3E7F2 ;
 	padding :0 50px 0 20px;
 	color:#000;
 }
@@ -161,7 +161,7 @@ font-size: 18px;
     height: 37px;
 	float: right;
 	margin:10px 70px 0 20px;
-	padding-top:9px;
+	padding-top:6px;
 	width :138px;
     background: url(images/normal-button.png) no-repeat ;
     text-align:center;
@@ -188,10 +188,12 @@ input[type="submit"]
      height: 37px;
 	float: left;
 	margin-left:106px;
+	padding:0;
 	width :138px;
     background: url(images/normal-button.png) no-repeat ;
     text-align:center;
     border:0;
+    font-family:"Microsoft YaHei";
 }
 
 input[type="submit"]:hover

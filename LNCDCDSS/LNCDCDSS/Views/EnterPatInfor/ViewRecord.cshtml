@@ -68,7 +68,7 @@
                         $(".CurrentView").parent().css("background-color", "#B9DCF2");
                         $(".CurrentView").removeClass("CurrentView");
                         $('#' + recordToDelete).addClass("CurrentView");
-                        $(".CurrentView").parent().css("background-color", "#B9DBE2");
+                        $(".CurrentView").parent().css("background-color", "#D3E7F2");
                         $("#ViewContent").show();
                     },
                     error: function (jqXhr, textStatus, errorThrown) {
@@ -96,7 +96,7 @@
 
                 success: function (data) {
                     if (data.OK) {
-                        $('#' + data.Message).parent().hide();
+                        $('#' + data.Message).parent().remove();
                         $("#ViewContent").hide();
                     }
                     else {

@@ -6,7 +6,7 @@ body {
 	background-color:#c0c0c0;
 	font-size: 20px;
 	color:#000;
-	
+	font-family: "Microsoft YaHei";
 }
 h
 {
@@ -35,7 +35,7 @@ ul {
 	width: 335px;
 	height: 436px;
 	float: right;
-	margin:100px 20px 0 0;
+	margin:105px 27px 0 0;
 	background: url(images/Login/login.png) no-repeat ;
 }
 .footer {

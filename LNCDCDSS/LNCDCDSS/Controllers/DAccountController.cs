@@ -15,8 +15,8 @@ namespace LNCDCDSS.Controllers
        
         public ActionResult Index()
         {
-         // return View();
-            return RedirectToAction("Index", "EnterPatInfor");
+          return View();
+         //   return RedirectToAction("Index", "EnterPatInfor");
        
         }
         [HttpPost]

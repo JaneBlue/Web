@@ -3,7 +3,7 @@
 body
 {
 background-color:#c0c0c0;
-font-family:Arial, Helvetica, sans-serif;
+font-family: "Microsoft YaHei",Arial, Helvetica, sans-serif;
 padding:0;
 font-size:12px;
 margin:0px auto auto auto;
@@ -53,26 +53,26 @@ height:30px;
 #menu ul li a{
 height:32px;
 display:block;
-padding:8px 10px 0 10px;
+padding:6px 10px 0 10px;
 margin:0 4px 0 4px;
 float:left;
 text-decoration:none;
 text-align:center;
 color:#000;
-font-size:24px;
+font-size:20px;
 line-height:27px;
 
 }
 #menu ul li.selected a{
 height:32px;
 display:block;
-padding:8px 10px 0 10px;
+padding:6px 10px 0 10px;
 margin:0px 5px 0 5px;
 float:left;
 text-decoration:none;
 text-align:center ;
 color:#000;
-font-size:24px;
+font-size:20px;
 line-height:27px;
 
 }
@@ -157,7 +157,7 @@ background:url(images/foot.png) no-repeat bottom;
     height: 37px;
 	float: right;
 	width :138px;
-	padding-top:9px;
+	padding-top:5px;
 	background: url(images/normal-button.png) no-repeat ;
 	text-align:center;
 }
