@@ -28,7 +28,7 @@ h
 ul {
 	padding :0 0 0 25px;
 	display:block;
-	height:70px;
+	height:80px;
 }
 .login
 {
@@ -79,7 +79,7 @@ p
 
 #main
 {
-    margin:90px 20px 0 0;
+    margin:100px 20px 0 0;
     height :120px;
 }
 #msg

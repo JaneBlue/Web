@@ -283,11 +283,12 @@ input[type="submit"]:active
 }
 #DiagnosisResult
 {
-    padding :0 20px 0 100px;
+    padding :0 40px 0 100px;
     width: 510px;
     height: 92px;
     background: url(images/box2.png) no-repeat ;
     background-position: right;
+    text-align: center;
 }
 #RecordNote
 {
