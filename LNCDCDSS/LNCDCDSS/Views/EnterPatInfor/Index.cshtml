@@ -25,7 +25,7 @@
              <li><span>性别</span>
            @Html.DropDownList("sex", @items)
 		    </li>
-             <li><span>就诊日期</span><input ID="date" type="date"></input>
+             <li><span>就诊日期</span><input id="date" type="date"></input>
 		    </li>
              <li><span>诊断结论</span>   @Html.DropDownList("Diagnosis", String.Empty)
 		    </li>
@@ -37,7 +37,7 @@
 		</div>
 		<div id="entry">
 			<h2 class="title">新病人注册</h2>
-			 <div ID="label">
+			 <div id="label">
               @using (Html.BeginForm("Index"))
               {
              <ul>

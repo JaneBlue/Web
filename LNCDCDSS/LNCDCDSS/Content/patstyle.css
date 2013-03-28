@@ -18,6 +18,8 @@ body, th, td,  textarea, option {
 h1, h2, h3 {
 	font-weight: normal;
 	color: #000000;
+	
+	
 }
 
 h1 {
@@ -28,11 +30,11 @@ h1 {
 h2 {
 	letter-spacing: -1px;
 	font-size: 24px;
+	margin: 10px 0 0 58px;
+	padding-bottom: 5px;
 }
 
-h3 {
-	font-size: 1em;
-}
+
 
 
 
@@ -151,7 +153,7 @@ font-size: 18px;
 
 
 .title {
-	margin: 0 0 0 10px;
+	margin: 10 0 0 10px;
 	padding-bottom: 5px;
 	
 }
@@ -281,9 +283,9 @@ input[type="submit"]:active
 }
 #DiagnosisResult
 {
-    padding :40px 20px 0 100px;
+    padding :0 20px 0 100px;
     width: 510px;
-    height: 144px;
+    height: 92px;
     background: url(images/box2.png) no-repeat ;
     background-position: right;
 }
