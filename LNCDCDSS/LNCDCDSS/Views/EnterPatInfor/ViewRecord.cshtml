@@ -56,7 +56,7 @@
 
                 // Perform the ajax post
                 $.ajax({
-                    url: '/EnterPatInfor/DetailView',
+                    url: '@Url.Action("DetailView", "EnterPatInfor")',
                     type: "POST",
                     data: { id: recordToDelete },
                     success: function (data) {
@@ -90,7 +90,7 @@
         $("#delete").click(function () {
 
             $.ajax({
-                url: '/EnterPatInfor/DeleteRecord',
+                url: '@Url.Action("DeleteRecord", "EnterPatInfor")',
                 type: "POST",
 
 

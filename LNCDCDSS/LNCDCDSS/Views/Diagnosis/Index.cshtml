@@ -760,7 +760,7 @@
 
             if ($(".selected").last().attr("id") == "辅助诊断") {
                 $.ajax({
-                    url: '/Diagnosis/Save',
+                    url: '@Url.Action("Save", "Diagnosis")',
                     type: "POST",
                     data: { postjson: encoded },
                     success: function (data) {
@@ -793,7 +793,7 @@
                 OCX.ShowThisPage(name);
                 if (name == "辅助诊断") {
                     $.ajax({
-                        url: '/Diagnosis/CDSSdiagnosis',
+                        url: '@Url.Action("CDSSdiagnosis", "Diagnosis")',
                         type: "POST",
                         data: { postjson: encoded },
                         success: function (data) {
