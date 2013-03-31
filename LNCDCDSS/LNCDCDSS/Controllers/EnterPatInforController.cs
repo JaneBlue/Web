@@ -60,6 +60,7 @@ namespace LNCDCDSS.Controllers
             string t = ID;
             List<VisitRecord> vrecord = visitop.GetVistRecord(t);
             this.TempData["PatID"] = ID;
+            this.ViewBag.patId=ID;
             return View(vrecord);
         }
 
@@ -90,11 +91,12 @@ namespace LNCDCDSS.Controllers
             visitop.AddNewRecord(ID);
             return RedirectToAction("Index", "Diagnosis", new { ID = ID });
         }
-        public ActionResult DeleteRecord()
+        public ActionResult DeleteRecord(string ID)
         {
 
             // string jsonStr = Request.Params["postjson"];
-            string PatID = this.TempData["PatID"].ToString();
+          //  string PatID = this.TempData["PatID"].ToString();
+            string PatID = ID;
             string RecordID = this.TempData["recordID"].ToString();
             try
             {

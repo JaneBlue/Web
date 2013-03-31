@@ -3,6 +3,7 @@
     Layout = "~/Views/Shared/PatLayout.cshtml";
 }
 @model List<LNCDCDSS.Models.VisitRecord>
+ 
 <div id="content">
 <div id="ViewContent">
     <h2 class="title">
@@ -50,15 +51,15 @@
 
         $(" li  a").click(function () {
 
-            var recordToDelete = $(this).attr("id");
-
-            if (recordToDelete != '') {
+            var recordToView = $(this).attr("id");
+           
+            if (recordToView != '') {
 
                 // Perform the ajax post
                 $.ajax({
                     url: '@Url.Action("DetailView", "EnterPatInfor")',
                     type: "POST",
-                    data: { id: recordToDelete },
+                    data: { id: recordToView },
                     success: function (data) {
                         // Successful requests get here
                         // Update the page elements
@@ -67,7 +68,7 @@
                         }
                         $(".CurrentView").parent().css("background-color", "#B9DCF2");
                         $(".CurrentView").removeClass("CurrentView");
-                        $('#' + recordToDelete).addClass("CurrentView");
+                        $('#' + recordToView).addClass("CurrentView");
                         $(".CurrentView").parent().css("background-color", "#D3E7F2");
                         $("#ViewContent").show();
                     },
@@ -88,11 +89,11 @@
     });
     $(function () {
         $("#delete").click(function () {
-
+            var pid = '@ViewBag.patId';
             $.ajax({
                 url: '@Url.Action("DeleteRecord", "EnterPatInfor")',
                 type: "POST",
-
+                data: { id: pid },
 
                 success: function (data) {
                     if (data.OK) {

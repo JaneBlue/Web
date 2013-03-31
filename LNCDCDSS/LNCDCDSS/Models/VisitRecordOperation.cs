@@ -269,7 +269,19 @@ namespace LNCDCDSS.Models
                 {
                     context.PatLabExamSet.Remove(r.PatLabExam);
                 }
-
+                if(r.PatRecentDrug.Count!=0)
+                {
+                    foreach( PatRecentDrug rd in r.PatRecentDrug)
+                    {
+                        foreach (Drug d in rd.Drug)
+                        {
+                            context.DrugSet.Remove(d);
+                        }
+                       
+                        context.PatRecentDrugSet.Remove(rd);
+                    }
+                   
+                }
                 context.VisitRecordSet.Remove(r);
                 context.SaveChanges();
                 return true;
