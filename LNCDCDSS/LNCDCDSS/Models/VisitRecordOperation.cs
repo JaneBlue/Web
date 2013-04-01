@@ -154,33 +154,33 @@ namespace LNCDCDSS.Models
                 }
                 if (vd.PatMoCA != null)
                 {
-                    test += "               MoCA= " + vd.PatMoCA.Total;
+                    test += ";MoCA= " + vd.PatMoCA.Total;
                 }
                 if (vd.PatOtherTest != null)
                 {
-                    test += "               CDR= " + vd.PatOtherTest.PatCDR;
+                    test += ";CDR= " + vd.PatOtherTest.PatCDR;
                 }
                 if (vd.PatOtherTest != null)
                 {
-                    test += "                GDS= " + vd.PatOtherTest.PatGDS;
+                    test += ";GDS= " + vd.PatOtherTest.PatGDS;
                 }
                 if (vd.PatADL != null)
                 {
-                    test += "               ADL= " + vd.PatADL.Total;
+                    test += ";ADL= " + vd.PatADL.Total;
                 }
                 if (vd.PatOtherTest != null)
                 {
-                    test += "词语学习1= " + vd.PatOtherTest.Vocabulary1;
-                    test += "词语学习2= " + vd.PatOtherTest.Vocabulary2;
-                    test += "词语学习3= " + vd.PatOtherTest.Vocabulary3;
-                    test += " 延迟记忆= " + vd.PatOtherTest.Vocabulary4;
-                    test += "原词辨认 =" + vd.PatOtherTest.VocabularyAnalyse1;
-                    test += "新词辨认 =" + vd.PatOtherTest.VocabularyAnalyse2;
-                    test += "图形复制 =" + vd.PatOtherTest.Picture1;
-                    test += "即刻回忆 =" + vd.PatOtherTest.Picture2;
-                    test += "延迟回忆 =" + vd.PatOtherTest.Picture3;
-                    test += "连线A =" + vd.PatOtherTest.ConnectNumber1;
-                    test += "连线B =" + vd.PatOtherTest.ConnectNumber2;
+                    test += ";词语学习1= " + vd.PatOtherTest.Vocabulary1;
+                    test += ";词语学习2= " + vd.PatOtherTest.Vocabulary2;
+                    test += ";词语学习3= " + vd.PatOtherTest.Vocabulary3;
+                    test += ";延迟记忆= " + vd.PatOtherTest.Vocabulary4;
+                    test += ";原词辨认 =" + vd.PatOtherTest.VocabularyAnalyse1;
+                    test += ";新词辨认 =" + vd.PatOtherTest.VocabularyAnalyse2;
+                    test += ";图形复制 =" + vd.PatOtherTest.Picture1;
+                    test += ";即刻回忆 =" + vd.PatOtherTest.Picture2;
+                    test += ";延迟回忆 =" + vd.PatOtherTest.Picture3;
+                    test += ";连线A =" + vd.PatOtherTest.ConnectNumber1;
+                    test += ";连线B =" + vd.PatOtherTest.ConnectNumber2;
                 }
                 conttext.Add(test);
                 conttext.Add(vd.RecordNote);
@@ -200,10 +200,10 @@ namespace LNCDCDSS.Models
                       && (string.IsNullOrEmpty(Condition[2]) ? true : p.VisitRecord.Last().VisitDate == DateTime.Parse(Condition[2]))
                       && (string.IsNullOrEmpty(Condition[3]) ? true : p.VisitRecord.Last().DiagnosisiResult == Condition[3])
                        select p;
-          
+
             try
             {
-               
+
                 foreach (PatBasicInfor pt in pats)
                 {
                     pat.Add(pt);
@@ -269,18 +269,18 @@ namespace LNCDCDSS.Models
                 {
                     context.PatLabExamSet.Remove(r.PatLabExam);
                 }
-                if(r.PatRecentDrug.Count!=0)
+                if (r.PatRecentDrug.Count != 0)
                 {
-                    foreach( PatRecentDrug rd in r.PatRecentDrug)
+                    foreach (PatRecentDrug rd in r.PatRecentDrug)
                     {
                         foreach (Drug d in rd.Drug)
                         {
                             context.DrugSet.Remove(d);
                         }
-                       
+
                         context.PatRecentDrugSet.Remove(rd);
                     }
-                   
+
                 }
                 context.VisitRecordSet.Remove(r);
                 context.SaveChanges();

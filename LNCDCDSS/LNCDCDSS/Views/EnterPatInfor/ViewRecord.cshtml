@@ -10,6 +10,26 @@
     <h2 class="title">
         认知检查</h2>
     <div id="TestResult">
+    <table id="test" border="1">
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+ <tr>
+    <td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
+</table>
     </div>
     <h2 class="title">
         主诉</h2>
@@ -56,7 +76,7 @@
         $(" li  a").click(function () {
 
             var recordToView = $(this).attr("id");
-           
+
             if (recordToView != '') {
 
                 // Perform the ajax post
@@ -67,7 +87,23 @@
                     success: function (data) {
                         // Successful requests get here
                         // Update the page elements
-                        for (var n = 0; n < data.length; n++) {
+                        var resultlist = data[0].Contetntext.split(";");
+                        var datatable = document.getElementById("test");
+
+                        for (var count = 0; count < 5; count++) {
+                            var i = Math.floor(count / 3);
+                            var j = count % 3;
+                            datatable.rows[i].cells[j].innerText = resultlist[count];
+                        }
+                        for (var ncount = count; ncount < 16; ncount++) {
+                            var k = ncount + 1;
+                            var i = Math.floor(k / 3);
+                            var j = k % 3;
+                            datatable.rows[i].cells[j].innerText = resultlist[ncount];
+
+                        }
+
+                        for (var n = 1; n < data.length; n++) {
                             $("#" + data[n].Name).html(data[n].Contetntext);
                         }
                         $(".CurrentView").parent().css("background-color", "#B9DCF2");

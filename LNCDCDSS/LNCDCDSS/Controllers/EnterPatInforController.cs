@@ -60,7 +60,7 @@ namespace LNCDCDSS.Controllers
             string t = ID;
             List<VisitRecord> vrecord = visitop.GetVistRecord(t);
             this.TempData["PatID"] = ID;
-            this.ViewBag.patId=ID;
+            this.ViewBag.patId = ID;
             return View(vrecord);
         }
 
@@ -70,7 +70,7 @@ namespace LNCDCDSS.Controllers
             DetaiInfor a = new DetaiInfor() { Name = "TestResult", Contetntext = text[0] };
             DetaiInfor b = new DetaiInfor() { Name = "RecordNote", Contetntext = text[1] };
             DetaiInfor c = new DetaiInfor() { Name = "DiagnosisResult", Contetntext = text[2] };
-            DetaiInfor e = new DetaiInfor() { Name = "PatID", Contetntext = text[2] };
+
             List<DetaiInfor> list = new List<DetaiInfor>();
             DetaiInfor id = new DetaiInfor() { Name = "ID", Contetntext = ID.ToString() };
             list.Add(a);
@@ -95,7 +95,7 @@ namespace LNCDCDSS.Controllers
         {
 
             // string jsonStr = Request.Params["postjson"];
-          //  string PatID = this.TempData["PatID"].ToString();
+            //  string PatID = this.TempData["PatID"].ToString();
             string PatID = ID;
             string RecordID = this.TempData["recordID"].ToString();
             try

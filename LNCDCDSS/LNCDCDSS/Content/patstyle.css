@@ -293,6 +293,11 @@ input[type="submit"]:active
     background: url(images/box1.png) no-repeat ;
     background-position: right;
 }
+#TestResult td
+{
+    height: 25px;
+    width:155px
+}
 #DiagnosisResult
 {
     padding :0 40px 0 80px;
