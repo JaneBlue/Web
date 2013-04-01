@@ -25,7 +25,8 @@
              <li><span>性别</span>
            @Html.DropDownList("sex", @items)
 		    </li>
-             <li><span>就诊日期</span><input id="date" type="date"></input>
+             <li><span>就诊日期</span><input type="text" name="date" id="date" />
+            
 		    </li>
              <li><span>诊断结论</span>   @Html.DropDownList("Diagnosis", String.Empty)
 		    </li>
@@ -67,4 +68,9 @@
     <h2> 病人列表</h2>
 	</div>
 	</div>
-   
+    <script type="text/javascript">
+        $(function () {
+            $("#date").Zebra_DatePicker();
+
+        });
+    </script>

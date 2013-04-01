@@ -9,8 +9,8 @@ body {
 	font-family: "Microsoft YaHei",Î¢ÈíÑÅºÚ,Tahoma,Helvetica,arial,sans-serif;
 }
 
-body, th, td,  textarea, option {
-	text-transform: lowercase;
+body,  textarea, option {
+
 	
 	font-size: 18px;
 }
