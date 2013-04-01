@@ -12,7 +12,15 @@
     $(function () {
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
-        var b = OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\LNCDtemp");
+        try {
+            OCX.OpenReport("C://Program Files//ReporterOCX");
+        }
+        catch (err) {
+            var b = confirm("是否下载显示控件");
+            if (b) {//download installer
+                window.location.href='http://192.168.1.82/ReporterOCX.exe';
+            }
+        }
         OCX.ShowReport();
         OCX.ShowThisPage("基本情况");
         // })
