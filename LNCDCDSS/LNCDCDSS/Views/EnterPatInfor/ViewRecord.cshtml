@@ -25,6 +25,9 @@
     <div id="delete" class="button">
         <a>删除记录</a>
     </div>
+    <div id="return" class="button">
+        @Html.ActionLink("返回查询","index")
+    </div>
     </div>
 </div>
 <div id="sidebar">
@@ -71,7 +74,7 @@
                         $(".CurrentView").removeClass("CurrentView");
                         $('#' + recordToView).addClass("CurrentView");
                         $(".CurrentView").parent().css("background-color", "#D3E7F2");
-                        $("#ViewContent").show();
+                        $("#delete").show();
                     },
                     error: function (jqXhr, textStatus, errorThrown) {
                         alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
@@ -115,7 +118,7 @@
         })
     });
     $(document).ready(function () {
-        $("#ViewContent").hide();
+        $("#delete").hide();
         $(".paging").find("li").hide();
         $(".paging li:lt(12)").addClass("current").show();
         var num = Math.ceil($(".paging li").length / 12);

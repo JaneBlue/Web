@@ -7,6 +7,7 @@ body {
 	font-size: 17px;
 	color:#076FA2;
 	font-family: "Microsoft YaHei",Î¢ÈíÑÅºÚ,Tahoma,Helvetica,arial,sans-serif;
+	
 }
 
 body,  textarea, option {
@@ -54,8 +55,14 @@ p
 	height: 162px;
 	margin: 0 auto;
 	background: url(images/head.png) no-repeat right top;
+	
 }
-
+#header a
+{
+   float:right;
+   margin: 70px  25px 0 0 ;
+   color:#F0BE72;
+}
 
 /* Page */
 
@@ -157,17 +164,22 @@ font-size: 18px;
 	padding-bottom: 5px;
 	
 }
-
+.button a
+{
+     text-decoration:none;
+     color: #000;
+}
 .button
 {
     height: 37px;
 	float: right;
-	margin:10px 70px 0 20px;
+	margin:10px 70px 0 10px;
 	padding-top:6px;
 	width :138px;
     background: url(images/normal-button.png) no-repeat ;
     text-align:center;
-    color: #000;
+    
+   
 }
 
 .button:hover

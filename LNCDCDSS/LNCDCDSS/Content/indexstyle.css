@@ -26,9 +26,14 @@ height:148px;
 background:url(images/head.png) no-repeat center;
 font-size:0;
 }
-.logo{
-padding:0 0 0 30px;
+.header a
+{
+   float:right;
+   margin: 70px  25px 0 0 ;
+   color:#F0BE72;
+   font-size:18px;
 }
+
 /*-----------------------------menu-------------------*/
 #menu{
 width:962px;
