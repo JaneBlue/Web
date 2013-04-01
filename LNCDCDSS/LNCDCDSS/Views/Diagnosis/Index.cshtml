@@ -12,8 +12,7 @@
     $(function () {
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
-        var b = OCX.OpenReport("D:\\2013cdss\\TemplateForReporter\\LNCDtemp");
-        // var b = OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\LNCDtemp");
+        var b = OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\LNCDtemp");
         OCX.ShowReport();
         OCX.ShowThisPage("基本情况");
         // })
@@ -798,7 +797,7 @@
                         data: { postjson: encoded },
                         success: function (data) {
                             if (data.OK) {
-                                OCX.SetData("Data_source/VisitRecord/CDSSDiagnosis", data.Message);
+                                OCX.SetData("Data_source/VisitRecord/CDSSDiagnosis", "                                                                                                                   " + data.Message);
                             }
                             else {
                                 document.getElementById("msg").innerHTML = data.Message.toString();
