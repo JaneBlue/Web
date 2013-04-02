@@ -1,14 +1,12 @@
-﻿@model   ICollection< LNCDCDSS.Models.PatBasicInfor>
-     <h2> 病人列表</h2>         
+﻿@model   ICollection<LNCDCDSS.Models.PatBasicInfor>
+<h2>
+    病人列表</h2>
 <ul>
+    @foreach (var item in Model)
+    {
 
-@foreach (var item in Model)
-
-{
-
-    <li>
- @Html.ActionLink(@item.Name+"   "+@item.Sex , "ViewRecord", new { id = item.Id })
-  </li>
-}
-
+        <li>
+            @Html.ActionLink(@item.Name + "   " + @item.Sex, "ViewRecord", new { id = item.Id })
+        </li>
+    }
 </ul>

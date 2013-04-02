@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LNCDCDSS.Models;
-using System.Text.RegularExpressions;  
+using System.Text.RegularExpressions;
 
 namespace LNCDCDSS.Controllers
 {
@@ -32,7 +32,7 @@ namespace LNCDCDSS.Controllers
             else
             {
                 Regex reg = new Regex("^[0-9]+$");
-                Match ma1 = reg.Match(pat.Age);  
+                Match ma1 = reg.Match(pat.Age);
                 Match ma2 = reg.Match(pat.Phone);
                 if (ma1.Success && ma2.Success)
                 {
@@ -41,15 +41,15 @@ namespace LNCDCDSS.Controllers
                 {
                     ModelState.AddModelError("", "手机和年龄必须为数字");
                 }
-                     
-                
+
+
             }
-             if (ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-          
-            pto.InsertPat(pat, HID, PID);
-            return RedirectToAction("Index", "Diagnosis", new { ID = pat.Id });
-                  }
+
+                pto.InsertPat(pat, HID, PID);
+                return RedirectToAction("Index", "Diagnosis", new { ID = pat.Id });
+            }
             else
             {
                 return View();

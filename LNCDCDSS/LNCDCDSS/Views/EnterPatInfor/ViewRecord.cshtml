@@ -4,50 +4,79 @@
      
 }
 @model List<LNCDCDSS.Models.VisitRecord>
- 
 <div id="content">
-<div id="ViewContent">
-    <h2 class="title">
-        认知检查</h2>
-    <div id="TestResult">
-    <table id="test" border="1">
-  <tr>
-    <td></td><td></td><td></td>
-  </tr>
- <tr>
-    <td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <td></td><td></td><td></td>
-  </tr>
-  <tr>
-    <td></td><td></td><td></td>
-  </tr>
-</table>
-    </div>
-    <h2 class="title">
-        主诉</h2>
-    <div id="RecordNote">
-    </div>
-    <h2 class="title">
-        诊断</h2>
-    <div id="DiagnosisResult">
-    </div>
-    <div id="diagnosis" class="button">
-        <a>开始问诊</a>
-    </div>
-    <div id="delete" class="button">
-        <a>删除记录</a>
-    </div>
-    <div id="return" class="button">
-        @Html.ActionLink("返回查询","index")
-    </div>
+    <div id="ViewContent">
+        <h2 class="title">
+            认知检查</h2>
+        <div id="TestResult">
+            <table id="test" border="1">
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h2 class="title">
+            主诉</h2>
+        <div id="RecordNote">
+        </div>
+        <h2 class="title">
+            诊断</h2>
+        <div id="DiagnosisResult">
+        </div>
+        <div id="diagnosis" class="button">
+            <a>开始问诊</a>
+        </div>
+        <div id="delete" class="button">
+            <a>删除记录</a>
+        </div>
+        <div id="return" class="button">
+            @Html.ActionLink("返回查询", "index")
+        </div>
     </div>
 </div>
 <div id="sidebar">
@@ -57,8 +86,7 @@
         <ul class="paging">
             @foreach (var item in Model)
             {
-                <li><a href="#"  id="@item.Id">@item.VisitDate.Date.ToString("yyyy-MM-dd")</a>
-                </li>
+                <li><a href="#"  id="@item.Id">@item.VisitDate.Date.ToString("yyyy-MM-dd")</a> </li>
             }
         </ul>
     </div>

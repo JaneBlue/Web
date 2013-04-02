@@ -8,10 +8,10 @@ namespace LNCDCDSS.Controllers
 {
     public class DiagnosisController : Controller
     {
-       // string PatID;
+        // string PatID;
         public ActionResult Index(string ID)
         {
-         this.TempData["PatID"]=ID;
+            this.TempData["PatID"] = ID;
             return View();
         }
         [HttpPost]
@@ -19,30 +19,30 @@ namespace LNCDCDSS.Controllers
         {
             VisitRecordOperation vr = new VisitRecordOperation();
             string jsonStr = Request.Params["postjson"];
-            string  PatID =this.TempData["PatID"].ToString();
-            try{
+            string PatID = this.TempData["PatID"].ToString();
+            try
+            {
                 VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
 
-                 vr.InsertPatADL(obj.pal, PatID);
-
-
-                    vr.InsertPatDisease(obj.pds, PatID);
-                    vr.InsertPatLabExam(obj.ple, PatID);
-                    vr.InsertPatMMSE(obj.pme, PatID);
-                    vr.InsertPatMoca(obj.pma, PatID);
-                    vr.InsertPatotherTest(obj.pot, PatID);
-                    vr.UpdateVisitRecord(obj.vsr,PatID);
-               vr.InsertPatPhysicaExam(obj.ppe, PatID);
-               vr.InsertPatRecentDrug(obj.prd, PatID);
+                vr.InsertPatADL(obj.pal, PatID);
+                vr.InsertPatDisease(obj.pds, PatID);
+                vr.InsertPatLabExam(obj.ple, PatID);
+                vr.InsertPatMMSE(obj.pme, PatID);
+                vr.InsertPatMoca(obj.pma, PatID);
+                vr.InsertPatotherTest(obj.pot, PatID);
+                vr.UpdateVisitRecord(obj.vsr, PatID);
+                vr.InsertPatPhysicaExam(obj.ppe, PatID);
+                vr.InsertPatRecentDrug(obj.prd, PatID);
 
                 //
-               
+
             }
-            catch(Exception  e){
-                return this.Json(new { OK = false, Message = "保存失败" });  
+            catch (Exception e)
+            {
+                return this.Json(new { OK = false, Message = "保存失败" });
             }
-            
-          return  this.Json(new { OK = true, Message = "保存成功" });  
+
+            return this.Json(new { OK = true, Message = "保存成功" });
         }
         [HttpPost]
         public JsonResult CDSSdiagnosis()
@@ -200,7 +200,7 @@ namespace LNCDCDSS.Controllers
 
                 WebReference.InferenceService b = new WebReference.InferenceService();
 
-            
+
 
                 b.DoInference(InputDataValue, ref strResult, ref dProbalily);
             }

@@ -12,31 +12,31 @@ namespace LNCDCDSS.Controllers
         LNCDDataModelContainer DataContainer = new LNCDDataModelContainer();
         //
         // GET: /DAccount/
-       
+
         public ActionResult Index()
         {
-          return View();
-         //   return RedirectToAction("Index", "EnterPatInfor");
-       
+            return View();
+            //   return RedirectToAction("Index", "EnterPatInfor");
+
         }
         [HttpPost]
-        public ActionResult  Index(DoctorAccount dacount)
+        public ActionResult Index(DoctorAccount dacount)
         {
             var students = from s in DataContainer.DoctorAccountSet.ToList() select s;
             var student = students.Where(s => s.UserName == dacount.UserName && s.PassWord == dacount.PassWord).FirstOrDefault();
-          if (student!=null)
-          {
-              return RedirectToAction("Index","EnterPatInfor");
- 
-          }
-          else
+            if (student != null)
+            {
+                return RedirectToAction("Index", "EnterPatInfor");
+
+            }
+            else
             {
                 ViewBag.message = "用户名或密码错误";
                 return View();
             }
-          
 
-           
+
+
         }
     }
 }

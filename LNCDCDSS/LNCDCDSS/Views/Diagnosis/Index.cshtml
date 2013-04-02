@@ -3,12 +3,11 @@
     Layout = "~/Views/Shared/Diagnosis_Layout.cshtml";
 }
 <p>
-   <object id="Reporter2" 
-    classid="clsid:466F909A-0EE1-4F40-A2CA-9906C5E36CB2"   width="920" height="540">
-</object>
+    <object id="Reporter2" classid="clsid:466F909A-0EE1-4F40-A2CA-9906C5E36CB2" width="920"
+        height="540">
+    </object>
 </p>
-
-<script type ="text/javascript">
+<script type="text/javascript">
     $(function () {
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
@@ -18,7 +17,7 @@
         catch (err) {
             var b = confirm("是否下载显示控件");
             if (b) {//download installer
-                window.location.href='http://192.168.1.82/ReporterOCX.exe';
+                window.location.href = 'http://192.168.1.82/ReporterOCX.exe';
             }
         }
         OCX.ShowReport();

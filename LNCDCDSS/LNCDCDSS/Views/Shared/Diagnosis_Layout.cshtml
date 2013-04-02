@@ -8,50 +8,47 @@
     <script src="@Url.Content("~/Scripts/jquery.json-2.4.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
 </head>
-
 <body>
-  <div id="wrap">
-
-       <div class="header">
-        @Html.ActionLink("退出登录", "index","DAccount")
-       </div> 
-          <div id="menu">
-            <ul class=“progress”>                                                                       
-            <li id="基本情况" class="selected"><b></b><a>基本情况</a></li>
-            <li id="认知检查"><b></b><a>认知检查</a></li>
-            <li id="临床检查"><b></b><a>临床检查</a></li>         
-            <li id="辅助诊断"><b></b><a>辅助诊断</a></li>
+    <div id="wrap">
+        <div class="header">
+            @Html.ActionLink("退出登录", "index", "DAccount")
+        </div>
+        <div id="menu">
+            <ul class="“progress”">
+                <li id="基本情况" class="selected"><b></b><a>基本情况</a></li>
+                <li id="认知检查"><b></b><a>认知检查</a></li>
+                <li id="临床检查"><b></b><a>临床检查</a></li>
+                <li id="辅助诊断"><b></b><a>辅助诊断</a></li>
             </ul>
-        </div>      
-           
-        <div id="direct"> 
-        <ul >
-       <li class="active"><a> </a></li>
-        
-         <li><a> </a></li>
-          <li><a> </a></li>
-           <li><a> </a></li>
-       </ul> 
         </div>
-        <div class="clear "></div>
-       <div class="center_content">
-       	<div class="ocx">
-        <div ID="ne">
-        <section id="main">
+        <div id="direct">
+            <ul>
+                <li class="active"><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+            </ul>
+        </div>
+        <div class="clear ">
+        </div>
+        <div class="center_content">
+            <div class="ocx">
+                <div id="ne">
+                    <section id="main">
             @RenderBody()
-        </section>     
-    </div>
+        </section>
+                </div>
+            </div>
+            <div class="button">
+                <div id="btn1" class="btn">
+                    <a id="b1">下一步</a>
+                </div>
+                <div id="btn2" class="btn">
+                    <a id="b1">上一步</a></div>
+            </div>
+            <!--end of center content-->
+            <div class="footer">
+            </div>
         </div>
-        <div class="button">
-       <div ID="btn1" class="btn"><a ID="b1">下一步</a> </div>
-       <div ID="btn2"class="btn"><a ID="b1">上一步</a></div>
-       </div><!--end of center content-->
-       
-              
-  <div class="footer">
-    
-    </div>
-  </div>
-       
 </body>
 </html>
