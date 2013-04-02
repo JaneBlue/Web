@@ -81,9 +81,13 @@ namespace LNCDCDSS.Controllers
         {
             string t = ID;
             List<VisitRecord> vrecord = visitop.GetVistRecord(t);
-            this.TempData["PatID"] = ID;
+         
+              this.TempData["PatID"] = ID;
             this.ViewBag.patId = ID;
             return View(vrecord);
+           
+            
+           
         }
 
         public ActionResult DetailView(int ID)

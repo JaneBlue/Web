@@ -139,6 +139,7 @@
                         $('#' + recordToView).addClass("CurrentView");
                         $(".CurrentView").parent().css("background-color", "#D3E7F2");
                         $("#delete").show();
+                        $("#ViewContent").show();
                     },
                     error: function (jqXhr, textStatus, errorThrown) {
                         alert("Error '" + jqXhr.status + "' (textStatus: '" + textStatus + "', errorThrown: '" + errorThrown + "')");
@@ -151,7 +152,7 @@
 
     $(function () {
         $("#diagnosis").click(function () {
-            window.location.href = '@Url.Action("GoToDiagnosis", "EnterPatInfor", new { id = Model[0].PatBasicInforId }, null)';
+            window.location.href = '@Url.Action("GoToDiagnosis", "EnterPatInfor", new { id = ViewBag.patId }, null)';
         })
 
     });
