@@ -161,6 +161,7 @@
     <Content Include="Content\images\calendar.png" />
     <Content Include="Content\images\click-button.png" />
     <Content Include="Content\images\Content.png" />
+    <Content Include="Content\images\wait.gif" />
     <Content Include="Content\images\foot-2.png" />
     <Content Include="Content\images\head.png" />
     <Content Include="Content\images\hover-button.png" />
@@ -170,6 +171,15 @@
     <Content Include="Content\images\dropdown.png" />
     <Content Include="Content\images\login\login.png" />
     <Content Include="Content\images\sidebar.png" />
+    <Content Include="Content\images\wbox\close.png" />
+    <Content Include="Content\images\wbox\close0.png" />
+    <Content Include="Content\images\wbox\loading.gif" />
+    <Content Include="Content\images\wbox\titleBG.png" />
+    <Content Include="Content\images\wbox\titleBG0.png" />
+    <Content Include="Content\images\wbox\titleBG1.png" />
+    <Content Include="Content\images\wbox\wbox.gif" />
+    <Content Include="Content\images\wbox\wbox.png" />
+    <Content Include="Content\images\wbox\wbox2.gif" />
     <Content Include="Content\jqpagination.css" />
     <Content Include="Content\Loginstyle.css" />
     <Content Include="Content\patstyle.css" />
@@ -216,6 +226,8 @@
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\wbox-min.css" />
+    <Content Include="Content\wbox.css" />
     <Content Include="Content\zebra_datepicker.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -244,6 +256,8 @@
     <Content Include="Scripts\shBrushJScript.js" />
     <Content Include="Scripts\shCore.js" />
     <Content Include="Scripts\shLegacy.js" />
+    <Content Include="Scripts\wbox-min.js" />
+    <Content Include="Scripts\wbox.js" />
     <Content Include="Scripts\XRegExp.js" />
     <Content Include="Scripts\zebra_datepicker.js" />
     <Content Include="Web.config" />

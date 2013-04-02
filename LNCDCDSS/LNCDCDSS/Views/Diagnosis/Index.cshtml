@@ -2,17 +2,18 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Diagnosis_Layout.cshtml";
 }
-<p>
+<p id="ocx">
     <object id="Reporter2" classid="clsid:466F909A-0EE1-4F40-A2CA-9906C5E36CB2" width="920"
         height="540">
     </object>
 </p>
 <script type="text/javascript">
     $(function () {
+       
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
         try {
-            OCX.OpenReport("C://Program Files//ReporterOCX");
+            OCX.OpenReport("D:\\2013cdss\\TemplateForReporter\\LNCDtemp");
         }
         catch (err) {
             var b = confirm("是否下载显示控件");
@@ -25,12 +26,15 @@
         // })
         $("#btn2").hide();
         $("#btn2").click(function () {
+
+
             $(".selected").last().removeClass("selected");
             var name = $(".selected").last().attr("id");
             $(".active").prev().addClass("active");
             $(".active").last().removeClass("active");
             OCX.ShowReport();
             OCX.ShowThisPage(name);
+           
             if (name == "基本情况") {
                 $("#btn2").hide();
             }
@@ -765,13 +769,18 @@
 
 
             if ($(".selected").last().attr("id") == "辅助诊断") {
+                $("#ocx").hide();
+                  $(".active").wBox({title: "提示信息", html: "<div class='demo'>正在保存  请稍候<img src='D:\2013CDSS\Web\LNCDCDSS\LNCDCDSS\Content\images\wait.gif'/></div>", show: true  });
                 $.ajax({
                     url: '@Url.Action("Save", "Diagnosis")',
                     type: "POST",
                     data: { postjson: encoded },
                     success: function (data) {
                         if (data.OK) {
-                            window.location.href = '@Url.Action("Index", "EnterPatInfor")';
+                          $(".demo").html("本次问诊信息保存成功！");
+                            var t = setTimeout("  window.location.href = '@Url.Action("Index", "EnterPatInfor")'", 6000);
+
+                        
                         }
                         else {
                             document.getElementById("msg").innerHTML = data.Message.toString();
