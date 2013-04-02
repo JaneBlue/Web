@@ -7,10 +7,27 @@
  @{
      var items = new SelectList(new[]
         { 
-            new SelectListItem {Text = "", Value = ""},
+           new SelectListItem {Text = "", Value = ""},
             new SelectListItem {Text = "男", Value = "男"},
             new SelectListItem {Text = "女", Value = "女"},
-             
+        }, "Text", "Value");
+    }
+    @{
+     var diagnosis = new SelectList(new[]
+        {  new SelectListItem {Text = "", Value = ""},
+            new SelectListItem {Text = "正常", Value = "正常"},
+            new SelectListItem {Text = "MCI", Value = "MCI"},
+             new SelectListItem {Text = "AD", Value = "AD"},
+        }, "Text", "Value");
+    }
+      @{
+     var education = new SelectList(new[]
+        {  new SelectListItem {Text = "", Value = ""},
+            new SelectListItem {Text = "1", Value = "文盲"},
+            new SelectListItem {Text = "2", Value = "小学"},
+             new SelectListItem {Text = "3", Value = "初中"}, 
+          new SelectListItem {Text = "4", Value = "高中/中专"},
+             new SelectListItem {Text = "5", Value = "大专/大学及以上"},
         }, "Text", "Value");
     }
 <div id="content">
@@ -28,7 +45,7 @@
              <li><span>就诊日期</span><input type="text" name="date" id="date" />
             
 		    </li>
-             <li><span>诊断结论</span>   @Html.DropDownList("Diagnosis", String.Empty)
+             <li><span>诊断结论</span>   @Html.DropDownList("Diagnosis", @diagnosis)
 		    </li>
             </ul>
          
@@ -45,10 +62,11 @@
               <li><span>门诊号</span><input type="text" name="门诊号"/></li>
              <li><span>住院号</span><input type="text" name="住院号"/></li>
             <li><span>姓名</span>@Html.EditorFor(model => model.Name)</li>
+           
             <li><span>性别</span>@Html.DropDownListFor(model => model.Sex, @items) </li>
             
             <li><span>年龄</span> @Html.EditorFor(model => model.Age)</li>
-             <li> <span>教育水平</span>@Html.EditorFor(model => model.Education)</li>
+             <li> <span>教育水平</span>@Html.DropDownListFor(model => model.Education, @education) </li>
             <li><span>职业</span>@Html.EditorFor(model => model.Job) </li>    
             <li><span>手机</span>@Html.EditorFor(model => model.Phone)</li>
             <li><span>家属</span> @Html.EditorFor(model => model.FamilyMember)</li>
@@ -59,7 +77,7 @@
             
               }
               </div>
-             <div><span class="error" id="login_msg"></span></div>
+             <div><span class="error" id="login_msg">@Html.ValidationSummary()</span></div>
 
            </div>
   </div>
@@ -71,6 +89,5 @@
     <script type="text/javascript">
         $(function () {
             $("#date").Zebra_DatePicker();
-
         });
     </script>

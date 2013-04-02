@@ -151,11 +151,10 @@ font-size: 18px;
 .error
 {
     display :block;
-   padding:55px 0 0 100px;
+   padding:55px 0 0 105px;
     color: #CA471B;
     line-height: 24px;
 }
-
 
 
 
@@ -314,4 +313,6 @@ input[type="submit"]:active
     height: 144px;
     background: url(images/box3.png) no-repeat ;
     background-position: right;
+    overflow-y:auto; 
+    border:1px solid;
 }

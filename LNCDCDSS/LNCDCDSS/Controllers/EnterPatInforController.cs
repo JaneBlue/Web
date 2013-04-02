@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LNCDCDSS.Models;
+using System.Text.RegularExpressions;  
 
 namespace LNCDCDSS.Controllers
 {
@@ -15,11 +16,6 @@ namespace LNCDCDSS.Controllers
 
         public ActionResult Index()
         {
-            List<SelectListItem> items = new List<SelectListItem>();
-            items.Add(new SelectListItem { Text = "正常", Value = "正常" });
-            items.Add(new SelectListItem { Text = "AD", Value = "AD" });
-            items.Add(new SelectListItem { Text = "MCI", Value = "MCI" });
-            this.ViewData["Diagnosis"] = items;
             return View();
         }
         [HttpPost]
@@ -29,9 +25,35 @@ namespace LNCDCDSS.Controllers
             PatOperation pto = new PatOperation();
             string HID = Request.Form["住院号"];
             string PID = Request.Form["门诊号"];
+            if (string.IsNullOrEmpty(pat.Name) || string.IsNullOrEmpty(pat.Sex) || string.IsNullOrEmpty(pat.Age) || string.IsNullOrEmpty(pat.Education) || string.IsNullOrEmpty(pat.Phone) || string.IsNullOrEmpty(pat.FamilyMember) || string.IsNullOrEmpty(pat.ChiefDoctor))
+            {
+                ModelState.AddModelError("", "输入项不能为空");
+            }
+            else
+            {
+                Regex reg = new Regex("^[0-9]+$");
+                Match ma1 = reg.Match(pat.Age);  
+                Match ma2 = reg.Match(pat.Phone);
+                if (ma1.Success && ma2.Success)
+                {
+                }
+                else
+                {
+                    ModelState.AddModelError("", "手机和年龄必须为数字");
+                }
+                     
+                
+            }
+             if (ModelState.IsValid)
+            {
+          
             pto.InsertPat(pat, HID, PID);
-
             return RedirectToAction("Index", "Diagnosis", new { ID = pat.Id });
+                  }
+            else
+            {
+                return View();
+            }
             //   return Redirect("/Diagnosis/Index/"+pat.Id);
 
 
