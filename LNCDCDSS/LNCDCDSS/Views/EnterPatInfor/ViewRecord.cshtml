@@ -9,7 +9,7 @@
         <h2 class="title">
             认知检查</h2>
         <div id="TestResult">
-            <table id="test" border="1">
+            <table id="test" >
                 <tr>
                     <td>
                     </td>
@@ -63,10 +63,12 @@
         <h2 class="title">
             主诉</h2>
         <div id="RecordNote">
+         <div id="Record"> </div>
         </div>
         <h2 class="title">
             诊断</h2>
         <div id="DiagnosisResult">
+        <div id="Diagnosis"> </div>
         </div>
         <div id="diagnosis" class="button">
             <a>开始问诊</a>
@@ -100,7 +102,7 @@
 </div>
 <script type="text/javascript">
     $(function () {
-        
+
         $(" li  a").click(function () {
 
             var recordToView = $(this).attr("id");

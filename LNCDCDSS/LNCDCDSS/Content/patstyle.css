@@ -286,11 +286,17 @@ input[type="submit"]:active
 
 #TestResult
 {
-     padding :40px 20px 0 100px;
+     padding :0px 20px 0 100px;
+     
     width: 510px;
-    height: 164px;
+    height: 264px;
     background: url(images/box1.png) no-repeat ;
     background-position: right;
+}
+#test
+{
+    padding-top:40px;
+    border:0;
 }
 #TestResult td
 {
@@ -305,14 +311,26 @@ input[type="submit"]:active
     background: url(images/box2.png) no-repeat ;
     background-position: right;
     text-align: center;
+    
 }
 #RecordNote
 {
-    padding :40px 20px 0 100px;
+    padding :0px 20px 0 100px;
     width: 510px;
-    height: 144px;
+    height: 184px;
     background: url(images/box3.png) no-repeat ;
     background-position: right;
+  
+}
+#Record
+{
+    padding:30px 0 0 0;
     overflow-y:auto; 
-    border:1px solid;
+   width:490px;
+   height:110px;
+   border:1px;
+}
+#Diagnosis
+{
+    padding:30px 0 0 0;
 }

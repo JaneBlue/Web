@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using LNCDCDSS.Models;
 using System.Text.RegularExpressions;
-
+using LNCDCDSS.Filters;
 namespace LNCDCDSS.Controllers
 {
     public class EnterPatInforController : Controller
@@ -13,7 +13,7 @@ namespace LNCDCDSS.Controllers
         VisitRecordOperation visitop = new VisitRecordOperation();
         //
         // GET: /EnterPatInfor/
-
+        [AuthorizeActionFilter]
         public ActionResult Index()
         {
             return View();
@@ -94,8 +94,8 @@ namespace LNCDCDSS.Controllers
         {
             List<string> text = visitop.GetVisitContent(ID.ToString());
             DetaiInfor a = new DetaiInfor() { Name = "TestResult", Contetntext = text[0] };
-            DetaiInfor b = new DetaiInfor() { Name = "RecordNote", Contetntext = text[1] };
-            DetaiInfor c = new DetaiInfor() { Name = "DiagnosisResult", Contetntext = text[2] };
+            DetaiInfor b = new DetaiInfor() { Name = "Record", Contetntext = text[1] };
+            DetaiInfor c = new DetaiInfor() { Name = "Diagnosis", Contetntext = text[2] };
 
             List<DetaiInfor> list = new List<DetaiInfor>();
             DetaiInfor id = new DetaiInfor() { Name = "ID", Contetntext = ID.ToString() };
