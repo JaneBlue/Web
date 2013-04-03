@@ -119,17 +119,17 @@ height:27px;
 }
 #direct ul li a{
 height:27px;
-width: 138px;
+width: 130px;
 display:block;
-margin:0px 26px  0 0;
+margin:0px 19px  0 0;
 float:left;	
 
 }
 #direct ul li.active a{
 height:27px;
-width: 138px;
+width: 130px;
 display:block;
-margin:0px 26px  0 0;
+margin:0px 19px  0 0;
 float:left;	
 background:url(images/triangle.png) no-repeat ;
 }
