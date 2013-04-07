@@ -31,7 +31,7 @@
 }
 <div id="content">
     <div id="query">
-        @using (Ajax.BeginForm("Query", new AjaxOptions { UpdateTargetId = "List", HttpMethod = "POST", InsertionMode = InsertionMode.Replace }))
+        @using (Ajax.BeginForm("Query", new AjaxOptions { UpdateTargetId = "List", HttpMethod = "POST", InsertionMode = InsertionMode.Replace, OnSuccess = "ListPage" }))
         {
             <h2 class="title">
                 查询病人</h2>
@@ -87,9 +87,38 @@
         <h2>
             病人列表</h2>
     </div>
+     <div class="pagination">
+        <a href="#" class="first" data-action="first">&laquo;</a> <a href="#" class="previous"
+            data-action="previous">&lsaquo;</a>
+        <input type="text" readonly="readonly" data-max-page="40" />
+        <a href="#" class="next" data-action="next">&rsaquo;</a> <a href="#" class="last"
+            data-action="last">&raquo;</a>
+    </div>
 </div>
 <script type="text/javascript">
     $(function () {
+        $(".pagination").hide();
         $("#date").Zebra_DatePicker();
     });
+    function ListPage() {
+        $(".page").find("li").hide();
+        $(".pagination").show();
+        $(".page li:lt(12)").addClass("current").show();
+        var num = Math.ceil($(".page li").length / 12);
+        $('.pagination').jqPagination({
+            max_page: num,
+            paged: function (page) {
+                $(".current").hide();
+                var start = (page - 1) * 12;
+                for (var i = 0; i < 12; i++) {
+
+                    $(".page li:eq(" + start + ")").addClass("current").show();
+                    start = start + 1;
+                }
+                // do something with the page variable
+
+            }
+        })
+    }
+   
 </script>

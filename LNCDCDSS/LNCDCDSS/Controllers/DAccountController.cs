@@ -26,6 +26,8 @@ namespace LNCDCDSS.Controllers
             var student = students.Where(s => s.UserName == dacount.UserName && s.PassWord == dacount.PassWord).FirstOrDefault();
             if (student != null)
             {
+                HttpCookie cookie = new HttpCookie("username", student.UserName);
+                Response.Cookies.Add(cookie);
                 return RedirectToAction("Index", "EnterPatInfor");
 
             }
