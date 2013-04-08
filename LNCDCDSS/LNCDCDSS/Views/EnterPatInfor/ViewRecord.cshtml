@@ -76,9 +76,7 @@
         <div id="delete" class="button">
             <a>删除记录</a>
         </div>
-        <div id="return" class="button">
-            @Html.ActionLink("返回查询", "index")
-        </div>
+      
     </div>
 </div>
 <div id="sidebar">
@@ -91,6 +89,8 @@
                 <li><a href="#"  id="@item.Id">@item.VisitDate.Date.ToString("yyyy-MM-dd")</a> </li>
             }
         </ul>
+
+          
     </div>
     <div class="pagination">
         <a href="#" class="first" data-action="first">&laquo;</a> <a href="#" class="previous"
@@ -99,6 +99,9 @@
         <a href="#" class="next" data-action="next">&rsaquo;</a> <a href="#" class="last"
             data-action="last">&raquo;</a>
     </div>
+    <div id="return" class="button">
+            @Html.ActionLink("返回查询", "index")
+        </div>
 </div>
 <script type="text/javascript">
     $(function () {
