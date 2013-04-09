@@ -162,13 +162,13 @@
     <Content Include="Content\images\calendar.png" />
     <Content Include="Content\images\click-button.png" />
     <Content Include="Content\images\Content.png" />
+    <Content Include="Content\images\login\content.gif" />
+    <Content Include="Content\images\login\footer.gif" />
+    <Content Include="Content\images\login\head.gif" />
     <Content Include="Content\images\wait.gif" />
     <Content Include="Content\images\foot-2.png" />
     <Content Include="Content\images\head.png" />
     <Content Include="Content\images\hover-button.png" />
-    <Content Include="Content\images\login\content.png" />
-    <Content Include="Content\images\login\footer.png" />
-    <Content Include="Content\images\login\head.png" />
     <Content Include="Content\images\dropdown.png" />
     <Content Include="Content\images\login\login.png" />
     <Content Include="Content\images\sidebar.png" />

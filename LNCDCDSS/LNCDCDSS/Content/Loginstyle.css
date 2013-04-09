@@ -17,13 +17,13 @@ h
 	width: 962px;
 	height: 182px;
 	margin: 0 auto;
-	background: url(images/Login/head.png) no-repeat ;
+	background: url(images/Login/head.gif) no-repeat ;
 }
 .content {
 	width: 960px;
 	margin: 0 auto;
 	height:638px;
-	background: url(images/Login/content.png) no-repeat ;
+	background: url(images/Login/content.gif) no-repeat ;
 }
 ul {
 	padding :0 0 0 25px;
@@ -44,7 +44,7 @@ ul {
 	height: 118px;
 	margin: 0 auto;
 	padding: 0 0 0 0;
-	background: url(images/Login/footer.png) no-repeat ;
+	background: url(images/Login/footer.gif) no-repeat ;
 	
 }
 
