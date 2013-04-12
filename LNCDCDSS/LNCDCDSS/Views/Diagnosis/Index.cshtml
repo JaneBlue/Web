@@ -816,7 +816,7 @@
                         data: { postjson: encoded },
                         success: function (data) {
                             if (data.OK) {
-                                OCX.SetData("Data_source/VisitRecord/CDSSDiagnosis", "                                                                                                                   " + data.Message);
+                                OCX.SetData("Data_source/VisitRecord/CDSSDiagnosis", "                                                                    " + data.Message);
                             }
                             else {
                                 document.getElementById("msg").innerHTML = data.Message.toString();
