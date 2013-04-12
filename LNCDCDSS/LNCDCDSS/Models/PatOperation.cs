@@ -13,7 +13,7 @@ namespace LNCDCDSS.Models
         {
             return context.PatBasicInforSet.ToList();
         }
-        public void InsertPat(PatBasicInfor pat, string PID, string HID)
+        public void InsertPat(PatBasicInfor pat, string PID, string HID,string User)
         {
 
             try
@@ -38,7 +38,7 @@ namespace LNCDCDSS.Models
                 pat.VisitRecord.Add(r);
                 //context.PatBasicInforSet.Add(pat);
                 var students = from s in context.DoctorAccountSet.ToList() select s;
-                DoctorAccount student = students.Where(s => s.UserName == "123" && s.PassWord == "123").FirstOrDefault();
+                DoctorAccount student = students.Where(s => s.UserName == User).FirstOrDefault();
                 student.PatBasicInfor.Add(pat);
 
                 context.SaveChanges();

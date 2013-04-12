@@ -46,8 +46,13 @@ namespace LNCDCDSS.Controllers
             }
             if (ModelState.IsValid)
             {
+                
+                    string user;
 
-                pto.InsertPat(pat, HID, PID);
+                    user = HttpContext.Request.Cookies["username"].ToString();
+              
+
+                pto.InsertPat(pat, HID, PID,user);
                 return RedirectToAction("Index", "Diagnosis", new { ID = pat.Id });
             }
             else
