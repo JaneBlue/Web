@@ -205,7 +205,7 @@ namespace LNCDCDSS.Controllers
                 b.DoInference(InputDataValue, ref strResult, ref dProbalily);
 
                 if ("AD" == strResult)
-                    strResult = "阿兹海默症";
+                    strResult = "阿尔兹海默症";
                 else if("MCI" == strResult)
                     strResult = "轻度认知障碍";
                 else if("Normal" == strResult)
@@ -213,7 +213,7 @@ namespace LNCDCDSS.Controllers
             }
             catch (Exception e)
             {
-                return this.Json(new { OK = false, Message = "         " + "推理出错" });
+                return this.Json(new { OK = false, Message =e.Message + "推理出错" });
             }
 
             return this.Json(new { OK = true, Message = strResult + "              相似度:" + (dProbalily * 100).ToString() + "%" });
