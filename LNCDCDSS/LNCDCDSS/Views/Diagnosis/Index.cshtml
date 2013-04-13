@@ -18,7 +18,10 @@
         catch (err) {
             var b = confirm("是否下载显示控件");
             if (b) {//download installer
-                window.location.href = './ReporterOCX.exe';
+                var strOCXURL;
+            strOCXURL= "http://"+location.host+"/LNCDCDSS/CDSSOCX.exe";
+            //window.alert(strOCXURL);
+            window.location.href = strOCXURL;
             }
         }
         OCX.ShowReport();
@@ -43,7 +46,6 @@
             }
         });
         $("#btn1").click(function () {
-
             //var thing = { pma: [ { Id: 2, MC1: 'jquery-json', MC2: 'jquery-json', MC3: 'jquery-json', MC4: 'jquery-json', MC5: 'jquery-json', MC6: 'jquery-json', MC7: 'jquery-json', MC8: 'jquery-json', MC9: 'jquery-json', Total: 'jquery-json' }, { Id: 3, MC1: 'jquery-json', MC2: 'jquery-json', MC3: 'jquery-json', MC4: 'jquery-json', MC5: 'jquery-json', MC6: 'jquery-json', MC7: 'jquery-json', MC8: 'jquery-json', MC9: 'jquery-json', Total: 'jquery-json'} ] };
             $("#btn2").show();
             //get the data of PatMoCA

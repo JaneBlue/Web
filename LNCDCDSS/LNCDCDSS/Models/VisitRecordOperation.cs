@@ -152,21 +152,41 @@ namespace LNCDCDSS.Models
                 {
                     test += "MMSE=" + vd.PatMMSE.Total;
                 }
+                else
+                {
+                    test += "MMSE=";
+                }
                 if (vd.PatMoCA != null)
                 {
                     test += ";MoCA= " + vd.PatMoCA.Total;
+                }
+                else
+                {
+                    test += ";MoCA= ";
                 }
                 if (vd.PatOtherTest != null)
                 {
                     test += ";CDR= " + vd.PatOtherTest.PatCDR;
                 }
+                else
+                {
+                    test += ";CDR= ";
+                }
                 if (vd.PatOtherTest != null)
                 {
                     test += ";GDS= " + vd.PatOtherTest.PatGDS;
                 }
+                else
+                {
+                    test += ";GDS= ";
+                }
                 if (vd.PatADL != null)
                 {
                     test += ";ADL= " + vd.PatADL.Total;
+                }
+                else
+                {
+                    test += ";ADL= ";
                 }
                 if (vd.PatOtherTest != null)
                 {
@@ -181,6 +201,20 @@ namespace LNCDCDSS.Models
                     test += ";延迟回忆 =" + vd.PatOtherTest.Picture3;
                     test += ";连线A =" + vd.PatOtherTest.ConnectNumber1;
                     test += ";连线B =" + vd.PatOtherTest.ConnectNumber2;
+                }
+                else
+                {
+                    test += ";词语学习1= ";
+                    test += ";词语学习2= ";
+                    test += ";词语学习3= ";
+                    test += ";延迟记忆= ";
+                    test += ";原词辨认 =";
+                    test += ";新词辨认 =";
+                    test += ";图形复制 =";
+                    test += ";即刻回忆 =";
+                    test += ";延迟回忆 =";
+                    test += ";连线A =";
+                    test += ";连线B =";
                 }
                 conttext.Add(test);
                 conttext.Add(vd.RecordNote);
@@ -234,7 +268,7 @@ namespace LNCDCDSS.Models
             PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
 
             VisitRecord vr = new VisitRecord();
-            if (pt.VisitRecord.Count!=0)
+            if (pt.VisitRecord.Count != 0)
             {
                 vr.VisitRecordID = pt.VisitRecord.Last().VisitRecordID;
             }
