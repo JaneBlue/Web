@@ -234,7 +234,14 @@ namespace LNCDCDSS.Models
             PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
 
             VisitRecord vr = new VisitRecord();
-            vr.VisitRecordID = pt.VisitRecord.Last().VisitRecordID;
+            if (pt.VisitRecord.Count!=0)
+            {
+                vr.VisitRecordID = pt.VisitRecord.Last().VisitRecordID;
+            }
+            else
+            {
+                vr.VisitRecordID = "1";
+            }
             vr.VisitDate = DateTime.Now;
             vr.PatBasicInforId = PatID;
             pt.VisitRecord.Add(vr);
