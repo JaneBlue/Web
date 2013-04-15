@@ -644,6 +644,15 @@
 
             strPatCDR = fPatCDR.toString();
 
+            if("" == strPatCDR) {
+                strPatCDR = "0";
+            }
+
+            if ("" == strPatCDRMemory && "" == strPatCDROrientation && "" == strPatCDRJudgementPloblemSolving 
+            && "" == strPatCDRHomeHobbies && "" == strPatCDRPersonalCare) {
+                strPatCDR = "";
+            }
+            
             //get the record data
             var strDiagnosisiResult = OCX.GetData("Data_source/VisitRecord/DiagnosisiResult");
             var strRecordNote = OCX.GetData("Data_source/VisitRecord/RecordNote");
