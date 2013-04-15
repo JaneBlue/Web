@@ -49,7 +49,7 @@ namespace LNCDCDSS.Controllers
                 
                     string user;
 
-                    user = HttpContext.Request.Cookies["username"].ToString();
+                    user = HttpContext.Request.Cookies["username"].Value.ToString();
               
 
                 pto.InsertPat(pat, HID, PID,user);
