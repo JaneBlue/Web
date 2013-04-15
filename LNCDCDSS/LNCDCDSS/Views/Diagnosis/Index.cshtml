@@ -258,7 +258,7 @@
                 nA20 = 0;
 
             var nTotalpal = nA1 + nA2 + nA3 + nA4 + nA5 + nA6 + nA7 + nA8 + nA9 + nA10 + nA11 + nA12 + nA13 + nA14 + nA15 + nA16 + nA17 + nA18 + nA19 + nA20;
-            var strTotalpal = nTotalpal.toString();
+            var strTotalpal = OCX.GetData("Data_source/PatADL/Total");
 
             //get the data of pds
             var strD1Situation = OCX.GetData("Data_source/PatDisease/D1/Situation");
