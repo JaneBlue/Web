@@ -261,7 +261,9 @@
     <Content Include="Scripts\wbox.js" />
     <Content Include="Scripts\XRegExp.js" />
     <Content Include="Scripts\zebra_datepicker.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

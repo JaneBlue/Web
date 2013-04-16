@@ -739,7 +739,7 @@
 
             if ($(".selected").last().attr("id") == "辅助诊断") {
                 $("#ocx").hide();
-                  $(".active").wBox({title: "提示信息", html: "<div class='demo'><img src='/Content/images/wait.gif'/></div>", show: true  });
+                  $(".active").wBox({title: "提示信息", html: "<div class='demo'><img src='../../Content/images/wait.gif'/></div>", show: true  });
                 $.ajax({
                     url: '@Url.Action("Save", "Diagnosis")',
                     type: "POST",
