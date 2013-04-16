@@ -158,106 +158,61 @@
 
             //get the data of PatADL
             var strA1 = OCX.GetData("Data_source/PatADL/A1");
-            var nA1 = parseInt(strA1);
-            if (isNaN(nA1))
-                nA1 = 0;
-
             var strA2 = OCX.GetData("Data_source/PatADL/A2");
-            var nA2 = parseInt(strA2);
-            if (isNaN(nA2))
-                nA2 = 0;
-
             var strA3 = OCX.GetData("Data_source/PatADL/A3");
-            var nA3 = parseInt(strA3);
-            if (isNaN(nA3))
-                nA3 = 0;
-
             var strA4 = OCX.GetData("Data_source/PatADL/A4");
-            var nA4 = parseInt(strA4);
-            if (isNaN(nA4))
-                nA4 = 0;
-
             var strA5 = OCX.GetData("Data_source/PatADL/A5");
-            var nA5 = parseInt(strA5);
-            if (isNaN(nA5))
-                nA5 = 0;
-
             var strA6 = OCX.GetData("Data_source/PatADL/A6");
-            var nA6 = parseInt(strA6);
-            if (isNaN(nA6))
-                nA6 = 0;
-
             var strA7 = OCX.GetData("Data_source/PatADL/A7");
-            var nA7 = parseInt(strA7);
-            if (isNaN(nA7))
-                nA7 = 0;
-
             var strA8 = OCX.GetData("Data_source/PatADL/A8");
-            var nA8 = parseInt(strA8);
-            if (isNaN(nA8))
-                nA8 = 0;
-
             var strA9 = OCX.GetData("Data_source/PatADL/A9");
-            var nA9 = parseInt(strA9);
-            if (isNaN(nA9))
-                nA9 = 0;
-
             var strA10 = OCX.GetData("Data_source/PatADL/A10");
-            var nA10 = parseInt(strA10);
-            if (isNaN(nA10))
-                nA10 = 0;
-
             var strA11 = OCX.GetData("Data_source/PatADL/A11");
-            var nA11 = parseInt(strA11);
-            if (isNaN(nA11))
-                nA11 = 0;
-
             var strA12 = OCX.GetData("Data_source/PatADL/A12");
-            var nA12 = parseInt(strA12);
-            if (isNaN(nA12))
-                nA12 = 0;
-
             var strA13 = OCX.GetData("Data_source/PatADL/A13");
-            var nA13 = parseInt(strA13);
-            if (isNaN(nA13))
-                nA13 = 0;
-
             var strA14 = OCX.GetData("Data_source/PatADL/A14");
-            var nA14 = parseInt(strA14);
-            if (isNaN(nA14))
-                nA14 = 0;
-
             var strA15 = OCX.GetData("Data_source/PatADL/A15");
-            var nA15 = parseInt(strA15);
-            if (isNaN(nA15))
-                nA15 = 0;
-
             var strA16 = OCX.GetData("Data_source/PatADL/A16");
-            var nA16 = parseInt(strA16);
-            if (isNaN(nA16))
-                nA16 = 0;
-
             var strA17 = OCX.GetData("Data_source/PatADL/A17");
-            var nA17 = parseInt(strA17);
-            if (isNaN(nA17))
-                nA17 = 0;
-
             var strA18 = OCX.GetData("Data_source/PatADL/A18");
-            var nA18 = parseInt(strA18);
-            if (isNaN(nA18))
-                nA18 = 0;
-
             var strA19 = OCX.GetData("Data_source/PatADL/A19");
-            var nA19 = parseInt(strA19);
-            if (isNaN(nA19))
-                nA19 = 0;
-
             var strA20 = OCX.GetData("Data_source/PatADL/A20");
-            var nA20 = parseInt(strA20);
-            if (isNaN(nA20))
-                nA20 = 0;
 
-            var nTotalpal = nA1 + nA2 + nA3 + nA4 + nA5 + nA6 + nA7 + nA8 + nA9 + nA10 + nA11 + nA12 + nA13 + nA14 + nA15 + nA16 + nA17 + nA18 + nA19 + nA20;
+            var strADLlist = new Array(strA1, strA2, strA3, strA4, strA5, strA6, strA7, strA8, strA9, strA10, strA11, strA12, strA13, strA14, strA15, strA16, strA17, strA18, strA19, strA20);
+            var nADLlist = new Array(20);
+            
+            var nTotalpal = 0;
+            for(var nADLIndex = 0; nADLIndex < 20; ++nADLIndex)
+            {
+                if ("独立完成" == strADLlist[nADLIndex])
+                {
+                    strADLlist[nADLIndex] = "1";
+                    nADLlist[nADLIndex] = 1;
+                }
+                else if ("有些困难" == strADLlist[nADLIndex])
+                {
+                    strADLlist[nADLIndex] = "2";
+                    nADLlist[nADLIndex] = 2;
+                }
+                else if ("需要帮助" == strADLlist[nADLIndex])
+                {
+                    strADLlist[nADLIndex] = "3";
+                    nADLlist[nADLIndex] = 3;
+                }
+                else if ("无法完成" == strADLlist[nADLIndex])
+                {
+                    strADLlist[nADLIndex] = "4";
+                    nADLlist[nADLIndex] = 4;
+                }
+                else
+                {
+                    strADLlist[nADLIndex] = "0";
+                    nADLlist[nADLIndex] = 0;
+                }
+
+                nTotalpal += nADLlist[nADLIndex];
+            }
+                
             var strTotalpal = OCX.GetData("Data_source/PatADL/Total");
 
             //get the data of pds
@@ -683,13 +638,13 @@
             , M9: strM9, M10: strM10, M11: strM11
             , Total: strTotalpme
                 },
-                pal: { A1: strA1, A2: strA2
-            , A3: strA3, A4: strA4, A5: strA5
-            , A6: strA6, A7: strA7, A8: strA8
-            , A9: strA9, A10: strA10, A11: strA11
-            , A12: strA12, A13: strA13, A14: strA14
-            , A15: strA15, A16: strA16, A17: strA17
-            , A18: strA18, A19: strA19, A20: strA20
+                pal: { A1: strADLlist[0], A2: strADLlist[1]
+            , A3: strADLlist[2], A4: strADLlist[3], A5: strADLlist[4]
+            , A6: strADLlist[5], A7: strADLlist[6], A8: strADLlist[7]
+            , A9: strADLlist[8], A10: strADLlist[9], A11: strADLlist[10]
+            , A12: strADLlist[11], A13: strADLlist[12], A14: strADLlist[13]
+            , A15: strADLlist[14], A16: strADLlist[15], A17: strADLlist[16]
+            , A18: strADLlist[17], A19: strADLlist[18], A20: strADLlist[19]
             , Total: strTotalpal
                 },
                 pds: { D1: { Situation: strD1Situation }, D2: { Situation: strD2Situation }
