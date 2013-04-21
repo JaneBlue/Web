@@ -212,7 +212,7 @@ namespace LNCDCDSS.Controllers
                 return this.Json(new { OK = false, Message =e.Message + "推理出错" });
             }
 
-            return this.Json(new { OK = true, Message = strResult + "              相似度:" + (dProbalily * 100).ToString() + "%" });
+            return this.Json(new { OK = true, Message = strResult + "              相似度:" + (dProbalily * 100).ToString("0.00") + "%" });
         }
     }
 }
