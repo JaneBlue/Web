@@ -182,6 +182,7 @@
             var nADLlist = new Array(20);
             
             var nTotalpal = 0;
+            var nEmptyCount = 0;
             for(var nADLIndex = 0; nADLIndex < 20; ++nADLIndex)
             {
                 if ("独立完成" == strADLlist[nADLIndex])
@@ -208,12 +209,20 @@
                 {
                     strADLlist[nADLIndex] = "0";
                     nADLlist[nADLIndex] = 0;
+                    if("" == strADLlist[nADLIndex])
+                    {
+                        ++nEmptyCount;
+                    }
                 }
 
                 nTotalpal += nADLlist[nADLIndex];
             }
                 
             var strTotalpal = OCX.GetData("Data_source/PatADL/Total");
+            if(20 == nEmptyCount)
+            {
+                strTotalpal = "";
+            }
 
             //get the data of pds
             var strD1Situation = OCX.GetData("Data_source/PatDisease/D1/Situation");
