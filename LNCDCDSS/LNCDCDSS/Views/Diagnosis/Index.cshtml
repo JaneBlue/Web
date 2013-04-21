@@ -13,7 +13,7 @@
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
         try {
-            OCX.OpenReport("D:\\Reporter2OCX");
+            OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\LNCDtemp");
         }
         catch (err) {
             var b = confirm("是否下载显示控件");
@@ -779,7 +779,7 @@
                 //var b = OCX.OpenReport("D:\\2013CDSS\\TemplateForReporter\\LNCDtemp");
 
                 //set the CDSSDiagnoses default result
-                OCX.SetData("Data_source/VisitRecord/CDSSDiagnosis", "                                                                              " + "正在推理中。。。");
+                OCX.SetData("Data_source/VisitRecord/CDSSDiagnosis", "        " + "正在推理中。。。");
 
                 OCX.ShowReport();
                 OCX.ShowThisPage(name);
@@ -790,7 +790,7 @@
                         data: { postjson: encoded },
                         success: function (data) {
                             if (data.OK) {
-                                OCX.SetData("Data_source/VisitRecord/CDSSDiagnosis", "                                                                    " + data.Message);
+                                OCX.SetData("Data_source/VisitRecord/CDSSDiagnosis", "        " + data.Message);
                             }
                             else {
                                 document.getElementById("msg").innerHTML = data.Message.toString();
