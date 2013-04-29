@@ -126,8 +126,10 @@ namespace LNCDCDSS.Controllers
         }
         public ActionResult ContinueDiagnosis(string ID)
         {
-            visitop.AddNewRecord(ID);
-            return RedirectToAction("VisitContinue", "Diagnosis", new { ID = ID });
+            string identity = ID+"%";
+            
+           identity =identity+ this.TempData["recordID"].ToString();
+           return RedirectToAction("VisitContinue", "Diagnosis", new { identity = identity });
         }
         public ActionResult DeleteRecord(string ID)
         {
