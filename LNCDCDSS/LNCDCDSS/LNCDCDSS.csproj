@@ -253,6 +253,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Views\Diagnosis\VisitContinue.cshtml" />
     <None Include="Web References\WebReference\InferenceService.disco" />
     <Content Include="Scripts\shBrushJScript.js" />
     <Content Include="Scripts\shCore.js" />

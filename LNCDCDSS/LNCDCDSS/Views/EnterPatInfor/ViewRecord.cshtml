@@ -70,8 +70,11 @@
         <div id="DiagnosisResult">
         <div id="Diagnosis"> </div>
         </div>
+        <div id="continue" class="button">
+            <a>继续问诊</a>
+        </div>
         <div id="diagnosis" class="button">
-            <a>开始问诊</a>
+            <a>开始新问诊</a>
         </div>
         <div id="delete" class="button">
             <a>删除记录</a>
@@ -144,6 +147,7 @@
                         $('#' + recordToView).addClass("CurrentView");
                         $(".CurrentView").parent().css("background-color", "#D3E7F2");
                         $("#delete").show();
+                        $("#continue").show();
                         $("#ViewContent").show();
                     },
                     error: function (jqXhr, textStatus, errorThrown) {
@@ -162,6 +166,12 @@
 
     });
     $(function () {
+        $("#continue").click(function () {
+            window.location.href = '@Url.Action("ContinueDiagnosis", "EnterPatInfor", new { id = ViewBag.patId }, null)';
+        })
+
+    });
+        $(function () {
         $("#delete").click(function () {
             var pid = '@ViewBag.patId';
             $.ajax({
@@ -189,6 +199,7 @@
     });
     $(document).ready(function () {
         $("#delete").hide();
+        $("#continue").hide();
         $(".paging").find("li").hide();
         $(".paging li:lt(12)").addClass("current").show();
         var num = Math.ceil($(".paging li").length / 12);

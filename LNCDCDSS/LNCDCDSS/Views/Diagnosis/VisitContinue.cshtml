@@ -9,11 +9,13 @@
 </p>
 <script type="text/javascript">
     $(function () {
-       
+        $("#认知检查").addClass("selected");   
+                $(".active").next().addClass("active");
+                $(".active").first().removeClass("active");
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
         try {
-            OCX.OpenReport("D:\\Reporter2OCX");
+            OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\LNCDtemp");
         }
         catch (err) {
             var b = confirm("是否下载显示控件");
@@ -25,7 +27,7 @@
             }
         }
         OCX.ShowReport();
-        OCX.ShowThisPage("基本情况");
+        OCX.ShowThisPage("认知检查");
         // })
         $("#btn2").hide();
         $("#btn2").click(function () {

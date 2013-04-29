@@ -14,6 +14,11 @@ namespace LNCDCDSS.Controllers
             this.TempData["PatID"] = ID;
             return View();
         }
+        public ActionResult VisitContinue(string ID)
+        {
+            this.TempData["PatID"] = ID;
+            return View();
+        }
         [HttpPost]
         public JsonResult Save()
         {

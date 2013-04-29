@@ -11,17 +11,19 @@ namespace LNCDCDSS.Controllers
     public class EnterPatInforController : Controller
     {
         VisitRecordOperation visitop = new VisitRecordOperation();
+        
         //
         // GET: /EnterPatInfor/
         [AuthorizeActionFilter]
         public ActionResult Index()
         {
             return View();
+           
         }
         [HttpPost]
         public ActionResult Index(PatBasicInfor pat)
         {
-
+           
             PatOperation pto = new PatOperation();
             string HID = Request.Form["住院号"];
             string PID = Request.Form["门诊号"];
@@ -121,6 +123,11 @@ namespace LNCDCDSS.Controllers
         {
             visitop.AddNewRecord(ID);
             return RedirectToAction("Index", "Diagnosis", new { ID = ID });
+        }
+        public ActionResult ContinueDiagnosis(string ID)
+        {
+            visitop.AddNewRecord(ID);
+            return RedirectToAction("VisitContinue", "Diagnosis", new { ID = ID });
         }
         public ActionResult DeleteRecord(string ID)
         {
