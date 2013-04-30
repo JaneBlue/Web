@@ -335,7 +335,33 @@ namespace LNCDCDSS.Models
         }
         public bool SaveContinueRecord(string PatID, string RecordID,VisitData visitdata)
         {
+            try
+        {
+            int recordId = int.Parse(RecordID);
+            VisitRecord vd = context.VisitRecordSet.Find(recordId);
+            if (vd.PatADL == null)
+            {
+                vd.PatADL=visitdata.pal;
+            }
+            if (vd.PatMMSE == null)
+            {
+                vd.PatMMSE=visitdata.pme;
+            }
+            if (vd.PatMoCA == null)
+            {
+                vd.PatMoCA = visitdata.pma;
+            }
+            if (vd.PatOtherTest == null)
+            {
+                vd.PatOtherTest = visitdata.pot;
+            }
+            return true;
+        }
+        catch (System.Exception ex)
+        {
             return false;
+        }
+           
         }
     }
 }
