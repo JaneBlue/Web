@@ -333,6 +333,9 @@ namespace LNCDCDSS.Models
 
             }
         }
-
+        public bool SaveContinueRecord(string PatID, string RecordID,VisitData visitdata)
+        {
+            return false;
+        }
     }
 }

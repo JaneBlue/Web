@@ -40,7 +40,7 @@
             OCX.ShowReport();
             OCX.ShowThisPage(name);
            
-            if (name == "基本情况") {
+            if (name == "认知检查") {
                 $("#btn2").hide();
             }
             if (name == "影像检查") {
@@ -751,7 +751,7 @@
                 $("#ocx").hide();
                   $(".active").wBox({title: "提示信息", html: "<div class='demo'><img src='../../Content/images/wait.gif'/></div>", show: true  });
                 $.ajax({
-                    url: '@Url.Action("Save", "Diagnosis")',
+                    url: '@Url.Action("SaveContinue", "Diagnosis")',
                     type: "POST",
                     data: { postjson: encoded },
                     success: function (data) {

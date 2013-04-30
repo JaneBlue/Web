@@ -52,6 +52,29 @@ namespace LNCDCDSS.Controllers
             return this.Json(new { OK = true, Message = "保存成功" });
         }
         [HttpPost]
+        public JsonResult SaveContinue()
+        {
+            VisitRecordOperation vr = new VisitRecordOperation();
+            string jsonStr = Request.Params["postjson"];
+            string PatID = this.TempData["PatID"].ToString();
+            string VisitID=  this.TempData["ContinueVisitID"].ToString();
+            try
+            {
+                VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
+
+                vr.SaveContinueRecord(PatID, VisitID, obj);
+
+                //
+
+            }
+            catch (Exception e)
+            {
+                return this.Json(new { OK = false, Message = "保存失败" });
+            }
+
+            return this.Json(new { OK = true, Message = "保存成功" });
+        }
+        [HttpPost]
         public JsonResult CDSSdiagnosis()
         {
             string strResult = null;
