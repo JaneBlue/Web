@@ -13,7 +13,7 @@
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
         try {
-            OCX.OpenReport("D:\\Reporter2OCX");
+            OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\LNCDtemp");
         }
         catch (err) {
             var b = confirm("是否下载显示控件");
@@ -49,112 +49,182 @@
             //var thing = { pma: [ { Id: 2, MC1: 'jquery-json', MC2: 'jquery-json', MC3: 'jquery-json', MC4: 'jquery-json', MC5: 'jquery-json', MC6: 'jquery-json', MC7: 'jquery-json', MC8: 'jquery-json', MC9: 'jquery-json', Total: 'jquery-json' }, { Id: 3, MC1: 'jquery-json', MC2: 'jquery-json', MC3: 'jquery-json', MC4: 'jquery-json', MC5: 'jquery-json', MC6: 'jquery-json', MC7: 'jquery-json', MC8: 'jquery-json', MC9: 'jquery-json', Total: 'jquery-json'} ] };
             $("#btn2").show();
             //get the data of PatMoCA
+            var nCountEmptyPatMoCA = 0;
             var strMC1 = OCX.GetData("Data_source/PatMoCA/MC1");
             var nMC1 = parseInt(strMC1);
             if (isNaN(nMC1))
+            {
+                ++nCountEmptyPatMoCA;
                 nMC1 = 0;
+            }
 
             var strMC2 = OCX.GetData("Data_source/PatMoCA/MC2");
             var nMC2 = parseInt(strMC2);
             if (isNaN(nMC2))
+            {
+                ++nCountEmptyPatMoCA;
                 nMC2 = 0;
+            }
 
             var strMC3 = OCX.GetData("Data_source/PatMoCA/MC3");
             var nMC3 = parseInt(strMC3);
             if (isNaN(nMC3))
+            {
+                ++nCountEmptyPatMoCA;
                 nMC3 = 0;
+            }
 
             var strMC4 = OCX.GetData("Data_source/PatMoCA/MC4");
             var nMC4 = parseInt(strMC4);
             if (isNaN(nMC4))
+            {
+                ++nCountEmptyPatMoCA;
                 nMC4 = 0;
+            }
 
             var strMC5 = OCX.GetData("Data_source/PatMoCA/MC5");
             var nMC5 = parseInt(strMC5);
             if (isNaN(nMC5))
+            {
+                ++nCountEmptyPatMoCA;
                 nMC5 = 0;
+            }
 
             var strMC6 = OCX.GetData("Data_source/PatMoCA/MC6");
             var nMC6 = parseInt(strMC6);
             if (isNaN(nMC6))
+            {
+                ++nCountEmptyPatMoCA;
                 nMC6 = 0;
+            }
 
             var strMC7 = OCX.GetData("Data_source/PatMoCA/MC7");
             var nMC7 = parseInt(strMC7);
             if (isNaN(nMC7))
+            {
+                ++nCountEmptyPatMoCA;
                 nMC7 = 0;
+            }
 
             var strMC8 = OCX.GetData("Data_source/PatMoCA/MC8");
             var nMC8 = parseInt(strMC8);
             if (isNaN(nMC8))
+            {
+                ++nCountEmptyPatMoCA;
                 nMC8 = 0;
+            }
 
             var strMC9 = OCX.GetData("Data_source/PatMoCA/MC9");
             var nMC9 = parseInt(strMC9);
             if (isNaN(nMC9))
+            {
+                ++nCountEmptyPatMoCA;
                 nMC9 = 0;
+            }
 
             var nTotalpma = nMC1 + nMC2 + nMC3 + nMC4 + nMC5 + nMC6 + nMC7 + nMC8 + nMC9;
             var strTotalpma = nTotalpma.toString();
+            if(9 == nCountEmptyPatMoCA)
+            {
+                strTotalpma = "";
+            }
 
             //get the data of PatMMSE
+            var nCountEmptyPatMMSE = 0;
             var strM1 = OCX.GetData("Data_source/PatMMSE/M1");
             var nM1 = parseInt(strM1);
             if (isNaN(nM1))
+            {
+                ++nCountEmptyPatMMSE;
                 nM1 = 0;
+            }
 
             var strM2 = OCX.GetData("Data_source/PatMMSE/M2");
             var nM2 = parseInt(strM2);
             if (isNaN(nM2))
+            {
+                ++nCountEmptyPatMMSE;
                 nM2 = 0;
+            }
 
             var strM3 = OCX.GetData("Data_source/PatMMSE/M3");
             var nM3 = parseInt(strM3);
             if (isNaN(nM3))
+            {
+                ++nCountEmptyPatMMSE;
                 nM3 = 0;
+            }
 
             var strM4 = OCX.GetData("Data_source/PatMMSE/M4");
             var nM4 = parseInt(strM4);
             if (isNaN(nM4))
+            {
+                ++nCountEmptyPatMMSE;
                 nM4 = 0;
+            }
 
             var strM5 = OCX.GetData("Data_source/PatMMSE/M5");
             var nM5 = parseInt(strM5);
             if (isNaN(nM5))
+            {
+                ++nCountEmptyPatMMSE;
                 nM5 = 0;
+            }
 
             var strM6 = OCX.GetData("Data_source/PatMMSE/M6");
             var nM6 = parseInt(strM6);
             if (isNaN(nM6))
+            {
+                ++nCountEmptyPatMMSE;
                 nM6 = 0;
+            }
 
             var strM7 = OCX.GetData("Data_source/PatMMSE/M7");
             var nM7 = parseInt(strM7);
             if (isNaN(nM7))
+            {
+                ++nCountEmptyPatMMSE;
                 nM7 = 0;
+            }
 
             var strM8 = OCX.GetData("Data_source/PatMMSE/M8");
             var nM8 = parseInt(strM8);
             if (isNaN(nM8))
+            {
+                ++nCountEmptyPatMMSE;
                 nM8 = 0;
+            }
 
             var strM9 = OCX.GetData("Data_source/PatMMSE/M9");
             var nM9 = parseInt(strM9);
             if (isNaN(nM9))
+            {
+                ++nCountEmptyPatMMSE;
                 nM9 = 0;
+            }
 
             var strM10 = OCX.GetData("Data_source/PatMMSE/M10");
             var nM10 = parseInt(strM10);
             if (isNaN(nM10))
+            {
+                ++nCountEmptyPatMMSE;
                 nM10 = 0;
+            }
 
             var strM11 = OCX.GetData("Data_source/PatMMSE/M11");
             var nM11 = parseInt(strM11);
             if (isNaN(nM11))
+            {
+                ++nCountEmptyPatMMSE;
                 nM11 = 0;
+            }
 
             var nTotalpme = nM1 + nM2 + nM3 + nM4 + nM5 + nM6 + nM7 + nM8 + nM9 + nM10 + nM11;
             var strTotalpme = nTotalpme.toString();
+            if(11 == nCountEmptyPatMMSE)
+            {
+                strTotalpme = "";
+            }
 
             //get the data of PatADL
             var strA1 = OCX.GetData("Data_source/PatADL/A1");
@@ -625,11 +695,11 @@
                 strCDSSDiagnosis = "";
             }
 
-            //set OCX the data
-            if ("0" == strTotalpme)
-                strTotalpme = "";
-            if ("0" == strTotalpma)
-                strTotalpma = "";
+//            //set OCX the data
+//            if ("0" == strTotalpme)
+//                strTotalpme = "";
+//            if ("0" == strTotalpma)
+//                strTotalpma = "";
 
             OCX.SetData("Data_source/PatMMSE/Total", strTotalpme);
             OCX.SetData("Data_source/PatMoCA/Total", strTotalpma);
