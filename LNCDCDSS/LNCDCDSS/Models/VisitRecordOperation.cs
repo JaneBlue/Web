@@ -339,21 +339,76 @@ namespace LNCDCDSS.Models
         {
             int recordId = int.Parse(RecordID);
             VisitRecord vd = context.VisitRecordSet.Find(recordId);
-            if (vd.PatADL == null)
+            if (vd.PatADL == null ||vd.PatADL.Total=="")
             {
                 vd.PatADL=visitdata.pal;
             }
-            if (vd.PatMMSE == null)
+            if (vd.PatMMSE == null || vd.PatMMSE.Total == "")
             {
                 vd.PatMMSE=visitdata.pme;
             }
-            if (vd.PatMoCA == null)
+            if (vd.PatMoCA == null||vd.PatMoCA.Total=="")
             {
                 vd.PatMoCA = visitdata.pma;
             }
             if (vd.PatOtherTest == null)
             {
                 vd.PatOtherTest = visitdata.pot;
+            }
+            else
+            {
+                if (vd.PatOtherTest.Vocabulary1=="")
+                {
+                    vd.PatOtherTest.Vocabulary1 = visitdata.pot.Vocabulary1;
+                }
+                if (vd.PatOtherTest.Vocabulary2 == "")
+                {
+                    vd.PatOtherTest.Vocabulary2 = visitdata.pot.Vocabulary2;
+                }
+                if (vd.PatOtherTest.Vocabulary3== "")
+                {
+                    vd.PatOtherTest.Vocabulary3 = visitdata.pot.Vocabulary3;
+                }
+                if (vd.PatOtherTest.Vocabulary4 == "")
+                {
+                    vd.PatOtherTest.Vocabulary4 = visitdata.pot.Vocabulary4;
+                }
+                if (vd.PatOtherTest.ConnectNumber1 == "")
+                {
+                    vd.PatOtherTest.ConnectNumber1 = visitdata.pot.ConnectNumber1;
+                }
+                if (vd.PatOtherTest.ConnectNumber2 == "")
+                {
+                    vd.PatOtherTest.ConnectNumber2 = visitdata.pot.ConnectNumber2;
+                }
+                if (vd.PatOtherTest.PatCDR== "")
+                {
+                    vd.PatOtherTest.PatCDR = visitdata.pot.PatCDR;
+                }
+                if (vd.PatOtherTest.PatGDS == "")
+                {
+                    vd.PatOtherTest.PatGDS = visitdata.pot.PatGDS;
+                }
+                if (vd.PatOtherTest.Picture1 == "")
+                {
+                    vd.PatOtherTest.Picture1 = visitdata.pot.Picture1;
+                }
+                if (vd.PatOtherTest.Picture2 == "")
+                {
+                    vd.PatOtherTest.Picture2= visitdata.pot.Picture2;
+                }
+                if (vd.PatOtherTest.Picture3 == "")
+                {
+                    vd.PatOtherTest.Picture3 = visitdata.pot.Picture3;
+                }
+                if (vd.PatOtherTest.VocabularyAnalyse1== "")
+                {
+                    vd.PatOtherTest.VocabularyAnalyse1 = visitdata.pot.VocabularyAnalyse1;
+                }
+                if (vd.PatOtherTest.VocabularyAnalyse2 == "")
+                {
+                    vd.PatOtherTest.VocabularyAnalyse2 = visitdata.pot.VocabularyAnalyse2;
+                }
             }
             return true;
         }
