@@ -9,28 +9,32 @@
 </p>
 <script type="text/javascript">
     $(function () {
-        $("#认知检查").addClass("selected");   
+                $("#认知检查").addClass("selected");   
                 $(".active").next().addClass("active");
                 $(".active").first().removeClass("active");
-        //$(".button").click(function () {
-        var OCX = document.getElementById('Reporter2');
+       
+                var OCX = document.getElementById('Reporter2');
         try {
-            OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\LNCDtemp");
-        }
-        catch (err) {
+            OCX.OpenReport("D:\\Reporter2OCX");
+              }
+         catch (err)
+          {
             var b = confirm("是否下载显示控件");
             if (b) {//download installer
                 var strOCXURL;
-            strOCXURL= "http://"+location.host+"/LNCDCDSS/CDSSOCX.exe";
+              strOCXURL= "http://"+location.host+"/LNCDCDSS/CDSSOCX.exe";
             //window.alert(strOCXURL);
-            window.location.href = strOCXURL;
+             window.location.href = strOCXURL;
             }
         }
-        OCX.ShowReport();
-        OCX.ShowThisPage("认知检查");
-        // })
-        $("#btn2").hide();
-        $("#btn2").click(function () {
+          var a = $.parseJSON( '@Html.Raw(Json.Encode(ViewData["data"]))');
+         var t= a.Data;
+         var s=t["1"];
+           OCX.ShowReport();
+           OCX.ShowThisPage("认知检查");
+       
+           $("#btn2").hide();
+           $("#btn2").click(function () {
 
 
             $(".selected").last().removeClass("selected");

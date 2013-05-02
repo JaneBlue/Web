@@ -19,7 +19,15 @@ namespace LNCDCDSS.Controllers
             string[] IDs = identity.Split(new Char[] { '%' });
             this.TempData["PatID"] =IDs[0];
             this.TempData["ContinueVisitID"] = IDs[1];
+            VisitRecordOperation vr = new VisitRecordOperation();
+            string[] exams= vr.GetExamContent(IDs[0], IDs[1]);
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("1", "111"); 
+            dict.Add("2", "222");
+            ViewData["data"] = Json(dict);
             return View();
+           
+
         }
         [HttpPost]
         public JsonResult Save()
