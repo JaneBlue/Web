@@ -134,6 +134,7 @@ namespace LNCDCDSS.Models
             pt.VisitRecord.Last().CDSSDiagnosis = vsr.CDSSDiagnosis;
             pt.VisitRecord.Last().DiagnosisiResult = vsr.CDSSDiagnosis;
             pt.VisitRecord.Last().RecordNote = vsr.RecordNote;
+            context.SaveChanges();
             return true;
 
         }
@@ -224,12 +225,12 @@ namespace LNCDCDSS.Models
             { }
             return conttext;
         }
-        public string[] GetExamContent(string PatID,string RecordID)
+        public string[] GetExamContent(string PatID, string RecordID)
         {
             int recordId = int.Parse(RecordID);
             PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
             VisitRecord vd = context.VisitRecordSet.Find(recordId);
-            string[] content =new string[16];
+            string[] content = new string[16];
             // string test = vd.PatADL.Total + vd.PatMMSE.Total;
             for (int i = 0; i < 16; i++)
             {
@@ -237,42 +238,42 @@ namespace LNCDCDSS.Models
             }
             try
             {
-               
+
                 if (vd.PatMMSE != null)
                 {
                     content[0] = vd.PatMMSE.Total;
                 }
-                
+
                 if (vd.PatMoCA != null)
                 {
-                    content[1]= vd.PatMoCA.Total;
+                    content[1] = vd.PatMoCA.Total;
                 }
                 if (vd.PatADL != null)
                 {
-                   content[2]=vd.PatADL.Total;
+                    content[2] = vd.PatADL.Total;
                 }
-                
+
                 if (vd.PatOtherTest != null)
                 {
                     content[3] = vd.PatOtherTest.PatCDR;
-                   content[4] = vd.PatOtherTest.PatGDS;
-                   content[5]=vd.PatOtherTest.Vocabulary1;
-                   content[6]= vd.PatOtherTest.Vocabulary2;
-                   content[7]= vd.PatOtherTest.Vocabulary3;
-                   content[8]= vd.PatOtherTest.Vocabulary4;
-                   content[9]= vd.PatOtherTest.VocabularyAnalyse1;
-                   content[10]= vd.PatOtherTest.VocabularyAnalyse2;
-                   content[11]=vd.PatOtherTest.Picture1;
-                    content[12]= vd.PatOtherTest.Picture2;
-                   content[13]= vd.PatOtherTest.Picture3;
-                   content[14]=vd.PatOtherTest.ConnectNumber1;
-                   content[15]= vd.PatOtherTest.ConnectNumber2;
+                    content[4] = vd.PatOtherTest.PatGDS;
+                    content[5] = vd.PatOtherTest.Vocabulary1;
+                    content[6] = vd.PatOtherTest.Vocabulary2;
+                    content[7] = vd.PatOtherTest.Vocabulary3;
+                    content[8] = vd.PatOtherTest.Vocabulary4;
+                    content[9] = vd.PatOtherTest.VocabularyAnalyse1;
+                    content[10] = vd.PatOtherTest.VocabularyAnalyse2;
+                    content[11] = vd.PatOtherTest.Picture1;
+                    content[12] = vd.PatOtherTest.Picture2;
+                    content[13] = vd.PatOtherTest.Picture3;
+                    content[14] = vd.PatOtherTest.ConnectNumber1;
+                    content[15] = vd.PatOtherTest.ConnectNumber2;
                 }
 
-                
+
             }
             catch (Exception e)
-            { 
+            {
             }
             return content;
         }
@@ -384,90 +385,107 @@ namespace LNCDCDSS.Models
 
             }
         }
-        public bool SaveContinueRecord(string PatID, string RecordID,VisitData visitdata)
+        public bool SaveContinueRecord(string PatID, string RecordID, VisitData visitdata)
         {
             try
-        {
-            int recordId = int.Parse(RecordID);
-            VisitRecord vd = context.VisitRecordSet.Find(recordId);
-            if (vd.PatADL == null ||vd.PatADL.Total=="")
             {
-                vd.PatADL=visitdata.pal;
+
+                int recordId = int.Parse(RecordID);
+                VisitRecord vd = context.VisitRecordSet.Find(recordId);
+                if (vd.PatADL == null)
+                {
+                    vd.PatADL = visitdata.pal;
+                }
+                else if (vd.PatADL.Total == "")
+                {
+                    ObjectMapper.CopyValueProperties(visitdata.pal, vd.PatADL);
+                }
+                if (vd.PatMMSE == null)
+                {
+                    vd.PatMMSE = visitdata.pme;
+                }
+                else if (vd.PatMMSE.Total == "")
+                {
+                    ObjectMapper.CopyValueProperties(visitdata.pme, vd.PatMMSE);
+                }
+                if (vd.PatMoCA == null)
+                {
+                    vd.PatMoCA = visitdata.pma;
+                }
+                else if (vd.PatMoCA.Total == "")
+                {
+                    ObjectMapper.CopyValueProperties(visitdata.pma, vd.PatMoCA);
+                }
+                if (vd.PatOtherTest == null)
+                {
+                    vd.PatOtherTest = visitdata.pot;
+                }
+                else
+                {
+                    if (vd.PatOtherTest.Vocabulary1 == "")
+                    {
+                        vd.PatOtherTest.Vocabulary1 = visitdata.pot.Vocabulary1;
+                    }
+                    if (vd.PatOtherTest.Vocabulary2 == "")
+                    {
+                        vd.PatOtherTest.Vocabulary2 = visitdata.pot.Vocabulary2;
+                    }
+                    if (vd.PatOtherTest.Vocabulary3 == "")
+                    {
+                        vd.PatOtherTest.Vocabulary3 = visitdata.pot.Vocabulary3;
+                    }
+                    if (vd.PatOtherTest.Vocabulary4 == "")
+                    {
+                        vd.PatOtherTest.Vocabulary4 = visitdata.pot.Vocabulary4;
+                    }
+                    if (vd.PatOtherTest.ConnectNumber1 == "")
+                    {
+                        vd.PatOtherTest.ConnectNumber1 = visitdata.pot.ConnectNumber1;
+                    }
+                    if (vd.PatOtherTest.ConnectNumber2 == "")
+                    {
+                        vd.PatOtherTest.ConnectNumber2 = visitdata.pot.ConnectNumber2;
+                    }
+                    if (vd.PatOtherTest.PatCDR == "")
+                    {
+                        vd.PatOtherTest.PatCDR = visitdata.pot.PatCDR;
+                    }
+                    if (vd.PatOtherTest.PatGDS == "")
+                    {
+                        vd.PatOtherTest.PatGDS = visitdata.pot.PatGDS;
+                    }
+                    if (vd.PatOtherTest.Picture1 == "")
+                    {
+                        vd.PatOtherTest.Picture1 = visitdata.pot.Picture1;
+                    }
+                    if (vd.PatOtherTest.Picture2 == "")
+                    {
+                        vd.PatOtherTest.Picture2 = visitdata.pot.Picture2;
+                    }
+                    if (vd.PatOtherTest.Picture3 == "")
+                    {
+                        vd.PatOtherTest.Picture3 = visitdata.pot.Picture3;
+                    }
+                    if (vd.PatOtherTest.VocabularyAnalyse1 == "")
+                    {
+                        vd.PatOtherTest.VocabularyAnalyse1 = visitdata.pot.VocabularyAnalyse1;
+                    }
+                    if (vd.PatOtherTest.VocabularyAnalyse2 == "")
+                    {
+                        vd.PatOtherTest.VocabularyAnalyse2 = visitdata.pot.VocabularyAnalyse2;
+                    }
+                    PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
+
+
+                }
+                context.SaveChanges();
+                return true;
             }
-            if (vd.PatMMSE == null || vd.PatMMSE.Total == "")
+            catch (System.Exception ex)
             {
-                vd.PatMMSE=visitdata.pme;
+                return false;
             }
-            if (vd.PatMoCA == null||vd.PatMoCA.Total=="")
-            {
-                vd.PatMoCA = visitdata.pma;
-            }
-            if (vd.PatOtherTest == null)
-            {
-                vd.PatOtherTest = visitdata.pot;
-            }
-            else
-            {
-                if (vd.PatOtherTest.Vocabulary1=="")
-                {
-                    vd.PatOtherTest.Vocabulary1 = visitdata.pot.Vocabulary1;
-                }
-                if (vd.PatOtherTest.Vocabulary2 == "")
-                {
-                    vd.PatOtherTest.Vocabulary2 = visitdata.pot.Vocabulary2;
-                }
-                if (vd.PatOtherTest.Vocabulary3== "")
-                {
-                    vd.PatOtherTest.Vocabulary3 = visitdata.pot.Vocabulary3;
-                }
-                if (vd.PatOtherTest.Vocabulary4 == "")
-                {
-                    vd.PatOtherTest.Vocabulary4 = visitdata.pot.Vocabulary4;
-                }
-                if (vd.PatOtherTest.ConnectNumber1 == "")
-                {
-                    vd.PatOtherTest.ConnectNumber1 = visitdata.pot.ConnectNumber1;
-                }
-                if (vd.PatOtherTest.ConnectNumber2 == "")
-                {
-                    vd.PatOtherTest.ConnectNumber2 = visitdata.pot.ConnectNumber2;
-                }
-                if (vd.PatOtherTest.PatCDR== "")
-                {
-                    vd.PatOtherTest.PatCDR = visitdata.pot.PatCDR;
-                }
-                if (vd.PatOtherTest.PatGDS == "")
-                {
-                    vd.PatOtherTest.PatGDS = visitdata.pot.PatGDS;
-                }
-                if (vd.PatOtherTest.Picture1 == "")
-                {
-                    vd.PatOtherTest.Picture1 = visitdata.pot.Picture1;
-                }
-                if (vd.PatOtherTest.Picture2 == "")
-                {
-                    vd.PatOtherTest.Picture2= visitdata.pot.Picture2;
-                }
-                if (vd.PatOtherTest.Picture3 == "")
-                {
-                    vd.PatOtherTest.Picture3 = visitdata.pot.Picture3;
-                }
-                if (vd.PatOtherTest.VocabularyAnalyse1== "")
-                {
-                    vd.PatOtherTest.VocabularyAnalyse1 = visitdata.pot.VocabularyAnalyse1;
-                }
-                if (vd.PatOtherTest.VocabularyAnalyse2 == "")
-                {
-                    vd.PatOtherTest.VocabularyAnalyse2 = visitdata.pot.VocabularyAnalyse2;
-                }
-            }
-            return true;
-        }
-        catch (System.Exception ex)
-        {
-            return false;
-        }
-           
+
         }
     }
 }
