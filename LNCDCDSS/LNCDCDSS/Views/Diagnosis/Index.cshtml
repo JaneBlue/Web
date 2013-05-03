@@ -333,6 +333,11 @@
             var strVocabularyAnalyse2 = OCX.GetData("Data_source/PatOtherTest/VocabularyAnalyse2");
             var strPatCDR = OCX.GetData("Data_source/PatOtherTest/PatCDR");
             var strPatGDS = OCX.GetData("Data_source/PatOtherTest/PatGDS2");
+            
+            if("" == strVocabularyAnalyse1 && "" != strVocabularyAnalyse2)
+                strVocabularyAnalyse1 = "0";
+            else if("" == strVocabularyAnalyse2 && "" != strVocabularyAnalyse1)
+                strVocabularyAnalyse2 = "0";
 
             //get the data of ppe
             var strHeight = OCX.GetData("Data_source/PatPhysicalExam/Height");
