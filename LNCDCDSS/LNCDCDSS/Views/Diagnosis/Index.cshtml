@@ -13,7 +13,7 @@
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
         try {
-            OCX.OpenReport("D:\\CDSSOCX");
+            OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\LNCDtemp");
         }
         catch (err) {
             var b = confirm("是否下载显示控件");
@@ -678,6 +678,10 @@
                 ++nZero;
             }
             if (fMemory - 1 > 0.1 && nZero > 2) {//当M=1或以上，CDR不能为0；在这种情况下，当次要项目的大多数为0时，CDR= 0. 5。
+                fPatCDR = 0.5;
+            }
+
+            if(Math.abs(fMemory - 0.5) < 0.1 && Math.abs(fPatCDR) < 0.1){//如果M=0. 5，CDR不能为0，只能是0. 5或1
                 fPatCDR = 0.5;
             }
 
