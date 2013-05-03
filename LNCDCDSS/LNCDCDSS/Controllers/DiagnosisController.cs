@@ -22,8 +22,22 @@ namespace LNCDCDSS.Controllers
             VisitRecordOperation vr = new VisitRecordOperation();
             string[] exams= vr.GetExamContent(IDs[0], IDs[1]);
             Dictionary<string, string> dict = new Dictionary<string, string>();
-            dict.Add("1", "111"); 
-            dict.Add("2", "222");
+            dict.Add("MMSE", exams[0]);
+            dict.Add("MoCA", exams[1]);
+            dict.Add("ADL", exams[2]);
+            dict.Add("PatCDR", exams[3]);
+            dict.Add("PatGDS", exams[4]);
+            dict.Add("Vocabulary1", exams[5]);
+            dict.Add("Vocabulary2", exams[6]);
+            dict.Add("Vocabulary3", exams[7]);
+            dict.Add("Vocabulary4", exams[8]);
+            dict.Add("VocabularyAnalyse1", exams[9]);
+            dict.Add("VocabularyAnalyse2", exams[10]);
+            dict.Add("Picture1", exams[11]);
+            dict.Add("Picture2", exams[12]);
+            dict.Add("Picture3", exams[13]);
+            dict.Add("ConnectNumber1", exams[14]);
+            dict.Add("ConnectNumber2", exams[15]);
             ViewData["data"] = Json(dict);
             return View();
            

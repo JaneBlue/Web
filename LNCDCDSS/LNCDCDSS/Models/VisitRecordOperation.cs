@@ -231,7 +231,10 @@ namespace LNCDCDSS.Models
             VisitRecord vd = context.VisitRecordSet.Find(recordId);
             string[] content =new string[16];
             // string test = vd.PatADL.Total + vd.PatMMSE.Total;
-
+            for (int i = 0; i < 16; i++)
+            {
+                content[i] = "";
+            }
             try
             {
                

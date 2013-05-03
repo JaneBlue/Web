@@ -15,7 +15,7 @@
        
                 var OCX = document.getElementById('Reporter2');
         try {
-            OCX.OpenReport("D:\\Reporter2OCX");
+            OCX.OpenReport("D:\\CDSSOCX");
               }
          catch (err)
           {
@@ -29,7 +29,22 @@
         }
           var a = $.parseJSON( '@Html.Raw(Json.Encode(ViewData["data"]))');
          var t= a.Data;
-         var s=t["1"];
+           OCX.SetData("Data_source/LastScore/MMSE",t["MMSE"]);
+            OCX.SetData("Data_source/LastScore/MoCA",t["MoCA"]);
+            OCX.SetData("Data_source/LastScore/ADL",t["ADL"]);
+            OCX.SetData("Data_source/LastScore/Vocabulary1",t["Vocabulary1"]);
+            OCX.SetData("Data_source/LastScore/Vocabulary2",t["Vocabulary2"]);
+            OCX.SetData("Data_source/LastScore/Vocabulary3",t["Vocabulary3"]);
+            OCX.SetData("Data_source/LastScore/Vocabulary4",t["Vocabulary4"]);
+            OCX.SetData("Data_source/LastScore/Picture1",t["Picture1"]);
+            OCX.SetData("Data_source/LastScore/Picture2",t["Picture2"]);
+            OCX.SetData("Data_source/LastScore/Picture3",t["Picture3"]);
+            OCX.SetData("Data_source/LastScore/ConnectNumber1",t["ConnectNumber1"]);
+            OCX.SetData("Data_source/LastScore/ConnectNumber2",t["ConnectNumber2"]);
+            OCX.SetData("Data_source/LastScore/VocabularyAnalyse1",t["VocabularyAnalyse1"]);
+            OCX.SetData("Data_source/LastScore/VocabularyAnalyse2",t["VocabularyAnalyse2"]);
+            OCX.SetData("Data_source/LastScore/PatCDR",t["PatCDR"]);
+             OCX.SetData("Data_source/LastScore/PatGDS",t["PatGDS"]);
            OCX.ShowReport();
            OCX.ShowThisPage("认知检查");
        
