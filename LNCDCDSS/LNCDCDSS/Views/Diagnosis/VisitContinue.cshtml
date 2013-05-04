@@ -735,6 +735,106 @@
             OCX.SetData("Data_source/PatMoCA/Total", strTotalpma);
             OCX.SetData("Data_source/PatOtherTest/PatCDR1", strPatCDR);
 
+            var strDiagnosisMMSE, strDiagnosisMoCA, strDiagnosisADL, strDiagnosisVocabulary1, strDiagnosisVocabulary2, strDiagnosisVocabulary3;
+            var strDiagnosisVocabulary4, strDiagnosisPicture1, strDiagnosisPicture2, strDiagnosisPicture3, strDiagnosisConnectNumber1;
+            var strDiagnosisConnectNumber2, strDiagnosisVocabularyAnalyse1, strDiagnosisVocabularyAnalyse2, strDiagnosisPatCDR, strDiagnosisPatGDS;
+            strDiagnosisMMSE = OCX.GetData("Data_source/LastScore/MMSE");
+            strDiagnosisMoCA = OCX.GetData("Data_source/LastScore/MoCA");
+            strDiagnosisADL = OCX.GetData("Data_source/LastScore/ADL");
+            strDiagnosisVocabulary1 = OCX.GetData("Data_source/LastScore/Vocabulary1");
+            strDiagnosisVocabulary2 = OCX.GetData("Data_source/LastScore/Vocabulary2");
+            strDiagnosisVocabulary3 = OCX.GetData("Data_source/LastScore/Vocabulary3");
+            strDiagnosisVocabulary4 = OCX.GetData("Data_source/LastScore/Vocabulary4");
+            strDiagnosisPicture1 = OCX.GetData("Data_source/LastScore/Picture1");
+            strDiagnosisPicture2 = OCX.GetData("Data_source/LastScore/Picture2");
+            strDiagnosisPicture3 = OCX.GetData("Data_source/LastScore/Picture3");
+            strDiagnosisConnectNumber1 = OCX.GetData("Data_source/LastScore/ConnectNumber1");
+            strDiagnosisConnectNumber2 = OCX.GetData("Data_source/LastScore/ConnectNumber2");
+            strDiagnosisVocabularyAnalyse1 = OCX.GetData("Data_source/LastScore/VocabularyAnalyse1");
+            strDiagnosisVocabularyAnalyse2 = OCX.GetData("Data_source/LastScore/VocabularyAnalyse2");
+            strDiagnosisPatCDR = OCX.GetData("Data_source/LastScore/PatCDR");
+            strDiagnosisPatGDS = OCX.GetData("Data_source/LastScore/PatGDS");
+
+            if("" == strDiagnosisMMSE) {
+                strDiagnosisMMSE = OCX.GetData("Data_source/PatMMSE/Total");
+            }
+            OCX.SetData("Data_source/Diganosis/MMSE", strDiagnosisMMSE);
+
+            if("" == strDiagnosisMoCA) {
+                strDiagnosisMoCA = OCX.GetData("Data_source/PatMoCA/Total");
+            }
+            OCX.SetData("Data_source/Diganosis/MoCA", strDiagnosisMoCA);
+
+            if("" == strDiagnosisADL) {
+                strDiagnosisADL = OCX.GetData("Data_source/PatADL/Total");
+            }
+            OCX.SetData("Data_source/Diganosis/ADL", strDiagnosisADL);
+
+            if("" == strDiagnosisVocabulary1) {
+                strDiagnosisVocabulary1 = OCX.GetData("Data_source/PatOtherTest/Vocabulary1");
+            }
+            OCX.SetData("Data_source/Diganosis/Vocabulary1", strDiagnosisVocabulary1);
+
+            if("" == strDiagnosisVocabulary2) {
+                strDiagnosisVocabulary2 = OCX.GetData("Data_source/PatOtherTest/Vocabulary2");
+            }
+            OCX.SetData("Data_source/Diganosis/Vocabulary2", strDiagnosisVocabulary2);
+
+            if("" == strDiagnosisVocabulary3) {
+                strDiagnosisVocabulary3 = OCX.GetData("Data_source/PatOtherTest/Vocabulary3");
+            }
+            OCX.SetData("Data_source/Diganosis/Vocabulary3", strDiagnosisVocabulary3);
+
+            if("" == strDiagnosisVocabulary4) {
+                strDiagnosisVocabulary4 = OCX.GetData("Data_source/PatOtherTest/Vocabulary4");
+            }
+            OCX.SetData("Data_source/Diganosis/Vocabulary4", strDiagnosisVocabulary4);
+
+            if("" == strDiagnosisPicture1) {
+                strDiagnosisPicture1 = OCX.GetData("Data_source/PatOtherTest/Picture1");
+            }
+            OCX.SetData("Data_source/Diganosis/Picture1", strDiagnosisPicture1);
+
+            if("" == strDiagnosisPicture2) {
+                strDiagnosisPicture2 = OCX.GetData("Data_source/PatOtherTest/Picture2");
+            }
+            OCX.SetData("Data_source/Diganosis/Picture2", strDiagnosisPicture2);
+
+            if("" == strDiagnosisPicture3) {
+                strDiagnosisPicture3 = OCX.GetData("Data_source/PatOtherTest/Picture3");
+            }
+            OCX.SetData("Data_source/Diganosis/Picture3", strDiagnosisPicture3);
+
+            if("" == strDiagnosisConnectNumber1) {
+                strDiagnosisConnectNumber1 = OCX.GetData("Data_source/PatOtherTest/ConnectNumber1");
+            }
+            OCX.SetData("Data_source/Diganosis/ConnectNumber1", strDiagnosisConnectNumber1);
+
+            if("" == strDiagnosisConnectNumber2) {
+                strDiagnosisConnectNumber2 = OCX.GetData("Data_source/PatOtherTest/ConnectNumber2");
+            }
+            OCX.SetData("Data_source/Diganosis/ConnectNumber2", strDiagnosisConnectNumber2);
+
+            if("" == strDiagnosisVocabularyAnalyse1) {
+                strDiagnosisVocabularyAnalyse1 = OCX.GetData("Data_source/PatOtherTest/VocabularyAnalyse1");
+            }
+            OCX.SetData("Data_source/Diganosis/VocabularyAnalyse1", strDiagnosisVocabularyAnalyse1);
+
+            if("" == strDiagnosisVocabularyAnalyse2) {
+                strDiagnosisVocabularyAnalyse2 = OCX.GetData("Data_source/PatOtherTest/VocabularyAnalyse2");
+            }
+            OCX.SetData("Data_source/Diganosis/VocabularyAnalyse2", strDiagnosisVocabularyAnalyse2);
+
+            if("" == strDiagnosisPatCDR) {
+                strDiagnosisPatCDR = OCX.GetData("Data_source/PatOtherTest/PatCDR1");
+            }
+            OCX.SetData("Data_source/Diganosis/PatCDR", strDiagnosisPatCDR);
+
+            if("" == strDiagnosisPatGDS) {
+                strDiagnosisPatGDS = OCX.GetData("Data_source/PatOtherTest/PatGDS2");
+            }
+            OCX.SetData("Data_source/Diganosis/PatGDS", strDiagnosisPatGDS);
+
             var thing = { pma: { MC1: strMC1, MC2: strMC2
             , MC3: strMC3, MC4: strMC4, MC5: strMC5
             , MC6: strMC6, MC7: strMC7, MC8: strMC8
