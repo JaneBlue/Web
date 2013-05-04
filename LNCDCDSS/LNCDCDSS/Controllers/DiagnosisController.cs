@@ -85,7 +85,7 @@ namespace LNCDCDSS.Controllers
                 VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
 
                 vr.SaveContinueRecord(PatID, VisitID, obj);
-
+               
                 //
 
             }

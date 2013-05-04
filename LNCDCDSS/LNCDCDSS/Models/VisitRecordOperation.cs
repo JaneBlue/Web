@@ -132,7 +132,7 @@ namespace LNCDCDSS.Models
         {
             PatBasicInfor pt = context.PatBasicInforSet.Find(ID);
             pt.VisitRecord.Last().CDSSDiagnosis = vsr.CDSSDiagnosis;
-            pt.VisitRecord.Last().DiagnosisiResult = vsr.CDSSDiagnosis;
+            pt.VisitRecord.Last().DiagnosisiResult = vsr.DiagnosisiResult;
             pt.VisitRecord.Last().RecordNote = vsr.RecordNote;
             context.SaveChanges();
             return true;
@@ -474,10 +474,14 @@ namespace LNCDCDSS.Models
                     {
                         vd.PatOtherTest.VocabularyAnalyse2 = visitdata.pot.VocabularyAnalyse2;
                     }
-                    PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
+                   
 
 
                 }
+
+                vd.CDSSDiagnosis = visitdata.vsr.CDSSDiagnosis;
+                vd.DiagnosisiResult = visitdata.vsr.DiagnosisiResult;
+                vd.RecordNote = visitdata.vsr.RecordNote;
                 context.SaveChanges();
                 return true;
             }
