@@ -487,5 +487,94 @@ namespace LNCDCDSS.Models
             }
 
         }
+        public bool CopyContinueRecord(string PatID, string RecordID, VisitData visitdata)
+        {
+            try
+            {
+
+                int recordId = int.Parse(RecordID);
+                VisitRecord vd = context.VisitRecordSet.Find(recordId);
+                if (vd.PatADL != null && vd.PatADL.Total != "")
+                {
+                    ObjectMapper.CopyValueProperties(vd.PatADL, visitdata.pal);
+                }
+
+
+                if (vd.PatMMSE != null && vd.PatMMSE.Total != "")
+                {
+                    ObjectMapper.CopyValueProperties(vd.PatMMSE, visitdata.pme);
+                }
+
+                if (vd.PatMoCA != null && vd.PatMoCA.Total != "")
+                {
+                    ObjectMapper.CopyValueProperties(vd.PatMoCA, visitdata.pma);
+                }
+
+                if (vd.PatOtherTest != null)
+                {
+                    if (vd.PatOtherTest.Vocabulary1 != "")
+                    {
+                        visitdata.pot.Vocabulary1 = vd.PatOtherTest.Vocabulary1;
+                    }
+                    if (vd.PatOtherTest.Vocabulary2 != "")
+                    {
+                        visitdata.pot.Vocabulary2 = vd.PatOtherTest.Vocabulary2;
+                    }
+                    if (vd.PatOtherTest.Vocabulary3 != "")
+                    {
+                        visitdata.pot.Vocabulary3 = vd.PatOtherTest.Vocabulary3;
+                    }
+                    if (vd.PatOtherTest.Vocabulary4 != "")
+                    {
+                        visitdata.pot.Vocabulary4 = vd.PatOtherTest.Vocabulary4;
+                    }
+                    if (vd.PatOtherTest.ConnectNumber1 != "")
+                    {
+                        visitdata.pot.ConnectNumber1 = vd.PatOtherTest.ConnectNumber1;
+                    }
+                    if (vd.PatOtherTest.ConnectNumber2 != "")
+                    {
+                        visitdata.pot.ConnectNumber2 = vd.PatOtherTest.ConnectNumber2;
+                    }
+                    if (vd.PatOtherTest.PatCDR != "")
+                    {
+                        visitdata.pot.PatCDR = vd.PatOtherTest.PatCDR;
+                    }
+                    if (vd.PatOtherTest.PatGDS != "")
+                    {
+                        visitdata.pot.PatGDS = vd.PatOtherTest.PatGDS;
+                    }
+                    if (vd.PatOtherTest.Picture1 != "")
+                    {
+                        visitdata.pot.Picture1 = vd.PatOtherTest.Picture1;
+                    }
+                    if (vd.PatOtherTest.Picture2 != "")
+                    {
+                        visitdata.pot.Picture2 = vd.PatOtherTest.Picture2;
+                    }
+                    if (vd.PatOtherTest.Picture3 != "")
+                    {
+                        visitdata.pot.Picture3 = vd.PatOtherTest.Picture3;
+                    }
+                    if (vd.PatOtherTest.VocabularyAnalyse1 != "")
+                    {
+                        visitdata.pot.VocabularyAnalyse1 = vd.PatOtherTest.VocabularyAnalyse1;
+                    }
+                    if (vd.PatOtherTest.VocabularyAnalyse2 != "")
+                    {
+                        visitdata.pot.VocabularyAnalyse2 = vd.PatOtherTest.VocabularyAnalyse2;
+                    }
+
+
+                }
+
+                return true;
+            }
+            catch (System.Exception ex)
+            {
+                return false;
+            }
+
+        }
     }
 }

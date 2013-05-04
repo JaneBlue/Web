@@ -885,7 +885,7 @@
                 OCX.ShowThisPage(name);
                 if (name == "辅助诊断") {
                     $.ajax({
-                        url: '@Url.Action("CDSSdiagnosis", "Diagnosis")',
+                        url: '@Url.Action("ContinueCDSSdiagnosis", "Diagnosis")',
                         type: "POST",
                         data: { postjson: encoded },
                         success: function (data) {
