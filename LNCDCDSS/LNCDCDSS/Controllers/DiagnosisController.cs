@@ -256,7 +256,7 @@ namespace LNCDCDSS.Controllers
                 if ("AD" == strResult)
                     strResult = "阿尔兹海默症，具体类型待定，请结合病史";
                 else if ("MCI" == strResult)
-                    strResult = "痴呆或轻度认知功能障碍，具体类型待定，请结合病史";
+                    strResult = "轻度认知功能障碍，具体类型待定，请结合病史";
                 else if ("Normal" == strResult)
                     strResult = "正常";
             }
