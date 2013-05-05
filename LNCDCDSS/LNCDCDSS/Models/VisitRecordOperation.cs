@@ -230,9 +230,9 @@ namespace LNCDCDSS.Models
             int recordId = int.Parse(RecordID);
             PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
             VisitRecord vd = context.VisitRecordSet.Find(recordId);
-            string[] content = new string[16];
+            string[] content = new string[17];
             // string test = vd.PatADL.Total + vd.PatMMSE.Total;
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 17; i++)
             {
                 content[i] = "";
             }
@@ -269,7 +269,10 @@ namespace LNCDCDSS.Models
                     content[14] = vd.PatOtherTest.ConnectNumber1;
                     content[15] = vd.PatOtherTest.ConnectNumber2;
                 }
-
+                if(vd.RecordNote!=null)
+                {
+                    content[16] = vd.RecordNote;
+                }
 
             }
             catch (Exception e)
@@ -280,6 +283,7 @@ namespace LNCDCDSS.Models
         public List<PatBasicInfor> GetPat(List<string> Condition)
         {
             List<PatBasicInfor> pat = new List<PatBasicInfor>();
+            List<PatBasicInfor> Unormalpat = new List<PatBasicInfor>();
             var pats = from p in context.PatBasicInforSet.ToList()
                        where (string.IsNullOrEmpty(Condition[0]) ? true : p.Name == Condition[0])
                       && (string.IsNullOrEmpty(Condition[1]) ? true : p.Sex == Condition[1])
@@ -289,11 +293,22 @@ namespace LNCDCDSS.Models
 
             try
             {
-
+                
                 foreach (PatBasicInfor pt in pats)
+                {if (pt.VisitRecord!=null&&pt.VisitRecord.Count!=0)
                 {
-                    pat.Add(pt);
+                     pat.Add(pt);
+                } 
+                 else
+                {
+                    Unormalpat.Add(pt);
                 }
+                }
+                if (string.IsNullOrEmpty(Condition[2]))
+                {
+                    InsertSort(pat);
+                }
+                pat.AddRange(Unormalpat);
             }
             catch (Exception e)
             {
@@ -580,5 +595,25 @@ namespace LNCDCDSS.Models
             }
 
         }
+        public static void InsertSort(List<PatBasicInfor> data)
+        {
+            var count = data.Count;
+            for (int i = 1; i < count; i++)
+            {
+                var t = data[i].VisitRecord.Last().VisitDate;
+                var d = data[i];
+                var j = i;
+                while (j > 0 && data[j - 1].VisitRecord.Last().VisitDate < t)
+                {
+                    data[j] = data[j - 1];
+                    --j;
+                }
+                data[j] =d;
+            }
+        }
+
+        
+
+
     }
 }

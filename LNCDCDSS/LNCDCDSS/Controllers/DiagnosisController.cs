@@ -38,6 +38,7 @@ namespace LNCDCDSS.Controllers
             dict.Add("Picture3", exams[13]);
             dict.Add("ConnectNumber1", exams[14]);
             dict.Add("ConnectNumber2", exams[15]);
+            dict.Add("RecordNote", exams[16]);
             ViewData["data"] = Json(dict);
             return View();
 
