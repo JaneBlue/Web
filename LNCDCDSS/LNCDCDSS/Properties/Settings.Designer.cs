@@ -26,10 +26,20 @@ namespace LNCDCDSS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.3.9/InferenceWebservice/InferenceService.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://127.0.0.1/InferenceService/InferenceService.asmx")]
         public string LNCDCDSS_WebReference_InferenceService {
             get {
                 return ((string)(this["LNCDCDSS_WebReference_InferenceService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.1.61:9090/adr/AQLExecute")]
+        public string LNCDCDSS_AQLExecute_AQLExecuteImplService {
+            get {
+                return ((string)(this["LNCDCDSS_AQLExecute_AQLExecuteImplService"]));
             }
         }
     }

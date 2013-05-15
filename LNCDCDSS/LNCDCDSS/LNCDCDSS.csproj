@@ -149,6 +149,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Web References\AQLExecute\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\WebReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -254,6 +259,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Content Include="Views\Diagnosis\VisitContinue.cshtml" />
+    <None Include="Web References\AQLExecute\AQLExecuteImplService.wsdl" />
+    <None Include="Web References\AQLExecute\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\WebReference\InferenceService.disco" />
     <Content Include="Scripts\shBrushJScript.js" />
     <Content Include="Scripts\shCore.js" />
@@ -331,6 +341,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.1.61:9090/adr/AQLExecute%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AQLExecute\</RelPath>
+      <UpdateFromURL>http://192.168.1.61:9090/adr/AQLExecute%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LNCDCDSS_AQLExecute_AQLExecuteImplService</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://192.168.3.9/InferenceWebservice/InferenceService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WebReference\</RelPath>

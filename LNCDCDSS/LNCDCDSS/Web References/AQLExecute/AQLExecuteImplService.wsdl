@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.adr/" name="AQLExecuteImplService" targetNamespace="http://ws.adr/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://ws.adr/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="insert" type="tns:insert" />
+      <xs:element name="insertResponse" type="tns:insertResponse" />
+      <xs:element name="reconfigure" type="tns:reconfigure" />
+      <xs:element name="reconfigureResponse" type="tns:reconfigureResponse" />
+      <xs:element name="registerArchetype" type="tns:registerArchetype" />
+      <xs:element name="registerArchetypeResponse" type="tns:registerArchetypeResponse" />
+      <xs:element name="registerArm" type="tns:registerArm" />
+      <xs:element name="registerArmResponse" type="tns:registerArmResponse" />
+      <xs:element name="select" type="tns:select" />
+      <xs:element name="selectResponse" type="tns:selectResponse" />
+      <xs:complexType name="insert">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="insertResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="reconfigure">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="reconfigureResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="select">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="arg2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="selectResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="registerArm">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="registerArmResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="registerArchetype">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="registerArchetypeResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="selectResponse">
+    <wsdl:part name="parameters" element="tns:selectResponse" />
+  </wsdl:message>
+  <wsdl:message name="reconfigureResponse">
+    <wsdl:part name="parameters" element="tns:reconfigureResponse" />
+  </wsdl:message>
+  <wsdl:message name="select">
+    <wsdl:part name="parameters" element="tns:select" />
+  </wsdl:message>
+  <wsdl:message name="registerArm">
+    <wsdl:part name="parameters" element="tns:registerArm" />
+  </wsdl:message>
+  <wsdl:message name="registerArchetypeResponse">
+    <wsdl:part name="parameters" element="tns:registerArchetypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="registerArchetype">
+    <wsdl:part name="parameters" element="tns:registerArchetype" />
+  </wsdl:message>
+  <wsdl:message name="insert">
+    <wsdl:part name="parameters" element="tns:insert" />
+  </wsdl:message>
+  <wsdl:message name="registerArmResponse">
+    <wsdl:part name="parameters" element="tns:registerArmResponse" />
+  </wsdl:message>
+  <wsdl:message name="reconfigure">
+    <wsdl:part name="parameters" element="tns:reconfigure" />
+  </wsdl:message>
+  <wsdl:message name="insertResponse">
+    <wsdl:part name="parameters" element="tns:insertResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AQLExecute">
+    <wsdl:operation name="insert">
+      <wsdl:input name="insert" message="tns:insert" />
+      <wsdl:output name="insertResponse" message="tns:insertResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="reconfigure">
+      <wsdl:input name="reconfigure" message="tns:reconfigure" />
+      <wsdl:output name="reconfigureResponse" message="tns:reconfigureResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="select">
+      <wsdl:input name="select" message="tns:select" />
+      <wsdl:output name="selectResponse" message="tns:selectResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="registerArm">
+      <wsdl:input name="registerArm" message="tns:registerArm" />
+      <wsdl:output name="registerArmResponse" message="tns:registerArmResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="registerArchetype">
+      <wsdl:input name="registerArchetype" message="tns:registerArchetype" />
+      <wsdl:output name="registerArchetypeResponse" message="tns:registerArchetypeResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AQLExecuteImplServiceSoapBinding" type="tns:AQLExecute">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insert">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="insert">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="insertResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reconfigure">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reconfigure">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reconfigureResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="select">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="select">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="selectResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerArm">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="registerArm">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="registerArmResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerArchetype">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="registerArchetype">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="registerArchetypeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AQLExecuteImplService">
+    <wsdl:port name="AQLExecuteImplPort" binding="tns:AQLExecuteImplServiceSoapBinding">
+      <soap:address location="http://192.168.1.61:9090/adr/AQLExecute" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
