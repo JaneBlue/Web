@@ -34,8 +34,186 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="adl-parser-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\adl-parser-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="adl-serializer-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\adl-serializer-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="commons-io-1.2">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\commons-io-1.2.dll</HintPath>
+    </Reference>
+    <Reference Include="commons-io-1.4">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\commons-io-1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="commons-io-2.3">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\commons-io-2.3.dll</HintPath>
+    </Reference>
+    <Reference Include="commons-jxpath-1.3">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\commons-jxpath-1.3.dll</HintPath>
+    </Reference>
+    <Reference Include="commons-lang-2.6">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\commons-lang-2.6.dll</HintPath>
+    </Reference>
+    <Reference Include="dadl-binding-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\dadl-binding-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="dadl-parser-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\dadl-parser-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ikvm">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\ikvm.exe</HintPath>
+    </Reference>
+    <Reference Include="IKVM.AWT.WinForms">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.AWT.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Beans.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Corba.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Reflection">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\IKVM.Runtime.JNI.dll</HintPath>
+    </Reference>
+    <Reference Include="ikvmc">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\ikvm\ikvmc.exe</HintPath>
+    </Reference>
+    <Reference Include="jdom-1.0">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\jdom-1.0.dll</HintPath>
+    </Reference>
+    <Reference Include="joda-time-1.3">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\joda-time-1.3.dll</HintPath>
+    </Reference>
+    <Reference Include="jsr-275-0.9.4">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\jsr-275-0.9.4.dll</HintPath>
+    </Reference>
+    <Reference Include="jsr173_api-1.0">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\jsr173_api-1.0.dll</HintPath>
+    </Reference>
+    <Reference Include="junit-3.8.1">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\junit-3.8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="junit-4.5">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\junit-4.5.dll</HintPath>
+    </Reference>
+    <Reference Include="log4j-1.2.13">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\log4j-1.2.13.dll</HintPath>
+    </Reference>
+    <Reference Include="log4j-1.2.8">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\log4j-1.2.8.dll</HintPath>
+    </Reference>
+    <Reference Include="measure-serv-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\measure-serv-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="mini-termserv-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\mini-termserv-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="oet-parser-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\oet-parser-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="openehr-aom-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\openehr-aom-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="openehr-ap-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\openehr-ap-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="openehr-rm-core-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\openehr-rm-core-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="openehr-rm-domain-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\openehr-rm-domain-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="rm-builder-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\rm-builder-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="rm-skeleton-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\rm-skeleton-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="saxon-8.7">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\saxon-8.7.dll</HintPath>
+    </Reference>
+    <Reference Include="stax-1.1.1-dev">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\stax-1.1.1-dev.dll</HintPath>
+    </Reference>
+    <Reference Include="stax-api-1.0.1">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\stax-api-1.0.1.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
@@ -64,6 +242,24 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="xml-binding-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\xml-binding-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="xml-serializer-1.0.3-SNAPSHOT">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\xml-serializer-1.0.3-SNAPSHOT.dll</HintPath>
+    </Reference>
+    <Reference Include="xmlbeans-2.3.0">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\xmlbeans-2.3.0.dll</HintPath>
+    </Reference>
+    <Reference Include="xmlbeans-xpath-2.3.0">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\xmlbeans-xpath-2.3.0.dll</HintPath>
+    </Reference>
+    <Reference Include="xpp3_min-1.1.4c">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\xpp3_min-1.1.4c.dll</HintPath>
+    </Reference>
+    <Reference Include="xstream-1.3.1">
+      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\xstream-1.3.1.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DAccountController.cs" />
@@ -80,6 +276,9 @@
     <Compile Include="Models\ComplexType1.cs">
       <DependentUpon>LNCDDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CreatedADLHelper.cs" />
+    <Compile Include="Models\DataFromReporter.cs" />
+    <Compile Include="Models\DataFromReporterOperation.cs" />
     <Compile Include="Models\Disease.cs">
       <DependentUpon>LNCDDataModel.tt</DependentUpon>
     </Compile>
@@ -381,7 +580,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>33778</DevelopmentServerPort>
+          <DevelopmentServerPort>54770</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:33778/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
