@@ -3585,7 +3585,7 @@
 				<layout left="0.000000" top="0.264201" width="228.797881" height="146.301186"/>
 				<border_style line-type="solid" line-dash-style="solid" line-color="#FF808040" line-width="0.264201"/>
 				<fill_style fill-type="solid" back-color="#FFC6E2EE"/>
-				<tab_page name="TabPage_1" title="MMSE">
+				<tab_page name="TabPage_1" title="MMSE" visible="false">
 					<layout left="1.056803" top="7.133421" width="226.684275" height="138.639363"/>
 					<border_style line-type="none" line-dash-style="solid" line-color="#FF606060" line-width="0.264201"/>
 					<fill_style fill-type="none"/>
@@ -3689,13 +3689,13 @@
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFFFFFFF" line-width="0.264201"/>
 							<fill_style fill-type="solid" back-color="#FFC6E2EE"/>
 						</groupbox>
-						<label name="Label_199" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_199" font-ref="Font6" alignment-ref="Align4">
 							<text>现在是哪一年：</text>
 							<layout left="-1.321004" top="10.039630" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_1" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="352" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_1" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="352" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="41.215323" top="10.039630" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3705,15 +3705,15 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0005]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_200" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_200" font-ref="Font6" alignment-ref="Align4">
 							<text>现在是什么季节：</text>
-							<layout left="-1.321004" top="17.965653" width="42.272126" height="5.284016"/>
+							<layout left="-1.321004" top="17.965651" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_2" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="351" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_2" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="351" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
-							<layout left="41.215323" top="17.965653" width="19.815059" height="3.963012"/>
+							<layout left="41.215323" top="17.965651" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<unchecked_fill_style fill-type="none"/>
 							<checked_fill_style fill-type="none"/>
@@ -3721,13 +3721,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0009]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_223" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_223" font-ref="Font6" alignment-ref="Align4">
 							<text>现在是几月：</text>
 							<layout left="-1.321004" top="25.891677" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_3" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="350" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_3" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="350" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="41.215323" top="25.891677" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3737,15 +3737,15 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0012]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_224" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_224" font-ref="Font6" alignment-ref="Align4">
 							<text>今天是几号：</text>
-							<layout left="-1.321004" top="33.817701" width="42.272126" height="5.284016"/>
+							<layout left="-1.321004" top="33.817699" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_4" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="349" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_4" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="349" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
-							<layout left="41.215323" top="33.817701" width="19.815059" height="3.963012"/>
+							<layout left="41.215323" top="33.817699" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<unchecked_fill_style fill-type="none"/>
 							<checked_fill_style fill-type="none"/>
@@ -3753,13 +3753,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0015]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_227" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_227" font-ref="Font6" alignment-ref="Align4">
 							<text>今天是星期几：</text>
 							<layout left="-1.321004" top="41.743724" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_5" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="348" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_5" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="348" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="41.215323" top="41.743724" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3769,13 +3769,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0016]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_228" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_228" font-ref="Font6" alignment-ref="Align4">
 							<text>我们在哪个省市：</text>
 							<layout left="71.598413" top="9.775429" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_8" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="84" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_8" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="84" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="114.134740" top="9.775429" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3785,13 +3785,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/items[at0021]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_229" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_229" font-ref="Font6" alignment-ref="Align4">
 							<text>您住在什么区（县）：</text>
 							<layout left="71.598413" top="17.701453" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_9" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="83" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_9" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="83" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="114.134740" top="17.701453" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3801,13 +3801,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/items[at0024]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_230" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_230" font-ref="Font6" alignment-ref="Align4">
 							<text>您住在什么街道（乡）：</text>
 							<layout left="71.598413" top="25.627476" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_10" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="38" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_10" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="38" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="114.134740" top="25.627476" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3817,15 +3817,15 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/items[at0025]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_231" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_231" font-ref="Font6" alignment-ref="Align4">
 							<text>这里是什么地方：</text>
-							<layout left="71.598413" top="33.553500" width="42.272126" height="5.284016"/>
+							<layout left="71.598413" top="33.553502" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_34" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="37" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_34" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="37" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
-							<layout left="114.134740" top="33.553500" width="19.815059" height="3.963012"/>
+							<layout left="114.134740" top="33.553502" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<unchecked_fill_style fill-type="none"/>
 							<checked_fill_style fill-type="none"/>
@@ -3833,13 +3833,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/items[at0028]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_232" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_232" font-ref="Font6" alignment-ref="Align4">
 							<text>我们是在几层楼：</text>
 							<layout left="71.598413" top="41.479528" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_35" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="7" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_35" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="7" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="114.134740" top="41.479528" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3849,13 +3849,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/items[at0031]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_233" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_233" font-ref="Font6" alignment-ref="Align4">
 							<text>皮球：</text>
 							<layout left="117.569350" top="15.852047" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_11" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="87" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_11" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="87" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="160.105677" top="15.852047" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3865,13 +3865,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0034]/items[at0035]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_234" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_234" font-ref="Font6" alignment-ref="Align4">
 							<text>国旗：</text>
 							<layout left="117.569350" top="23.778071" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_12" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="86" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_12" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="86" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="160.105677" top="23.778071" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3881,13 +3881,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0034]/items[at0038]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_235" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_235" font-ref="Font6" alignment-ref="Align4">
 							<text>树木：</text>
 							<layout left="117.569350" top="31.704094" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_13" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="85" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_13" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="85" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="160.105677" top="31.704094" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3897,15 +3897,15 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0034]/items[at0041]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_15" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_15" font-ref="Font6" alignment-ref="Align4">
 							<text>100-7=：</text>
-							<layout left="163.276086" top="9.247028" width="42.272126" height="5.284016"/>
+							<layout left="163.276086" top="9.247029" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_14" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="90" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_14" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="90" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
-							<layout left="205.812413" top="9.247028" width="19.815059" height="3.963012"/>
+							<layout left="205.812413" top="9.247029" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<unchecked_fill_style fill-type="none"/>
 							<checked_fill_style fill-type="none"/>
@@ -3913,13 +3913,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0045]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_16" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_16" font-ref="Font6" alignment-ref="Align4">
 							<text>93-7=：</text>
 							<layout left="163.276086" top="17.173051" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_15" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="89" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_15" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="89" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="205.812413" top="17.173051" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3929,13 +3929,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0046]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_17" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_17" font-ref="Font6" alignment-ref="Align4">
 							<text>86-7=：</text>
 							<layout left="163.276086" top="25.099075" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_16" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="88" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_16" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="88" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="205.812413" top="25.099075" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3945,15 +3945,15 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0047]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_236" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_236" font-ref="Font6" alignment-ref="Align4">
 							<text>79-7=：</text>
-							<layout left="163.276086" top="33.025098" width="42.272126" height="5.284016"/>
+							<layout left="163.276086" top="33.025096" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_17" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="19" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_17" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="19" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
-							<layout left="205.812413" top="33.025098" width="19.815059" height="3.963012"/>
+							<layout left="205.812413" top="33.025096" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<unchecked_fill_style fill-type="none"/>
 							<checked_fill_style fill-type="none"/>
@@ -3961,13 +3961,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0048]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_237" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_237" font-ref="Font6" alignment-ref="Align4">
 							<text>72-7=：</text>
 							<layout left="163.276086" top="40.951122" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_18" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="17" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_18" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="17" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="205.812413" top="40.951122" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3977,13 +3977,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0049]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_238" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_238" font-ref="Font6" alignment-ref="Align4">
 							<text>100-7=：</text>
 							<layout left="21.684279" top="140.046235" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_20" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="121" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_20" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="121" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="64.220605" top="140.046235" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -3993,13 +3993,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0045]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_239" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_239" font-ref="Font6" alignment-ref="Align4">
 							<text>93-7=：</text>
 							<layout left="21.684279" top="147.972259" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_21" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="116" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_21" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="116" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="64.220605" top="147.972259" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4009,13 +4009,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0046]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_240" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_240" font-ref="Font6" alignment-ref="Align4">
 							<text>86-7=：</text>
 							<layout left="21.684279" top="155.898282" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_23" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="113" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_23" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="113" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="64.220605" top="155.898282" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4025,13 +4025,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0047]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_258" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_258" font-ref="Font6" alignment-ref="Align4">
 							<text>79-7=：</text>
 							<layout left="21.684279" top="163.824306" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_46" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="110" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_46" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="110" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="64.220605" top="163.824306" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4041,13 +4041,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0048]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_259" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_259" font-ref="Font6" alignment-ref="Align4">
 							<text>72-7=：</text>
 							<layout left="21.684279" top="171.750330" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_47" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="21" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_47" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="21" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="64.220605" top="171.750330" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4057,15 +4057,15 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0049]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_260" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_260" font-ref="Font6" alignment-ref="Align4">
 							<text>皮球：</text>
 							<layout left="-8.718626" top="51.254953" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_48" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="147" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_48" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="147" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
-							<layout left="33.817701" top="51.254953" width="19.815059" height="3.963012"/>
+							<layout left="33.817699" top="51.254953" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<unchecked_fill_style fill-type="none"/>
 							<checked_fill_style fill-type="none"/>
@@ -4073,15 +4073,15 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0061]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_261" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_261" font-ref="Font6" alignment-ref="Align4">
 							<text>国旗：</text>
 							<layout left="-8.718626" top="59.180976" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_49" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="125" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_49" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="125" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
-							<layout left="33.817701" top="59.180976" width="19.815059" height="3.963012"/>
+							<layout left="33.817699" top="59.180976" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<unchecked_fill_style fill-type="none"/>
 							<checked_fill_style fill-type="none"/>
@@ -4089,15 +4089,15 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0062]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_262" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_262" font-ref="Font6" alignment-ref="Align4">
 							<text>树木：</text>
-							<layout left="-8.718626" top="67.107000" width="42.272126" height="5.284016"/>
+							<layout left="-8.718626" top="67.107004" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_50" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="122" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_50" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="122" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
-							<layout left="33.817701" top="67.107000" width="19.815059" height="3.963012"/>
+							<layout left="33.817699" top="67.107004" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<unchecked_fill_style fill-type="none"/>
 							<checked_fill_style fill-type="none"/>
@@ -4105,13 +4105,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0063]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_241" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_241" font-ref="Font6" alignment-ref="Align4">
 							<text>皮球：</text>
 							<layout left="84.828271" top="180.204755" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_19" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="152" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_19" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="152" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="127.364597" top="180.204755" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4121,13 +4121,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0061]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_242" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_242" font-ref="Font6" alignment-ref="Align4">
 							<text>国旗：</text>
 							<layout left="84.828271" top="188.130778" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_22" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="149" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_22" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="149" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="127.364597" top="188.130778" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4137,13 +4137,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0062]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_263" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_263" font-ref="Font6" alignment-ref="Align4">
 							<text>树木：</text>
 							<layout left="84.828271" top="196.056802" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_51" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="148" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_51" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="148" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="127.364597" top="196.056802" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4153,13 +4153,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0063]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_264" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_264" font-ref="Font6" alignment-ref="Align4">
 							<text>拿出手表，问这是什么：</text>
-							<layout left="67.635401" top="55.746366" width="42.272126" height="5.284016"/>
+							<layout left="67.635397" top="55.746366" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_52" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="181" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_52" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="181" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="110.171728" top="55.746366" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4169,13 +4169,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0071]/items[at0072]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_265" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_265" font-ref="Font6" alignment-ref="Align4">
 							<text>拿出铅笔，问这是什么：</text>
-							<layout left="67.635401" top="63.672390" width="42.272126" height="5.284016"/>
+							<layout left="67.635397" top="63.672390" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_53" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="180" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_53" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="180" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="110.171728" top="63.672390" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4185,13 +4185,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0071]/items[at0073]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_243" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_243" font-ref="Font6" alignment-ref="Align4">
 							<text>现在我要说一句话，请您听清楚，并跟我清楚重复一遍：“四十四只石狮子”：</text>
 							<layout left="142.140023" top="60.501980" width="47.291941" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_24" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="213" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_24" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="213" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="203.170405" top="60.501980" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4201,13 +4201,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0078]/items[at0079]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_28" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_28" font-ref="Font6" alignment-ref="Align4">
 							<text>右手拿去这张纸：</text>
 							<layout left="-2.906209" top="82.166445" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_28" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="214" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_28" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="214" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="39.630118" top="82.166445" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4217,13 +4217,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0082]/items[at0083]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_29" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_29" font-ref="Font6" alignment-ref="Align4">
 							<text>用双手对折：</text>
 							<layout left="-2.906209" top="90.092468" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_29" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="28" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_29" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="28" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="39.630118" top="90.092468" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4233,13 +4233,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0082]/items[at0084]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_244" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_244" font-ref="Font6" alignment-ref="Align4">
 							<text>然后放到左腿：</text>
 							<layout left="-2.906209" top="98.018492" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_30" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="27" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_30" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="27" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="39.630118" top="98.018492" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4249,13 +4249,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0082]/items[at0085]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_245" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_245" font-ref="Font6" alignment-ref="Align4">
 							<text>请闭上您的眼睛：</text>
-							<layout left="63.936590" top="87.714661" width="42.272126" height="5.284016"/>
+							<layout left="63.936586" top="87.714661" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_31" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="32" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_31" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="32" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="106.472917" top="87.714661" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4265,13 +4265,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0092]/items[at0093]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_246" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_246" font-ref="Font6" alignment-ref="Align4">
 							<text>请您说一句完整的句子, 句子必须有主语、谓语，且有意义：</text>
 							<layout left="145.310433" top="84.808453" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<checkbox name="CheckBox_32" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="216" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_32" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="216" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
 							<layout left="187.846759" top="84.808453" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4281,13 +4281,13 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]/items[at0098]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_247" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_247" font-ref="Font6" alignment-ref="Align4">
 							<text>句子内容：</text>
 							<layout left="145.310433" top="92.734476" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<textbox name="TextBox_28" tab-index="33" font-ref="Font9" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
+						<textbox name="TextBox_28" tab-index="33" font-ref="Font6" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
 							<layout left="187.846759" top="92.734476" width="26.420079" height="5.284016"/>
 							<margin left="0.000000" top="0.000000" right="0.000000" bottom="0.000000"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4297,9 +4297,9 @@
 								<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]/items[at0101]/value/value" RM="OBSERVATION"/>
 							</bindings>
 						</textbox>
-						<checkbox name="CheckBox_33" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="35" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
+						<checkbox name="CheckBox_33" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="35" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
-							<layout left="54.953764" top="117.569350" width="19.815059" height="3.963012"/>
+							<layout left="54.953768" top="117.569350" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<unchecked_fill_style fill-type="none"/>
 							<checked_fill_style fill-type="none"/>
@@ -4307,19 +4307,19 @@
 								<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0102]/items[at0103]/value/value"/>
 							</bindings>
 						</checkbox>
-						<label name="Label_248" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_248" font-ref="Font6" alignment-ref="Align4">
 							<text>请把样图照样画下来：</text>
 							<layout left="12.417437" top="117.569350" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<label name="Label_249" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_249" font-ref="Font6" alignment-ref="Align4">
 							<text>MMSE总分：</text>
-							<layout left="131.307791" top="114.927342" width="42.272126" height="5.284016"/>
+							<layout left="131.307783" top="114.927342" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<textbox name="TextBox_29" tab-index="222" font-ref="Font9" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
+						<textbox name="TextBox_29" tab-index="222" font-ref="Font6" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
 							<layout left="173.844118" top="114.927342" width="26.420079" height="5.284016"/>
 							<margin left="0.000000" top="0.000000" right="0.000000" bottom="0.000000"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -4329,13 +4329,13 @@
 								<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0106]/value/magnitude" RM="OBSERVATION"/>
 							</bindings>
 						</textbox>
-						<label name="Label_250" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_250" font-ref="Font6" alignment-ref="Align4">
 							<text>VisitID：</text>
-							<layout left="131.307791" top="122.853366" width="42.272126" height="5.284016"/>
+							<layout left="131.307783" top="122.853366" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<textbox name="TextBox_30" tab-index="217" font-ref="Font9" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
+						<textbox name="TextBox_30" tab-index="217" font-ref="Font6" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
 							<layout left="173.844118" top="122.853366" width="26.420079" height="5.284016"/>
 							<margin left="0.000000" top="0.000000" right="0.000000" bottom="0.000000"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -5411,7 +5411,7 @@
 						</textbox>
 					</layer>
 				</tab_page>
-				<tab_page name="TabPage_1" title="ADL" visible="false">
+				<tab_page name="TabPage_1" title="ADL">
 					<layout left="1.056803" top="7.133421" width="226.684275" height="138.639363"/>
 					<border_style line-type="none" line-dash-style="solid" line-color="#FF606060" line-width="0.264201"/>
 					<fill_style fill-type="none"/>
@@ -5764,6 +5764,22 @@
 								<binding name="ValueList" archetypeId="ValueList" path="valuelists/openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0118]_value_value"/>
 							</bindings>
 						</combobox>
+						<label name="Label_266" font-ref="Font9" alignment-ref="Align4">
+							<text>VisitId：</text>
+							<layout left="57.067370" top="125.759574" width="42.272126" height="5.284016"/>
+							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
+							<fill_style fill-type="none"/>
+						</label>
+						<textbox name="TextBox_31" tab-index="301" font-ref="Font9" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
+							<layout left="99.603697" top="125.759574" width="26.420079" height="5.284016"/>
+							<margin left="0.000000" top="0.000000" right="0.000000" bottom="0.000000"/>
+							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
+							<fill_style fill-type="none"/>
+							<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
+							<bindings>
+								<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.adl.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0126]/value/value" RM="OBSERVATION"/>
+							</bindings>
+						</textbox>
 					</layer>
 				</tab_page>
 				<tab_page name="TabPage_2" title="CDR" visible="false">
@@ -5793,13 +5809,13 @@
 										<fill_style fill-type="none"/>
 									</label>
 								</layer>
-								<label name="Label_219" font-ref="Font10" alignment-ref="Align4">
+								<label name="Label_219" font-ref="Font4" alignment-ref="Align4">
 									<text>VisitID：</text>
 									<layout left="5.548217" top="3.698811" width="42.272126" height="5.284016"/>
 									<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
 								</label>
-								<textbox name="TextBox_27" tab-index="109" font-ref="Font10" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
+								<textbox name="TextBox_27" tab-index="109" font-ref="Font4" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
 									<layout left="48.084543" top="3.698811" width="26.420079" height="5.284016"/>
 									<margin left="0.000000" top="0.000000" right="0.000000" bottom="0.000000"/>
 									<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -5809,13 +5825,13 @@
 										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.cdr.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0057]/value/value" RM="OBSERVATION"/>
 									</bindings>
 								</textbox>
-								<label name="Label_220" font-ref="Font10" alignment-ref="Align4">
+								<label name="Label_220" font-ref="Font4" alignment-ref="Align4">
 									<text>记忆力：</text>
 									<layout left="5.548217" top="11.624834" width="42.272126" height="5.284016"/>
 									<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
 								</label>
-								<combobox name="ComboBox_45" tab-index="107" font-ref="Font10" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
+								<combobox name="ComboBox_45" tab-index="107" font-ref="Font4" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
 									<layout left="48.084543" top="11.624834" width="31.704094" height="5.284016"/>
 									<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
@@ -5825,13 +5841,13 @@
 										<binding name="ValueList" archetypeId="ValueList" path="valuelists/openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0058]_value_value"/>
 									</bindings>
 								</combobox>
-								<label name="Label_225" font-ref="Font10" alignment-ref="Align4">
+								<label name="Label_225" font-ref="Font4" alignment-ref="Align4">
 									<text>定向力：</text>
 									<layout left="5.548217" top="19.550858" width="42.272126" height="5.284016"/>
 									<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
 								</label>
-								<combobox name="ComboBox_80" tab-index="106" font-ref="Font10" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
+								<combobox name="ComboBox_80" tab-index="106" font-ref="Font4" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
 									<layout left="48.084543" top="19.550858" width="31.704094" height="5.284016"/>
 									<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
@@ -5841,14 +5857,14 @@
 										<binding name="ValueList" archetypeId="ValueList" path="valuelists/openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0064]_value_value"/>
 									</bindings>
 								</combobox>
-								<label name="Label_226" font-ref="Font10" alignment-ref="Align4">
+								<label name="Label_226" font-ref="Font4" alignment-ref="Align4">
 									<text>判断力+解决问题能力：</text>
-									<layout left="5.548217" top="27.476882" width="42.272126" height="5.284016"/>
+									<layout left="5.548217" top="27.476884" width="42.272126" height="5.284016"/>
 									<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
 								</label>
-								<combobox name="ComboBox_81" tab-index="105" font-ref="Font10" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
-									<layout left="48.084543" top="27.476882" width="31.704094" height="5.284016"/>
+								<combobox name="ComboBox_81" tab-index="105" font-ref="Font4" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
+									<layout left="48.084543" top="27.476884" width="31.704094" height="5.284016"/>
 									<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
 									<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
@@ -5857,13 +5873,13 @@
 										<binding name="ValueList" archetypeId="ValueList" path="valuelists/openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0070]_value_value"/>
 									</bindings>
 								</combobox>
-								<label name="Label_254" font-ref="Font10" alignment-ref="Align4">
+								<label name="Label_254" font-ref="Font4" alignment-ref="Align4">
 									<text>社会事务：</text>
 									<layout left="5.548217" top="35.402905" width="42.272126" height="5.284016"/>
 									<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
 								</label>
-								<combobox name="ComboBox_82" tab-index="95" font-ref="Font10" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
+								<combobox name="ComboBox_82" tab-index="95" font-ref="Font4" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
 									<layout left="48.084543" top="35.402905" width="31.704094" height="5.284016"/>
 									<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
@@ -5873,13 +5889,13 @@
 										<binding name="ValueList" archetypeId="ValueList" path="valuelists/openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0076]_value_value"/>
 									</bindings>
 								</combobox>
-								<label name="Label_255" font-ref="Font10" alignment-ref="Align4">
+								<label name="Label_255" font-ref="Font4" alignment-ref="Align4">
 									<text>家庭+爱好：</text>
 									<layout left="5.548217" top="43.328929" width="42.272126" height="5.284016"/>
 									<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
 								</label>
-								<combobox name="ComboBox_83" tab-index="93" font-ref="Font10" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
+								<combobox name="ComboBox_83" tab-index="93" font-ref="Font4" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
 									<layout left="48.084543" top="43.328929" width="31.704094" height="5.284016"/>
 									<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
@@ -5889,13 +5905,13 @@
 										<binding name="ValueList" archetypeId="ValueList" path="valuelists/openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0082]_value_value"/>
 									</bindings>
 								</combobox>
-								<label name="Label_256" font-ref="Font10" alignment-ref="Align4">
+								<label name="Label_256" font-ref="Font4" alignment-ref="Align4">
 									<text>个人料理：</text>
 									<layout left="5.548217" top="51.254953" width="42.272126" height="5.284016"/>
 									<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
 								</label>
-								<combobox name="ComboBox_84" tab-index="92" font-ref="Font10" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
+								<combobox name="ComboBox_84" tab-index="92" font-ref="Font4" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
 									<layout left="48.084543" top="51.254953" width="31.704094" height="5.284016"/>
 									<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
@@ -5905,13 +5921,13 @@
 										<binding name="ValueList" archetypeId="ValueList" path="valuelists/openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0088]_value_value"/>
 									</bindings>
 								</combobox>
-								<label name="Label_257" font-ref="Font10" alignment-ref="Align4">
+								<label name="Label_257" font-ref="Font4" alignment-ref="Align4">
 									<text>综合CDR值：</text>
 									<layout left="5.548217" top="59.180976" width="42.272126" height="5.284016"/>
 									<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
 								</label>
-								<combobox name="ComboBox_85" tab-index="91" font-ref="Font10" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
+								<combobox name="ComboBox_85" tab-index="91" font-ref="Font4" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
 									<layout left="48.084543" top="59.180976" width="31.704094" height="5.284016"/>
 									<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
@@ -5938,104 +5954,7 @@
 	</main_page>
 	<main_page name="new page_1" layout-ref="PageLayout_0">
 		<fill_style fill-type="none"/>
-		<layer name="Fixed">
-			<label name="请闭上您的眼睛：label" font-ref="Font9" alignment-ref="Align4">
-				<text>请闭上您的眼睛：</text>
-				<layout left="14.286657" top="210.587845" width="42.272126" height="5.284016"/>
-				<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<fill_style fill-type="none"/>
-			</label>
-			<checkbox name="请闭上您的眼睛：item" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="301" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
-				<text/>
-				<layout left="56.822983" top="210.587845" width="19.815059" height="3.963012"/>
-				<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<unchecked_fill_style fill-type="none"/>
-				<checked_fill_style fill-type="none"/>
-				<bindings>
-					<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0092]/items[at0093]/value/value"/>
-				</bindings>
-			</checkbox>
-			<label name="请您说一句完整的句子, 句子必须有主语、谓语，且有意义：label" font-ref="Font9" alignment-ref="Align4">
-				<text>请您说一句完整的句子, 句子必须有主语、谓语，且有意义：</text>
-				<layout left="14.286657" top="218.513869" width="42.272126" height="5.284016"/>
-				<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<fill_style fill-type="none"/>
-			</label>
-			<checkbox name="请您说一句完整的句子, 句子必须有主语、谓语，且有意义：item" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="302" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
-				<text/>
-				<layout left="56.822983" top="218.513869" width="19.815059" height="3.963012"/>
-				<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<unchecked_fill_style fill-type="none"/>
-				<checked_fill_style fill-type="none"/>
-				<bindings>
-					<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]/items[at0098]/value/value"/>
-				</bindings>
-			</checkbox>
-			<label name="句子内容：label" font-ref="Font9" alignment-ref="Align4">
-				<text>句子内容：</text>
-				<layout left="14.286657" top="226.439892" width="42.272126" height="5.284016"/>
-				<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<fill_style fill-type="none"/>
-			</label>
-			<textbox name="句子内容：item" tab-index="303" font-ref="Font9" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
-				<layout left="56.822983" top="226.439892" width="26.420079" height="5.284016"/>
-				<margin left="0.000000" top="0.000000" right="0.000000" bottom="0.000000"/>
-				<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<fill_style fill-type="none"/>
-				<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
-				<bindings>
-					<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0097]/items[at0101]/value/value" RM="OBSERVATION"/>
-				</bindings>
-			</textbox>
-			<label name="请把样图照样画下来：label" font-ref="Font9" alignment-ref="Align4">
-				<text>请把样图照样画下来：</text>
-				<layout left="14.286657" top="234.365916" width="42.272126" height="5.284016"/>
-				<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<fill_style fill-type="none"/>
-			</label>
-			<checkbox name="请把样图照样画下来：item" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="304" font-ref="Font9" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
-				<text/>
-				<layout left="56.822983" top="234.365916" width="19.815059" height="3.963012"/>
-				<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<unchecked_fill_style fill-type="none"/>
-				<checked_fill_style fill-type="none"/>
-				<bindings>
-					<binding name="Checked" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0102]/items[at0103]/value/value"/>
-				</bindings>
-			</checkbox>
-			<label name="MMSE总分：label" font-ref="Font9" alignment-ref="Align4">
-				<text>MMSE总分：</text>
-				<layout left="14.286657" top="242.291940" width="42.272126" height="5.284016"/>
-				<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<fill_style fill-type="none"/>
-			</label>
-			<textbox name="MMSE总分：item" tab-index="305" font-ref="Font9" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
-				<layout left="56.822983" top="242.291940" width="26.420079" height="5.284016"/>
-				<margin left="0.000000" top="0.000000" right="0.000000" bottom="0.000000"/>
-				<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<fill_style fill-type="none"/>
-				<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
-				<bindings>
-					<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0106]/value/magnitude" RM="OBSERVATION"/>
-				</bindings>
-			</textbox>
-			<label name="VisitID：label" font-ref="Font9" alignment-ref="Align4">
-				<text>VisitID：</text>
-				<layout left="14.286657" top="250.217963" width="42.272126" height="5.284016"/>
-				<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<fill_style fill-type="none"/>
-			</label>
-			<textbox name="VisitID：item" tab-index="306" font-ref="Font9" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
-				<layout left="56.822983" top="250.217963" width="26.420079" height="5.284016"/>
-				<margin left="0.000000" top="0.000000" right="0.000000" bottom="0.000000"/>
-				<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
-				<fill_style fill-type="none"/>
-				<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
-				<bindings>
-					<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.mmse.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0107]/value/value" RM="OBSERVATION"/>
-				</bindings>
-			</textbox>
-		</layer>
+		<layer name="Fixed"/>
 		<layer name="Comment"/>
 		<layer name="Event"/>
 	</main_page>
@@ -6052,8 +5971,7 @@
 		<font name="Font6" font-family="ＭＳ Ｐゴシック" font-size="3.170409" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
 		<font name="Font7" font-family="宋体" font-size="3.874945" color="#FF000000" bold="true" italic="false" underline="false" strikeout="false" script="normal"/>
 		<font name="Font8" font-family="宋体" font-size="3.522677" color="#FFFFFFFF" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
-		<font name="Font9" font-family="ＭＳ Ｐゴシック" font-size="3.170409" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
-		<font name="Font10" font-family="ＭＳ Ｐゴシック" font-size="3.963012" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
+		<font name="Font9" font-family="ＭＳ Ｐゴシック" font-size="3.963012" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
 	</font_set>
 	<alignment_set>
 		<alignment name="Align1" direction="horizontal" horizontal="left" vertical="center"/>

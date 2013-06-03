@@ -10,21 +10,21 @@ namespace LNCDCDSS.Models
         public DataFromReporterOperation()
         {
             archetypes.put("openEHR-EHR-OBSERVATION.mmse.v1"
-                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\CDRDocument\\knowledge\\archetype\\ZJU\\CDSS\\openEHR-EHR-OBSERVATION.mmse.v1.adl"));
+                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\Web\\LNCDCDSS\\LNCDCDSS\\Archetypes\\openEHR-EHR-OBSERVATION.mmse.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1"
-                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\CDRDocument\\knowledge\\archetype\\ZJU\\CDSS\\openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1.adl"));
+                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\Web\\LNCDCDSS\\LNCDCDSS\\Archetypes\\openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.related_disease_and_drug.v1"
-                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\CDRDocument\\knowledge\\archetype\\ZJU\\CDSS\\openEHR-EHR-OBSERVATION.related_disease_and_drug.v1.adl"));
+                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\Web\\LNCDCDSS\\LNCDCDSS\\Archetypes\\openEHR-EHR-OBSERVATION.related_disease_and_drug.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.adl.v1"
-                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\CDRDocument\\knowledge\\archetype\\ZJU\\CDSS\\openEHR-EHR-OBSERVATION.adl.v1.adl"));
+                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\Web\\LNCDCDSS\\LNCDCDSS\\Archetypes\\openEHR-EHR-OBSERVATION.adl.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.body_check.v1"
-                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\CDRDocument\\knowledge\\archetype\\ZJU\\CDSS\\openEHR-EHR-OBSERVATION.body_check.v1.adl"));
+                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\Web\\LNCDCDSS\\LNCDCDSS\\Archetypes\\openEHR-EHR-OBSERVATION.body_check.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.cdr.v1"
-                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\CDRDocument\\knowledge\\archetype\\ZJU\\CDSS\\openEHR-EHR-OBSERVATION.cdr.v1.adl"));
+                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\Web\\LNCDCDSS\\LNCDCDSS\\Archetypes\\openEHR-EHR-OBSERVATION.cdr.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.gds.v1"
-                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\CDRDocument\\knowledge\\archetype\\ZJU\\CDSS\\openEHR-EHR-OBSERVATION.gds.v1.adl"));
+                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\Web\\LNCDCDSS\\LNCDCDSS\\Archetypes\\openEHR-EHR-OBSERVATION.gds.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.moca.v1"
-                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\CDRDocument\\knowledge\\archetype\\ZJU\\CDSS\\openEHR-EHR-OBSERVATION.moca.v1.adl"));
+                , readLines("C:\\Users\\hudi\\Documents\\GitHub\\Web\\LNCDCDSS\\LNCDCDSS\\Archetypes\\openEHR-EHR-OBSERVATION.moca.v1.adl"));
         }
 
         public String[] CreatedADL(java.util.Map results)
