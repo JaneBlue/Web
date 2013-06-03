@@ -1,0 +1,14 @@
+regsvr32 .\Reporter2.ocx        -u
+regsvr32 .\Rep2SVGParser.dll    -u
+regsvr32 .\Rep2Parser.dll       -u
+regsvr32 .\Rep2Sketch.dll       -u
+regsvr32 .\Rep2Rule.dll         -u
+regsvr32 .\Rep2Page.dll         -u
+regsvr32 .\Rep2ImageGrid.dll    -u
+regsvr32 .\Rep2EditPlus.dll     -u
+regsvr32 .\Rep2DataSource.dll   -u
+regsvr32 .\Rep2Control.dll      -u
+regsvr32 .\Rep2Common.dll       -u
+regsvr32 .\Rep2ActiveScript.dll -u
+regsvr32 .\Rep2GDIPlusEx.dll    -u
+regsvr32 .\Rep2Utility.dll      -u
