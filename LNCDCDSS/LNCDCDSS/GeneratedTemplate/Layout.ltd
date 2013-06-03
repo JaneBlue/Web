@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <layout_root>
 	<main_page name="辅助诊断" layout-ref="A4">
 		<fill_style fill-type="solid" back-color="#FFC6E2EE"/>
@@ -3899,13 +3899,13 @@
 						</checkbox>
 						<label name="Label_15" font-ref="Font6" alignment-ref="Align4">
 							<text>100-7=：</text>
-							<layout left="163.276086" top="9.247029" width="42.272126" height="5.284016"/>
+							<layout left="163.276086" top="9.247030" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
 						<checkbox name="CheckBox_14" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="90" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
-							<layout left="205.812413" top="9.247029" width="19.815059" height="3.963012"/>
+							<layout left="205.812413" top="9.247030" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<unchecked_fill_style fill-type="none"/>
 							<checked_fill_style fill-type="none"/>
@@ -4299,7 +4299,7 @@
 						</textbox>
 						<checkbox name="CheckBox_33" unchecked-fore-color="#FF000000" checked-fore-color="#FF000000" tab-index="35" font-ref="Font6" alignment-ref="Align1" check-style="check" checked="false" check-mark-color="#FF000000">
 							<text/>
-							<layout left="54.953768" top="117.569350" width="19.815059" height="3.963012"/>
+							<layout left="54.953772" top="117.569350" width="19.815059" height="3.963012"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<unchecked_fill_style fill-type="none"/>
 							<checked_fill_style fill-type="none"/>
@@ -5764,13 +5764,13 @@
 								<binding name="ValueList" archetypeId="ValueList" path="valuelists/openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0118]_value_value"/>
 							</bindings>
 						</combobox>
-						<label name="Label_266" font-ref="Font9" alignment-ref="Align4">
+						<label name="Label_266" font-ref="Font4" alignment-ref="Align4">
 							<text>VisitId：</text>
 							<layout left="57.067370" top="125.759574" width="42.272126" height="5.284016"/>
 							<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 							<fill_style fill-type="none"/>
 						</label>
-						<textbox name="TextBox_31" tab-index="301" font-ref="Font9" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
+						<textbox name="TextBox_31" tab-index="301" font-ref="Font4" alignment-ref="Align2" max-line-count="0" max-length="0" max-length-unit="characters" auto-font-size="false" edit-type="none">
 							<layout left="99.603697" top="125.759574" width="26.420079" height="5.284016"/>
 							<margin left="0.000000" top="0.000000" right="0.000000" bottom="0.000000"/>
 							<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
@@ -5859,12 +5859,12 @@
 								</combobox>
 								<label name="Label_226" font-ref="Font4" alignment-ref="Align4">
 									<text>判断力+解决问题能力：</text>
-									<layout left="5.548217" top="27.476884" width="42.272126" height="5.284016"/>
+									<layout left="5.548217" top="27.476886" width="42.272126" height="5.284016"/>
 									<border_style line-type="none" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
 								</label>
 								<combobox name="ComboBox_81" tab-index="105" font-ref="Font4" alignment-ref="Align1" auto-font-size="true" sort="none" max-display-item="5" combo-type="dropdown">
-									<layout left="48.084543" top="27.476884" width="31.704094" height="5.284016"/>
+									<layout left="48.084543" top="27.476886" width="31.704094" height="5.284016"/>
 									<border_style line-type="solid" line-dash-style="solid" line-color="#FFC0C0C0" line-width="0.264201"/>
 									<fill_style fill-type="none"/>
 									<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
@@ -5966,12 +5966,11 @@
 		<font name="Font1" font-family="宋体" font-size="3.874945" color="#FF0000FF" bold="true" italic="false" underline="false" strikeout="false" script="normal"/>
 		<font name="Font2" font-family="宋体" font-size="3.522677" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
 		<font name="Font3" font-family="微软雅黑" font-size="3.874945" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
-		<font name="Font4" font-family="ＭＳ Ｐゴシック" font-size="3.963012" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
+		<font name="Font4" font-family="宋体" font-size="3.963012" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
 		<font name="Font5" font-family="宋体" font-size="3.170409" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
-		<font name="Font6" font-family="ＭＳ Ｐゴシック" font-size="3.170409" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
+		<font name="Font6" font-family="宋体" font-size="3.170409" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
 		<font name="Font7" font-family="宋体" font-size="3.874945" color="#FF000000" bold="true" italic="false" underline="false" strikeout="false" script="normal"/>
 		<font name="Font8" font-family="宋体" font-size="3.522677" color="#FFFFFFFF" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
-		<font name="Font9" font-family="ＭＳ Ｐゴシック" font-size="3.963012" color="#FF000000" bold="false" italic="false" underline="false" strikeout="false" script="normal"/>
 	</font_set>
 	<alignment_set>
 		<alignment name="Align1" direction="horizontal" horizontal="left" vertical="center"/>
