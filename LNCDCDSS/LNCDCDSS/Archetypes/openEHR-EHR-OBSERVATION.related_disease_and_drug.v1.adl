@@ -1,0 +1,1076 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.related_disease_and_drug.v1
+
+concept
+	[at0000]	-- Related disease and drug
+language
+	original_language = <[ISO_639-1::zh]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["zh"] = <
+			language = <[ISO_639-1::zh]>
+			purpose = <"用于描述患者既往/目前所患疾病及其相关用药情况">
+			use = <"">
+			keywords = <"disease", "drug">
+			misuse = <"">
+			copyright = <"ZJU">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"CE90FF521E2927FB99BB53F06E8140F6">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Related disease and drug
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0005] occurrences matches {0..1} matches {	-- 脑血管病
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0006] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0007], 	-- 无
+													1|[local::at0008], 	-- 曾患
+													2|[local::at0009]  	-- 现患
+												}
+											}
+											ELEMENT[at0010] occurrences matches {0..1} matches {	-- 类型
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0011] occurrences matches {0..1} matches {	-- 硬膜下血肿
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0012] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0013], 	-- 无
+													1|[local::at0014], 	-- 曾患
+													2|[local::at0015]  	-- 现患
+												}
+											}
+											ELEMENT[at0016] occurrences matches {0..1} matches {	-- 类型
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {	-- 正常颅压积水
+										value matches {
+											0|[local::at0018], 	-- 无
+											1|[local::at0019], 	-- 曾患
+											2|[local::at0020]  	-- 现患
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {	-- 老年性震颤
+										value matches {
+											0|[local::at0022], 	-- 无 
+											1|[local::at0023], 	-- 曾患
+											2|[local::at0024]  	-- 现患
+										}
+									}
+									CLUSTER[at0025] occurrences matches {0..1} matches {	-- 帕金森病
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0026] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0027], 	-- 无
+													1|[local::at0028], 	-- 曾患
+													2|[local::at0029]  	-- 现患
+												}
+											}
+											ELEMENT[at0030] occurrences matches {0..1} matches {	-- 药物治疗
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0031] occurrences matches {0..1} matches {	-- 焦虑/抑郁
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0032] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0033], 	-- 无
+													1|[local::at0034], 	-- 曾患
+													2|[local::at0035]  	-- 现患
+												}
+											}
+											ELEMENT[at0036] occurrences matches {0..1} matches {	-- 药物治疗
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0037] occurrences matches {0..1} matches {	-- 甲低
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0038] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0039], 	-- 无
+													1|[local::at0040], 	-- 曾患
+													2|[local::at0041]  	-- 现患
+												}
+											}
+											ELEMENT[at0042] occurrences matches {0..1} matches {	-- 药物治疗
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0043] occurrences matches {0..1} matches {	-- 甲亢
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0044] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0045], 	-- 无
+													1|[local::at0046], 	-- 曾患
+													2|[local::at0047]  	--  现患
+												}
+											}
+											ELEMENT[at0048] occurrences matches {0..1} matches {	-- 药物治疗
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0049] occurrences matches {0..1} matches {	-- 叶酸/B12缺乏
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0050] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0051], 	-- 无
+													1|[local::at0052], 	-- 曾患
+													2|[local::at0053]  	-- 现患
+												}
+											}
+											ELEMENT[at0054] occurrences matches {0..1} matches {	-- 药物治疗
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0055] occurrences matches {0..1} matches {	-- 高脂血症
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0056] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0057], 	-- 无
+													1|[local::at0058], 	-- 曾患
+													2|[local::at0059]  	-- 现患
+												}
+											}
+											ELEMENT[at0061] occurrences matches {0..1} matches {	-- 病程
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::128]>
+														list = <
+															["1"] = <
+																units = <"a">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0062] occurrences matches {0..1} matches {	-- 药物治疗
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0063] occurrences matches {0..1} matches {	-- 肿瘤
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0064] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0065], 	-- 无
+													1|[local::at0066], 	-- 曾患
+													2|[local::at0067]  	-- 现患
+												}
+											}
+											ELEMENT[at0068] occurrences matches {0..1} matches {	-- 类型
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0070] occurrences matches {0..1} matches {	-- 手术治疗
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0076] occurrences matches {0..1} matches {	-- 肝功能异常
+										value matches {
+											0|[local::at0077], 	-- 无
+											1|[local::at0078], 	-- 曾患
+											2|[local::at0079]  	-- 现患
+										}
+									}
+									ELEMENT[at0080] occurrences matches {0..1} matches {	-- 消化道溃疡
+										value matches {
+											0|[local::at0081], 	-- 无
+											1|[local::at0082], 	-- 曾患
+											2|[local::at0083]  	-- 现患
+										}
+									}
+									ELEMENT[at0084] occurrences matches {0..1} matches {	-- 肾功能不全
+										value matches {
+											0|[local::at0085], 	-- 无
+											1|[local::at0086], 	-- 曾患
+											2|[local::at0087]  	-- 现患
+										}
+									}
+									CLUSTER[at0089] occurrences matches {0..1} matches {	-- 心功能不全
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0090] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0091], 	-- 无
+													1|[local::at0092], 	-- 曾患
+													2|[local::at0093]  	-- 现患
+												}
+											}
+											ELEMENT[at0094] occurrences matches {0..1} matches {	-- NYHF分级
+												value matches {
+													0|[local::at0095], 	-- I
+													1|[local::at0096], 	-- II
+													2|[local::at0097], 	-- III
+													3|[local::at0098]  	-- IV
+												}
+											}
+										}
+									}
+									CLUSTER[at0099] occurrences matches {0..1} matches {	-- 心肌梗死
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0100] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0101], 	-- 无
+													1|[local::at0102], 	-- 曾患
+													2|[local::at0103]  	-- 现患
+												}
+											}
+											ELEMENT[at0104] occurrences matches {0..1} matches {	-- 搭桥/支架治疗
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0105] occurrences matches {0..1} matches {	-- 房颤
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0106] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0107], 	-- 无
+													1|[local::at0108], 	-- 曾患
+													2|[local::at0109]  	-- 现患
+												}
+											}
+											ELEMENT[at0110] occurrences matches {0..1} matches {	-- 抗凝治疗
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0111] occurrences matches {0..1} matches {	-- 窦缓/快慢综合症
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0112] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0113], 	-- 无
+													1|[local::at0114], 	-- 曾患
+													2|[local::at0115]  	-- 现患
+												}
+											}
+											ELEMENT[at0116] occurrences matches {0..1} matches {	-- 安装起搏器
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0117] occurrences matches {0..1} matches {	-- 动脉疾病
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0118] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0119], 	-- 无
+													1|[local::at0120], 	-- 曾患 
+													2|[local::at0121]  	-- 现患
+												}
+											}
+											ELEMENT[at0122] occurrences matches {0..1} matches {	-- 类型
+												value matches {
+													0|[local::at0123], 	-- 颈A狭窄
+													1|[local::at0124], 	-- 上/下肢A狭窄
+													2|[local::at0125], 	-- 肠缺血综合症
+													3|[local::at0126]  	-- 动脉瘤
+												}
+											}
+											ELEMENT[at0127] occurrences matches {0..1} matches {	-- 手术/支架治疗
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+											ELEMENT[at0128] occurrences matches {0..1} matches {	-- 其他
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0129] occurrences matches {0..1} matches {	-- 高血压病
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0130] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0131], 	-- 无
+													1|[local::at0132], 	-- 曾患
+													2|[local::at0133]  	-- 现患
+												}
+											}
+											ELEMENT[at0134] occurrences matches {0..1} matches {	-- 病程
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::128]>
+														list = <
+															["1"] = <
+																units = <"a">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0135] occurrences matches {0..1} matches {	-- 服药
+												value matches {
+													DV_BOOLEAN matches {
+														value matches {True, False}
+													}
+												}
+											}
+											ELEMENT[at0136] occurrences matches {0..1} matches {	-- 并发症
+												value matches {
+													0|[local::at0137], 	-- 低血压
+													1|[local::at0138]  	-- 高血压肾病
+												}
+											}
+										}
+									}
+									CLUSTER[at0139] occurrences matches {0..1} matches {	-- 糖代谢异常
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0140] occurrences matches {0..1} matches {	-- 描述
+												value matches {
+													0|[local::at0141], 	-- 无
+													1|[local::at0142], 	-- 曾患
+													2|[local::at0143]  	-- 现患
+												}
+											}
+											ELEMENT[at0144] occurrences matches {0..1} matches {	-- 类型
+												value matches {
+													0|[local::at0145], 	-- 空腹血糖受损（IFG)
+													1|[local::at0146], 	-- 糖耐量受损（IGT）
+													2|[local::at0147]  	-- 糖尿病
+												}
+											}
+											ELEMENT[at0148] occurrences matches {0..1} matches {	-- 病程
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::128]>
+														list = <
+															["1"] = <
+																units = <"a">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0149] occurrences matches {0..1} matches {	-- 治疗
+												value matches {
+													0|[local::at0150], 	-- 饮食控制
+													1|[local::at0151], 	-- 口服药物治疗
+													2|[local::at0152], 	-- 胰岛素治疗
+													3|[local::at0153]  	-- 胰岛素+口服药
+												}
+											}
+											ELEMENT[at0154] occurrences matches {0..1} matches {	-- 并发症
+												value matches {
+													0|[local::at0155], 	-- 低血糖
+													1|[local::at0156], 	-- 酸中毒
+													2|[local::at0157], 	-- 眼底病变
+													3|[local::at0158], 	-- 周围神经病
+													4|[local::at0159], 	-- 糖尿病肾病
+													5|[local::at0160]  	-- 大血管病变
+												}
+											}
+										}
+									}
+									ELEMENT[at0161] occurrences matches {0..1} matches {	-- 其他重要疾病
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0162] occurrences matches {0..1} matches {	-- PatientId
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["zh"] = <
+			items = <
+				["at0000"] = <
+					text = <"Related disease and drug">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"脑血管病">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"类型">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"硬膜下血肿">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"类型">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"正常颅压积水">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"老年性震颤">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"无 ">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"帕金森病">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0027"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0028"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0029"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0030"] = <
+					text = <"药物治疗">
+					description = <"*">
+				>
+				["at0031"] = <
+					text = <"焦虑/抑郁">
+					description = <"*">
+				>
+				["at0032"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0033"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0034"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0035"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0036"] = <
+					text = <"药物治疗">
+					description = <"*">
+				>
+				["at0037"] = <
+					text = <"甲低">
+					description = <"*">
+				>
+				["at0038"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0039"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0040"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0041"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0042"] = <
+					text = <"药物治疗">
+					description = <"*">
+				>
+				["at0043"] = <
+					text = <"甲亢">
+					description = <"*">
+				>
+				["at0044"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0045"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0046"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0047"] = <
+					text = <" 现患">
+					description = <"*">
+				>
+				["at0048"] = <
+					text = <"药物治疗">
+					description = <"*">
+				>
+				["at0049"] = <
+					text = <"叶酸/B12缺乏">
+					description = <"*">
+				>
+				["at0050"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0052"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0053"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0054"] = <
+					text = <"药物治疗">
+					description = <"*">
+				>
+				["at0055"] = <
+					text = <"高脂血症">
+					description = <"*">
+				>
+				["at0056"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0057"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0058"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0059"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"病程">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"药物治疗">
+					description = <"*">
+				>
+				["at0063"] = <
+					text = <"肿瘤">
+					description = <"*">
+				>
+				["at0064"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0065"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0066"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0067"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0068"] = <
+					text = <"类型">
+					description = <"*">
+				>
+				["at0070"] = <
+					text = <"手术治疗">
+					description = <"*">
+				>
+				["at0076"] = <
+					text = <"肝功能异常">
+					description = <"*">
+				>
+				["at0077"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0078"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0080"] = <
+					text = <"消化道溃疡">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0082"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0083"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0084"] = <
+					text = <"肾功能不全">
+					description = <"*">
+				>
+				["at0085"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0086"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0087"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0089"] = <
+					text = <"心功能不全">
+					description = <"*">
+				>
+				["at0090"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0091"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0092"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0093"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0094"] = <
+					text = <"NYHF分级">
+					description = <"*">
+				>
+				["at0095"] = <
+					text = <"I">
+					description = <"*">
+				>
+				["at0096"] = <
+					text = <"II">
+					description = <"*">
+				>
+				["at0097"] = <
+					text = <"III">
+					description = <"*">
+				>
+				["at0098"] = <
+					text = <"IV">
+					description = <"*">
+				>
+				["at0099"] = <
+					text = <"心肌梗死">
+					description = <"*">
+				>
+				["at0100"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0101"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0102"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0103"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0104"] = <
+					text = <"搭桥/支架治疗">
+					description = <"*">
+				>
+				["at0105"] = <
+					text = <"房颤">
+					description = <"*">
+				>
+				["at0106"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0107"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0108"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0109"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0110"] = <
+					text = <"抗凝治疗">
+					description = <"*">
+				>
+				["at0111"] = <
+					text = <"窦缓/快慢综合症">
+					description = <"*">
+				>
+				["at0112"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0113"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0114"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0115"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0116"] = <
+					text = <"安装起搏器">
+					description = <"*">
+				>
+				["at0117"] = <
+					text = <"动脉疾病">
+					description = <"*">
+				>
+				["at0118"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0119"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0120"] = <
+					text = <"曾患 ">
+					description = <"*">
+				>
+				["at0121"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0122"] = <
+					text = <"类型">
+					description = <"*">
+				>
+				["at0123"] = <
+					text = <"颈A狭窄">
+					description = <"*">
+				>
+				["at0124"] = <
+					text = <"上/下肢A狭窄">
+					description = <"*">
+				>
+				["at0125"] = <
+					text = <"肠缺血综合症">
+					description = <"*">
+				>
+				["at0126"] = <
+					text = <"动脉瘤">
+					description = <"*">
+				>
+				["at0127"] = <
+					text = <"手术/支架治疗">
+					description = <"*">
+				>
+				["at0128"] = <
+					text = <"其他">
+					description = <"*">
+				>
+				["at0129"] = <
+					text = <"高血压病">
+					description = <"*">
+				>
+				["at0130"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0131"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0132"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0133"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0134"] = <
+					text = <"病程">
+					description = <"*">
+				>
+				["at0135"] = <
+					text = <"服药">
+					description = <"*">
+				>
+				["at0136"] = <
+					text = <"并发症">
+					description = <"*">
+				>
+				["at0137"] = <
+					text = <"低血压">
+					description = <"*">
+				>
+				["at0138"] = <
+					text = <"高血压肾病">
+					description = <"*">
+				>
+				["at0139"] = <
+					text = <"糖代谢异常">
+					description = <"*">
+				>
+				["at0140"] = <
+					text = <"描述">
+					description = <"*">
+				>
+				["at0141"] = <
+					text = <"无">
+					description = <"*">
+				>
+				["at0142"] = <
+					text = <"曾患">
+					description = <"*">
+				>
+				["at0143"] = <
+					text = <"现患">
+					description = <"*">
+				>
+				["at0144"] = <
+					text = <"类型">
+					description = <"*">
+				>
+				["at0145"] = <
+					text = <"空腹血糖受损（IFG)">
+					description = <"*">
+				>
+				["at0146"] = <
+					text = <"糖耐量受损（IGT）">
+					description = <"*">
+				>
+				["at0147"] = <
+					text = <"糖尿病">
+					description = <"*">
+				>
+				["at0148"] = <
+					text = <"病程">
+					description = <"*">
+				>
+				["at0149"] = <
+					text = <"治疗">
+					description = <"*">
+				>
+				["at0150"] = <
+					text = <"饮食控制">
+					description = <"*">
+				>
+				["at0151"] = <
+					text = <"口服药物治疗">
+					description = <"*">
+				>
+				["at0152"] = <
+					text = <"胰岛素治疗">
+					description = <"*">
+				>
+				["at0153"] = <
+					text = <"胰岛素+口服药">
+					description = <"*">
+				>
+				["at0154"] = <
+					text = <"并发症">
+					description = <"*">
+				>
+				["at0155"] = <
+					text = <"低血糖">
+					description = <"*">
+				>
+				["at0156"] = <
+					text = <"酸中毒">
+					description = <"*">
+				>
+				["at0157"] = <
+					text = <"眼底病变">
+					description = <"*">
+				>
+				["at0158"] = <
+					text = <"周围神经病">
+					description = <"*">
+				>
+				["at0159"] = <
+					text = <"糖尿病肾病">
+					description = <"*">
+				>
+				["at0160"] = <
+					text = <"大血管病变">
+					description = <"*">
+				>
+				["at0161"] = <
+					text = <"其他重要疾病">
+					description = <"*">
+				>
+				["at0162"] = <
+					text = <"PatientId">
+					description = <"*">
+				>
+			>
+		>
+	>

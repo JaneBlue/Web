@@ -1,0 +1,493 @@
+archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.moca.v1
+
+concept
+	[at0000]	-- Moca(beijing edition)
+language
+	original_language = <[ISO_639-1::zh]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["zh"] = <
+			language = <[ISO_639-1::zh]>
+			purpose = <"MoCA(Montreal Cognitive Assessment)由加拿大Nasreddine等根据临床经验并参考MMSE（简明精神状态检查）的认知项目和评分而制定，是一个用来对认知功能异常进行快速筛查的评定工具。本版本为北京版">
+			use = <"总分30分，≥26分正常，其敏感性高，覆盖重要的认知领域，测试时间短，适合临床运用。受教育程度的影响，文化背景的差异、检查者使用MoCA的技巧和经验，检查的环境及被试者的情绪及精神状态等均会对分值产生影响。">
+			keywords = <"MoCA", ...>
+			misuse = <"">
+			copyright = <"ZJU">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"87ED98CAF84FB3899D6A73BA0CF5F602">
+	>
+
+definition
+	OBSERVATION[at0000] matches {	-- Moca(beijing edition)
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {	-- 基本信息
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0005] occurrences matches {0..1} matches {	-- 姓名
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0006] occurrences matches {0..1} matches {	-- 性别
+												value matches {
+													0|[local::at0007], 	-- 男
+													1|[local::at0008]  	-- 女
+												}
+											}
+											ELEMENT[at0009] occurrences matches {0..1} matches {	-- 出生日期
+												value matches {
+													DV_DATE_TIME matches {*}
+												}
+											}
+											ELEMENT[at0010] occurrences matches {0..1} matches {	-- 教育水平
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0011] occurrences matches {0..1} matches {	-- 检查日期
+												value matches {
+													DV_DATE_TIME matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0012] occurrences matches {0..1} matches {	-- 视空间与执行功能
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0013] occurrences matches {0..1} matches {	-- 连线图
+												value matches {
+													0|[local::at0014], 	-- 未能完成
+													1|[local::at0015]  	-- 正确完成
+												}
+											}
+											ELEMENT[at0016] occurrences matches {0..1} matches {	-- 复制立方体
+												value matches {
+													0|[local::at0017], 	-- 未能完成
+													1|[local::at0018]  	-- 正确完成
+												}
+											}
+											CLUSTER[at0019] occurrences matches {0..1} matches {	-- 画钟表
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0020] occurrences matches {0..1} matches {	-- 轮廓
+														value matches {
+															0|[local::at0021], 	-- 未能完成
+															1|[local::at0022]  	-- 正确完成
+														}
+													}
+													ELEMENT[at0023] occurrences matches {0..1} matches {	-- 数字
+														value matches {
+															0|[local::at0024], 	-- 未能完成
+															1|[local::at0025]  	-- 正确完成
+														}
+													}
+													ELEMENT[at0026] occurrences matches {0..1} matches {	-- 指针
+														value matches {
+															0|[local::at0027], 	-- 未能完成
+															1|[local::at0028]  	-- 正确完成
+														}
+													}
+												}
+											}
+											ELEMENT[at0031] occurrences matches {0..1} matches {	-- 得分
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..5|}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0032] occurrences matches {0..1} matches {	-- 命名
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0033] occurrences matches {0..1} matches {	-- 得分
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0034] occurrences matches {0..1} matches {	-- 注意
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0035] occurrences matches {0..1} matches {	-- 顺背
+												value matches {
+													0|[local::at0036], 	-- 未能完成
+													1|[local::at0037]  	-- 正确完成
+												}
+											}
+											ELEMENT[at0038] occurrences matches {0..1} matches {	-- 倒背
+												value matches {
+													0|[local::at0039], 	-- 未能完成
+													1|[local::at0040]  	-- 正确完成
+												}
+											}
+											ELEMENT[at0044] occurrences matches {0..1} matches {	-- 读出一系列数字，每当出现数字1时，患者必须用手敲打一下桌面
+												value matches {
+													0|[local::at0045], 	-- 错误数大于或等于2
+													1|[local::at0046]  	-- 错误数小于2
+												}
+											}
+											ELEMENT[at0047] occurrences matches {0..1} matches {	-- 100连续减7
+												value matches {
+													0|[local::at0048], 	-- 全部错误
+													1|[local::at0049], 	-- 1个正确
+													2|[local::at0050], 	-- 2-3个正确
+													3|[local::at0051]  	-- 4-5个正确
+												}
+											}
+											ELEMENT[at0052] occurrences matches {0..1} matches {	-- 得分
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..6|}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0053] occurrences matches {0..1} matches {	-- 语言
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0054] occurrences matches {0..1} matches {	-- 重复句子1
+												value matches {
+													0|[local::at0055], 	-- 未能完成
+													1|[local::at0056]  	-- 正确完成
+												}
+											}
+											ELEMENT[at0057] occurrences matches {0..1} matches {	-- 重复句子2
+												value matches {
+													0|[local::at0058], 	-- 未能完成
+													1|[local::at0059]  	-- 正确完成
+												}
+											}
+											ELEMENT[at0060] occurrences matches {0..1} matches {	-- 在一分钟内尽可能多说动物的名字
+												value matches {
+													0|[local::at0061], 	-- 数目小于等于10
+													1|[local::at0062]  	-- 数目大于等于11
+												}
+											}
+											ELEMENT[at0063] occurrences matches {0..1} matches {	-- 得分
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0064] occurrences matches {0..1} matches {	-- 抽象得分
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..2|}
+											}
+										}
+									}
+									ELEMENT[at0065] occurrences matches {0..1} matches {	-- 延迟回忆
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..5|}
+											}
+										}
+									}
+									ELEMENT[at0066] occurrences matches {0..1} matches {	-- 定向
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..6|}
+											}
+										}
+									}
+									ELEMENT[at0067] occurrences matches {0..1} matches {	-- 总分
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..30|}
+											}
+										}
+									}
+									ELEMENT[at0068] occurrences matches {0..1} matches {	-- VisitID
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["zh"] = <
+			items = <
+				["at0000"] = <
+					text = <"Moca(beijing edition)">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"基本信息">
+					description = <"*描述被测试者的基本信息">
+				>
+				["at0005"] = <
+					text = <"姓名">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"性别">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"男">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"女">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"出生日期">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"教育水平">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"检查日期">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"视空间与执行功能">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"连线图">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"未能完成">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"正确完成">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"复制立方体">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"未能完成">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"正确完成">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"画钟表">
+					description = <"*画钟表（11点过10分）">
+				>
+				["at0020"] = <
+					text = <"轮廓">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"未能完成">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"正确完成">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"数字">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"未能完成">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"正确完成">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"指针">
+					description = <"*">
+				>
+				["at0027"] = <
+					text = <"未能完成">
+					description = <"*">
+				>
+				["at0028"] = <
+					text = <"正确完成">
+					description = <"*">
+				>
+				["at0031"] = <
+					text = <"得分">
+					description = <"*视空间与执行功能得分">
+				>
+				["at0032"] = <
+					text = <"命名">
+					description = <"*">
+				>
+				["at0033"] = <
+					text = <"得分">
+					description = <"*">
+				>
+				["at0034"] = <
+					text = <"注意">
+					description = <"*读出数字，请患者重复上述过程2次（每秒一个）">
+				>
+				["at0035"] = <
+					text = <"顺背">
+					description = <"*">
+				>
+				["at0036"] = <
+					text = <"未能完成">
+					description = <"*">
+				>
+				["at0037"] = <
+					text = <"正确完成">
+					description = <"*">
+				>
+				["at0038"] = <
+					text = <"倒背">
+					description = <"*">
+				>
+				["at0039"] = <
+					text = <"未能完成">
+					description = <"*">
+				>
+				["at0040"] = <
+					text = <"正确完成">
+					description = <"*">
+				>
+				["at0044"] = <
+					text = <"读出一系列数字，每当出现数字1时，患者必须用手敲打一下桌面">
+					description = <"*">
+				>
+				["at0045"] = <
+					text = <"错误数大于或等于2">
+					description = <"*">
+				>
+				["at0046"] = <
+					text = <"错误数小于2">
+					description = <"*">
+				>
+				["at0047"] = <
+					text = <"100连续减7">
+					description = <"*">
+				>
+				["at0048"] = <
+					text = <"全部错误">
+					description = <"*">
+				>
+				["at0049"] = <
+					text = <"1个正确">
+					description = <"*">
+				>
+				["at0050"] = <
+					text = <"2-3个正确">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"4-5个正确">
+					description = <"*">
+				>
+				["at0052"] = <
+					text = <"得分">
+					description = <"*">
+				>
+				["at0053"] = <
+					text = <"语言">
+					description = <"*">
+				>
+				["at0054"] = <
+					text = <"重复句子1">
+					description = <"*">
+				>
+				["at0055"] = <
+					text = <"未能完成">
+					description = <"*">
+				>
+				["at0056"] = <
+					text = <"正确完成">
+					description = <"*">
+				>
+				["at0057"] = <
+					text = <"重复句子2">
+					description = <"*">
+				>
+				["at0058"] = <
+					text = <"未能完成">
+					description = <"*">
+				>
+				["at0059"] = <
+					text = <"正确完成">
+					description = <"*">
+				>
+				["at0060"] = <
+					text = <"在一分钟内尽可能多说动物的名字">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"数目小于等于10">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"数目大于等于11">
+					description = <"*">
+				>
+				["at0063"] = <
+					text = <"得分">
+					description = <"*语言得分">
+				>
+				["at0064"] = <
+					text = <"抽象得分">
+					description = <"*词语相似度">
+				>
+				["at0065"] = <
+					text = <"延迟回忆">
+					description = <"*">
+				>
+				["at0066"] = <
+					text = <"定向">
+					description = <"*">
+				>
+				["at0067"] = <
+					text = <"总分">
+					description = <"*本次测试获得的总分">
+				>
+				["at0068"] = <
+					text = <"VisitID">
+					description = <"*">
+				>
+			>
+		>
+	>

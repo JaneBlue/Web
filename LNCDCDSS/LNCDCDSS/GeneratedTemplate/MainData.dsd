@@ -1,0 +1,1801 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Data_source xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header alias="header">
+        <Login_user>
+            <Login_name style="Text" direction="OnlyIn"/>
+			<User_name style="Text" direction="OnlyIn"/>
+			<User_class style="Text" direction="OnlyIn"/>
+			<User_department style="Text" direction="OnlyIn"/>
+		</Login_user>
+	</Header>
+	<ImplicitInfo>
+        <Study_sq direction="OnlyIn"/>
+		<Sort_group_name direction="OnlyIn"/>
+		<Sort_item_name direction="OnlyIn"/>
+		<Study_instance_uid direction="OnlyIn"/>
+		<Study_date style="Date" direction="OnlyIn"/>
+		<Measurement_group_sq direction="OnlyIn"/>
+		<Template_sq direction="OnlyIn"/>
+		<Report_instance_uid direction="OnlyIn"/>
+		<File_type direction="OnlyIn"/>
+		<Update_login_name direction="OnlyIn"/>
+		<Update_user_name direction="OnlyIn"/>
+		<Update_date style="Date" direction="OnlyIn"/>
+		<Drug_management_number direction="OnlyIn"/>
+	</ImplicitInfo>
+	<DB_definition alias="ＤＢ参照">
+        <Study_info>
+            <Sort_class_name alias="検査大分類" direction="BothInOut"/>
+			<Sort_group_name alias="検査中分類" direction="BothInOut"/>
+			<Sort_item_name alias="検査小分類" direction="BothInOut"/>
+			<Order_number alias="オーダ番号" direction="BothInOut"/>
+			<Co_order_number alias="部門オーダ番号" direction="BothInOut"/>
+			<Section_order_flag alias="部門発番フラグ" direction="BothInOut"/>
+			<Priority_flag alias="優先検査フラグ" direction="BothInOut"/>
+			<Receipt_number alias="受付番号" direction="BothInOut"/>
+			<Receipt_name alias="受付者名" direction="BothInOut"/>
+			<Medical_exam_number alias="検診番号" direction="BothInOut"/>
+			<Slip_number alias="伝票番号" direction="BothInOut"/>
+			<Study_id alias="検査ID" direction="BothInOut"/>
+			<Patient_id alias="被検者ID" direction="BothInOut"/>
+			<Patient_name_ascii alias="被検者名ASCII" direction="BothInOut"/>
+			<Patient_kana_name alias="被検者カナ名" direction="BothInOut"/>
+			<Patient_kanji_name alias="被検者漢字名" direction="BothInOut"/>
+			<Gender alias="性別" direction="BothInOut"/>
+			<Birthday alias="生年月日" style="Date" direction="BothInOut"/>
+			<Age alias="年齢" style="Age" direction="BothInOut"/>
+			<Study_date_age alias="検査時年齢" style="studydateage" direction="BothInOut"/>
+			<Height alias="身長" direction="BothInOut"/>
+			<Weight alias="体重" direction="BothInOut"/>
+			<Blood_type alias="血液型" direction="BothInOut"/>
+			<Systolic_bp alias="最高血圧" direction="BothInOut"/>
+			<Diastolic_bp alias="最低血圧" direction="BothInOut"/>
+			<Bp_unit alias="血圧単位" direction="BothInOut"/>
+			<Prev_disease_name alias="既往症" direction="BothInOut"/>
+			<Dominant_hand alias="利き腕" direction="BothInOut"/>
+			<In_out alias="入外区分" direction="BothInOut"/>
+			<Patient_way alias="患者移動方法" direction="BothInOut"/>
+			<Patient_pos alias="患者位置情報" direction="BothInOut"/>
+			<Req_confirm_flg alias="判読依頼フラグ" direction="BothInOut"/>
+			<Ward alias="病棟名" direction="BothInOut"/>
+			<Room alias="病室" direction="BothInOut"/>
+			<Department alias="所属科" direction="BothInOut"/>
+			<Request_department alias="依頼科" direction="BothInOut"/>
+			<Treatment_department alias="診療科" direction="BothInOut"/>
+			<Request_doctor alias="依頼医師名" direction="BothInOut"/>
+			<Req_drug_management_number alias="依頼医師麻薬管理番号" direction="BothInOut"/>
+			<Medication_name alias="投薬情報" direction="BothInOut"/>
+			<Contagion alias="伝染病" direction="BothInOut"/>
+			<Reserve_date alias="検査予定日時" style="Date" direction="BothInOut"/>
+			<Study_date alias="検査日時" style="Date" direction="BothInOut"/>
+			<Exam_room alias="使用検査室名" direction="BothInOut"/>
+			<Mod_name_list alias="使用モダリティSQリスト" direction="BothInOut"/>
+			<Oncall_flag alias="オンコールフラグ" direction="BothInOut"/>
+			<Disease_name alias="病名" direction="BothInOut"/>
+			<Patient_status alias="患者状態" direction="BothInOut"/>
+			<Infection alias="感染症情報" direction="BothInOut"/>
+			<Engineer1 alias="検査技師又は看護師１" direction="BothInOut"/>
+			<Engineer2 alias="検査技師又は看護師２" direction="BothInOut"/>
+			<Operator1 alias="検査者名１" direction="BothInOut"/>
+			<Operator2 alias="検査者名２" direction="BothInOut"/>
+			<Operator3 alias="検査者名３" direction="BothInOut"/>
+			<Signature_1 alias="所見記入者１" direction="BothInOut"/>
+			<Signature_2 alias="所見記入者２" direction="BothInOut"/>
+			<Signature_3 alias="所見記入者３" direction="BothInOut"/>
+			<Judgement alias="総合判定" direction="BothInOut"/>
+			<Study_instance_uid alias="検査インスタンスUID" direction="BothInOut"/>
+			<Study_description alias="検査記述" direction="BothInOut"/>
+			<Last_study_id alias="前回検査ID" direction="BothInOut"/>
+			<Last_study_date alias="前回検査日時" style="Date" direction="BothInOut"/>
+			<Report_count alias="レポート版数" direction="BothInOut"/>
+			<File_count alias="データファイル数" direction="BothInOut"/>
+			<Key_file_count alias="キー選択データファイル数" direction="BothInOut"/>
+			<Approval_status alias="承認状態フラグ" direction="BothInOut"/>
+			<Measurement_group_sq alias="詳細情報グループSQ" direction="BothInOut"/>
+			<File_type_list alias="ファイル種別リスト" direction="BothInOut"/>
+			<Edit_protection_flg alias="編集保護フラグ" direction="BothInOut"/>
+			<Profile_flg alias="プロファイルフラグ" direction="BothInOut"/>
+			<Site_sq alias="サイトSQ" direction="BothInOut"/>
+		</Study_info>
+		<Study_status_info>
+            <Study_status alias="検査進捗ステータス" direction="BothInOut"/>
+			<Report_status alias="レポート進捗ステータス" direction="BothInOut"/>
+			<Report_edit_flg alias="レポート編集中フラグ" direction="BothInOut"/>
+			<Report_hisregist_flg alias="レポートHIS登録フラグ" direction="BothInOut"/>
+			<Treatment_status alias="実施進捗ステータス" direction="BothInOut"/>
+			<Treatment_edit_flg alias="実施編集中フラグ" direction="BothInOut"/>
+			<Treatment_hisregist_flg alias="実施HIS登録フラグ" direction="BothInOut"/>
+			<rawdata_hisregist_flg alias="RAWデータHIS登録フラグ" direction="BothInOut"/>
+			<Study_edit_flg alias="検査情報編集フラグ" direction="BothInOut"/>
+			<Charge_flg alias="会計済みフラグ" direction="BothInOut"/>
+			<Receipt_date alias="受付日時" style="Date" direction="BothInOut"/>
+			<Start_date alias="検査開始日時" style="Date" direction="BothInOut"/>
+			<End_date alias="検査終了日時" style="Date" direction="BothInOut"/>
+			<Elapsed_time alias="検査所要時間" direction="BothInOut"/>
+		</Study_status_info>
+		<Study_comment_info>
+            <Diagnosis alias="臨床診断" direction="BothInOut"/>
+			<Purpose alias="検査目的" direction="BothInOut"/>
+			<Req_comment alias="検査依頼コメント" direction="BothInOut"/>
+			<Contraindication alias="禁忌情報" direction="BothInOut"/>
+			<Reception_comment alias="受付時コメント" direction="BothInOut"/>
+			<Pretreatment_comment alias="前処置コメント" direction="BothInOut"/>
+			<Exam_comment alias="検査時コメント" direction="BothInOut"/>
+			<Treatment_comment alias="実施時コメント" direction="BothInOut"/>
+			<Free_comment_1 alias="フリーコメント１" direction="BothInOut"/>
+			<Free_comment_2 alias="フリーコメント２" direction="BothInOut"/>
+			<Etcetera1 alias="その他1" direction="BothInOut"/>
+			<Etcetera2 alias="その他2" direction="BothInOut"/>
+			<Etcetera3 alias="その他3" direction="BothInOut"/>
+			<Etcetera4 alias="その他4" direction="BothInOut"/>
+			<Etcetera5 alias="その他5" direction="BothInOut"/>
+			<Etcetera6 alias="その他6" direction="BothInOut"/>
+			<Etcetera7 alias="その他7" direction="BothInOut"/>
+			<Etcetera8 alias="その他8" direction="BothInOut"/>
+			<Etcetera9 alias="その他9" direction="BothInOut"/>
+			<Etcetera10 alias="その他10" direction="BothInOut"/>
+			<Etcetera11 alias="その他11" direction="BothInOut"/>
+			<Etcetera12 alias="その他12" direction="BothInOut"/>
+			<Etcetera13 alias="その他13" direction="BothInOut"/>
+			<Etcetera14 alias="その他14" direction="BothInOut"/>
+			<Etcetera15 alias="その他15" direction="BothInOut"/>
+			<Etcetera16 alias="その他16" direction="BothInOut"/>
+			<Etcetera17 alias="その他17" direction="BothInOut"/>
+			<Etcetera18 alias="その他18" direction="BothInOut"/>
+			<Etcetera19 alias="その他19" direction="BothInOut"/>
+			<Etcetera20 alias="その他20" direction="BothInOut"/>
+			<Etcetera21 alias="その他21" direction="BothInOut"/>
+			<Etcetera22 alias="その他22" direction="BothInOut"/>
+			<Etcetera23 alias="その他23" direction="BothInOut"/>
+			<Etcetera24 alias="その他24" direction="BothInOut"/>
+			<Etcetera25 alias="その他25" direction="BothInOut"/>
+			<Etcetera26 alias="その他26" direction="BothInOut"/>
+			<Etcetera27 alias="その他27" direction="BothInOut"/>
+			<Etcetera28 alias="その他28" direction="BothInOut"/>
+			<Etcetera29 alias="その他29" direction="BothInOut"/>
+			<Etcetera30 alias="その他30" direction="BothInOut"/>
+			<Etcetera31 alias="その他31" direction="BothInOut"/>
+			<Etcetera32 alias="その他32" direction="BothInOut"/>
+			<Etcetera33 alias="その他33" direction="BothInOut"/>
+			<Etcetera34 alias="その他34" direction="BothInOut"/>
+			<Etcetera35 alias="その他35" direction="BothInOut"/>
+			<Etcetera36 alias="その他36" direction="BothInOut"/>
+			<Etcetera37 alias="その他37" direction="BothInOut"/>
+			<Etcetera38 alias="その他38" direction="BothInOut"/>
+			<Etcetera39 alias="その他39" direction="BothInOut"/>
+			<Etcetera40 alias="その他40" direction="BothInOut"/>
+			<Etcetera41 alias="その他41" direction="BothInOut"/>
+			<Etcetera42 alias="その他42" direction="BothInOut"/>
+			<Etcetera43 alias="その他43" direction="BothInOut"/>
+			<Etcetera44 alias="その他44" direction="BothInOut"/>
+			<Etcetera45 alias="その他45" direction="BothInOut"/>
+			<Etcetera46 alias="その他46" direction="BothInOut"/>
+			<Etcetera47 alias="その他47" direction="BothInOut"/>
+			<Etcetera48 alias="その他48" direction="BothInOut"/>
+			<Etcetera49 alias="その他49" direction="BothInOut"/>
+			<Etcetera50 alias="その他50" direction="BothInOut"/>
+		</Study_comment_info>
+		<Order_info>
+            <Sort_1st_name alias="検査第一分類名称" direction="BothInOut"/>
+			<Sort_2nd_name alias="検査第二分類名称" direction="BothInOut"/>
+			<Sort_3rd_name alias="検査第三分類名称" direction="BothInOut"/>
+			<Sort_4th_name alias="検査第四分類名称" direction="BothInOut"/>
+			<Sort_5th_name alias="検査第五分類名称" direction="BothInOut"/>
+			<Order_number alias="オーダ番号" direction="BothInOut"/>
+			<Order_date alias="オーダ発行日時" style="Date" direction="BothInOut"/>
+			<Order_name alias="オーダ発行者名" direction="BothInOut"/>
+			<Send_order_num alias="検査ステータス送信回数" direction="BothInOut"/>
+			<Send_raw_num alias="RAWデータ送信回数" direction="BothInOut"/>
+			<Send_report_num alias="レポート送信回数" direction="BothInOut"/>
+			<Send_treat_num alias="実施送信回数" direction="BothInOut"/>
+		</Order_info>
+		<Detail_study_info>
+            <Measurement_group_sq alias="詳細情報グループSQ" direction="BothInOut"/>
+			<Measurement_1 alias="詳細1" direction="BothInOut"/>
+			<Measurement_2 alias="詳細2" direction="BothInOut"/>
+			<Measurement_3 alias="詳細3" direction="BothInOut"/>
+			<Measurement_4 alias="詳細4" direction="BothInOut"/>
+			<Measurement_5 alias="詳細5" direction="BothInOut"/>
+			<Measurement_6 alias="詳細6" direction="BothInOut"/>
+			<Measurement_7 alias="詳細7" direction="BothInOut"/>
+			<Measurement_8 alias="詳細8" direction="BothInOut"/>
+			<Measurement_9 alias="詳細9" direction="BothInOut"/>
+			<Measurement_10 alias="詳細10" direction="BothInOut"/>
+			<Measurement_11 alias="詳細11" direction="BothInOut"/>
+			<Measurement_12 alias="詳細12" direction="BothInOut"/>
+			<Measurement_13 alias="詳細13" direction="BothInOut"/>
+			<Measurement_14 alias="詳細14" direction="BothInOut"/>
+			<Measurement_15 alias="詳細15" direction="BothInOut"/>
+			<Measurement_16 alias="詳細16" direction="BothInOut"/>
+			<Measurement_17 alias="詳細17" direction="BothInOut"/>
+			<Measurement_18 alias="詳細18" direction="BothInOut"/>
+			<Measurement_19 alias="詳細19" direction="BothInOut"/>
+			<Measurement_20 alias="詳細20" direction="BothInOut"/>
+			<Measurement_21 alias="詳細21" direction="BothInOut"/>
+			<Measurement_22 alias="詳細22" direction="BothInOut"/>
+			<Measurement_23 alias="詳細23" direction="BothInOut"/>
+			<Measurement_24 alias="詳細24" direction="BothInOut"/>
+			<Measurement_25 alias="詳細25" direction="BothInOut"/>
+			<Measurement_26 alias="詳細26" direction="BothInOut"/>
+			<Measurement_27 alias="詳細27" direction="BothInOut"/>
+			<Measurement_28 alias="詳細28" direction="BothInOut"/>
+			<Measurement_29 alias="詳細29" direction="BothInOut"/>
+			<Measurement_30 alias="詳細30" direction="BothInOut"/>
+			<Measurement_31 alias="詳細31" direction="BothInOut"/>
+			<Measurement_32 alias="詳細32" direction="BothInOut"/>
+			<Measurement_33 alias="詳細33" direction="BothInOut"/>
+			<Measurement_34 alias="詳細34" direction="BothInOut"/>
+			<Measurement_35 alias="詳細35" direction="BothInOut"/>
+			<Measurement_36 alias="詳細36" direction="BothInOut"/>
+			<Measurement_37 alias="詳細37" direction="BothInOut"/>
+			<Measurement_38 alias="詳細38" direction="BothInOut"/>
+			<Measurement_39 alias="詳細39" direction="BothInOut"/>
+			<Measurement_40 alias="詳細40" direction="BothInOut"/>
+			<Measurement_41 alias="詳細41" direction="BothInOut"/>
+			<Measurement_42 alias="詳細42" direction="BothInOut"/>
+			<Measurement_43 alias="詳細43" direction="BothInOut"/>
+			<Measurement_44 alias="詳細44" direction="BothInOut"/>
+			<Measurement_45 alias="詳細45" direction="BothInOut"/>
+			<Measurement_46 alias="詳細46" direction="BothInOut"/>
+			<Measurement_47 alias="詳細47" direction="BothInOut"/>
+			<Measurement_48 alias="詳細48" direction="BothInOut"/>
+			<Measurement_49 alias="詳細49" direction="BothInOut"/>
+			<Measurement_50 alias="詳細50" direction="BothInOut"/>
+			<Measurement_51 alias="詳細51" direction="BothInOut"/>
+			<Measurement_52 alias="詳細52" direction="BothInOut"/>
+			<Measurement_53 alias="詳細53" direction="BothInOut"/>
+			<Measurement_54 alias="詳細54" direction="BothInOut"/>
+			<Measurement_55 alias="詳細55" direction="BothInOut"/>
+			<Measurement_56 alias="詳細56" direction="BothInOut"/>
+			<Measurement_57 alias="詳細57" direction="BothInOut"/>
+			<Measurement_58 alias="詳細58" direction="BothInOut"/>
+			<Measurement_59 alias="詳細59" direction="BothInOut"/>
+			<Measurement_60 alias="詳細60" direction="BothInOut"/>
+			<Measurement_61 alias="詳細61" direction="BothInOut"/>
+			<Measurement_62 alias="詳細62" direction="BothInOut"/>
+			<Measurement_63 alias="詳細63" direction="BothInOut"/>
+			<Measurement_64 alias="詳細64" direction="BothInOut"/>
+			<Measurement_65 alias="詳細65" direction="BothInOut"/>
+			<Measurement_66 alias="詳細66" direction="BothInOut"/>
+			<Measurement_67 alias="詳細67" direction="BothInOut"/>
+			<Measurement_68 alias="詳細68" direction="BothInOut"/>
+			<Measurement_69 alias="詳細69" direction="BothInOut"/>
+			<Measurement_70 alias="詳細70" direction="BothInOut"/>
+			<Measurement_71 alias="詳細71" direction="BothInOut"/>
+			<Measurement_72 alias="詳細72" direction="BothInOut"/>
+			<Measurement_73 alias="詳細73" direction="BothInOut"/>
+			<Measurement_74 alias="詳細74" direction="BothInOut"/>
+			<Measurement_75 alias="詳細75" direction="BothInOut"/>
+			<Measurement_76 alias="詳細76" direction="BothInOut"/>
+			<Measurement_77 alias="詳細77" direction="BothInOut"/>
+			<Measurement_78 alias="詳細78" direction="BothInOut"/>
+			<Measurement_79 alias="詳細79" direction="BothInOut"/>
+			<Measurement_80 alias="詳細80" direction="BothInOut"/>
+			<Measurement_81 alias="詳細81" direction="BothInOut"/>
+			<Measurement_82 alias="詳細82" direction="BothInOut"/>
+			<Measurement_83 alias="詳細83" direction="BothInOut"/>
+			<Measurement_84 alias="詳細84" direction="BothInOut"/>
+			<Measurement_85 alias="詳細85" direction="BothInOut"/>
+			<Measurement_86 alias="詳細86" direction="BothInOut"/>
+			<Measurement_87 alias="詳細87" direction="BothInOut"/>
+			<Measurement_88 alias="詳細88" direction="BothInOut"/>
+			<Measurement_89 alias="詳細89" direction="BothInOut"/>
+			<Measurement_90 alias="詳細90" direction="BothInOut"/>
+			<Measurement_91 alias="詳細91" direction="BothInOut"/>
+			<Measurement_92 alias="詳細92" direction="BothInOut"/>
+			<Measurement_93 alias="詳細93" direction="BothInOut"/>
+			<Measurement_94 alias="詳細94" direction="BothInOut"/>
+			<Measurement_95 alias="詳細95" direction="BothInOut"/>
+			<Measurement_96 alias="詳細96" direction="BothInOut"/>
+			<Measurement_97 alias="詳細97" direction="BothInOut"/>
+			<Measurement_98 alias="詳細98" direction="BothInOut"/>
+			<Measurement_99 alias="詳細99" direction="BothInOut"/>
+			<Measurement_100 alias="詳細100" direction="BothInOut"/>
+			<Measurement_101 alias="詳細101" direction="BothInOut"/>
+			<Measurement_102 alias="詳細102" direction="BothInOut"/>
+			<Measurement_103 alias="詳細103" direction="BothInOut"/>
+			<Measurement_104 alias="詳細104" direction="BothInOut"/>
+			<Measurement_105 alias="詳細105" direction="BothInOut"/>
+			<Measurement_106 alias="詳細106" direction="BothInOut"/>
+			<Measurement_107 alias="詳細107" direction="BothInOut"/>
+			<Measurement_108 alias="詳細108" direction="BothInOut"/>
+			<Measurement_109 alias="詳細109" direction="BothInOut"/>
+			<Measurement_110 alias="詳細110" direction="BothInOut"/>
+			<Measurement_111 alias="詳細111" direction="BothInOut"/>
+			<Measurement_112 alias="詳細112" direction="BothInOut"/>
+			<Measurement_113 alias="詳細113" direction="BothInOut"/>
+			<Measurement_114 alias="詳細114" direction="BothInOut"/>
+			<Measurement_115 alias="詳細115" direction="BothInOut"/>
+			<Measurement_116 alias="詳細116" direction="BothInOut"/>
+			<Measurement_117 alias="詳細117" direction="BothInOut"/>
+			<Measurement_118 alias="詳細118" direction="BothInOut"/>
+			<Measurement_119 alias="詳細119" direction="BothInOut"/>
+			<Measurement_120 alias="詳細120" direction="BothInOut"/>
+			<Measurement_121 alias="詳細121" direction="BothInOut"/>
+			<Measurement_122 alias="詳細122" direction="BothInOut"/>
+			<Measurement_123 alias="詳細123" direction="BothInOut"/>
+			<Measurement_124 alias="詳細124" direction="BothInOut"/>
+			<Measurement_125 alias="詳細125" direction="BothInOut"/>
+			<Measurement_126 alias="詳細126" direction="BothInOut"/>
+			<Measurement_127 alias="詳細127" direction="BothInOut"/>
+			<Measurement_128 alias="詳細128" direction="BothInOut"/>
+			<Measurement_129 alias="詳細129" direction="BothInOut"/>
+			<Measurement_130 alias="詳細130" direction="BothInOut"/>
+			<Measurement_131 alias="詳細131" direction="BothInOut"/>
+			<Measurement_132 alias="詳細132" direction="BothInOut"/>
+			<Measurement_133 alias="詳細133" direction="BothInOut"/>
+			<Measurement_134 alias="詳細134" direction="BothInOut"/>
+			<Measurement_135 alias="詳細135" direction="BothInOut"/>
+			<Measurement_136 alias="詳細136" direction="BothInOut"/>
+			<Measurement_137 alias="詳細137" direction="BothInOut"/>
+			<Measurement_138 alias="詳細138" direction="BothInOut"/>
+			<Measurement_139 alias="詳細139" direction="BothInOut"/>
+			<Measurement_140 alias="詳細140" direction="BothInOut"/>
+			<Measurement_141 alias="詳細141" direction="BothInOut"/>
+			<Measurement_142 alias="詳細142" direction="BothInOut"/>
+			<Measurement_143 alias="詳細143" direction="BothInOut"/>
+			<Measurement_144 alias="詳細144" direction="BothInOut"/>
+			<Measurement_145 alias="詳細145" direction="BothInOut"/>
+			<Measurement_146 alias="詳細146" direction="BothInOut"/>
+			<Measurement_147 alias="詳細147" direction="BothInOut"/>
+			<Measurement_148 alias="詳細148" direction="BothInOut"/>
+			<Measurement_149 alias="詳細149" direction="BothInOut"/>
+			<Measurement_150 alias="詳細150" direction="BothInOut"/>
+			<Measurement_151 alias="詳細151" direction="BothInOut"/>
+			<Measurement_152 alias="詳細152" direction="BothInOut"/>
+			<Measurement_153 alias="詳細153" direction="BothInOut"/>
+			<Measurement_154 alias="詳細154" direction="BothInOut"/>
+			<Measurement_155 alias="詳細155" direction="BothInOut"/>
+			<Measurement_156 alias="詳細156" direction="BothInOut"/>
+			<Measurement_157 alias="詳細157" direction="BothInOut"/>
+			<Measurement_158 alias="詳細158" direction="BothInOut"/>
+			<Measurement_159 alias="詳細159" direction="BothInOut"/>
+			<Measurement_160 alias="詳細160" direction="BothInOut"/>
+			<Measurement_161 alias="詳細161" direction="BothInOut"/>
+			<Measurement_162 alias="詳細162" direction="BothInOut"/>
+			<Measurement_163 alias="詳細163" direction="BothInOut"/>
+			<Measurement_164 alias="詳細164" direction="BothInOut"/>
+			<Measurement_165 alias="詳細165" direction="BothInOut"/>
+			<Measurement_166 alias="詳細166" direction="BothInOut"/>
+			<Measurement_167 alias="詳細167" direction="BothInOut"/>
+			<Measurement_168 alias="詳細168" direction="BothInOut"/>
+			<Measurement_169 alias="詳細169" direction="BothInOut"/>
+			<Measurement_170 alias="詳細170" direction="BothInOut"/>
+			<Measurement_171 alias="詳細171" direction="BothInOut"/>
+			<Measurement_172 alias="詳細172" direction="BothInOut"/>
+			<Measurement_173 alias="詳細173" direction="BothInOut"/>
+			<Measurement_174 alias="詳細174" direction="BothInOut"/>
+			<Measurement_175 alias="詳細175" direction="BothInOut"/>
+			<Measurement_176 alias="詳細176" direction="BothInOut"/>
+			<Measurement_177 alias="詳細177" direction="BothInOut"/>
+			<Measurement_178 alias="詳細178" direction="BothInOut"/>
+			<Measurement_179 alias="詳細179" direction="BothInOut"/>
+			<Measurement_180 alias="詳細180" direction="BothInOut"/>
+			<Measurement_181 alias="詳細181" direction="BothInOut"/>
+			<Measurement_182 alias="詳細182" direction="BothInOut"/>
+			<Measurement_183 alias="詳細183" direction="BothInOut"/>
+			<Measurement_184 alias="詳細184" direction="BothInOut"/>
+			<Measurement_185 alias="詳細185" direction="BothInOut"/>
+			<Measurement_186 alias="詳細186" direction="BothInOut"/>
+			<Measurement_187 alias="詳細187" direction="BothInOut"/>
+			<Measurement_188 alias="詳細188" direction="BothInOut"/>
+			<Measurement_189 alias="詳細189" direction="BothInOut"/>
+			<Measurement_190 alias="詳細190" direction="BothInOut"/>
+			<Measurement_191 alias="詳細191" direction="BothInOut"/>
+			<Measurement_192 alias="詳細192" direction="BothInOut"/>
+			<Measurement_193 alias="詳細193" direction="BothInOut"/>
+			<Measurement_194 alias="詳細194" direction="BothInOut"/>
+			<Measurement_195 alias="詳細195" direction="BothInOut"/>
+			<Measurement_196 alias="詳細196" direction="BothInOut"/>
+			<Measurement_197 alias="詳細197" direction="BothInOut"/>
+			<Measurement_198 alias="詳細198" direction="BothInOut"/>
+			<Measurement_199 alias="詳細199" direction="BothInOut"/>
+			<Measurement_200 alias="詳細200" direction="BothInOut"/>
+			<Measurement_201 alias="詳細201" direction="BothInOut"/>
+			<Measurement_202 alias="詳細202" direction="BothInOut"/>
+			<Measurement_203 alias="詳細203" direction="BothInOut"/>
+			<Measurement_204 alias="詳細204" direction="BothInOut"/>
+			<Measurement_205 alias="詳細205" direction="BothInOut"/>
+			<Measurement_206 alias="詳細206" direction="BothInOut"/>
+			<Measurement_207 alias="詳細207" direction="BothInOut"/>
+			<Measurement_208 alias="詳細208" direction="BothInOut"/>
+			<Measurement_209 alias="詳細209" direction="BothInOut"/>
+			<Measurement_210 alias="詳細210" direction="BothInOut"/>
+			<Measurement_211 alias="詳細211" direction="BothInOut"/>
+			<Measurement_212 alias="詳細212" direction="BothInOut"/>
+			<Measurement_213 alias="詳細213" direction="BothInOut"/>
+			<Measurement_214 alias="詳細214" direction="BothInOut"/>
+			<Measurement_215 alias="詳細215" direction="BothInOut"/>
+			<Measurement_216 alias="詳細216" direction="BothInOut"/>
+			<Measurement_217 alias="詳細217" direction="BothInOut"/>
+			<Measurement_218 alias="詳細218" direction="BothInOut"/>
+			<Measurement_219 alias="詳細219" direction="BothInOut"/>
+			<Measurement_220 alias="詳細220" direction="BothInOut"/>
+			<Measurement_221 alias="詳細221" direction="BothInOut"/>
+			<Measurement_222 alias="詳細222" direction="BothInOut"/>
+			<Measurement_223 alias="詳細223" direction="BothInOut"/>
+			<Measurement_224 alias="詳細224" direction="BothInOut"/>
+			<Measurement_225 alias="詳細225" direction="BothInOut"/>
+			<Measurement_226 alias="詳細226" direction="BothInOut"/>
+			<Measurement_227 alias="詳細227" direction="BothInOut"/>
+			<Measurement_228 alias="詳細228" direction="BothInOut"/>
+			<Measurement_229 alias="詳細229" direction="BothInOut"/>
+			<Measurement_230 alias="詳細230" direction="BothInOut"/>
+			<Measurement_231 alias="詳細231" direction="BothInOut"/>
+			<Measurement_232 alias="詳細232" direction="BothInOut"/>
+			<Measurement_233 alias="詳細233" direction="BothInOut"/>
+			<Measurement_234 alias="詳細234" direction="BothInOut"/>
+			<Measurement_235 alias="詳細235" direction="BothInOut"/>
+			<Measurement_236 alias="詳細236" direction="BothInOut"/>
+			<Measurement_237 alias="詳細237" direction="BothInOut"/>
+			<Measurement_238 alias="詳細238" direction="BothInOut"/>
+			<Measurement_239 alias="詳細239" direction="BothInOut"/>
+			<Measurement_240 alias="詳細240" direction="BothInOut"/>
+			<Measurement_241 alias="詳細241" direction="BothInOut"/>
+			<Measurement_242 alias="詳細242" direction="BothInOut"/>
+			<Measurement_243 alias="詳細243" direction="BothInOut"/>
+			<Measurement_244 alias="詳細244" direction="BothInOut"/>
+			<Measurement_245 alias="詳細245" direction="BothInOut"/>
+			<Measurement_246 alias="詳細246" direction="BothInOut"/>
+			<Measurement_247 alias="詳細247" direction="BothInOut"/>
+			<Measurement_248 alias="詳細248" direction="BothInOut"/>
+			<Measurement_249 alias="詳細249" direction="BothInOut"/>
+			<Measurement_250 alias="詳細250" direction="BothInOut"/>
+			<Measurement_251 alias="詳細251" direction="BothInOut"/>
+			<Measurement_252 alias="詳細252" direction="BothInOut"/>
+			<Measurement_253 alias="詳細253" direction="BothInOut"/>
+			<Measurement_254 alias="詳細254" direction="BothInOut"/>
+			<Measurement_255 alias="詳細255" direction="BothInOut"/>
+			<Measurement_256 alias="詳細256" direction="BothInOut"/>
+			<Measurement_257 alias="詳細257" direction="BothInOut"/>
+			<Measurement_258 alias="詳細258" direction="BothInOut"/>
+			<Measurement_259 alias="詳細259" direction="BothInOut"/>
+			<Measurement_260 alias="詳細260" direction="BothInOut"/>
+			<Measurement_261 alias="詳細261" direction="BothInOut"/>
+			<Measurement_262 alias="詳細262" direction="BothInOut"/>
+			<Measurement_263 alias="詳細263" direction="BothInOut"/>
+			<Measurement_264 alias="詳細264" direction="BothInOut"/>
+			<Measurement_265 alias="詳細265" direction="BothInOut"/>
+			<Measurement_266 alias="詳細266" direction="BothInOut"/>
+			<Measurement_267 alias="詳細267" direction="BothInOut"/>
+			<Measurement_268 alias="詳細268" direction="BothInOut"/>
+			<Measurement_269 alias="詳細269" direction="BothInOut"/>
+			<Measurement_270 alias="詳細270" direction="BothInOut"/>
+			<Measurement_271 alias="詳細271" direction="BothInOut"/>
+			<Measurement_272 alias="詳細272" direction="BothInOut"/>
+			<Measurement_273 alias="詳細273" direction="BothInOut"/>
+			<Measurement_274 alias="詳細274" direction="BothInOut"/>
+			<Measurement_275 alias="詳細275" direction="BothInOut"/>
+			<Measurement_276 alias="詳細276" direction="BothInOut"/>
+			<Measurement_277 alias="詳細277" direction="BothInOut"/>
+			<Measurement_278 alias="詳細278" direction="BothInOut"/>
+			<Measurement_279 alias="詳細279" direction="BothInOut"/>
+			<Measurement_280 alias="詳細280" direction="BothInOut"/>
+			<Measurement_281 alias="詳細281" direction="BothInOut"/>
+			<Measurement_282 alias="詳細282" direction="BothInOut"/>
+			<Measurement_283 alias="詳細283" direction="BothInOut"/>
+			<Measurement_284 alias="詳細284" direction="BothInOut"/>
+			<Measurement_285 alias="詳細285" direction="BothInOut"/>
+			<Measurement_286 alias="詳細286" direction="BothInOut"/>
+			<Measurement_287 alias="詳細287" direction="BothInOut"/>
+			<Measurement_288 alias="詳細288" direction="BothInOut"/>
+			<Measurement_289 alias="詳細289" direction="BothInOut"/>
+			<Measurement_290 alias="詳細290" direction="BothInOut"/>
+			<Measurement_291 alias="詳細291" direction="BothInOut"/>
+			<Measurement_292 alias="詳細292" direction="BothInOut"/>
+			<Measurement_293 alias="詳細293" direction="BothInOut"/>
+			<Measurement_294 alias="詳細294" direction="BothInOut"/>
+			<Measurement_295 alias="詳細295" direction="BothInOut"/>
+			<Measurement_296 alias="詳細296" direction="BothInOut"/>
+			<Measurement_297 alias="詳細297" direction="BothInOut"/>
+			<Measurement_298 alias="詳細298" direction="BothInOut"/>
+			<Measurement_299 alias="詳細299" direction="BothInOut"/>
+			<Measurement_300 alias="詳細300" direction="BothInOut"/>
+		</Detail_study_info>
+		<Treatment>
+            <Data/>
+			<Treatmentdetails>
+                <Treat_item>
+                    <Search_item alias="検索項目名" direction="BothInOut"/>
+					<Unique_label alias="ユニークラベル" direction="BothInOut"/>
+					<Treat_value alias="値" direction="BothInOut"/>
+					<Treat_unit alias="単位" direction="BothInOut"/>
+				</Treat_item>
+			</Treatmentdetails>
+		</Treatment>
+		<ImageRef>
+            <Image style="Image" alias="Image1" number="1" direction="BothInOut">
+            </Image>
+			<Image style="Image" alias="Image2" number="2" direction="BothInOut">
+            </Image>
+			<Image style="Image" alias="Image3" number="3" direction="BothInOut">
+            </Image>
+			<Image style="Image" alias="Image4" number="4" direction="BothInOut">
+            </Image>
+			<Image style="Image" alias="Image5" number="5" direction="BothInOut">
+            </Image>
+			<Image style="Image" alias="Image6" number="6" direction="BothInOut">
+            </Image>
+			<Image style="Image" alias="Image7" number="7" direction="BothInOut">
+            </Image>
+			<Image style="Image" alias="Image8" number="8" direction="BothInOut">
+            </Image>
+			<Image style="Image" alias="Image9" number="9" direction="BothInOut">
+            </Image>
+			<Image style="Image" alias="Image10" number="10" direction="BothInOut">
+            </Image>
+		</ImageRef>
+		<Terminology>
+            <Data number="1">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="2">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="3">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="4">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="5">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="6">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="7">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="8">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="9">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="10">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="11">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="12">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="13">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="14">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="15">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="16">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="17">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="18">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="19">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+			<Data number="20">
+                <Code alias="用語コードリスト" direction="BothInOut"/>
+				<Numeric alias="属性数値" direction="BothInOut"/>
+				<Comment alias="属性コメント" direction="BothInOut"/>
+			</Data>
+		</Terminology>
+		<ExtraInfo/>
+		<Dataentity/>
+		<ReferenceStudy>
+            <Study_info>
+                <Sort_class_name alias="検査大分類" direction="BothInOut"/>
+				<Sort_group_name alias="検査中分類" direction="BothInOut"/>
+				<Sort_item_name alias="検査小分類" direction="BothInOut"/>
+				<Order_number alias="オーダ番号" direction="BothInOut"/>
+				<Co_order_number alias="部門オーダ番号" direction="BothInOut"/>
+				<Section_order_flag alias="部門発番フラグ" direction="BothInOut"/>
+				<Priority_flag alias="優先検査フラグ" direction="BothInOut"/>
+				<Receipt_number alias="受付番号" direction="BothInOut"/>
+				<Receipt_name alias="受付者名" direction="BothInOut"/>
+				<Medical_exam_number alias="検診番号" direction="BothInOut"/>
+				<Slip_number alias="伝票番号" direction="BothInOut"/>
+				<Study_id alias="検査ID" direction="BothInOut"/>
+				<Patient_id alias="被検者ID" direction="BothInOut"/>
+				<Patient_name_ascii alias="被検者名ASCII" direction="BothInOut"/>
+				<Patient_kana_name alias="被検者カナ名" direction="BothInOut"/>
+				<Patient_kanji_name alias="被検者漢字名" direction="BothInOut"/>
+				<Gender alias="性別" direction="BothInOut"/>
+				<Birthday alias="生年月日" style="Date" direction="BothInOut"/>
+				<Age alias="年齢" style="Age" direction="BothInOut"/>
+				<Study_date_age alias="検査時年齢" style="studydateage" direction="BothInOut"/>
+				<Height alias="身長" direction="BothInOut"/>
+				<Weight alias="体重" direction="BothInOut"/>
+				<Blood_type alias="血液型" direction="BothInOut"/>
+				<Systolic_bp alias="最高血圧" direction="BothInOut"/>
+				<Diastolic_bp alias="最低血圧" direction="BothInOut"/>
+				<Bp_unit alias="血圧単位" direction="BothInOut"/>
+				<Prev_disease_name alias="既往症" direction="BothInOut"/>
+				<Dominant_hand alias="利き腕" direction="BothInOut"/>
+				<In_out alias="入外区分" direction="BothInOut"/>
+				<Patient_way alias="患者移動方法" direction="BothInOut"/>
+				<Patient_pos alias="患者位置情報" direction="BothInOut"/>
+				<Req_confirm_flg alias="判読依頼フラグ" direction="BothInOut"/>
+				<Ward alias="病棟名" direction="BothInOut"/>
+				<Room alias="病室" direction="BothInOut"/>
+				<Department alias="所属科" direction="BothInOut"/>
+				<Request_department alias="依頼科" direction="BothInOut"/>
+				<Treatment_department alias="診療科" direction="BothInOut"/>
+				<Request_doctor alias="依頼医師名" direction="BothInOut"/>
+				<Req_drug_management_number alias="依頼医師麻薬管理番号" direction="BothInOut"/>
+				<Medication_name alias="投薬情報" direction="BothInOut"/>
+				<Contagion alias="伝染病" direction="BothInOut"/>
+				<Reserve_date alias="検査予定日時" style="Date" direction="BothInOut"/>
+				<Study_date alias="検査日時" style="Date" direction="BothInOut"/>
+				<Exam_room alias="使用検査室名" direction="BothInOut"/>
+				<Mod_name_list alias="使用モダリティSQリスト" direction="BothInOut"/>
+				<Oncall_flag alias="オンコールフラグ" direction="BothInOut"/>
+				<Disease_name alias="病名" direction="BothInOut"/>
+				<Patient_status alias="患者状態" direction="BothInOut"/>
+				<Infection alias="感染症情報" direction="BothInOut"/>
+				<Engineer1 alias="検査技師又は看護師１" direction="BothInOut"/>
+				<Engineer2 alias="検査技師又は看護師２" direction="BothInOut"/>
+				<Operator1 alias="検査者名１" direction="BothInOut"/>
+				<Operator2 alias="検査者名２" direction="BothInOut"/>
+				<Operator3 alias="検査者名３" direction="BothInOut"/>
+				<Signature_1 alias="所見記入者１" direction="BothInOut"/>
+				<Signature_2 alias="所見記入者２" direction="BothInOut"/>
+				<Signature_3 alias="所見記入者３" direction="BothInOut"/>
+				<Judgement alias="総合判定" direction="BothInOut"/>
+				<Study_instance_uid alias="検査インスタンスUID" direction="BothInOut"/>
+				<Study_description alias="検査記述" direction="BothInOut"/>
+				<Last_study_id alias="前回検査ID" direction="BothInOut"/>
+				<Last_study_date alias="前回検査日時" style="Date" direction="BothInOut"/>
+				<Report_count alias="レポート版数" direction="BothInOut"/>
+				<File_count alias="データファイル数" direction="BothInOut"/>
+				<Key_file_count alias="キー選択データファイル数" direction="BothInOut"/>
+				<Approval_status alias="承認状態フラグ" direction="BothInOut"/>
+				<Measurement_group_sq alias="詳細情報グループSQ" direction="BothInOut"/>
+				<File_type_list alias="ファイル種別リスト" direction="BothInOut"/>
+				<Edit_protection_flg alias="編集保護フラグ" direction="BothInOut"/>
+				<Profile_flg alias="プロファイルフラグ" direction="BothInOut"/>
+				<Site_sq alias="サイトSQ" direction="BothInOut"/>
+			</Study_info>
+			<Study_status_info>
+                <Study_status alias="検査進捗ステータス" direction="BothInOut"/>
+				<Report_status alias="レポート進捗ステータス" direction="BothInOut"/>
+				<Report_edit_flg alias="レポート編集中フラグ" direction="BothInOut"/>
+				<Report_hisregist_flg alias="レポートHIS登録フラグ" direction="BothInOut"/>
+				<Treatment_status alias="実施進捗ステータス" direction="BothInOut"/>
+				<Treatment_edit_flg alias="実施編集中フラグ" direction="BothInOut"/>
+				<Treatment_hisregist_flg alias="実施HIS登録フラグ" direction="BothInOut"/>
+				<rawdata_hisregist_flg alias="RAWデータHIS登録フラグ" direction="BothInOut"/>
+				<Study_edit_flg alias="検査情報編集フラグ" direction="BothInOut"/>
+				<Charge_flg alias="会計済みフラグ" direction="BothInOut"/>
+				<Receipt_date alias="受付日時" style="Date" direction="BothInOut"/>
+				<Start_date alias="検査開始日時" style="Date" direction="BothInOut"/>
+				<End_date alias="検査終了日時" style="Date" direction="BothInOut"/>
+				<Elapsed_time alias="検査所要時間" direction="BothInOut"/>
+			</Study_status_info>
+			<Study_comment_info>
+                <Diagnosis alias="臨床診断" direction="BothInOut"/>
+				<Purpose alias="検査目的" direction="BothInOut"/>
+				<Req_comment alias="検査依頼コメント" direction="BothInOut"/>
+				<Contraindication alias="禁忌情報" direction="BothInOut"/>
+				<Reception_comment alias="受付時コメント" direction="BothInOut"/>
+				<Pretreatment_comment alias="前処置コメント" direction="BothInOut"/>
+				<Exam_comment alias="検査時コメント" direction="BothInOut"/>
+				<Treatment_comment alias="実施時コメント" direction="BothInOut"/>
+				<Free_comment_1 alias="フリーコメント１" direction="BothInOut"/>
+				<Free_comment_2 alias="フリーコメント２" direction="BothInOut"/>
+				<Etcetera1 alias="その他1" direction="BothInOut"/>
+				<Etcetera2 alias="その他2" direction="BothInOut"/>
+				<Etcetera3 alias="その他3" direction="BothInOut"/>
+				<Etcetera4 alias="その他4" direction="BothInOut"/>
+				<Etcetera5 alias="その他5" direction="BothInOut"/>
+				<Etcetera6 alias="その他6" direction="BothInOut"/>
+				<Etcetera7 alias="その他7" direction="BothInOut"/>
+				<Etcetera8 alias="その他8" direction="BothInOut"/>
+				<Etcetera9 alias="その他9" direction="BothInOut"/>
+				<Etcetera10 alias="その他10" direction="BothInOut"/>
+				<Etcetera11 alias="その他11" direction="BothInOut"/>
+				<Etcetera12 alias="その他12" direction="BothInOut"/>
+				<Etcetera13 alias="その他13" direction="BothInOut"/>
+				<Etcetera14 alias="その他14" direction="BothInOut"/>
+				<Etcetera15 alias="その他15" direction="BothInOut"/>
+				<Etcetera16 alias="その他16" direction="BothInOut"/>
+				<Etcetera17 alias="その他17" direction="BothInOut"/>
+				<Etcetera18 alias="その他18" direction="BothInOut"/>
+				<Etcetera19 alias="その他19" direction="BothInOut"/>
+				<Etcetera20 alias="その他20" direction="BothInOut"/>
+				<Etcetera21 alias="その他21" direction="BothInOut"/>
+				<Etcetera22 alias="その他22" direction="BothInOut"/>
+				<Etcetera23 alias="その他23" direction="BothInOut"/>
+				<Etcetera24 alias="その他24" direction="BothInOut"/>
+				<Etcetera25 alias="その他25" direction="BothInOut"/>
+				<Etcetera26 alias="その他26" direction="BothInOut"/>
+				<Etcetera27 alias="その他27" direction="BothInOut"/>
+				<Etcetera28 alias="その他28" direction="BothInOut"/>
+				<Etcetera29 alias="その他29" direction="BothInOut"/>
+				<Etcetera30 alias="その他30" direction="BothInOut"/>
+				<Etcetera31 alias="その他31" direction="BothInOut"/>
+				<Etcetera32 alias="その他32" direction="BothInOut"/>
+				<Etcetera33 alias="その他33" direction="BothInOut"/>
+				<Etcetera34 alias="その他34" direction="BothInOut"/>
+				<Etcetera35 alias="その他35" direction="BothInOut"/>
+				<Etcetera36 alias="その他36" direction="BothInOut"/>
+				<Etcetera37 alias="その他37" direction="BothInOut"/>
+				<Etcetera38 alias="その他38" direction="BothInOut"/>
+				<Etcetera39 alias="その他39" direction="BothInOut"/>
+				<Etcetera40 alias="その他40" direction="BothInOut"/>
+				<Etcetera41 alias="その他41" direction="BothInOut"/>
+				<Etcetera42 alias="その他42" direction="BothInOut"/>
+				<Etcetera43 alias="その他43" direction="BothInOut"/>
+				<Etcetera44 alias="その他44" direction="BothInOut"/>
+				<Etcetera45 alias="その他45" direction="BothInOut"/>
+				<Etcetera46 alias="その他46" direction="BothInOut"/>
+				<Etcetera47 alias="その他47" direction="BothInOut"/>
+				<Etcetera48 alias="その他48" direction="BothInOut"/>
+				<Etcetera49 alias="その他49" direction="BothInOut"/>
+				<Etcetera50 alias="その他50" direction="BothInOut"/>
+			</Study_comment_info>
+			<Order_info>
+                <Sort_1st_name alias="検査第一分類名称" direction="BothInOut"/>
+				<Sort_2nd_name alias="検査第二分類名称" direction="BothInOut"/>
+				<Sort_3rd_name alias="検査第三分類名称" direction="BothInOut"/>
+				<Sort_4th_name alias="検査第四分類名称" direction="BothInOut"/>
+				<Sort_5th_name alias="検査第五分類名称" direction="BothInOut"/>
+				<Order_number alias="オーダ番号" direction="BothInOut"/>
+				<Order_date alias="オーダ発行日時" style="Date" direction="BothInOut"/>
+				<Order_name alias="オーダ発行者名" direction="BothInOut"/>
+				<Send_order_num alias="検査ステータス送信回数" direction="BothInOut"/>
+				<Send_raw_num alias="RAWデータ送信回数" direction="BothInOut"/>
+				<Send_report_num alias="レポート送信回数" direction="BothInOut"/>
+				<Send_treat_num alias="実施送信回数" direction="BothInOut"/>
+			</Order_info>
+			<Detail_study_info>
+                <Measurement_group_sq alias="詳細情報グループSQ" direction="BothInOut"/>
+				<Measurement_1 alias="詳細1" direction="BothInOut"/>
+				<Measurement_2 alias="詳細2" direction="BothInOut"/>
+				<Measurement_3 alias="詳細3" direction="BothInOut"/>
+				<Measurement_4 alias="詳細4" direction="BothInOut"/>
+				<Measurement_5 alias="詳細5" direction="BothInOut"/>
+				<Measurement_6 alias="詳細6" direction="BothInOut"/>
+				<Measurement_7 alias="詳細7" direction="BothInOut"/>
+				<Measurement_8 alias="詳細8" direction="BothInOut"/>
+				<Measurement_9 alias="詳細9" direction="BothInOut"/>
+				<Measurement_10 alias="詳細10" direction="BothInOut"/>
+				<Measurement_11 alias="詳細11" direction="BothInOut"/>
+				<Measurement_12 alias="詳細12" direction="BothInOut"/>
+				<Measurement_13 alias="詳細13" direction="BothInOut"/>
+				<Measurement_14 alias="詳細14" direction="BothInOut"/>
+				<Measurement_15 alias="詳細15" direction="BothInOut"/>
+				<Measurement_16 alias="詳細16" direction="BothInOut"/>
+				<Measurement_17 alias="詳細17" direction="BothInOut"/>
+				<Measurement_18 alias="詳細18" direction="BothInOut"/>
+				<Measurement_19 alias="詳細19" direction="BothInOut"/>
+				<Measurement_20 alias="詳細20" direction="BothInOut"/>
+				<Measurement_21 alias="詳細21" direction="BothInOut"/>
+				<Measurement_22 alias="詳細22" direction="BothInOut"/>
+				<Measurement_23 alias="詳細23" direction="BothInOut"/>
+				<Measurement_24 alias="詳細24" direction="BothInOut"/>
+				<Measurement_25 alias="詳細25" direction="BothInOut"/>
+				<Measurement_26 alias="詳細26" direction="BothInOut"/>
+				<Measurement_27 alias="詳細27" direction="BothInOut"/>
+				<Measurement_28 alias="詳細28" direction="BothInOut"/>
+				<Measurement_29 alias="詳細29" direction="BothInOut"/>
+				<Measurement_30 alias="詳細30" direction="BothInOut"/>
+				<Measurement_31 alias="詳細31" direction="BothInOut"/>
+				<Measurement_32 alias="詳細32" direction="BothInOut"/>
+				<Measurement_33 alias="詳細33" direction="BothInOut"/>
+				<Measurement_34 alias="詳細34" direction="BothInOut"/>
+				<Measurement_35 alias="詳細35" direction="BothInOut"/>
+				<Measurement_36 alias="詳細36" direction="BothInOut"/>
+				<Measurement_37 alias="詳細37" direction="BothInOut"/>
+				<Measurement_38 alias="詳細38" direction="BothInOut"/>
+				<Measurement_39 alias="詳細39" direction="BothInOut"/>
+				<Measurement_40 alias="詳細40" direction="BothInOut"/>
+				<Measurement_41 alias="詳細41" direction="BothInOut"/>
+				<Measurement_42 alias="詳細42" direction="BothInOut"/>
+				<Measurement_43 alias="詳細43" direction="BothInOut"/>
+				<Measurement_44 alias="詳細44" direction="BothInOut"/>
+				<Measurement_45 alias="詳細45" direction="BothInOut"/>
+				<Measurement_46 alias="詳細46" direction="BothInOut"/>
+				<Measurement_47 alias="詳細47" direction="BothInOut"/>
+				<Measurement_48 alias="詳細48" direction="BothInOut"/>
+				<Measurement_49 alias="詳細49" direction="BothInOut"/>
+				<Measurement_50 alias="詳細50" direction="BothInOut"/>
+				<Measurement_51 alias="詳細51" direction="BothInOut"/>
+				<Measurement_52 alias="詳細52" direction="BothInOut"/>
+				<Measurement_53 alias="詳細53" direction="BothInOut"/>
+				<Measurement_54 alias="詳細54" direction="BothInOut"/>
+				<Measurement_55 alias="詳細55" direction="BothInOut"/>
+				<Measurement_56 alias="詳細56" direction="BothInOut"/>
+				<Measurement_57 alias="詳細57" direction="BothInOut"/>
+				<Measurement_58 alias="詳細58" direction="BothInOut"/>
+				<Measurement_59 alias="詳細59" direction="BothInOut"/>
+				<Measurement_60 alias="詳細60" direction="BothInOut"/>
+				<Measurement_61 alias="詳細61" direction="BothInOut"/>
+				<Measurement_62 alias="詳細62" direction="BothInOut"/>
+				<Measurement_63 alias="詳細63" direction="BothInOut"/>
+				<Measurement_64 alias="詳細64" direction="BothInOut"/>
+				<Measurement_65 alias="詳細65" direction="BothInOut"/>
+				<Measurement_66 alias="詳細66" direction="BothInOut"/>
+				<Measurement_67 alias="詳細67" direction="BothInOut"/>
+				<Measurement_68 alias="詳細68" direction="BothInOut"/>
+				<Measurement_69 alias="詳細69" direction="BothInOut"/>
+				<Measurement_70 alias="詳細70" direction="BothInOut"/>
+				<Measurement_71 alias="詳細71" direction="BothInOut"/>
+				<Measurement_72 alias="詳細72" direction="BothInOut"/>
+				<Measurement_73 alias="詳細73" direction="BothInOut"/>
+				<Measurement_74 alias="詳細74" direction="BothInOut"/>
+				<Measurement_75 alias="詳細75" direction="BothInOut"/>
+				<Measurement_76 alias="詳細76" direction="BothInOut"/>
+				<Measurement_77 alias="詳細77" direction="BothInOut"/>
+				<Measurement_78 alias="詳細78" direction="BothInOut"/>
+				<Measurement_79 alias="詳細79" direction="BothInOut"/>
+				<Measurement_80 alias="詳細80" direction="BothInOut"/>
+				<Measurement_81 alias="詳細81" direction="BothInOut"/>
+				<Measurement_82 alias="詳細82" direction="BothInOut"/>
+				<Measurement_83 alias="詳細83" direction="BothInOut"/>
+				<Measurement_84 alias="詳細84" direction="BothInOut"/>
+				<Measurement_85 alias="詳細85" direction="BothInOut"/>
+				<Measurement_86 alias="詳細86" direction="BothInOut"/>
+				<Measurement_87 alias="詳細87" direction="BothInOut"/>
+				<Measurement_88 alias="詳細88" direction="BothInOut"/>
+				<Measurement_89 alias="詳細89" direction="BothInOut"/>
+				<Measurement_90 alias="詳細90" direction="BothInOut"/>
+				<Measurement_91 alias="詳細91" direction="BothInOut"/>
+				<Measurement_92 alias="詳細92" direction="BothInOut"/>
+				<Measurement_93 alias="詳細93" direction="BothInOut"/>
+				<Measurement_94 alias="詳細94" direction="BothInOut"/>
+				<Measurement_95 alias="詳細95" direction="BothInOut"/>
+				<Measurement_96 alias="詳細96" direction="BothInOut"/>
+				<Measurement_97 alias="詳細97" direction="BothInOut"/>
+				<Measurement_98 alias="詳細98" direction="BothInOut"/>
+				<Measurement_99 alias="詳細99" direction="BothInOut"/>
+				<Measurement_100 alias="詳細100" direction="BothInOut"/>
+				<Measurement_101 alias="詳細101" direction="BothInOut"/>
+				<Measurement_102 alias="詳細102" direction="BothInOut"/>
+				<Measurement_103 alias="詳細103" direction="BothInOut"/>
+				<Measurement_104 alias="詳細104" direction="BothInOut"/>
+				<Measurement_105 alias="詳細105" direction="BothInOut"/>
+				<Measurement_106 alias="詳細106" direction="BothInOut"/>
+				<Measurement_107 alias="詳細107" direction="BothInOut"/>
+				<Measurement_108 alias="詳細108" direction="BothInOut"/>
+				<Measurement_109 alias="詳細109" direction="BothInOut"/>
+				<Measurement_110 alias="詳細110" direction="BothInOut"/>
+				<Measurement_111 alias="詳細111" direction="BothInOut"/>
+				<Measurement_112 alias="詳細112" direction="BothInOut"/>
+				<Measurement_113 alias="詳細113" direction="BothInOut"/>
+				<Measurement_114 alias="詳細114" direction="BothInOut"/>
+				<Measurement_115 alias="詳細115" direction="BothInOut"/>
+				<Measurement_116 alias="詳細116" direction="BothInOut"/>
+				<Measurement_117 alias="詳細117" direction="BothInOut"/>
+				<Measurement_118 alias="詳細118" direction="BothInOut"/>
+				<Measurement_119 alias="詳細119" direction="BothInOut"/>
+				<Measurement_120 alias="詳細120" direction="BothInOut"/>
+				<Measurement_121 alias="詳細121" direction="BothInOut"/>
+				<Measurement_122 alias="詳細122" direction="BothInOut"/>
+				<Measurement_123 alias="詳細123" direction="BothInOut"/>
+				<Measurement_124 alias="詳細124" direction="BothInOut"/>
+				<Measurement_125 alias="詳細125" direction="BothInOut"/>
+				<Measurement_126 alias="詳細126" direction="BothInOut"/>
+				<Measurement_127 alias="詳細127" direction="BothInOut"/>
+				<Measurement_128 alias="詳細128" direction="BothInOut"/>
+				<Measurement_129 alias="詳細129" direction="BothInOut"/>
+				<Measurement_130 alias="詳細130" direction="BothInOut"/>
+				<Measurement_131 alias="詳細131" direction="BothInOut"/>
+				<Measurement_132 alias="詳細132" direction="BothInOut"/>
+				<Measurement_133 alias="詳細133" direction="BothInOut"/>
+				<Measurement_134 alias="詳細134" direction="BothInOut"/>
+				<Measurement_135 alias="詳細135" direction="BothInOut"/>
+				<Measurement_136 alias="詳細136" direction="BothInOut"/>
+				<Measurement_137 alias="詳細137" direction="BothInOut"/>
+				<Measurement_138 alias="詳細138" direction="BothInOut"/>
+				<Measurement_139 alias="詳細139" direction="BothInOut"/>
+				<Measurement_140 alias="詳細140" direction="BothInOut"/>
+				<Measurement_141 alias="詳細141" direction="BothInOut"/>
+				<Measurement_142 alias="詳細142" direction="BothInOut"/>
+				<Measurement_143 alias="詳細143" direction="BothInOut"/>
+				<Measurement_144 alias="詳細144" direction="BothInOut"/>
+				<Measurement_145 alias="詳細145" direction="BothInOut"/>
+				<Measurement_146 alias="詳細146" direction="BothInOut"/>
+				<Measurement_147 alias="詳細147" direction="BothInOut"/>
+				<Measurement_148 alias="詳細148" direction="BothInOut"/>
+				<Measurement_149 alias="詳細149" direction="BothInOut"/>
+				<Measurement_150 alias="詳細150" direction="BothInOut"/>
+				<Measurement_151 alias="詳細151" direction="BothInOut"/>
+				<Measurement_152 alias="詳細152" direction="BothInOut"/>
+				<Measurement_153 alias="詳細153" direction="BothInOut"/>
+				<Measurement_154 alias="詳細154" direction="BothInOut"/>
+				<Measurement_155 alias="詳細155" direction="BothInOut"/>
+				<Measurement_156 alias="詳細156" direction="BothInOut"/>
+				<Measurement_157 alias="詳細157" direction="BothInOut"/>
+				<Measurement_158 alias="詳細158" direction="BothInOut"/>
+				<Measurement_159 alias="詳細159" direction="BothInOut"/>
+				<Measurement_160 alias="詳細160" direction="BothInOut"/>
+				<Measurement_161 alias="詳細161" direction="BothInOut"/>
+				<Measurement_162 alias="詳細162" direction="BothInOut"/>
+				<Measurement_163 alias="詳細163" direction="BothInOut"/>
+				<Measurement_164 alias="詳細164" direction="BothInOut"/>
+				<Measurement_165 alias="詳細165" direction="BothInOut"/>
+				<Measurement_166 alias="詳細166" direction="BothInOut"/>
+				<Measurement_167 alias="詳細167" direction="BothInOut"/>
+				<Measurement_168 alias="詳細168" direction="BothInOut"/>
+				<Measurement_169 alias="詳細169" direction="BothInOut"/>
+				<Measurement_170 alias="詳細170" direction="BothInOut"/>
+				<Measurement_171 alias="詳細171" direction="BothInOut"/>
+				<Measurement_172 alias="詳細172" direction="BothInOut"/>
+				<Measurement_173 alias="詳細173" direction="BothInOut"/>
+				<Measurement_174 alias="詳細174" direction="BothInOut"/>
+				<Measurement_175 alias="詳細175" direction="BothInOut"/>
+				<Measurement_176 alias="詳細176" direction="BothInOut"/>
+				<Measurement_177 alias="詳細177" direction="BothInOut"/>
+				<Measurement_178 alias="詳細178" direction="BothInOut"/>
+				<Measurement_179 alias="詳細179" direction="BothInOut"/>
+				<Measurement_180 alias="詳細180" direction="BothInOut"/>
+				<Measurement_181 alias="詳細181" direction="BothInOut"/>
+				<Measurement_182 alias="詳細182" direction="BothInOut"/>
+				<Measurement_183 alias="詳細183" direction="BothInOut"/>
+				<Measurement_184 alias="詳細184" direction="BothInOut"/>
+				<Measurement_185 alias="詳細185" direction="BothInOut"/>
+				<Measurement_186 alias="詳細186" direction="BothInOut"/>
+				<Measurement_187 alias="詳細187" direction="BothInOut"/>
+				<Measurement_188 alias="詳細188" direction="BothInOut"/>
+				<Measurement_189 alias="詳細189" direction="BothInOut"/>
+				<Measurement_190 alias="詳細190" direction="BothInOut"/>
+				<Measurement_191 alias="詳細191" direction="BothInOut"/>
+				<Measurement_192 alias="詳細192" direction="BothInOut"/>
+				<Measurement_193 alias="詳細193" direction="BothInOut"/>
+				<Measurement_194 alias="詳細194" direction="BothInOut"/>
+				<Measurement_195 alias="詳細195" direction="BothInOut"/>
+				<Measurement_196 alias="詳細196" direction="BothInOut"/>
+				<Measurement_197 alias="詳細197" direction="BothInOut"/>
+				<Measurement_198 alias="詳細198" direction="BothInOut"/>
+				<Measurement_199 alias="詳細199" direction="BothInOut"/>
+				<Measurement_200 alias="詳細200" direction="BothInOut"/>
+				<Measurement_201 alias="詳細201" direction="BothInOut"/>
+				<Measurement_202 alias="詳細202" direction="BothInOut"/>
+				<Measurement_203 alias="詳細203" direction="BothInOut"/>
+				<Measurement_204 alias="詳細204" direction="BothInOut"/>
+				<Measurement_205 alias="詳細205" direction="BothInOut"/>
+				<Measurement_206 alias="詳細206" direction="BothInOut"/>
+				<Measurement_207 alias="詳細207" direction="BothInOut"/>
+				<Measurement_208 alias="詳細208" direction="BothInOut"/>
+				<Measurement_209 alias="詳細209" direction="BothInOut"/>
+				<Measurement_210 alias="詳細210" direction="BothInOut"/>
+				<Measurement_211 alias="詳細211" direction="BothInOut"/>
+				<Measurement_212 alias="詳細212" direction="BothInOut"/>
+				<Measurement_213 alias="詳細213" direction="BothInOut"/>
+				<Measurement_214 alias="詳細214" direction="BothInOut"/>
+				<Measurement_215 alias="詳細215" direction="BothInOut"/>
+				<Measurement_216 alias="詳細216" direction="BothInOut"/>
+				<Measurement_217 alias="詳細217" direction="BothInOut"/>
+				<Measurement_218 alias="詳細218" direction="BothInOut"/>
+				<Measurement_219 alias="詳細219" direction="BothInOut"/>
+				<Measurement_220 alias="詳細220" direction="BothInOut"/>
+				<Measurement_221 alias="詳細221" direction="BothInOut"/>
+				<Measurement_222 alias="詳細222" direction="BothInOut"/>
+				<Measurement_223 alias="詳細223" direction="BothInOut"/>
+				<Measurement_224 alias="詳細224" direction="BothInOut"/>
+				<Measurement_225 alias="詳細225" direction="BothInOut"/>
+				<Measurement_226 alias="詳細226" direction="BothInOut"/>
+				<Measurement_227 alias="詳細227" direction="BothInOut"/>
+				<Measurement_228 alias="詳細228" direction="BothInOut"/>
+				<Measurement_229 alias="詳細229" direction="BothInOut"/>
+				<Measurement_230 alias="詳細230" direction="BothInOut"/>
+				<Measurement_231 alias="詳細231" direction="BothInOut"/>
+				<Measurement_232 alias="詳細232" direction="BothInOut"/>
+				<Measurement_233 alias="詳細233" direction="BothInOut"/>
+				<Measurement_234 alias="詳細234" direction="BothInOut"/>
+				<Measurement_235 alias="詳細235" direction="BothInOut"/>
+				<Measurement_236 alias="詳細236" direction="BothInOut"/>
+				<Measurement_237 alias="詳細237" direction="BothInOut"/>
+				<Measurement_238 alias="詳細238" direction="BothInOut"/>
+				<Measurement_239 alias="詳細239" direction="BothInOut"/>
+				<Measurement_240 alias="詳細240" direction="BothInOut"/>
+				<Measurement_241 alias="詳細241" direction="BothInOut"/>
+				<Measurement_242 alias="詳細242" direction="BothInOut"/>
+				<Measurement_243 alias="詳細243" direction="BothInOut"/>
+				<Measurement_244 alias="詳細244" direction="BothInOut"/>
+				<Measurement_245 alias="詳細245" direction="BothInOut"/>
+				<Measurement_246 alias="詳細246" direction="BothInOut"/>
+				<Measurement_247 alias="詳細247" direction="BothInOut"/>
+				<Measurement_248 alias="詳細248" direction="BothInOut"/>
+				<Measurement_249 alias="詳細249" direction="BothInOut"/>
+				<Measurement_250 alias="詳細250" direction="BothInOut"/>
+				<Measurement_251 alias="詳細251" direction="BothInOut"/>
+				<Measurement_252 alias="詳細252" direction="BothInOut"/>
+				<Measurement_253 alias="詳細253" direction="BothInOut"/>
+				<Measurement_254 alias="詳細254" direction="BothInOut"/>
+				<Measurement_255 alias="詳細255" direction="BothInOut"/>
+				<Measurement_256 alias="詳細256" direction="BothInOut"/>
+				<Measurement_257 alias="詳細257" direction="BothInOut"/>
+				<Measurement_258 alias="詳細258" direction="BothInOut"/>
+				<Measurement_259 alias="詳細259" direction="BothInOut"/>
+				<Measurement_260 alias="詳細260" direction="BothInOut"/>
+				<Measurement_261 alias="詳細261" direction="BothInOut"/>
+				<Measurement_262 alias="詳細262" direction="BothInOut"/>
+				<Measurement_263 alias="詳細263" direction="BothInOut"/>
+				<Measurement_264 alias="詳細264" direction="BothInOut"/>
+				<Measurement_265 alias="詳細265" direction="BothInOut"/>
+				<Measurement_266 alias="詳細266" direction="BothInOut"/>
+				<Measurement_267 alias="詳細267" direction="BothInOut"/>
+				<Measurement_268 alias="詳細268" direction="BothInOut"/>
+				<Measurement_269 alias="詳細269" direction="BothInOut"/>
+				<Measurement_270 alias="詳細270" direction="BothInOut"/>
+				<Measurement_271 alias="詳細271" direction="BothInOut"/>
+				<Measurement_272 alias="詳細272" direction="BothInOut"/>
+				<Measurement_273 alias="詳細273" direction="BothInOut"/>
+				<Measurement_274 alias="詳細274" direction="BothInOut"/>
+				<Measurement_275 alias="詳細275" direction="BothInOut"/>
+				<Measurement_276 alias="詳細276" direction="BothInOut"/>
+				<Measurement_277 alias="詳細277" direction="BothInOut"/>
+				<Measurement_278 alias="詳細278" direction="BothInOut"/>
+				<Measurement_279 alias="詳細279" direction="BothInOut"/>
+				<Measurement_280 alias="詳細280" direction="BothInOut"/>
+				<Measurement_281 alias="詳細281" direction="BothInOut"/>
+				<Measurement_282 alias="詳細282" direction="BothInOut"/>
+				<Measurement_283 alias="詳細283" direction="BothInOut"/>
+				<Measurement_284 alias="詳細284" direction="BothInOut"/>
+				<Measurement_285 alias="詳細285" direction="BothInOut"/>
+				<Measurement_286 alias="詳細286" direction="BothInOut"/>
+				<Measurement_287 alias="詳細287" direction="BothInOut"/>
+				<Measurement_288 alias="詳細288" direction="BothInOut"/>
+				<Measurement_289 alias="詳細289" direction="BothInOut"/>
+				<Measurement_290 alias="詳細290" direction="BothInOut"/>
+				<Measurement_291 alias="詳細291" direction="BothInOut"/>
+				<Measurement_292 alias="詳細292" direction="BothInOut"/>
+				<Measurement_293 alias="詳細293" direction="BothInOut"/>
+				<Measurement_294 alias="詳細294" direction="BothInOut"/>
+				<Measurement_295 alias="詳細295" direction="BothInOut"/>
+				<Measurement_296 alias="詳細296" direction="BothInOut"/>
+				<Measurement_297 alias="詳細297" direction="BothInOut"/>
+				<Measurement_298 alias="詳細298" direction="BothInOut"/>
+				<Measurement_299 alias="詳細299" direction="BothInOut"/>
+				<Measurement_300 alias="詳細300" direction="BothInOut"/>
+			</Detail_study_info>
+			<Treatment>
+                <Data/>
+				<Treatmentdetails>
+                    <Treat_item>
+                        <Search_item alias="検索項目名" direction="BothInOut"/>
+						<Unique_label alias="ユニークラベル" direction="BothInOut"/>
+						<Treat_value alias="値" direction="BothInOut"/>
+						<Treat_unit alias="単位" direction="BothInOut"/>
+					</Treat_item>
+				</Treatmentdetails>
+			</Treatment>
+			<Terminology>
+                <Data number="1">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="2">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="3">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="4">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="5">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="6">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="7">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="8">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="9">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="10">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="11">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="12">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="13">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="14">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="15">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="16">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="17">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="18">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="19">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="20">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+			</Terminology>
+			<ExtraInfo/>
+		</ReferenceStudy>
+		<CompareStudy read-only="true">
+            <Study_info>
+                <Sort_class_name alias="検査大分類" direction="BothInOut"/>
+				<Sort_group_name alias="検査中分類" direction="BothInOut"/>
+				<Sort_item_name alias="検査小分類" direction="BothInOut"/>
+				<Order_number alias="オーダ番号" direction="BothInOut"/>
+				<Co_order_number alias="部門オーダ番号" direction="BothInOut"/>
+				<Section_order_flag alias="部門発番フラグ" direction="BothInOut"/>
+				<Priority_flag alias="優先検査フラグ" direction="BothInOut"/>
+				<Receipt_number alias="受付番号" direction="BothInOut"/>
+				<Receipt_name alias="受付者名" direction="BothInOut"/>
+				<Medical_exam_number alias="検診番号" direction="BothInOut"/>
+				<Slip_number alias="伝票番号" direction="BothInOut"/>
+				<Study_id alias="検査ID" direction="BothInOut"/>
+				<Patient_id alias="被検者ID" direction="BothInOut"/>
+				<Patient_name_ascii alias="被検者名ASCII" direction="BothInOut"/>
+				<Patient_kana_name alias="被検者カナ名" direction="BothInOut"/>
+				<Patient_kanji_name alias="被検者漢字名" direction="BothInOut"/>
+				<Gender alias="性別" direction="BothInOut"/>
+				<Birthday alias="生年月日" style="Date" direction="BothInOut"/>
+				<Age alias="年齢" style="Age" direction="BothInOut"/>
+				<Study_date_age alias="検査時年齢" style="studydateage" direction="BothInOut"/>
+				<Height alias="身長" direction="BothInOut"/>
+				<Weight alias="体重" direction="BothInOut"/>
+				<Blood_type alias="血液型" direction="BothInOut"/>
+				<Systolic_bp alias="最高血圧" direction="BothInOut"/>
+				<Diastolic_bp alias="最低血圧" direction="BothInOut"/>
+				<Bp_unit alias="血圧単位" direction="BothInOut"/>
+				<Prev_disease_name alias="既往症" direction="BothInOut"/>
+				<Dominant_hand alias="利き腕" direction="BothInOut"/>
+				<In_out alias="入外区分" direction="BothInOut"/>
+				<Patient_way alias="患者移動方法" direction="BothInOut"/>
+				<Patient_pos alias="患者位置情報" direction="BothInOut"/>
+				<Req_confirm_flg alias="判読依頼フラグ" direction="BothInOut"/>
+				<Ward alias="病棟名" direction="BothInOut"/>
+				<Room alias="病室" direction="BothInOut"/>
+				<Department alias="所属科" direction="BothInOut"/>
+				<Request_department alias="依頼科" direction="BothInOut"/>
+				<Treatment_department alias="診療科" direction="BothInOut"/>
+				<Request_doctor alias="依頼医師名" direction="BothInOut"/>
+				<Req_drug_management_number alias="依頼医師麻薬管理番号" direction="BothInOut"/>
+				<Medication_name alias="投薬情報" direction="BothInOut"/>
+				<Contagion alias="伝染病" direction="BothInOut"/>
+				<Reserve_date alias="検査予定日時" style="Date" direction="BothInOut"/>
+				<Study_date alias="検査日時" style="Date" direction="BothInOut"/>
+				<Exam_room alias="使用検査室名" direction="BothInOut"/>
+				<Mod_name_list alias="使用モダリティSQリスト" direction="BothInOut"/>
+				<Oncall_flag alias="オンコールフラグ" direction="BothInOut"/>
+				<Disease_name alias="病名" direction="BothInOut"/>
+				<Patient_status alias="患者状態" direction="BothInOut"/>
+				<Infection alias="感染症情報" direction="BothInOut"/>
+				<Engineer1 alias="検査技師又は看護師１" direction="BothInOut"/>
+				<Engineer2 alias="検査技師又は看護師２" direction="BothInOut"/>
+				<Operator1 alias="検査者名１" direction="BothInOut"/>
+				<Operator2 alias="検査者名２" direction="BothInOut"/>
+				<Operator3 alias="検査者名３" direction="BothInOut"/>
+				<Signature_1 alias="所見記入者１" direction="BothInOut"/>
+				<Signature_2 alias="所見記入者２" direction="BothInOut"/>
+				<Signature_3 alias="所見記入者３" direction="BothInOut"/>
+				<Judgement alias="総合判定" direction="BothInOut"/>
+				<Study_instance_uid alias="検査インスタンスUID" direction="BothInOut"/>
+				<Study_description alias="検査記述" direction="BothInOut"/>
+				<Last_study_id alias="前回検査ID" direction="BothInOut"/>
+				<Last_study_date alias="前回検査日時" style="Date" direction="BothInOut"/>
+				<Report_count alias="レポート版数" direction="BothInOut"/>
+				<File_count alias="データファイル数" direction="BothInOut"/>
+				<Key_file_count alias="キー選択データファイル数" direction="BothInOut"/>
+				<Approval_status alias="承認状態フラグ" direction="BothInOut"/>
+				<Measurement_group_sq alias="詳細情報グループSQ" direction="BothInOut"/>
+				<File_type_list alias="ファイル種別リスト" direction="BothInOut"/>
+				<Edit_protection_flg alias="編集保護フラグ" direction="BothInOut"/>
+				<Profile_flg alias="プロファイルフラグ" direction="BothInOut"/>
+				<Site_sq alias="サイトSQ" direction="BothInOut"/>
+			</Study_info>
+			<Study_status_info>
+                <Study_status alias="検査進捗ステータス" direction="BothInOut"/>
+				<Report_status alias="レポート進捗ステータス" direction="BothInOut"/>
+				<Report_edit_flg alias="レポート編集中フラグ" direction="BothInOut"/>
+				<Report_hisregist_flg alias="レポートHIS登録フラグ" direction="BothInOut"/>
+				<Treatment_status alias="実施進捗ステータス" direction="BothInOut"/>
+				<Treatment_edit_flg alias="実施編集中フラグ" direction="BothInOut"/>
+				<Treatment_hisregist_flg alias="実施HIS登録フラグ" direction="BothInOut"/>
+				<rawdata_hisregist_flg alias="RAWデータHIS登録フラグ" direction="BothInOut"/>
+				<Study_edit_flg alias="検査情報編集フラグ" direction="BothInOut"/>
+				<Charge_flg alias="会計済みフラグ" direction="BothInOut"/>
+				<Receipt_date alias="受付日時" style="Date" direction="BothInOut"/>
+				<Start_date alias="検査開始日時" style="Date" direction="BothInOut"/>
+				<End_date alias="検査終了日時" style="Date" direction="BothInOut"/>
+				<Elapsed_time alias="検査所要時間" direction="BothInOut"/>
+			</Study_status_info>
+			<Study_comment_info>
+                <Diagnosis alias="臨床診断" direction="BothInOut"/>
+				<Purpose alias="検査目的" direction="BothInOut"/>
+				<Req_comment alias="検査依頼コメント" direction="BothInOut"/>
+				<Contraindication alias="禁忌情報" direction="BothInOut"/>
+				<Reception_comment alias="受付時コメント" direction="BothInOut"/>
+				<Pretreatment_comment alias="前処置コメント" direction="BothInOut"/>
+				<Exam_comment alias="検査時コメント" direction="BothInOut"/>
+				<Treatment_comment alias="実施時コメント" direction="BothInOut"/>
+				<Free_comment_1 alias="フリーコメント１" direction="BothInOut"/>
+				<Free_comment_2 alias="フリーコメント２" direction="BothInOut"/>
+				<Etcetera1 alias="その他1" direction="BothInOut"/>
+				<Etcetera2 alias="その他2" direction="BothInOut"/>
+				<Etcetera3 alias="その他3" direction="BothInOut"/>
+				<Etcetera4 alias="その他4" direction="BothInOut"/>
+				<Etcetera5 alias="その他5" direction="BothInOut"/>
+				<Etcetera6 alias="その他6" direction="BothInOut"/>
+				<Etcetera7 alias="その他7" direction="BothInOut"/>
+				<Etcetera8 alias="その他8" direction="BothInOut"/>
+				<Etcetera9 alias="その他9" direction="BothInOut"/>
+				<Etcetera10 alias="その他10" direction="BothInOut"/>
+				<Etcetera11 alias="その他11" direction="BothInOut"/>
+				<Etcetera12 alias="その他12" direction="BothInOut"/>
+				<Etcetera13 alias="その他13" direction="BothInOut"/>
+				<Etcetera14 alias="その他14" direction="BothInOut"/>
+				<Etcetera15 alias="その他15" direction="BothInOut"/>
+				<Etcetera16 alias="その他16" direction="BothInOut"/>
+				<Etcetera17 alias="その他17" direction="BothInOut"/>
+				<Etcetera18 alias="その他18" direction="BothInOut"/>
+				<Etcetera19 alias="その他19" direction="BothInOut"/>
+				<Etcetera20 alias="その他20" direction="BothInOut"/>
+				<Etcetera21 alias="その他21" direction="BothInOut"/>
+				<Etcetera22 alias="その他22" direction="BothInOut"/>
+				<Etcetera23 alias="その他23" direction="BothInOut"/>
+				<Etcetera24 alias="その他24" direction="BothInOut"/>
+				<Etcetera25 alias="その他25" direction="BothInOut"/>
+				<Etcetera26 alias="その他26" direction="BothInOut"/>
+				<Etcetera27 alias="その他27" direction="BothInOut"/>
+				<Etcetera28 alias="その他28" direction="BothInOut"/>
+				<Etcetera29 alias="その他29" direction="BothInOut"/>
+				<Etcetera30 alias="その他30" direction="BothInOut"/>
+				<Etcetera31 alias="その他31" direction="BothInOut"/>
+				<Etcetera32 alias="その他32" direction="BothInOut"/>
+				<Etcetera33 alias="その他33" direction="BothInOut"/>
+				<Etcetera34 alias="その他34" direction="BothInOut"/>
+				<Etcetera35 alias="その他35" direction="BothInOut"/>
+				<Etcetera36 alias="その他36" direction="BothInOut"/>
+				<Etcetera37 alias="その他37" direction="BothInOut"/>
+				<Etcetera38 alias="その他38" direction="BothInOut"/>
+				<Etcetera39 alias="その他39" direction="BothInOut"/>
+				<Etcetera40 alias="その他40" direction="BothInOut"/>
+				<Etcetera41 alias="その他41" direction="BothInOut"/>
+				<Etcetera42 alias="その他42" direction="BothInOut"/>
+				<Etcetera43 alias="その他43" direction="BothInOut"/>
+				<Etcetera44 alias="その他44" direction="BothInOut"/>
+				<Etcetera45 alias="その他45" direction="BothInOut"/>
+				<Etcetera46 alias="その他46" direction="BothInOut"/>
+				<Etcetera47 alias="その他47" direction="BothInOut"/>
+				<Etcetera48 alias="その他48" direction="BothInOut"/>
+				<Etcetera49 alias="その他49" direction="BothInOut"/>
+				<Etcetera50 alias="その他50" direction="BothInOut"/>
+			</Study_comment_info>
+			<Order_info>
+                <Sort_1st_name alias="検査第一分類名称" direction="BothInOut"/>
+				<Sort_2nd_name alias="検査第二分類名称" direction="BothInOut"/>
+				<Sort_3rd_name alias="検査第三分類名称" direction="BothInOut"/>
+				<Sort_4th_name alias="検査第四分類名称" direction="BothInOut"/>
+				<Sort_5th_name alias="検査第五分類名称" direction="BothInOut"/>
+				<Order_number alias="オーダ番号" direction="BothInOut"/>
+				<Order_date alias="オーダ発行日時" style="Date" direction="BothInOut"/>
+				<Order_name alias="オーダ発行者名" direction="BothInOut"/>
+				<Send_order_num alias="検査ステータス送信回数" direction="BothInOut"/>
+				<Send_raw_num alias="RAWデータ送信回数" direction="BothInOut"/>
+				<Send_report_num alias="レポート送信回数" direction="BothInOut"/>
+				<Send_treat_num alias="実施送信回数" direction="BothInOut"/>
+			</Order_info>
+			<Detail_study_info>
+                <Measurement_group_sq alias="詳細情報グループSQ" direction="BothInOut"/>
+				<Measurement_1 alias="詳細1" direction="BothInOut"/>
+				<Measurement_2 alias="詳細2" direction="BothInOut"/>
+				<Measurement_3 alias="詳細3" direction="BothInOut"/>
+				<Measurement_4 alias="詳細4" direction="BothInOut"/>
+				<Measurement_5 alias="詳細5" direction="BothInOut"/>
+				<Measurement_6 alias="詳細6" direction="BothInOut"/>
+				<Measurement_7 alias="詳細7" direction="BothInOut"/>
+				<Measurement_8 alias="詳細8" direction="BothInOut"/>
+				<Measurement_9 alias="詳細9" direction="BothInOut"/>
+				<Measurement_10 alias="詳細10" direction="BothInOut"/>
+				<Measurement_11 alias="詳細11" direction="BothInOut"/>
+				<Measurement_12 alias="詳細12" direction="BothInOut"/>
+				<Measurement_13 alias="詳細13" direction="BothInOut"/>
+				<Measurement_14 alias="詳細14" direction="BothInOut"/>
+				<Measurement_15 alias="詳細15" direction="BothInOut"/>
+				<Measurement_16 alias="詳細16" direction="BothInOut"/>
+				<Measurement_17 alias="詳細17" direction="BothInOut"/>
+				<Measurement_18 alias="詳細18" direction="BothInOut"/>
+				<Measurement_19 alias="詳細19" direction="BothInOut"/>
+				<Measurement_20 alias="詳細20" direction="BothInOut"/>
+				<Measurement_21 alias="詳細21" direction="BothInOut"/>
+				<Measurement_22 alias="詳細22" direction="BothInOut"/>
+				<Measurement_23 alias="詳細23" direction="BothInOut"/>
+				<Measurement_24 alias="詳細24" direction="BothInOut"/>
+				<Measurement_25 alias="詳細25" direction="BothInOut"/>
+				<Measurement_26 alias="詳細26" direction="BothInOut"/>
+				<Measurement_27 alias="詳細27" direction="BothInOut"/>
+				<Measurement_28 alias="詳細28" direction="BothInOut"/>
+				<Measurement_29 alias="詳細29" direction="BothInOut"/>
+				<Measurement_30 alias="詳細30" direction="BothInOut"/>
+				<Measurement_31 alias="詳細31" direction="BothInOut"/>
+				<Measurement_32 alias="詳細32" direction="BothInOut"/>
+				<Measurement_33 alias="詳細33" direction="BothInOut"/>
+				<Measurement_34 alias="詳細34" direction="BothInOut"/>
+				<Measurement_35 alias="詳細35" direction="BothInOut"/>
+				<Measurement_36 alias="詳細36" direction="BothInOut"/>
+				<Measurement_37 alias="詳細37" direction="BothInOut"/>
+				<Measurement_38 alias="詳細38" direction="BothInOut"/>
+				<Measurement_39 alias="詳細39" direction="BothInOut"/>
+				<Measurement_40 alias="詳細40" direction="BothInOut"/>
+				<Measurement_41 alias="詳細41" direction="BothInOut"/>
+				<Measurement_42 alias="詳細42" direction="BothInOut"/>
+				<Measurement_43 alias="詳細43" direction="BothInOut"/>
+				<Measurement_44 alias="詳細44" direction="BothInOut"/>
+				<Measurement_45 alias="詳細45" direction="BothInOut"/>
+				<Measurement_46 alias="詳細46" direction="BothInOut"/>
+				<Measurement_47 alias="詳細47" direction="BothInOut"/>
+				<Measurement_48 alias="詳細48" direction="BothInOut"/>
+				<Measurement_49 alias="詳細49" direction="BothInOut"/>
+				<Measurement_50 alias="詳細50" direction="BothInOut"/>
+				<Measurement_51 alias="詳細51" direction="BothInOut"/>
+				<Measurement_52 alias="詳細52" direction="BothInOut"/>
+				<Measurement_53 alias="詳細53" direction="BothInOut"/>
+				<Measurement_54 alias="詳細54" direction="BothInOut"/>
+				<Measurement_55 alias="詳細55" direction="BothInOut"/>
+				<Measurement_56 alias="詳細56" direction="BothInOut"/>
+				<Measurement_57 alias="詳細57" direction="BothInOut"/>
+				<Measurement_58 alias="詳細58" direction="BothInOut"/>
+				<Measurement_59 alias="詳細59" direction="BothInOut"/>
+				<Measurement_60 alias="詳細60" direction="BothInOut"/>
+				<Measurement_61 alias="詳細61" direction="BothInOut"/>
+				<Measurement_62 alias="詳細62" direction="BothInOut"/>
+				<Measurement_63 alias="詳細63" direction="BothInOut"/>
+				<Measurement_64 alias="詳細64" direction="BothInOut"/>
+				<Measurement_65 alias="詳細65" direction="BothInOut"/>
+				<Measurement_66 alias="詳細66" direction="BothInOut"/>
+				<Measurement_67 alias="詳細67" direction="BothInOut"/>
+				<Measurement_68 alias="詳細68" direction="BothInOut"/>
+				<Measurement_69 alias="詳細69" direction="BothInOut"/>
+				<Measurement_70 alias="詳細70" direction="BothInOut"/>
+				<Measurement_71 alias="詳細71" direction="BothInOut"/>
+				<Measurement_72 alias="詳細72" direction="BothInOut"/>
+				<Measurement_73 alias="詳細73" direction="BothInOut"/>
+				<Measurement_74 alias="詳細74" direction="BothInOut"/>
+				<Measurement_75 alias="詳細75" direction="BothInOut"/>
+				<Measurement_76 alias="詳細76" direction="BothInOut"/>
+				<Measurement_77 alias="詳細77" direction="BothInOut"/>
+				<Measurement_78 alias="詳細78" direction="BothInOut"/>
+				<Measurement_79 alias="詳細79" direction="BothInOut"/>
+				<Measurement_80 alias="詳細80" direction="BothInOut"/>
+				<Measurement_81 alias="詳細81" direction="BothInOut"/>
+				<Measurement_82 alias="詳細82" direction="BothInOut"/>
+				<Measurement_83 alias="詳細83" direction="BothInOut"/>
+				<Measurement_84 alias="詳細84" direction="BothInOut"/>
+				<Measurement_85 alias="詳細85" direction="BothInOut"/>
+				<Measurement_86 alias="詳細86" direction="BothInOut"/>
+				<Measurement_87 alias="詳細87" direction="BothInOut"/>
+				<Measurement_88 alias="詳細88" direction="BothInOut"/>
+				<Measurement_89 alias="詳細89" direction="BothInOut"/>
+				<Measurement_90 alias="詳細90" direction="BothInOut"/>
+				<Measurement_91 alias="詳細91" direction="BothInOut"/>
+				<Measurement_92 alias="詳細92" direction="BothInOut"/>
+				<Measurement_93 alias="詳細93" direction="BothInOut"/>
+				<Measurement_94 alias="詳細94" direction="BothInOut"/>
+				<Measurement_95 alias="詳細95" direction="BothInOut"/>
+				<Measurement_96 alias="詳細96" direction="BothInOut"/>
+				<Measurement_97 alias="詳細97" direction="BothInOut"/>
+				<Measurement_98 alias="詳細98" direction="BothInOut"/>
+				<Measurement_99 alias="詳細99" direction="BothInOut"/>
+				<Measurement_100 alias="詳細100" direction="BothInOut"/>
+				<Measurement_101 alias="詳細101" direction="BothInOut"/>
+				<Measurement_102 alias="詳細102" direction="BothInOut"/>
+				<Measurement_103 alias="詳細103" direction="BothInOut"/>
+				<Measurement_104 alias="詳細104" direction="BothInOut"/>
+				<Measurement_105 alias="詳細105" direction="BothInOut"/>
+				<Measurement_106 alias="詳細106" direction="BothInOut"/>
+				<Measurement_107 alias="詳細107" direction="BothInOut"/>
+				<Measurement_108 alias="詳細108" direction="BothInOut"/>
+				<Measurement_109 alias="詳細109" direction="BothInOut"/>
+				<Measurement_110 alias="詳細110" direction="BothInOut"/>
+				<Measurement_111 alias="詳細111" direction="BothInOut"/>
+				<Measurement_112 alias="詳細112" direction="BothInOut"/>
+				<Measurement_113 alias="詳細113" direction="BothInOut"/>
+				<Measurement_114 alias="詳細114" direction="BothInOut"/>
+				<Measurement_115 alias="詳細115" direction="BothInOut"/>
+				<Measurement_116 alias="詳細116" direction="BothInOut"/>
+				<Measurement_117 alias="詳細117" direction="BothInOut"/>
+				<Measurement_118 alias="詳細118" direction="BothInOut"/>
+				<Measurement_119 alias="詳細119" direction="BothInOut"/>
+				<Measurement_120 alias="詳細120" direction="BothInOut"/>
+				<Measurement_121 alias="詳細121" direction="BothInOut"/>
+				<Measurement_122 alias="詳細122" direction="BothInOut"/>
+				<Measurement_123 alias="詳細123" direction="BothInOut"/>
+				<Measurement_124 alias="詳細124" direction="BothInOut"/>
+				<Measurement_125 alias="詳細125" direction="BothInOut"/>
+				<Measurement_126 alias="詳細126" direction="BothInOut"/>
+				<Measurement_127 alias="詳細127" direction="BothInOut"/>
+				<Measurement_128 alias="詳細128" direction="BothInOut"/>
+				<Measurement_129 alias="詳細129" direction="BothInOut"/>
+				<Measurement_130 alias="詳細130" direction="BothInOut"/>
+				<Measurement_131 alias="詳細131" direction="BothInOut"/>
+				<Measurement_132 alias="詳細132" direction="BothInOut"/>
+				<Measurement_133 alias="詳細133" direction="BothInOut"/>
+				<Measurement_134 alias="詳細134" direction="BothInOut"/>
+				<Measurement_135 alias="詳細135" direction="BothInOut"/>
+				<Measurement_136 alias="詳細136" direction="BothInOut"/>
+				<Measurement_137 alias="詳細137" direction="BothInOut"/>
+				<Measurement_138 alias="詳細138" direction="BothInOut"/>
+				<Measurement_139 alias="詳細139" direction="BothInOut"/>
+				<Measurement_140 alias="詳細140" direction="BothInOut"/>
+				<Measurement_141 alias="詳細141" direction="BothInOut"/>
+				<Measurement_142 alias="詳細142" direction="BothInOut"/>
+				<Measurement_143 alias="詳細143" direction="BothInOut"/>
+				<Measurement_144 alias="詳細144" direction="BothInOut"/>
+				<Measurement_145 alias="詳細145" direction="BothInOut"/>
+				<Measurement_146 alias="詳細146" direction="BothInOut"/>
+				<Measurement_147 alias="詳細147" direction="BothInOut"/>
+				<Measurement_148 alias="詳細148" direction="BothInOut"/>
+				<Measurement_149 alias="詳細149" direction="BothInOut"/>
+				<Measurement_150 alias="詳細150" direction="BothInOut"/>
+				<Measurement_151 alias="詳細151" direction="BothInOut"/>
+				<Measurement_152 alias="詳細152" direction="BothInOut"/>
+				<Measurement_153 alias="詳細153" direction="BothInOut"/>
+				<Measurement_154 alias="詳細154" direction="BothInOut"/>
+				<Measurement_155 alias="詳細155" direction="BothInOut"/>
+				<Measurement_156 alias="詳細156" direction="BothInOut"/>
+				<Measurement_157 alias="詳細157" direction="BothInOut"/>
+				<Measurement_158 alias="詳細158" direction="BothInOut"/>
+				<Measurement_159 alias="詳細159" direction="BothInOut"/>
+				<Measurement_160 alias="詳細160" direction="BothInOut"/>
+				<Measurement_161 alias="詳細161" direction="BothInOut"/>
+				<Measurement_162 alias="詳細162" direction="BothInOut"/>
+				<Measurement_163 alias="詳細163" direction="BothInOut"/>
+				<Measurement_164 alias="詳細164" direction="BothInOut"/>
+				<Measurement_165 alias="詳細165" direction="BothInOut"/>
+				<Measurement_166 alias="詳細166" direction="BothInOut"/>
+				<Measurement_167 alias="詳細167" direction="BothInOut"/>
+				<Measurement_168 alias="詳細168" direction="BothInOut"/>
+				<Measurement_169 alias="詳細169" direction="BothInOut"/>
+				<Measurement_170 alias="詳細170" direction="BothInOut"/>
+				<Measurement_171 alias="詳細171" direction="BothInOut"/>
+				<Measurement_172 alias="詳細172" direction="BothInOut"/>
+				<Measurement_173 alias="詳細173" direction="BothInOut"/>
+				<Measurement_174 alias="詳細174" direction="BothInOut"/>
+				<Measurement_175 alias="詳細175" direction="BothInOut"/>
+				<Measurement_176 alias="詳細176" direction="BothInOut"/>
+				<Measurement_177 alias="詳細177" direction="BothInOut"/>
+				<Measurement_178 alias="詳細178" direction="BothInOut"/>
+				<Measurement_179 alias="詳細179" direction="BothInOut"/>
+				<Measurement_180 alias="詳細180" direction="BothInOut"/>
+				<Measurement_181 alias="詳細181" direction="BothInOut"/>
+				<Measurement_182 alias="詳細182" direction="BothInOut"/>
+				<Measurement_183 alias="詳細183" direction="BothInOut"/>
+				<Measurement_184 alias="詳細184" direction="BothInOut"/>
+				<Measurement_185 alias="詳細185" direction="BothInOut"/>
+				<Measurement_186 alias="詳細186" direction="BothInOut"/>
+				<Measurement_187 alias="詳細187" direction="BothInOut"/>
+				<Measurement_188 alias="詳細188" direction="BothInOut"/>
+				<Measurement_189 alias="詳細189" direction="BothInOut"/>
+				<Measurement_190 alias="詳細190" direction="BothInOut"/>
+				<Measurement_191 alias="詳細191" direction="BothInOut"/>
+				<Measurement_192 alias="詳細192" direction="BothInOut"/>
+				<Measurement_193 alias="詳細193" direction="BothInOut"/>
+				<Measurement_194 alias="詳細194" direction="BothInOut"/>
+				<Measurement_195 alias="詳細195" direction="BothInOut"/>
+				<Measurement_196 alias="詳細196" direction="BothInOut"/>
+				<Measurement_197 alias="詳細197" direction="BothInOut"/>
+				<Measurement_198 alias="詳細198" direction="BothInOut"/>
+				<Measurement_199 alias="詳細199" direction="BothInOut"/>
+				<Measurement_200 alias="詳細200" direction="BothInOut"/>
+				<Measurement_201 alias="詳細201" direction="BothInOut"/>
+				<Measurement_202 alias="詳細202" direction="BothInOut"/>
+				<Measurement_203 alias="詳細203" direction="BothInOut"/>
+				<Measurement_204 alias="詳細204" direction="BothInOut"/>
+				<Measurement_205 alias="詳細205" direction="BothInOut"/>
+				<Measurement_206 alias="詳細206" direction="BothInOut"/>
+				<Measurement_207 alias="詳細207" direction="BothInOut"/>
+				<Measurement_208 alias="詳細208" direction="BothInOut"/>
+				<Measurement_209 alias="詳細209" direction="BothInOut"/>
+				<Measurement_210 alias="詳細210" direction="BothInOut"/>
+				<Measurement_211 alias="詳細211" direction="BothInOut"/>
+				<Measurement_212 alias="詳細212" direction="BothInOut"/>
+				<Measurement_213 alias="詳細213" direction="BothInOut"/>
+				<Measurement_214 alias="詳細214" direction="BothInOut"/>
+				<Measurement_215 alias="詳細215" direction="BothInOut"/>
+				<Measurement_216 alias="詳細216" direction="BothInOut"/>
+				<Measurement_217 alias="詳細217" direction="BothInOut"/>
+				<Measurement_218 alias="詳細218" direction="BothInOut"/>
+				<Measurement_219 alias="詳細219" direction="BothInOut"/>
+				<Measurement_220 alias="詳細220" direction="BothInOut"/>
+				<Measurement_221 alias="詳細221" direction="BothInOut"/>
+				<Measurement_222 alias="詳細222" direction="BothInOut"/>
+				<Measurement_223 alias="詳細223" direction="BothInOut"/>
+				<Measurement_224 alias="詳細224" direction="BothInOut"/>
+				<Measurement_225 alias="詳細225" direction="BothInOut"/>
+				<Measurement_226 alias="詳細226" direction="BothInOut"/>
+				<Measurement_227 alias="詳細227" direction="BothInOut"/>
+				<Measurement_228 alias="詳細228" direction="BothInOut"/>
+				<Measurement_229 alias="詳細229" direction="BothInOut"/>
+				<Measurement_230 alias="詳細230" direction="BothInOut"/>
+				<Measurement_231 alias="詳細231" direction="BothInOut"/>
+				<Measurement_232 alias="詳細232" direction="BothInOut"/>
+				<Measurement_233 alias="詳細233" direction="BothInOut"/>
+				<Measurement_234 alias="詳細234" direction="BothInOut"/>
+				<Measurement_235 alias="詳細235" direction="BothInOut"/>
+				<Measurement_236 alias="詳細236" direction="BothInOut"/>
+				<Measurement_237 alias="詳細237" direction="BothInOut"/>
+				<Measurement_238 alias="詳細238" direction="BothInOut"/>
+				<Measurement_239 alias="詳細239" direction="BothInOut"/>
+				<Measurement_240 alias="詳細240" direction="BothInOut"/>
+				<Measurement_241 alias="詳細241" direction="BothInOut"/>
+				<Measurement_242 alias="詳細242" direction="BothInOut"/>
+				<Measurement_243 alias="詳細243" direction="BothInOut"/>
+				<Measurement_244 alias="詳細244" direction="BothInOut"/>
+				<Measurement_245 alias="詳細245" direction="BothInOut"/>
+				<Measurement_246 alias="詳細246" direction="BothInOut"/>
+				<Measurement_247 alias="詳細247" direction="BothInOut"/>
+				<Measurement_248 alias="詳細248" direction="BothInOut"/>
+				<Measurement_249 alias="詳細249" direction="BothInOut"/>
+				<Measurement_250 alias="詳細250" direction="BothInOut"/>
+				<Measurement_251 alias="詳細251" direction="BothInOut"/>
+				<Measurement_252 alias="詳細252" direction="BothInOut"/>
+				<Measurement_253 alias="詳細253" direction="BothInOut"/>
+				<Measurement_254 alias="詳細254" direction="BothInOut"/>
+				<Measurement_255 alias="詳細255" direction="BothInOut"/>
+				<Measurement_256 alias="詳細256" direction="BothInOut"/>
+				<Measurement_257 alias="詳細257" direction="BothInOut"/>
+				<Measurement_258 alias="詳細258" direction="BothInOut"/>
+				<Measurement_259 alias="詳細259" direction="BothInOut"/>
+				<Measurement_260 alias="詳細260" direction="BothInOut"/>
+				<Measurement_261 alias="詳細261" direction="BothInOut"/>
+				<Measurement_262 alias="詳細262" direction="BothInOut"/>
+				<Measurement_263 alias="詳細263" direction="BothInOut"/>
+				<Measurement_264 alias="詳細264" direction="BothInOut"/>
+				<Measurement_265 alias="詳細265" direction="BothInOut"/>
+				<Measurement_266 alias="詳細266" direction="BothInOut"/>
+				<Measurement_267 alias="詳細267" direction="BothInOut"/>
+				<Measurement_268 alias="詳細268" direction="BothInOut"/>
+				<Measurement_269 alias="詳細269" direction="BothInOut"/>
+				<Measurement_270 alias="詳細270" direction="BothInOut"/>
+				<Measurement_271 alias="詳細271" direction="BothInOut"/>
+				<Measurement_272 alias="詳細272" direction="BothInOut"/>
+				<Measurement_273 alias="詳細273" direction="BothInOut"/>
+				<Measurement_274 alias="詳細274" direction="BothInOut"/>
+				<Measurement_275 alias="詳細275" direction="BothInOut"/>
+				<Measurement_276 alias="詳細276" direction="BothInOut"/>
+				<Measurement_277 alias="詳細277" direction="BothInOut"/>
+				<Measurement_278 alias="詳細278" direction="BothInOut"/>
+				<Measurement_279 alias="詳細279" direction="BothInOut"/>
+				<Measurement_280 alias="詳細280" direction="BothInOut"/>
+				<Measurement_281 alias="詳細281" direction="BothInOut"/>
+				<Measurement_282 alias="詳細282" direction="BothInOut"/>
+				<Measurement_283 alias="詳細283" direction="BothInOut"/>
+				<Measurement_284 alias="詳細284" direction="BothInOut"/>
+				<Measurement_285 alias="詳細285" direction="BothInOut"/>
+				<Measurement_286 alias="詳細286" direction="BothInOut"/>
+				<Measurement_287 alias="詳細287" direction="BothInOut"/>
+				<Measurement_288 alias="詳細288" direction="BothInOut"/>
+				<Measurement_289 alias="詳細289" direction="BothInOut"/>
+				<Measurement_290 alias="詳細290" direction="BothInOut"/>
+				<Measurement_291 alias="詳細291" direction="BothInOut"/>
+				<Measurement_292 alias="詳細292" direction="BothInOut"/>
+				<Measurement_293 alias="詳細293" direction="BothInOut"/>
+				<Measurement_294 alias="詳細294" direction="BothInOut"/>
+				<Measurement_295 alias="詳細295" direction="BothInOut"/>
+				<Measurement_296 alias="詳細296" direction="BothInOut"/>
+				<Measurement_297 alias="詳細297" direction="BothInOut"/>
+				<Measurement_298 alias="詳細298" direction="BothInOut"/>
+				<Measurement_299 alias="詳細299" direction="BothInOut"/>
+				<Measurement_300 alias="詳細300" direction="BothInOut"/>
+			</Detail_study_info>
+			<Treatment>
+                <Data/>
+				<Treatmentdetails>
+                    <Treat_item>
+                        <Search_item alias="検索項目名" direction="BothInOut"/>
+						<Unique_label alias="ユニークラベル" direction="BothInOut"/>
+						<Treat_value alias="値" direction="BothInOut"/>
+						<Treat_unit alias="単位" direction="BothInOut"/>
+					</Treat_item>
+				</Treatmentdetails>
+			</Treatment>
+			<Terminology>
+                <Data number="1">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="2">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="3">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="4">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="5">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="6">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="7">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="8">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="9">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="10">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="11">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="12">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="13">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="14">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="15">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="16">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="17">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="18">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="19">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+				<Data number="20">
+                    <Code alias="用語コードリスト" direction="BothInOut"/>
+					<Numeric alias="属性数値" direction="BothInOut"/>
+					<Comment alias="属性コメント" direction="BothInOut"/>
+				</Data>
+			</Terminology>
+			<ExtraInfo/>
+		</CompareStudy>
+	</DB_definition>
+</Data_source>

@@ -1,0 +1,6904 @@
+﻿Function CheckBox_SSRI_CheckedChanged()
+if CheckBox_SSRI.Checked then 
+TextBox_SSRI.Text = "SSRI类"
+else
+TextBox_SSRI.Text = ""
+end if
+End Function
+
+Function CheckBox_WLDL_CheckedChanged()
+if CheckBox_WLDL.Checked then 
+TextBox_WLDL.Text = "文拉/度洛"
+else
+TextBox_WLDL.Text = ""
+end if
+End Function
+
+Function CheckBox_MDP_CheckedChanged()
+if CheckBox_MDP.Checked then 
+TextBox_MDP.Text = "米氮平"
+else
+TextBox_MDP.Text = ""
+end if
+End Function
+
+Function CheckBox_SH_CheckedChanged()
+if CheckBox_SH.Checked then 
+TextBox_SH.Text = "三环"
+else
+TextBox_SH.Text = ""
+end if
+End Function
+Function CheckBox_SIHUAN_CheckedChanged()
+if CheckBox_SIHUAN.Checked then 
+TextBox_SIHUAN.Text = "四环"
+else
+TextBox_SIHUAN.Text = ""
+end if
+End Function
+Function CheckBox_QZT_CheckedChanged()
+if CheckBox_QZT.Checked then 
+TextBox_QZT.Text = "曲唑酮"
+else
+TextBox_QZT.Text = ""
+end if
+End Function
+Function CheckBox_DTL_CheckedChanged()
+if CheckBox_DTL.Checked then 
+TextBox_DTL.Text = "达体朗"
+else
+TextBox_DTL.Text = ""
+end if
+End Function
+Function CheckBox_ELSE_CheckedChanged()
+if CheckBox_ELSE.Checked then 
+TextBox_ELSE.Text = "其它"
+else
+TextBox_ELSE.Text = ""
+end if
+End Function
+Function CheckBox_JD_CheckedChanged()
+if CheckBox_JD.Checked then 
+TextBox_JD.Text = "经典"
+else
+TextBox_JD.Text = ""
+end if
+End Function
+Function CheckBox_FJD_CheckedChanged()
+if CheckBox_FJD.Checked then 
+TextBox_FJD.Text = "非经典"
+else
+TextBox_FJD.Text = ""
+end if
+End Function
+Function CheckBox_AD_CheckedChanged()
+if CheckBox_AD.Checked then 
+TextBox_AD.Text = "安定类"
+else
+TextBox_AD.Text = ""
+end if
+End Function
+Function CheckBox_ZBT_CheckedChanged()
+if CheckBox_ZBT.Checked then 
+TextBox_ZBT.Text = "唑吡坦"
+else
+TextBox_ZBT.Text = ""
+end if
+End Function
+Function CheckBox_ZPKL_CheckedChanged()
+if CheckBox_ZPKL.Checked then 
+TextBox_ZPKL.Text = "佐匹克隆"
+else
+TextBox_ZPKL.Text = ""
+end if
+End Function
+Function CheckBox_FNL_CheckedChanged()
+if CheckBox_FNL.Checked then 
+TextBox_FNL.Text = "芬那路"
+else
+TextBox_FNL.Text = ""
+end if
+End Function
+Function CheckBox_ZPKL_CheckedChanged()
+if CheckBox_ZPKL.Checked then 
+TextBox_ZPKL.Text = "佐匹克隆"
+else
+TextBox_ZPKL.Text = ""
+end if
+End Function
+Function CheckBox_ELSE2_CheckedChanged()
+if CheckBox_ELSE2.Checked then 
+TextBox_ELSE2.Text = "其它"
+else
+TextBox_ELSE2.Text = ""
+end if
+End Function
+Function CheckBox_BWS_CheckedChanged()
+if CheckBox_BWS.Checked then 
+TextBox_BWS.Text = "丙戊酸"
+else
+TextBox_BWS.Text = ""
+end if
+End Function
+Function CheckBox_KMXP_CheckedChanged()
+if CheckBox_KMXP.Checked then 
+TextBox_KMXP.Text = "卡马西平"
+else
+TextBox_KMXP.Text = ""
+end if
+End Function
+Function CheckBox_BTY_CheckedChanged()
+if CheckBox_BTY.Checked then 
+TextBox_BTY.Text = "苯妥英"
+else
+TextBox_BTY.Text = ""
+end if
+End Function
+Function CheckBox_BBBT_CheckedChanged()
+if CheckBox_BBBT.Checked then 
+TextBox_BBBT.Text = "苯巴比妥"
+else
+TextBox_BBBT.Text = ""
+end if
+End Function
+Function CheckBox_DBSJ_CheckedChanged()
+if CheckBox_DBSJ.Checked then 
+TextBox_DBSJ.Text = "多巴丝肼"
+else
+TextBox_DBSJ.Text = ""
+end if
+End Function
+Function CheckBox_AT_CheckedChanged()
+if CheckBox_AT.Checked then 
+TextBox_AT.Text = "安坦"
+else
+TextBox_AT.Text = ""
+end if
+End Function
+Function CheckBox_JGWA_CheckedChanged()
+if CheckBox_JGWA.Checked then 
+TextBox_JGWA.Text = "金刚烷胺"
+else
+TextBox_JGWA.Text = ""
+end if
+End Function
+Function CheckBox_PLKS_CheckedChanged()
+if CheckBox_PLKS.Checked then 
+TextBox_PLKS.Text = "普拉克索"
+else
+TextBox_PLKS.Text = ""
+end if
+End Function
+Function CheckBox_TSD_CheckedChanged()
+if CheckBox_TSD.Checked then 
+TextBox_TSD.Text = "泰舒达"
+else
+TextBox_TSD.Text = ""
+end if
+End Function
+Function CheckBox_ALS_CheckedChanged()
+if CheckBox_ALS.Checked then 
+TextBox_ALS.Text = "安理申"
+else
+TextBox_ALS.Text = ""
+end if
+End Function
+Function CheckBox_ASN_CheckedChanged()
+if CheckBox_ASN.Checked then 
+TextBox_ASN.Text = "艾斯能"
+else
+TextBox_ASN.Text = ""
+end if
+End Function
+Function CheckBox_MJG_CheckedChanged()
+if CheckBox_MJG.Checked then 
+TextBox_MJG.Text = "美金刚"
+else
+TextBox_MJG.Text = ""
+end if
+End Function
+Function CheckBox_ASN_CheckedChanged()
+if CheckBox_ASN.Checked then 
+TextBox_ASN.Text = "艾斯能"
+else
+TextBox_ASN.Text = ""
+end if
+End Function
+Function CheckBox_ELSE3_CheckedChanged()
+if CheckBox_ELSE3.Checked then 
+TextBox_ELSE3.Text = "其他"
+else
+TextBox_ELSE3.Text = ""
+end if
+End Function
+Function CheckBox_YX_CheckedChanged()
+if CheckBox_YX.Checked then 
+TextBox_YX.Text = "银杏"
+else
+TextBox_YX.Text = ""
+end if
+End Function
+Function CheckBox_MJ_CheckedChanged()
+if CheckBox_MJ.Checked then 
+TextBox_MJ.Text = "麦角"
+else
+TextBox_MJ.Text = ""
+end if
+End Function
+Function CheckBox_ZCY_CheckedChanged()
+if CheckBox_ZCY.Checked then 
+TextBox_ZCY.Text = "中成药"
+else
+TextBox_ZCY.Text = ""
+end if
+End Function
+Function CheckBox_XSZ_CheckedChanged()
+if CheckBox_XSZ.Checked then 
+TextBox_XSZ.Text = "硝酸脂类"
+else
+TextBox_XSZ.Text = ""
+end if
+End Function
+Function CheckBox_ASPL_CheckedChanged()
+if CheckBox_ASPL.Checked then 
+TextBox_ASPL.Text = "阿司匹林"
+else
+TextBox_ASPL.Text = ""
+end if
+End Function
+Function CheckBox_BLW_CheckedChanged()
+if CheckBox_BLW.Checked then 
+TextBox_BLW.Text = "波立维"
+else
+TextBox_BLW.Text = ""
+end if
+End Function
+Function CheckBox_DKLD_CheckedChanged()
+if CheckBox_DKLD.Checked then 
+TextBox_DKLD.Text = "抵克立得"
+else
+TextBox_DKLD.Text = ""
+end if
+End Function
+Function CheckBox_PSD_CheckedChanged()
+if CheckBox_PSD.Checked then 
+TextBox_PSD.Text = "潘生丁"
+else
+TextBox_PSD.Text = ""
+end if
+End Function
+Function CheckBox_HFL_CheckedChanged()
+if CheckBox_HFL.Checked then 
+TextBox_HFL.Text = "华法令"
+else
+TextBox_HFL.Text = ""
+end if
+End Function
+Function RadioBox_93_CheckedChanged()
+if RadioBox_93.Checked then 
+TextBox_XYZTY.Text = "是"
+else
+TextBox_XYZTY.Text = "否"
+end if
+End Function
+Function TextBox_CSXD_Change()
+TextBox_19.Text = TextBox_CSXD.Text + "EF=" + TextBox_EF.Text
+End Function
+Function TextBox_EF_Change()
+TextBox_19.Text = TextBox_CSXD.Text + "EF=" + TextBox_EF.Text
+End Function
+Function RadioBox_XD_CheckedChanged()
+if RadioBox_XD.Checked then 
+TextBox_141.Text = "正常"
+else
+TextBox_141.Text = "异常"
+end if
+End Function
+Function RadioBox_CSXD_CheckedChanged()
+if RadioBox_CSXD.Checked then 
+TextBox_142.Text = "正常"
+else
+TextBox_142.Text = "异常"
+end if
+End Function
+Function RadioBox_ND_CheckedChanged()
+if RadioBox_ND.Checked then 
+TextBox_143.Text = "正常"
+else
+TextBox_143.Text = "异常"
+end if
+End Function
+Function CheckBox_1_CheckedChanged()
+TextBox_M1.Text = -CheckBox_1.Checked - CheckBox_2.Checked - CheckBox_3.Checked - CheckBox_5.Checked - CheckBox_4.Checked 
+End Function
+Function CheckBox_2_CheckedChanged()
+TextBox_M1.Text = -CheckBox_1.Checked - CheckBox_2.Checked - CheckBox_3.Checked - CheckBox_5.Checked - CheckBox_4.Checked 
+End Function
+Function CheckBox_3_CheckedChanged()
+TextBox_M1.Text = -CheckBox_1.Checked - CheckBox_2.Checked - CheckBox_3.Checked - CheckBox_5.Checked - CheckBox_4.Checked 
+End Function
+Function CheckBox_5_CheckedChanged()
+TextBox_M1.Text = -CheckBox_1.Checked - CheckBox_2.Checked - CheckBox_3.Checked - CheckBox_5.Checked - CheckBox_4.Checked 
+End Function
+Function CheckBox_4_CheckedChanged()
+TextBox_M1.Text = -CheckBox_1.Checked - CheckBox_2.Checked - CheckBox_3.Checked - CheckBox_5.Checked - CheckBox_4.Checked 
+End Function
+Function CheckBox_10_CheckedChanged()
+TextBox_M2.Text = -CheckBox_10.Checked - CheckBox_9.Checked - CheckBox_8.Checked - CheckBox_34.Checked - CheckBox_35.Checked 
+End Function
+Function CheckBox_9_CheckedChanged()
+TextBox_M2.Text = -CheckBox_10.Checked - CheckBox_9.Checked - CheckBox_8.Checked - CheckBox_34.Checked - CheckBox_35.Checked 
+End Function
+Function CheckBox_8_CheckedChanged()
+TextBox_M2.Text = -CheckBox_10.Checked - CheckBox_9.Checked - CheckBox_8.Checked - CheckBox_34.Checked - CheckBox_35.Checked 
+End Function
+Function CheckBox_34_CheckedChanged()
+TextBox_M2.Text = -CheckBox_10.Checked - CheckBox_9.Checked - CheckBox_8.Checked - CheckBox_34.Checked - CheckBox_35.Checked 
+End Function
+Function CheckBox_35_CheckedChanged()
+TextBox_M2.Text = -CheckBox_10.Checked - CheckBox_9.Checked - CheckBox_8.Checked - CheckBox_34.Checked - CheckBox_35.Checked 
+End Function
+Function CheckBox_11_CheckedChanged()
+TextBox_M3.Text = -CheckBox_11.Checked - CheckBox_12.Checked - CheckBox_13.Checked 
+End Function
+Function CheckBox_12_CheckedChanged()
+TextBox_M3.Text = -CheckBox_11.Checked - CheckBox_12.Checked - CheckBox_13.Checked
+End Function
+Function CheckBox_13_CheckedChanged()
+TextBox_M3.Text = -CheckBox_11.Checked - CheckBox_12.Checked - CheckBox_13.Checked
+End Function
+Function CheckBox_16_CheckedChanged()
+TextBox_M4.Text = -CheckBox_16.Checked - CheckBox_15.Checked - CheckBox_14.Checked - CheckBox_17.Checked - CheckBox_18.Checked 
+End Function
+Function CheckBox_15_CheckedChanged()
+TextBox_M4.Text = -CheckBox_16.Checked - CheckBox_15.Checked - CheckBox_14.Checked - CheckBox_17.Checked - CheckBox_18.Checked 
+End Function
+Function CheckBox_14_CheckedChanged()
+TextBox_M4.Text = -CheckBox_16.Checked - CheckBox_15.Checked - CheckBox_14.Checked - CheckBox_17.Checked - CheckBox_18.Checked 
+End Function
+Function CheckBox_17_CheckedChanged()
+TextBox_M4.Text = -CheckBox_16.Checked - CheckBox_15.Checked - CheckBox_14.Checked - CheckBox_17.Checked - CheckBox_18.Checked 
+End Function
+Function CheckBox_18_CheckedChanged()
+TextBox_M4.Text = -CheckBox_16.Checked - CheckBox_15.Checked - CheckBox_14.Checked - CheckBox_17.Checked - CheckBox_18.Checked 
+End Function
+Function CheckBox_21_CheckedChanged()
+TextBox_M5.Text = -CheckBox_21.Checked - CheckBox_20.Checked - CheckBox_23.Checked 
+End Function
+Function CheckBox_20_CheckedChanged()
+TextBox_M5.Text = -CheckBox_21.Checked - CheckBox_20.Checked - CheckBox_23.Checked 
+End Function
+Function CheckBox_23_CheckedChanged()
+TextBox_M5.Text = -CheckBox_21.Checked - CheckBox_20.Checked - CheckBox_23.Checked 
+End Function
+Function CheckBox_19_CheckedChanged()
+TextBox_M6.Text = -CheckBox_19.Checked - CheckBox_22.Checked 
+End Function
+Function CheckBox_22_CheckedChanged()
+TextBox_M6.Text = -CheckBox_19.Checked - CheckBox_22.Checked 
+End Function
+Function CheckBox_24_CheckedChanged()
+TextBox_M7.Text = -CheckBox_24.Checked 
+End Function
+Function CheckBox_28_CheckedChanged()
+TextBox_M8.Text = -CheckBox_28.Checked - CheckBox_29.Checked - CheckBox_30.Checked 
+End Function
+Function CheckBox_29_CheckedChanged()
+TextBox_M8.Text = -CheckBox_28.Checked - CheckBox_29.Checked - CheckBox_30.Checked 
+End Function
+Function CheckBox_30_CheckedChanged()
+TextBox_M8.Text = -CheckBox_28.Checked - CheckBox_29.Checked - CheckBox_30.Checked 
+End Function
+Function CheckBox_31_CheckedChanged()
+TextBox_M9.Text = -CheckBox_31.Checked 
+End Function
+Function CheckBox_32_CheckedChanged()
+TextBox_M10.Text = -CheckBox_32.Checked 
+End Function
+Function CheckBox_33_CheckedChanged()
+TextBox_M11.Text = -CheckBox_33.Checked 
+End Function
+Function CheckBox_6_CheckedChanged()
+TextBox_C2A.Text = -CheckBox_6.Checked - CheckBox_7.Checked - CheckBox_36.Checked - CheckBox_37.Checked - CheckBox_38.Checked - CheckBox_39.Checked - CheckBox_40.Checked - CheckBox_41.Checked - CheckBox_42.Checked - CheckBox_43.Checked 
+End Function
+Function CheckBox_7_CheckedChanged()
+TextBox_C2A.Text = -CheckBox_6.Checked - CheckBox_7.Checked - CheckBox_36.Checked - CheckBox_37.Checked - CheckBox_38.Checked - CheckBox_39.Checked - CheckBox_40.Checked - CheckBox_41.Checked - CheckBox_42.Checked - CheckBox_43.Checked 
+End Function
+Function CheckBox_36_CheckedChanged()
+TextBox_C2A.Text = -CheckBox_6.Checked - CheckBox_7.Checked - CheckBox_36.Checked - CheckBox_37.Checked - CheckBox_38.Checked - CheckBox_39.Checked - CheckBox_40.Checked - CheckBox_41.Checked - CheckBox_42.Checked - CheckBox_43.Checked 
+End Function
+Function CheckBox_37_CheckedChanged()
+TextBox_C2A.Text = -CheckBox_6.Checked - CheckBox_7.Checked - CheckBox_36.Checked - CheckBox_37.Checked - CheckBox_38.Checked - CheckBox_39.Checked - CheckBox_40.Checked - CheckBox_41.Checked - CheckBox_42.Checked - CheckBox_43.Checked 
+End Function
+Function CheckBox_38_CheckedChanged()
+TextBox_C2A.Text = -CheckBox_6.Checked - CheckBox_7.Checked - CheckBox_36.Checked - CheckBox_37.Checked - CheckBox_38.Checked - CheckBox_39.Checked - CheckBox_40.Checked - CheckBox_41.Checked - CheckBox_42.Checked - CheckBox_43.Checked 
+End Function
+Function CheckBox_39_CheckedChanged()
+TextBox_C2A.Text = -CheckBox_6.Checked - CheckBox_7.Checked - CheckBox_36.Checked - CheckBox_37.Checked - CheckBox_38.Checked - CheckBox_39.Checked - CheckBox_40.Checked - CheckBox_41.Checked - CheckBox_42.Checked - CheckBox_43.Checked 
+End Function
+Function CheckBox_40_CheckedChanged()
+TextBox_C2A.Text = -CheckBox_6.Checked - CheckBox_7.Checked - CheckBox_36.Checked - CheckBox_37.Checked - CheckBox_38.Checked - CheckBox_39.Checked - CheckBox_40.Checked - CheckBox_41.Checked - CheckBox_42.Checked - CheckBox_43.Checked 
+End Function
+Function CheckBox_41_CheckedChanged()
+TextBox_C2A.Text = -CheckBox_6.Checked - CheckBox_7.Checked - CheckBox_36.Checked - CheckBox_37.Checked - CheckBox_38.Checked - CheckBox_39.Checked - CheckBox_40.Checked - CheckBox_41.Checked - CheckBox_42.Checked - CheckBox_43.Checked 
+End Function
+Function CheckBox_42_CheckedChanged()
+TextBox_C2A.Text = -CheckBox_6.Checked - CheckBox_7.Checked - CheckBox_36.Checked - CheckBox_37.Checked - CheckBox_38.Checked - CheckBox_39.Checked - CheckBox_40.Checked - CheckBox_41.Checked - CheckBox_42.Checked - CheckBox_43.Checked 
+End Function
+Function CheckBox_43_CheckedChanged()
+TextBox_C2A.Text = -CheckBox_6.Checked - CheckBox_7.Checked - CheckBox_36.Checked - CheckBox_37.Checked - CheckBox_38.Checked - CheckBox_39.Checked - CheckBox_40.Checked - CheckBox_41.Checked - CheckBox_42.Checked - CheckBox_43.Checked 
+End Function
+Function CheckBox_53_CheckedChanged()
+TextBox_C2B.Text = -CheckBox_53.Checked - CheckBox_52.Checked - CheckBox_51.Checked - CheckBox_50.Checked - CheckBox_49.Checked - CheckBox_48.Checked - CheckBox_47.Checked - CheckBox_46.Checked - CheckBox_45.Checked - CheckBox_44.Checked 
+End Function
+Function CheckBox_52_CheckedChanged()
+TextBox_C2B.Text = -CheckBox_53.Checked - CheckBox_52.Checked - CheckBox_51.Checked - CheckBox_50.Checked - CheckBox_49.Checked - CheckBox_48.Checked - CheckBox_47.Checked - CheckBox_46.Checked - CheckBox_45.Checked - CheckBox_44.Checked
+End Function
+Function CheckBox_51_CheckedChanged()
+TextBox_C2B.Text = -CheckBox_53.Checked - CheckBox_52.Checked - CheckBox_51.Checked - CheckBox_50.Checked - CheckBox_49.Checked - CheckBox_48.Checked - CheckBox_47.Checked - CheckBox_46.Checked - CheckBox_45.Checked - CheckBox_44.Checked
+End Function
+Function CheckBox_50_CheckedChanged()
+TextBox_C2B.Text = -CheckBox_53.Checked - CheckBox_52.Checked - CheckBox_51.Checked - CheckBox_50.Checked - CheckBox_49.Checked - CheckBox_48.Checked - CheckBox_47.Checked - CheckBox_46.Checked - CheckBox_45.Checked - CheckBox_44.Checked
+End Function
+Function CheckBox_49_CheckedChanged()
+TextBox_C2B.Text = -CheckBox_53.Checked - CheckBox_52.Checked - CheckBox_51.Checked - CheckBox_50.Checked - CheckBox_49.Checked - CheckBox_48.Checked - CheckBox_47.Checked - CheckBox_46.Checked - CheckBox_45.Checked - CheckBox_44.Checked
+End Function
+Function CheckBox_48_CheckedChanged()
+TextBox_C2B.Text = -CheckBox_53.Checked - CheckBox_52.Checked - CheckBox_51.Checked - CheckBox_50.Checked - CheckBox_49.Checked - CheckBox_48.Checked - CheckBox_47.Checked - CheckBox_46.Checked - CheckBox_45.Checked - CheckBox_44.Checked
+End Function
+Function CheckBox_47_CheckedChanged()
+TextBox_C2B.Text = -CheckBox_53.Checked - CheckBox_52.Checked - CheckBox_51.Checked - CheckBox_50.Checked - CheckBox_49.Checked - CheckBox_48.Checked - CheckBox_47.Checked - CheckBox_46.Checked - CheckBox_45.Checked - CheckBox_44.Checked
+End Function
+Function CheckBox_46_CheckedChanged()
+TextBox_C2B.Text = -CheckBox_53.Checked - CheckBox_52.Checked - CheckBox_51.Checked - CheckBox_50.Checked - CheckBox_49.Checked - CheckBox_48.Checked - CheckBox_47.Checked - CheckBox_46.Checked - CheckBox_45.Checked - CheckBox_44.Checked
+End Function
+Function CheckBox_45_CheckedChanged()
+TextBox_C2B.Text = -CheckBox_53.Checked - CheckBox_52.Checked - CheckBox_51.Checked - CheckBox_50.Checked - CheckBox_49.Checked - CheckBox_48.Checked - CheckBox_47.Checked - CheckBox_46.Checked - CheckBox_45.Checked - CheckBox_44.Checked
+End Function
+Function CheckBox_44_CheckedChanged()
+TextBox_C2B.Text = -CheckBox_53.Checked - CheckBox_52.Checked - CheckBox_51.Checked - CheckBox_50.Checked - CheckBox_49.Checked - CheckBox_48.Checked - CheckBox_47.Checked - CheckBox_46.Checked - CheckBox_45.Checked - CheckBox_44.Checked
+End Function
+Function CheckBox_54_CheckedChanged()
+TextBox_C2C.Text = -CheckBox_54.Checked - CheckBox_55.Checked - CheckBox_56.Checked - CheckBox_57.Checked - CheckBox_58.Checked - CheckBox_59.Checked - CheckBox_60.Checked - CheckBox_61.Checked - CheckBox_62.Checked - CheckBox_63.Checked
+End Function
+Function CheckBox_55_CheckedChanged()
+TextBox_C2C.Text = -CheckBox_54.Checked - CheckBox_55.Checked - CheckBox_56.Checked - CheckBox_57.Checked - CheckBox_58.Checked - CheckBox_59.Checked - CheckBox_60.Checked - CheckBox_61.Checked - CheckBox_62.Checked - CheckBox_63.Checked
+End Function
+Function CheckBox_56_CheckedChanged()
+TextBox_C2C.Text = -CheckBox_54.Checked - CheckBox_55.Checked - CheckBox_56.Checked - CheckBox_57.Checked - CheckBox_58.Checked - CheckBox_59.Checked - CheckBox_60.Checked - CheckBox_61.Checked - CheckBox_62.Checked - CheckBox_63.Checked
+End Function
+Function CheckBox_57_CheckedChanged()
+TextBox_C2C.Text = -CheckBox_54.Checked - CheckBox_55.Checked - CheckBox_56.Checked - CheckBox_57.Checked - CheckBox_58.Checked - CheckBox_59.Checked - CheckBox_60.Checked - CheckBox_61.Checked - CheckBox_62.Checked - CheckBox_63.Checked
+End Function
+Function CheckBox_58_CheckedChanged()
+TextBox_C2C.Text = -CheckBox_54.Checked - CheckBox_55.Checked - CheckBox_56.Checked - CheckBox_57.Checked - CheckBox_58.Checked - CheckBox_59.Checked - CheckBox_60.Checked - CheckBox_61.Checked - CheckBox_62.Checked - CheckBox_63.Checked
+End Function
+Function CheckBox_59_CheckedChanged()
+TextBox_C2C.Text = -CheckBox_54.Checked - CheckBox_55.Checked - CheckBox_56.Checked - CheckBox_57.Checked - CheckBox_58.Checked - CheckBox_59.Checked - CheckBox_60.Checked - CheckBox_61.Checked - CheckBox_62.Checked - CheckBox_63.Checked
+End Function
+Function CheckBox_60_CheckedChanged()
+TextBox_C2C.Text = -CheckBox_54.Checked - CheckBox_55.Checked - CheckBox_56.Checked - CheckBox_57.Checked - CheckBox_58.Checked - CheckBox_59.Checked - CheckBox_60.Checked - CheckBox_61.Checked - CheckBox_62.Checked - CheckBox_63.Checked
+End Function
+Function CheckBox_61_CheckedChanged()
+TextBox_C2C.Text = -CheckBox_54.Checked - CheckBox_55.Checked - CheckBox_56.Checked - CheckBox_57.Checked - CheckBox_58.Checked - CheckBox_59.Checked - CheckBox_60.Checked - CheckBox_61.Checked - CheckBox_62.Checked - CheckBox_63.Checked
+End Function
+Function CheckBox_62_CheckedChanged()
+TextBox_C2C.Text = -CheckBox_54.Checked - CheckBox_55.Checked - CheckBox_56.Checked - CheckBox_57.Checked - CheckBox_58.Checked - CheckBox_59.Checked - CheckBox_60.Checked - CheckBox_61.Checked - CheckBox_62.Checked - CheckBox_63.Checked
+End Function
+Function CheckBox_63_CheckedChanged()
+TextBox_C2C.Text = -CheckBox_54.Checked - CheckBox_55.Checked - CheckBox_56.Checked - CheckBox_57.Checked - CheckBox_58.Checked - CheckBox_59.Checked - CheckBox_60.Checked - CheckBox_61.Checked - CheckBox_62.Checked - CheckBox_63.Checked
+End Function
+Function ComboBox_21_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_21.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_21.Text)
+end if
+if ComboBox_22.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_22.Text)
+end if
+if ComboBox_23.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_23.Text)
+end if
+if ComboBox_24.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_24.Text)
+end if
+if ComboBox_25.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_25.Text)
+end if
+if ComboBox_26.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_26.Text)
+end if
+if ComboBox_27.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_27.Text)
+end if
+if ComboBox_28.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_28.Text)
+end if
+TextBox_C3A.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8 
+End Function
+Function ComboBox_22_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_21.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_21.Text)
+end if
+if ComboBox_22.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_22.Text)
+end if
+if ComboBox_23.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_23.Text)
+end if
+if ComboBox_24.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_24.Text)
+end if
+if ComboBox_25.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_25.Text)
+end if
+if ComboBox_26.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_26.Text)
+end if
+if ComboBox_27.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_27.Text)
+end if
+if ComboBox_28.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_28.Text)
+end if
+TextBox_C3A.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_23_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_21.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_21.Text)
+end if
+if ComboBox_22.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_22.Text)
+end if
+if ComboBox_23.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_23.Text)
+end if
+if ComboBox_24.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_24.Text)
+end if
+if ComboBox_25.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_25.Text)
+end if
+if ComboBox_26.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_26.Text)
+end if
+if ComboBox_27.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_27.Text)
+end if
+if ComboBox_28.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_28.Text)
+end if
+TextBox_C3A.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_24_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_21.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_21.Text)
+end if
+if ComboBox_22.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_22.Text)
+end if
+if ComboBox_23.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_23.Text)
+end if
+if ComboBox_24.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_24.Text)
+end if
+if ComboBox_25.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_25.Text)
+end if
+if ComboBox_26.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_26.Text)
+end if
+if ComboBox_27.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_27.Text)
+end if
+if ComboBox_28.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_28.Text)
+end if
+TextBox_C3A.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_25_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_21.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_21.Text)
+end if
+if ComboBox_22.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_22.Text)
+end if
+if ComboBox_23.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_23.Text)
+end if
+if ComboBox_24.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_24.Text)
+end if
+if ComboBox_25.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_25.Text)
+end if
+if ComboBox_26.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_26.Text)
+end if
+if ComboBox_27.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_27.Text)
+end if
+if ComboBox_28.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_28.Text)
+end if
+TextBox_C3A.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_26_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_21.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_21.Text)
+end if
+if ComboBox_22.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_22.Text)
+end if
+if ComboBox_23.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_23.Text)
+end if
+if ComboBox_24.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_24.Text)
+end if
+if ComboBox_25.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_25.Text)
+end if
+if ComboBox_26.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_26.Text)
+end if
+if ComboBox_27.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_27.Text)
+end if
+if ComboBox_28.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_28.Text)
+end if
+TextBox_C3A.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_27_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_21.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_21.Text)
+end if
+if ComboBox_22.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_22.Text)
+end if
+if ComboBox_23.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_23.Text)
+end if
+if ComboBox_24.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_24.Text)
+end if
+if ComboBox_25.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_25.Text)
+end if
+if ComboBox_26.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_26.Text)
+end if
+if ComboBox_27.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_27.Text)
+end if
+if ComboBox_28.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_28.Text)
+end if
+TextBox_C3A.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_28_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_21.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_21.Text)
+end if
+if ComboBox_22.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_22.Text)
+end if
+if ComboBox_23.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_23.Text)
+end if
+if ComboBox_24.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_24.Text)
+end if
+if ComboBox_25.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_25.Text)
+end if
+if ComboBox_26.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_26.Text)
+end if
+if ComboBox_27.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_27.Text)
+end if
+if ComboBox_28.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_28.Text)
+end if
+TextBox_C3A.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_36_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_36.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_36.Text)
+end if
+if ComboBox_35.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_35.Text)
+end if
+if ComboBox_34.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_34.Text)
+end if
+if ComboBox_33.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_33.Text)
+end if
+if ComboBox_32.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_32.Text)
+end if
+if ComboBox_31.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_31.Text)
+end if
+if ComboBox_30.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_30.Text)
+end if
+if ComboBox_29.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_29.Text)
+end if
+TextBox_C3B.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_35_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_36.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_36.Text)
+end if
+if ComboBox_35.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_35.Text)
+end if
+if ComboBox_34.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_34.Text)
+end if
+if ComboBox_33.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_33.Text)
+end if
+if ComboBox_32.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_32.Text)
+end if
+if ComboBox_31.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_31.Text)
+end if
+if ComboBox_30.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_30.Text)
+end if
+if ComboBox_29.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_29.Text)
+end if
+TextBox_C3B.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_34_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_36.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_36.Text)
+end if
+if ComboBox_35.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_35.Text)
+end if
+if ComboBox_34.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_34.Text)
+end if
+if ComboBox_33.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_33.Text)
+end if
+if ComboBox_32.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_32.Text)
+end if
+if ComboBox_31.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_31.Text)
+end if
+if ComboBox_30.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_30.Text)
+end if
+if ComboBox_29.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_29.Text)
+end if
+TextBox_C3B.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_33_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_36.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_36.Text)
+end if
+if ComboBox_35.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_35.Text)
+end if
+if ComboBox_34.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_34.Text)
+end if
+if ComboBox_33.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_33.Text)
+end if
+if ComboBox_32.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_32.Text)
+end if
+if ComboBox_31.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_31.Text)
+end if
+if ComboBox_30.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_30.Text)
+end if
+if ComboBox_29.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_29.Text)
+end if
+TextBox_C3B.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_32_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_36.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_36.Text)
+end if
+if ComboBox_35.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_35.Text)
+end if
+if ComboBox_34.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_34.Text)
+end if
+if ComboBox_33.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_33.Text)
+end if
+if ComboBox_32.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_32.Text)
+end if
+if ComboBox_31.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_31.Text)
+end if
+if ComboBox_30.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_30.Text)
+end if
+if ComboBox_29.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_29.Text)
+end if
+TextBox_C3B.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_31_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_36.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_36.Text)
+end if
+if ComboBox_35.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_35.Text)
+end if
+if ComboBox_34.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_34.Text)
+end if
+if ComboBox_33.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_33.Text)
+end if
+if ComboBox_32.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_32.Text)
+end if
+if ComboBox_31.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_31.Text)
+end if
+if ComboBox_30.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_30.Text)
+end if
+if ComboBox_29.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_29.Text)
+end if
+TextBox_C3B.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_30_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_36.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_36.Text)
+end if
+if ComboBox_35.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_35.Text)
+end if
+if ComboBox_34.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_34.Text)
+end if
+if ComboBox_33.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_33.Text)
+end if
+if ComboBox_32.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_32.Text)
+end if
+if ComboBox_31.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_31.Text)
+end if
+if ComboBox_30.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_30.Text)
+end if
+if ComboBox_29.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_29.Text)
+end if
+TextBox_C3B.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_29_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_36.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_36.Text)
+end if
+if ComboBox_35.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_35.Text)
+end if
+if ComboBox_34.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_34.Text)
+end if
+if ComboBox_33.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_33.Text)
+end if
+if ComboBox_32.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_32.Text)
+end if
+if ComboBox_31.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_31.Text)
+end if
+if ComboBox_30.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_30.Text)
+end if
+if ComboBox_29.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_29.Text)
+end if
+TextBox_C3B.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_44_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_44.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_44.Text)
+end if
+if ComboBox_43.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_43.Text)
+end if
+if ComboBox_42.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_42.Text)
+end if
+if ComboBox_41.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_41.Text)
+end if
+if ComboBox_40.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_40.Text)
+end if
+if ComboBox_39.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_39.Text)
+end if
+if ComboBox_38.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_38.Text)
+end if
+if ComboBox_37.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_37.Text)
+end if
+TextBox_C3C.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_43_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_44.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_44.Text)
+end if
+if ComboBox_43.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_43.Text)
+end if
+if ComboBox_42.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_42.Text)
+end if
+if ComboBox_41.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_41.Text)
+end if
+if ComboBox_40.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_40.Text)
+end if
+if ComboBox_39.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_39.Text)
+end if
+if ComboBox_38.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_38.Text)
+end if
+if ComboBox_37.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_37.Text)
+end if
+TextBox_C3C.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_42_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_44.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_44.Text)
+end if
+if ComboBox_43.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_43.Text)
+end if
+if ComboBox_42.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_42.Text)
+end if
+if ComboBox_41.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_41.Text)
+end if
+if ComboBox_40.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_40.Text)
+end if
+if ComboBox_39.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_39.Text)
+end if
+if ComboBox_38.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_38.Text)
+end if
+if ComboBox_37.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_37.Text)
+end if
+TextBox_C3C.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_41_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_44.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_44.Text)
+end if
+if ComboBox_43.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_43.Text)
+end if
+if ComboBox_42.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_42.Text)
+end if
+if ComboBox_41.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_41.Text)
+end if
+if ComboBox_40.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_40.Text)
+end if
+if ComboBox_39.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_39.Text)
+end if
+if ComboBox_38.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_38.Text)
+end if
+if ComboBox_37.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_37.Text)
+end if
+TextBox_C3C.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_40_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_44.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_44.Text)
+end if
+if ComboBox_43.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_43.Text)
+end if
+if ComboBox_42.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_42.Text)
+end if
+if ComboBox_41.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_41.Text)
+end if
+if ComboBox_40.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_40.Text)
+end if
+if ComboBox_39.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_39.Text)
+end if
+if ComboBox_38.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_38.Text)
+end if
+if ComboBox_37.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_37.Text)
+end if
+TextBox_C3C.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_39_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_44.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_44.Text)
+end if
+if ComboBox_43.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_43.Text)
+end if
+if ComboBox_42.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_42.Text)
+end if
+if ComboBox_41.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_41.Text)
+end if
+if ComboBox_40.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_40.Text)
+end if
+if ComboBox_39.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_39.Text)
+end if
+if ComboBox_38.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_38.Text)
+end if
+if ComboBox_37.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_37.Text)
+end if
+TextBox_C3C.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_38_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_44.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_44.Text)
+end if
+if ComboBox_43.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_43.Text)
+end if
+if ComboBox_42.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_42.Text)
+end if
+if ComboBox_41.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_41.Text)
+end if
+if ComboBox_40.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_40.Text)
+end if
+if ComboBox_39.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_39.Text)
+end if
+if ComboBox_38.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_38.Text)
+end if
+if ComboBox_37.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_37.Text)
+end if
+TextBox_C3C.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function ComboBox_37_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8
+if ComboBox_44.Text = "" then
+nCom1 = 0
+else
+nCom1 = CInt(ComboBox_44.Text)
+end if
+if ComboBox_43.Text = "" then
+nCom2 = 0
+else
+nCom2 = CInt(ComboBox_43.Text)
+end if
+if ComboBox_42.Text = "" then
+nCom3 = 0
+else
+nCom3 = CInt(ComboBox_42.Text)
+end if
+if ComboBox_41.Text = "" then
+nCom4 = 0
+else
+nCom4 = CInt(ComboBox_41.Text)
+end if
+if ComboBox_40.Text = "" then
+nCom5 = 0
+else
+nCom5 = CInt(ComboBox_40.Text)
+end if
+if ComboBox_39.Text = "" then
+nCom6 = 0
+else
+nCom6 = CInt(ComboBox_39.Text)
+end if
+if ComboBox_38.Text = "" then
+nCom7 = 0
+else
+nCom7 = CInt(ComboBox_38.Text)
+end if
+if ComboBox_37.Text = "" then
+nCom8 = 0
+else
+nCom8 = CInt(ComboBox_37.Text)
+end if
+TextBox_C3C.Text = nCom1 + nCom2 + nCom3 + nCom4 + nCom5 + nCom6 + nCom7 + nCom8
+End Function
+Function CheckBox_73_CheckedChanged()
+TextBox_C2D.Text = -CheckBox_73.Checked - CheckBox_72.Checked - CheckBox_71.Checked - CheckBox_70.Checked - CheckBox_69.Checked - CheckBox_68.Checked - CheckBox_67.Checked - CheckBox_66.Checked - CheckBox_65.Checked - CheckBox_64.Checked
+End Function
+Function CheckBox_72_CheckedChanged()
+TextBox_C2D.Text = -CheckBox_73.Checked - CheckBox_72.Checked - CheckBox_71.Checked - CheckBox_70.Checked - CheckBox_69.Checked - CheckBox_68.Checked - CheckBox_67.Checked - CheckBox_66.Checked - CheckBox_65.Checked - CheckBox_64.Checked
+End Function
+Function CheckBox_71_CheckedChanged()
+TextBox_C2D.Text = -CheckBox_73.Checked - CheckBox_72.Checked - CheckBox_71.Checked - CheckBox_70.Checked - CheckBox_69.Checked - CheckBox_68.Checked - CheckBox_67.Checked - CheckBox_66.Checked - CheckBox_65.Checked - CheckBox_64.Checked
+End Function
+Function CheckBox_70_CheckedChanged()
+TextBox_C2D.Text = -CheckBox_73.Checked - CheckBox_72.Checked - CheckBox_71.Checked - CheckBox_70.Checked - CheckBox_69.Checked - CheckBox_68.Checked - CheckBox_67.Checked - CheckBox_66.Checked - CheckBox_65.Checked - CheckBox_64.Checked
+End Function
+Function CheckBox_69_CheckedChanged()
+TextBox_C2D.Text = -CheckBox_73.Checked - CheckBox_72.Checked - CheckBox_71.Checked - CheckBox_70.Checked - CheckBox_69.Checked - CheckBox_68.Checked - CheckBox_67.Checked - CheckBox_66.Checked - CheckBox_65.Checked - CheckBox_64.Checked
+End Function
+Function CheckBox_68_CheckedChanged()
+TextBox_C2D.Text = -CheckBox_73.Checked - CheckBox_72.Checked - CheckBox_71.Checked - CheckBox_70.Checked - CheckBox_69.Checked - CheckBox_68.Checked - CheckBox_67.Checked - CheckBox_66.Checked - CheckBox_65.Checked - CheckBox_64.Checked
+End Function
+Function CheckBox_67_CheckedChanged()
+TextBox_C2D.Text = -CheckBox_73.Checked - CheckBox_72.Checked - CheckBox_71.Checked - CheckBox_70.Checked - CheckBox_69.Checked - CheckBox_68.Checked - CheckBox_67.Checked - CheckBox_66.Checked - CheckBox_65.Checked - CheckBox_64.Checked
+End Function
+Function CheckBox_66_CheckedChanged()
+TextBox_C2D.Text = -CheckBox_73.Checked - CheckBox_72.Checked - CheckBox_71.Checked - CheckBox_70.Checked - CheckBox_69.Checked - CheckBox_68.Checked - CheckBox_67.Checked - CheckBox_66.Checked - CheckBox_65.Checked - CheckBox_64.Checked
+End Function
+Function CheckBox_65_CheckedChanged()
+TextBox_C2D.Text = -CheckBox_73.Checked - CheckBox_72.Checked - CheckBox_71.Checked - CheckBox_70.Checked - CheckBox_69.Checked - CheckBox_68.Checked - CheckBox_67.Checked - CheckBox_66.Checked - CheckBox_65.Checked - CheckBox_64.Checked
+End Function
+Function CheckBox_64_CheckedChanged()
+TextBox_C2D.Text = -CheckBox_73.Checked - CheckBox_72.Checked - CheckBox_71.Checked - CheckBox_70.Checked - CheckBox_69.Checked - CheckBox_68.Checked - CheckBox_67.Checked - CheckBox_66.Checked - CheckBox_65.Checked - CheckBox_64.Checked
+End Function
+Function CheckBox_83_CheckedChanged()
+TextBox_C2E1.Text = -CheckBox_83.Checked - CheckBox_82.Checked - CheckBox_80.Checked - CheckBox_77.Checked - CheckBox_75.Checked - CheckBox_74.Checked - CheckBox_111.Checked - CheckBox_107.Checked - CheckBox_105.Checked - CheckBox_101.Checked 
+End Function
+Function CheckBox_82_CheckedChanged()
+TextBox_C2E1.Text = -CheckBox_83.Checked - CheckBox_82.Checked - CheckBox_80.Checked - CheckBox_77.Checked - CheckBox_75.Checked - CheckBox_74.Checked - CheckBox_111.Checked - CheckBox_107.Checked - CheckBox_105.Checked - CheckBox_101.Checked
+End Function
+Function CheckBox_80_CheckedChanged()
+TextBox_C2E1.Text = -CheckBox_83.Checked - CheckBox_82.Checked - CheckBox_80.Checked - CheckBox_77.Checked - CheckBox_75.Checked - CheckBox_74.Checked - CheckBox_111.Checked - CheckBox_107.Checked - CheckBox_105.Checked - CheckBox_101.Checked
+End Function
+Function CheckBox_77_CheckedChanged()
+TextBox_C2E1.Text = -CheckBox_83.Checked - CheckBox_82.Checked - CheckBox_80.Checked - CheckBox_77.Checked - CheckBox_75.Checked - CheckBox_74.Checked - CheckBox_111.Checked - CheckBox_107.Checked - CheckBox_105.Checked - CheckBox_101.Checked
+End Function
+Function CheckBox_75_CheckedChanged()
+TextBox_C2E1.Text = -CheckBox_83.Checked - CheckBox_82.Checked - CheckBox_80.Checked - CheckBox_77.Checked - CheckBox_75.Checked - CheckBox_74.Checked - CheckBox_111.Checked - CheckBox_107.Checked - CheckBox_105.Checked - CheckBox_101.Checked
+End Function
+Function CheckBox_74_CheckedChanged()
+TextBox_C2E1.Text = -CheckBox_83.Checked - CheckBox_82.Checked - CheckBox_80.Checked - CheckBox_77.Checked - CheckBox_75.Checked - CheckBox_74.Checked - CheckBox_111.Checked - CheckBox_107.Checked - CheckBox_105.Checked - CheckBox_101.Checked
+End Function
+Function CheckBox_111_CheckedChanged()
+TextBox_C2E1.Text = -CheckBox_83.Checked - CheckBox_82.Checked - CheckBox_80.Checked - CheckBox_77.Checked - CheckBox_75.Checked - CheckBox_74.Checked - CheckBox_111.Checked - CheckBox_107.Checked - CheckBox_105.Checked - CheckBox_101.Checked
+End Function
+Function CheckBox_107_CheckedChanged()
+TextBox_C2E1.Text = -CheckBox_83.Checked - CheckBox_82.Checked - CheckBox_80.Checked - CheckBox_77.Checked - CheckBox_75.Checked - CheckBox_74.Checked - CheckBox_111.Checked - CheckBox_107.Checked - CheckBox_105.Checked - CheckBox_101.Checked
+End Function
+Function CheckBox_105_CheckedChanged()
+TextBox_C2E1.Text = -CheckBox_83.Checked - CheckBox_82.Checked - CheckBox_80.Checked - CheckBox_77.Checked - CheckBox_75.Checked - CheckBox_74.Checked - CheckBox_111.Checked - CheckBox_107.Checked - CheckBox_105.Checked - CheckBox_101.Checked
+End Function
+Function CheckBox_101_CheckedChanged()
+TextBox_C2E1.Text = -CheckBox_83.Checked - CheckBox_82.Checked - CheckBox_80.Checked - CheckBox_77.Checked - CheckBox_75.Checked - CheckBox_74.Checked - CheckBox_111.Checked - CheckBox_107.Checked - CheckBox_105.Checked - CheckBox_101.Checked
+End Function
+Function CheckBox_86_CheckedChanged()
+TextBox_C2E2.Text = -CheckBox_86.Checked - CheckBox_88.Checked - CheckBox_89.Checked - CheckBox_91.Checked - CheckBox_94.Checked - CheckBox_112.Checked - CheckBox_108.Checked - CheckBox_102.Checked - CheckBox_98.Checked - CheckBox_96.Checked 
+End Function
+Function CheckBox_88_CheckedChanged()
+TextBox_C2E2.Text = -CheckBox_86.Checked - CheckBox_88.Checked - CheckBox_89.Checked - CheckBox_91.Checked - CheckBox_94.Checked - CheckBox_112.Checked - CheckBox_108.Checked - CheckBox_102.Checked - CheckBox_98.Checked - CheckBox_96.Checked
+End Function
+Function CheckBox_89_CheckedChanged()
+TextBox_C2E2.Text = -CheckBox_86.Checked - CheckBox_88.Checked - CheckBox_89.Checked - CheckBox_91.Checked - CheckBox_94.Checked - CheckBox_112.Checked - CheckBox_108.Checked - CheckBox_102.Checked - CheckBox_98.Checked - CheckBox_96.Checked
+End Function
+Function CheckBox_91_CheckedChanged()
+TextBox_C2E2.Text = -CheckBox_86.Checked - CheckBox_88.Checked - CheckBox_89.Checked - CheckBox_91.Checked - CheckBox_94.Checked - CheckBox_112.Checked - CheckBox_108.Checked - CheckBox_102.Checked - CheckBox_98.Checked - CheckBox_96.Checked
+End Function
+Function CheckBox_94_CheckedChanged()
+TextBox_C2E2.Text = -CheckBox_86.Checked - CheckBox_88.Checked - CheckBox_89.Checked - CheckBox_91.Checked - CheckBox_94.Checked - CheckBox_112.Checked - CheckBox_108.Checked - CheckBox_102.Checked - CheckBox_98.Checked - CheckBox_96.Checked
+End Function
+Function CheckBox_112_CheckedChanged()
+TextBox_C2E2.Text = -CheckBox_86.Checked - CheckBox_88.Checked - CheckBox_89.Checked - CheckBox_91.Checked - CheckBox_94.Checked - CheckBox_112.Checked - CheckBox_108.Checked - CheckBox_102.Checked - CheckBox_98.Checked - CheckBox_96.Checked
+End Function
+Function CheckBox_108_CheckedChanged()
+TextBox_C2E2.Text = -CheckBox_86.Checked - CheckBox_88.Checked - CheckBox_89.Checked - CheckBox_91.Checked - CheckBox_94.Checked - CheckBox_112.Checked - CheckBox_108.Checked - CheckBox_102.Checked - CheckBox_98.Checked - CheckBox_96.Checked
+End Function
+Function CheckBox_102_CheckedChanged()
+TextBox_C2E2.Text = -CheckBox_86.Checked - CheckBox_88.Checked - CheckBox_89.Checked - CheckBox_91.Checked - CheckBox_94.Checked - CheckBox_112.Checked - CheckBox_108.Checked - CheckBox_102.Checked - CheckBox_98.Checked - CheckBox_96.Checked
+End Function
+Function CheckBox_98_CheckedChanged()
+TextBox_C2E2.Text = -CheckBox_86.Checked - CheckBox_88.Checked - CheckBox_89.Checked - CheckBox_91.Checked - CheckBox_94.Checked - CheckBox_112.Checked - CheckBox_108.Checked - CheckBox_102.Checked - CheckBox_98.Checked - CheckBox_96.Checked
+End Function
+Function CheckBox_96_CheckedChanged()
+TextBox_C2E2.Text = -CheckBox_86.Checked - CheckBox_88.Checked - CheckBox_89.Checked - CheckBox_91.Checked - CheckBox_94.Checked - CheckBox_112.Checked - CheckBox_108.Checked - CheckBox_102.Checked - CheckBox_98.Checked - CheckBox_96.Checked
+End Function
+Function CheckBox_114_CheckedChanged()
+TextBox_SKJZXGN.Text = -CheckBox_114.Checked - CheckBox_115.Checked - CheckBox_116.Checked - CheckBox_117.Checked - CheckBox_118.Checked
+End Function
+Function CheckBox_115_CheckedChanged()
+TextBox_SKJZXGN.Text = -CheckBox_114.Checked - CheckBox_115.Checked - CheckBox_116.Checked - CheckBox_117.Checked - CheckBox_118.Checked 
+End Function
+Function CheckBox_116_CheckedChanged()
+TextBox_SKJZXGN.Text = -CheckBox_114.Checked - CheckBox_115.Checked - CheckBox_116.Checked - CheckBox_117.Checked - CheckBox_118.Checked 
+End Function
+Function CheckBox_117_CheckedChanged()
+TextBox_SKJZXGN.Text = -CheckBox_114.Checked - CheckBox_115.Checked - CheckBox_116.Checked - CheckBox_117.Checked - CheckBox_118.Checked 
+End Function
+Function CheckBox_118_CheckedChanged()
+TextBox_SKJZXGN.Text = -CheckBox_114.Checked - CheckBox_115.Checked - CheckBox_116.Checked - CheckBox_117.Checked - CheckBox_118.Checked 
+End Function
+Function CheckBox_121_CheckedChanged()
+TextBox_MM.Text = -CheckBox_121.Checked - CheckBox_120.Checked - CheckBox_119.Checked 
+End Function
+Function CheckBox_120_CheckedChanged()
+TextBox_MM.Text = -CheckBox_121.Checked - CheckBox_120.Checked - CheckBox_119.Checked 
+End Function
+Function CheckBox_119_CheckedChanged()
+TextBox_MM.Text = -CheckBox_121.Checked - CheckBox_120.Checked - CheckBox_119.Checked 
+End Function
+Function CheckBox_123_CheckedChanged()
+TextBox_CX.Text = -CheckBox_123.Checked - CheckBox_122.Checked 
+End Function
+Function CheckBox_122_CheckedChanged()
+TextBox_CX.Text = -CheckBox_123.Checked - CheckBox_122.Checked 
+End Function
+Function CheckBox_125_CheckedChanged()
+dim nTemp
+nTemp = - CheckBox_127.Checked - CheckBox_128.Checked - CheckBox_129.Checked - CheckBox_130.Checked - CheckBox_131.Checked
+if nTemp = 5 then
+nTemp = 3
+elseif nTemp = 4 then
+nTemp = 3
+elseif nTemp = 3 then
+nTemp = 2
+end if
+TextBox_ZY.Text = -CheckBox_125.Checked - CheckBox_124.Checked - CheckBox_126.Checked + nTemp
+End Function
+Function CheckBox_124_CheckedChanged()
+dim nTemp
+nTemp = - CheckBox_127.Checked - CheckBox_128.Checked - CheckBox_129.Checked - CheckBox_130.Checked - CheckBox_131.Checked
+if nTemp = 5 then
+nTemp = 3
+elseif nTemp = 4 then
+nTemp = 3
+elseif nTemp = 3 then
+nTemp = 2
+end if
+TextBox_ZY.Text = -CheckBox_125.Checked - CheckBox_124.Checked - CheckBox_126.Checked + nTemp
+End Function
+Function CheckBox_126_CheckedChanged()
+dim nTemp
+nTemp = - CheckBox_127.Checked - CheckBox_128.Checked - CheckBox_129.Checked - CheckBox_130.Checked - CheckBox_131.Checked
+if nTemp = 5 then
+nTemp = 3
+elseif nTemp = 4 then
+nTemp = 3
+elseif nTemp = 3 then
+nTemp = 2
+end if
+TextBox_ZY.Text = -CheckBox_125.Checked - CheckBox_124.Checked - CheckBox_126.Checked + nTemp
+End Function
+Function CheckBox_127_CheckedChanged()
+dim nTemp
+nTemp = - CheckBox_127.Checked - CheckBox_128.Checked - CheckBox_129.Checked - CheckBox_130.Checked - CheckBox_131.Checked
+if nTemp = 5 then
+nTemp = 3
+elseif nTemp = 4 then
+nTemp = 3
+elseif nTemp = 3 then
+nTemp = 2
+end if
+TextBox_ZY.Text = -CheckBox_125.Checked - CheckBox_124.Checked - CheckBox_126.Checked + nTemp
+End Function
+Function CheckBox_128_CheckedChanged()
+dim nTemp
+nTemp = - CheckBox_127.Checked - CheckBox_128.Checked - CheckBox_129.Checked - CheckBox_130.Checked - CheckBox_131.Checked
+if nTemp = 5 then
+nTemp = 3
+elseif nTemp = 4 then
+nTemp = 3
+elseif nTemp = 3 then
+nTemp = 2
+end if
+TextBox_ZY.Text = -CheckBox_125.Checked - CheckBox_124.Checked - CheckBox_126.Checked + nTemp
+End Function
+Function CheckBox_129_CheckedChanged()
+dim nTemp
+nTemp = - CheckBox_127.Checked - CheckBox_128.Checked - CheckBox_129.Checked - CheckBox_130.Checked - CheckBox_131.Checked
+if nTemp = 5 then
+nTemp = 3
+elseif nTemp = 4 then
+nTemp = 3
+elseif nTemp = 3 then
+nTemp = 2
+end if
+TextBox_ZY.Text = -CheckBox_125.Checked - CheckBox_124.Checked - CheckBox_126.Checked + nTemp
+End Function
+Function CheckBox_130_CheckedChanged()
+dim nTemp
+nTemp = - CheckBox_127.Checked - CheckBox_128.Checked - CheckBox_129.Checked - CheckBox_130.Checked - CheckBox_131.Checked
+if nTemp = 5 then
+nTemp = 3
+elseif nTemp = 4 then
+nTemp = 3
+elseif nTemp = 3 then
+nTemp = 2
+end if
+TextBox_ZY.Text = -CheckBox_125.Checked - CheckBox_124.Checked - CheckBox_126.Checked + nTemp
+End Function
+Function CheckBox_131_CheckedChanged()
+dim nTemp
+nTemp = - CheckBox_127.Checked - CheckBox_128.Checked - CheckBox_129.Checked - CheckBox_130.Checked - CheckBox_131.Checked
+if nTemp = 5 then
+nTemp = 3
+elseif nTemp = 4 then
+nTemp = 3
+elseif nTemp = 3 then
+nTemp = 2
+end if
+TextBox_ZY.Text = -CheckBox_125.Checked - CheckBox_124.Checked - CheckBox_126.Checked + nTemp
+End Function
+Function CheckBox_132_CheckedChanged()
+TextBox_YY.Text = -CheckBox_132.Checked - CheckBox_133.Checked - CheckBox_134.Checked 
+End Function
+Function CheckBox_133_CheckedChanged()
+TextBox_YY.Text = -CheckBox_132.Checked - CheckBox_133.Checked - CheckBox_134.Checked 
+End Function
+Function CheckBox_134_CheckedChanged()
+TextBox_YY.Text = -CheckBox_132.Checked - CheckBox_133.Checked - CheckBox_134.Checked 
+End Function
+Function CheckBox_135_CheckedChanged()
+TextBox_DX.Text = -CheckBox_135.Checked - CheckBox_136.Checked - CheckBox_137.Checked - CheckBox_140.Checked - CheckBox_139.Checked - CheckBox_138.Checked 
+End Function
+Function CheckBox_140_CheckedChanged()
+TextBox_DX.Text = -CheckBox_135.Checked - CheckBox_136.Checked - CheckBox_137.Checked - CheckBox_140.Checked - CheckBox_139.Checked - CheckBox_138.Checked 
+End Function
+Function CheckBox_136_CheckedChanged()
+TextBox_DX.Text = -CheckBox_135.Checked - CheckBox_136.Checked - CheckBox_137.Checked - CheckBox_140.Checked - CheckBox_139.Checked - CheckBox_138.Checked 
+End Function
+Function CheckBox_139_CheckedChanged()
+TextBox_DX.Text = -CheckBox_135.Checked - CheckBox_136.Checked - CheckBox_137.Checked - CheckBox_140.Checked - CheckBox_139.Checked - CheckBox_138.Checked 
+End Function
+Function CheckBox_137_CheckedChanged()
+TextBox_DX.Text = -CheckBox_135.Checked - CheckBox_136.Checked - CheckBox_137.Checked - CheckBox_140.Checked - CheckBox_139.Checked - CheckBox_138.Checked 
+End Function
+Function CheckBox_138_CheckedChanged()
+TextBox_DX.Text = -CheckBox_135.Checked - CheckBox_136.Checked - CheckBox_137.Checked - CheckBox_140.Checked - CheckBox_139.Checked - CheckBox_138.Checked 
+End Function
+Function CheckBox_141_CheckedChanged()
+TextBox_YCHY.Text = -CheckBox_141.Checked - CheckBox_142.Checked - CheckBox_143.Checked - CheckBox_144.Checked - CheckBox_145.Checked 
+End Function
+Function CheckBox_142_CheckedChanged()
+TextBox_YCHY.Text = -CheckBox_141.Checked - CheckBox_142.Checked - CheckBox_143.Checked - CheckBox_144.Checked - CheckBox_145.Checked 
+End Function
+Function CheckBox_143_CheckedChanged()
+TextBox_YCHY.Text = -CheckBox_141.Checked - CheckBox_142.Checked - CheckBox_143.Checked - CheckBox_144.Checked - CheckBox_145.Checked 
+End Function
+Function CheckBox_144_CheckedChanged()
+TextBox_YCHY.Text = -CheckBox_141.Checked - CheckBox_142.Checked - CheckBox_143.Checked - CheckBox_144.Checked - CheckBox_145.Checked 
+End Function
+Function CheckBox_145_CheckedChanged()
+TextBox_YCHY.Text = -CheckBox_141.Checked - CheckBox_142.Checked - CheckBox_143.Checked - CheckBox_144.Checked - CheckBox_145.Checked 
+End Function
+Function RadioBox_1_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+Function RadioBox_4_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_6_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_7_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_9_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_12_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_15_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_14_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_18_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_19_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_22_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_23_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_26_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_27_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_30_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function ComboBox_1_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_2_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_3_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_5_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_6_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_7_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_8_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_9_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_10_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_20_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_19_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_18_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_17_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_16_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_15_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_14_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_13_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_12_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_11_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function ComboBox_4_Change()
+dim nCom1,nCom2,nCom3,nCom4,nCom5,nCom6,nCom7,nCom8,nCom9,nCom10,nCom11,nCom12,nCom13,nCom14,nCom15,nCom16,nCom17,nCom18,nCom19,nCom20
+if ComboBox_1.Text = "独立完成" then
+nCom1 = 1
+elseif ComboBox_1.Text = "有些困难" then
+nCom1 = 2
+elseif ComboBox_1.Text = "需要帮助" then
+nCom1 = 3
+elseif ComboBox_1.Text = "无法完成" then
+nCom1 = 4
+else
+nCom1 = 0
+end if
+if ComboBox_2.Text = "独立完成" then
+nCom2 = 1
+elseif ComboBox_2.Text = "有些困难" then
+nCom2 = 2
+elseif ComboBox_2.Text = "需要帮助" then
+nCom2 = 3
+elseif ComboBox_2.Text = "无法完成" then
+nCom2 = 4
+else
+nCom2 = 0
+end if
+if ComboBox_3.Text = "独立完成" then
+nCom3 = 1
+elseif ComboBox_3.Text = "有些困难" then
+nCom3 = 2
+elseif ComboBox_3.Text = "需要帮助" then
+nCom3 = 3
+elseif ComboBox_3.Text = "无法完成" then
+nCom3 = 4
+else
+nCom3 = 0
+end if
+if ComboBox_4.Text = "独立完成" then
+nCom4 = 1
+elseif ComboBox_4.Text = "有些困难" then
+nCom4 = 2
+elseif ComboBox_4.Text = "需要帮助" then
+nCom4 = 3
+elseif ComboBox_4.Text = "无法完成" then
+nCom4 = 4
+else
+nCom4 = 0
+end if
+if ComboBox_5.Text = "独立完成" then
+nCom5 = 1
+elseif ComboBox_5.Text = "有些困难" then
+nCom5 = 2
+elseif ComboBox_5.Text = "需要帮助" then
+nCom5 = 3
+elseif ComboBox_5.Text = "无法完成" then
+nCom5 = 4
+else
+nCom5 = 0
+end if
+if ComboBox_6.Text = "独立完成" then
+nCom6 = 1
+elseif ComboBox_6.Text = "有些困难" then
+nCom6 = 2
+elseif ComboBox_6.Text = "需要帮助" then
+nCom6 = 3
+elseif ComboBox_6.Text = "无法完成" then
+nCom6 = 4
+else
+nCom6 = 0
+end if
+if ComboBox_7.Text = "独立完成" then
+nCom7 = 1
+elseif ComboBox_7.Text = "有些困难" then
+nCom7 = 2
+elseif ComboBox_7.Text = "需要帮助" then
+nCom7 = 3
+elseif ComboBox_7.Text = "无法完成" then
+nCom7 = 4
+else
+nCom7 = 0
+end if
+if ComboBox_8.Text = "独立完成" then
+nCom8 = 1
+elseif ComboBox_8.Text = "有些困难" then
+nCom8 = 2
+elseif ComboBox_8.Text = "需要帮助" then
+nCom8 = 3
+elseif ComboBox_8.Text = "无法完成" then
+nCom8 = 4
+else
+nCom8 = 0
+end if
+if ComboBox_9.Text = "独立完成" then
+nCom9 = 1
+elseif ComboBox_9.Text = "有些困难" then
+nCom9 = 2
+elseif ComboBox_9.Text = "需要帮助" then
+nCom9 = 3
+elseif ComboBox_9.Text = "无法完成" then
+nCom9 = 4
+else
+nCom9 = 0
+end if
+if ComboBox_10.Text = "独立完成" then
+nCom10 = 1
+elseif ComboBox_10.Text = "有些困难" then
+nCom10 = 2
+elseif ComboBox_10.Text = "需要帮助" then
+nCom10 = 3
+elseif ComboBox_10.Text = "无法完成" then
+nCom10 = 4
+else
+nCom10 = 0
+end if
+if ComboBox_11.Text = "独立完成" then
+nCom11 = 1
+elseif ComboBox_11.Text = "有些困难" then
+nCom11 = 2
+elseif ComboBox_11.Text = "需要帮助" then
+nCom11 = 3
+elseif ComboBox_11.Text = "无法完成" then
+nCom11 = 4
+else
+nCom11 = 0
+end if
+if ComboBox_12.Text = "独立完成" then
+nCom12 = 1
+elseif ComboBox_12.Text = "有些困难" then
+nCom12 = 2
+elseif ComboBox_12.Text = "需要帮助" then
+nCom12 = 3
+elseif ComboBox_12.Text = "无法完成" then
+nCom12 = 4
+else
+nCom12 = 0
+end if
+if ComboBox_13.Text = "独立完成" then
+nCom13 = 1
+elseif ComboBox_13.Text = "有些困难" then
+nCom13 = 2
+elseif ComboBox_13.Text = "需要帮助" then
+nCom13 = 3
+elseif ComboBox_13.Text = "无法完成" then
+nCom13 = 4
+else
+nCom13 = 0
+end if
+if ComboBox_14.Text = "独立完成" then
+nCom14 = 1
+elseif ComboBox_14.Text = "有些困难" then
+nCom14 = 2
+elseif ComboBox_14.Text = "需要帮助" then
+nCom14 = 3
+elseif ComboBox_14.Text = "无法完成" then
+nCom14 = 4
+else
+nCom14 = 0
+end if
+if ComboBox_15.Text = "独立完成" then
+nCom15 = 1
+elseif ComboBox_15.Text = "有些困难" then
+nCom15 = 2
+elseif ComboBox_15.Text = "需要帮助" then
+nCom15 = 3
+elseif ComboBox_15.Text = "无法完成" then
+nCom15 = 4
+else
+nCom15 = 0
+end if
+if ComboBox_16.Text = "独立完成" then
+nCom16 = 1
+elseif ComboBox_16.Text = "有些困难" then
+nCom16 = 2
+elseif ComboBox_16.Text = "需要帮助" then
+nCom16 = 3
+elseif ComboBox_16.Text = "无法完成" then
+nCom16 = 4
+else
+nCom16 = 0
+end if
+if ComboBox_17.Text = "独立完成" then
+nCom17 = 1
+elseif ComboBox_17.Text = "有些困难" then
+nCom17 = 2
+elseif ComboBox_17.Text = "需要帮助" then
+nCom17 = 3
+elseif ComboBox_17.Text = "无法完成" then
+nCom17 = 4
+else
+nCom17 = 0
+end if
+if ComboBox_18.Text = "独立完成" then
+nCom18 = 1
+elseif ComboBox_18.Text = "有些困难" then
+nCom18 = 2
+elseif ComboBox_18.Text = "需要帮助" then
+nCom18 = 3
+elseif ComboBox_18.Text = "无法完成" then
+nCom18 = 4
+else
+nCom18 = 0
+end if
+if ComboBox_19.Text = "独立完成" then
+nCom19 = 1
+elseif ComboBox_19.Text = "有些困难" then
+nCom19 = 2
+elseif ComboBox_19.Text = "需要帮助" then
+nCom19 = 3
+elseif ComboBox_19.Text = "无法完成" then
+nCom19 = 4
+else
+nCom19 = 0
+end if
+if ComboBox_20.Text = "独立完成" then
+nCom20 = 1
+elseif ComboBox_20.Text = "有些困难" then
+nCom20 = 2
+elseif ComboBox_20.Text = "需要帮助" then
+nCom20 = 3
+elseif ComboBox_20.Text = "无法完成" then
+nCom20 = 4
+else
+nCom20 = 0
+end if
+TextBox_ADL.Text = nCom1+nCom2+nCom3+nCom4+nCom5+nCom6+nCom7+nCom8+nCom9+nCom10+nCom11+nCom12+nCom13+nCom14+nCom15+nCom16+nCom17+nCom18+nCom19+nCom20
+End Function
+Function RadioBox_45_CheckedChanged()
+if RadioBox_45.Checked then
+TextBox_MEMORY.Text = 0
+elseif RadioBox_44.Checked then
+TextBox_MEMORY.Text = 0.5
+elseif RadioBox_43.Checked then
+TextBox_MEMORY.Text = 1
+elseif RadioBox_42.Checked then
+TextBox_MEMORY.Text = 2
+elseif RadioBox_41.Checked then
+TextBox_MEMORY.Text = 3
+end if
+End Function
+Function RadioBox_44_CheckedChanged()
+if RadioBox_45.Checked then
+TextBox_MEMORY.Text = 0
+elseif RadioBox_44.Checked then
+TextBox_MEMORY.Text = 0.5
+elseif RadioBox_43.Checked then
+TextBox_MEMORY.Text = 1
+elseif RadioBox_42.Checked then
+TextBox_MEMORY.Text = 2
+elseif RadioBox_41.Checked then
+TextBox_MEMORY.Text = 3
+end if
+End Function
+Function RadioBox_43_CheckedChanged()
+if RadioBox_45.Checked then
+TextBox_MEMORY.Text = 0
+elseif RadioBox_44.Checked then
+TextBox_MEMORY.Text = 0.5
+elseif RadioBox_43.Checked then
+TextBox_MEMORY.Text = 1
+elseif RadioBox_42.Checked then
+TextBox_MEMORY.Text = 2
+elseif RadioBox_41.Checked then
+TextBox_MEMORY.Text = 3
+end if
+End Function
+Function RadioBox_42_CheckedChanged()
+if RadioBox_45.Checked then
+TextBox_MEMORY.Text = 0
+elseif RadioBox_44.Checked then
+TextBox_MEMORY.Text = 0.5
+elseif RadioBox_43.Checked then
+TextBox_MEMORY.Text = 1
+elseif RadioBox_42.Checked then
+TextBox_MEMORY.Text = 2
+elseif RadioBox_41.Checked then
+TextBox_MEMORY.Text = 3
+end if
+End Function
+Function RadioBox_41_CheckedChanged()
+if RadioBox_45.Checked then
+TextBox_MEMORY.Text = 0
+elseif RadioBox_44.Checked then
+TextBox_MEMORY.Text = 0.5
+elseif RadioBox_43.Checked then
+TextBox_MEMORY.Text = 1
+elseif RadioBox_42.Checked then
+TextBox_MEMORY.Text = 2
+elseif RadioBox_41.Checked then
+TextBox_MEMORY.Text = 3
+end if
+End Function
+Function RadioBox_40_CheckedChanged()
+if RadioBox_40.Checked then
+TextBox_ORIENTATION.Text = 0
+elseif RadioBox_39.Checked then
+TextBox_ORIENTATION.Text = 0.5
+elseif RadioBox_38.Checked then
+TextBox_ORIENTATION.Text = 1
+elseif RadioBox_37.Checked then
+TextBox_ORIENTATION.Text = 2
+elseif RadioBox_36.Checked then
+TextBox_ORIENTATION.Text = 3
+end if
+End Function
+Function RadioBox_39_CheckedChanged()
+if RadioBox_40.Checked then
+TextBox_ORIENTATION.Text = 0
+elseif RadioBox_39.Checked then
+TextBox_ORIENTATION.Text = 0.5
+elseif RadioBox_38.Checked then
+TextBox_ORIENTATION.Text = 1
+elseif RadioBox_37.Checked then
+TextBox_ORIENTATION.Text = 2
+elseif RadioBox_36.Checked then
+TextBox_ORIENTATION.Text = 3
+end if
+End Function
+Function RadioBox_38_CheckedChanged()
+if RadioBox_40.Checked then
+TextBox_ORIENTATION.Text = 0
+elseif RadioBox_39.Checked then
+TextBox_ORIENTATION.Text = 0.5
+elseif RadioBox_38.Checked then
+TextBox_ORIENTATION.Text = 1
+elseif RadioBox_37.Checked then
+TextBox_ORIENTATION.Text = 2
+elseif RadioBox_36.Checked then
+TextBox_ORIENTATION.Text = 3
+end if
+End Function
+Function RadioBox_37_CheckedChanged()
+if RadioBox_40.Checked then
+TextBox_ORIENTATION.Text = 0
+elseif RadioBox_39.Checked then
+TextBox_ORIENTATION.Text = 0.5
+elseif RadioBox_38.Checked then
+TextBox_ORIENTATION.Text = 1
+elseif RadioBox_37.Checked then
+TextBox_ORIENTATION.Text = 2
+elseif RadioBox_36.Checked then
+TextBox_ORIENTATION.Text = 3
+end if
+End Function
+Function RadioBox_36_CheckedChanged()
+if RadioBox_40.Checked then
+TextBox_ORIENTATION.Text = 0
+elseif RadioBox_39.Checked then
+TextBox_ORIENTATION.Text = 0.5
+elseif RadioBox_38.Checked then
+TextBox_ORIENTATION.Text = 1
+elseif RadioBox_37.Checked then
+TextBox_ORIENTATION.Text = 2
+elseif RadioBox_36.Checked then
+TextBox_ORIENTATION.Text = 3
+end if
+End Function
+Function RadioBox_35_CheckedChanged()
+if RadioBox_35.Checked then
+TextBox_JUDGEMENT.Text = 0
+elseif RadioBox_34.Checked then
+TextBox_JUDGEMENT.Text = 0.5
+elseif RadioBox_33.Checked then
+TextBox_JUDGEMENT.Text = 1
+elseif RadioBox_32.Checked then
+TextBox_JUDGEMENT.Text = 2
+elseif RadioBox_31.Checked then
+TextBox_JUDGEMENT.Text = 3
+end if
+End Function
+Function RadioBox_34_CheckedChanged()
+if RadioBox_35.Checked then
+TextBox_JUDGEMENT.Text = 0
+elseif RadioBox_34.Checked then
+TextBox_JUDGEMENT.Text = 0.5
+elseif RadioBox_33.Checked then
+TextBox_JUDGEMENT.Text = 1
+elseif RadioBox_32.Checked then
+TextBox_JUDGEMENT.Text = 2
+elseif RadioBox_31.Checked then
+TextBox_JUDGEMENT.Text = 3
+end if
+End Function
+Function RadioBox_33_CheckedChanged()
+if RadioBox_35.Checked then
+TextBox_JUDGEMENT.Text = 0
+elseif RadioBox_34.Checked then
+TextBox_JUDGEMENT.Text = 0.5
+elseif RadioBox_33.Checked then
+TextBox_JUDGEMENT.Text = 1
+elseif RadioBox_32.Checked then
+TextBox_JUDGEMENT.Text = 2
+elseif RadioBox_31.Checked then
+TextBox_JUDGEMENT.Text = 3
+end if
+End Function
+Function RadioBox_32_CheckedChanged()
+if RadioBox_35.Checked then
+TextBox_JUDGEMENT.Text = 0
+elseif RadioBox_34.Checked then
+TextBox_JUDGEMENT.Text = 0.5
+elseif RadioBox_33.Checked then
+TextBox_JUDGEMENT.Text = 1
+elseif RadioBox_32.Checked then
+TextBox_JUDGEMENT.Text = 2
+elseif RadioBox_31.Checked then
+TextBox_JUDGEMENT.Text = 3
+end if
+End Function
+Function RadioBox_31_CheckedChanged()
+if RadioBox_35.Checked then
+TextBox_JUDGEMENT.Text = 0
+elseif RadioBox_34.Checked then
+TextBox_JUDGEMENT.Text = 0.5
+elseif RadioBox_33.Checked then
+TextBox_JUDGEMENT.Text = 1
+elseif RadioBox_32.Checked then
+TextBox_JUDGEMENT.Text = 2
+elseif RadioBox_31.Checked then
+TextBox_JUDGEMENT.Text = 3
+end if
+End Function
+Function RadioBox_50_CheckedChanged()
+if RadioBox_50.Checked then
+TextBox_COMMUNITY.Text = 0
+elseif RadioBox_49.Checked then
+TextBox_COMMUNITY.Text = 0.5
+elseif RadioBox_48.Checked then
+TextBox_COMMUNITY.Text = 1
+elseif RadioBox_47.Checked then
+TextBox_COMMUNITY.Text = 2
+elseif RadioBox_46.Checked then
+TextBox_COMMUNITY.Text = 3
+end if
+End Function
+Function RadioBox_49_CheckedChanged()
+if RadioBox_50.Checked then
+TextBox_COMMUNITY.Text = 0
+elseif RadioBox_49.Checked then
+TextBox_COMMUNITY.Text = 0.5
+elseif RadioBox_48.Checked then
+TextBox_COMMUNITY.Text = 1
+elseif RadioBox_47.Checked then
+TextBox_COMMUNITY.Text = 2
+elseif RadioBox_46.Checked then
+TextBox_COMMUNITY.Text = 3
+end if
+End Function
+Function RadioBox_48_CheckedChanged()
+if RadioBox_50.Checked then
+TextBox_COMMUNITY.Text = 0
+elseif RadioBox_49.Checked then
+TextBox_COMMUNITY.Text = 0.5
+elseif RadioBox_48.Checked then
+TextBox_COMMUNITY.Text = 1
+elseif RadioBox_47.Checked then
+TextBox_COMMUNITY.Text = 2
+elseif RadioBox_46.Checked then
+TextBox_COMMUNITY.Text = 3
+end if
+End Function
+Function RadioBox_47_CheckedChanged()
+if RadioBox_50.Checked then
+TextBox_COMMUNITY.Text = 0
+elseif RadioBox_49.Checked then
+TextBox_COMMUNITY.Text = 0.5
+elseif RadioBox_48.Checked then
+TextBox_COMMUNITY.Text = 1
+elseif RadioBox_47.Checked then
+TextBox_COMMUNITY.Text = 2
+elseif RadioBox_46.Checked then
+TextBox_COMMUNITY.Text = 3
+end if
+End Function
+Function RadioBox_46_CheckedChanged()
+if RadioBox_50.Checked then
+TextBox_COMMUNITY.Text = 0
+elseif RadioBox_49.Checked then
+TextBox_COMMUNITY.Text = 0.5
+elseif RadioBox_48.Checked then
+TextBox_COMMUNITY.Text = 1
+elseif RadioBox_47.Checked then
+TextBox_COMMUNITY.Text = 2
+elseif RadioBox_46.Checked then
+TextBox_COMMUNITY.Text = 3
+end if
+End Function
+Function RadioBox_55_CheckedChanged()
+if RadioBox_55.Checked then
+TextBox_HOME.Text = 0
+elseif RadioBox_54.Checked then
+TextBox_HOME.Text = 0.5
+elseif RadioBox_53.Checked then
+TextBox_HOME.Text = 1
+elseif RadioBox_52.Checked then
+TextBox_HOME.Text = 2
+elseif RadioBox_51.Checked then
+TextBox_HOME.Text = 3
+end if
+End Function
+Function RadioBox_54_CheckedChanged()
+if RadioBox_55.Checked then
+TextBox_HOME.Text = 0
+elseif RadioBox_54.Checked then
+TextBox_HOME.Text = 0.5
+elseif RadioBox_53.Checked then
+TextBox_HOME.Text = 1
+elseif RadioBox_52.Checked then
+TextBox_HOME.Text = 2
+elseif RadioBox_51.Checked then
+TextBox_HOME.Text = 3
+end if
+End Function
+Function RadioBox_53_CheckedChanged()
+if RadioBox_55.Checked then
+TextBox_HOME.Text = 0
+elseif RadioBox_54.Checked then
+TextBox_HOME.Text = 0.5
+elseif RadioBox_53.Checked then
+TextBox_HOME.Text = 1
+elseif RadioBox_52.Checked then
+TextBox_HOME.Text = 2
+elseif RadioBox_51.Checked then
+TextBox_HOME.Text = 3
+end if
+End Function
+Function RadioBox_52_CheckedChanged()
+if RadioBox_55.Checked then
+TextBox_HOME.Text = 0
+elseif RadioBox_54.Checked then
+TextBox_HOME.Text = 0.5
+elseif RadioBox_53.Checked then
+TextBox_HOME.Text = 1
+elseif RadioBox_52.Checked then
+TextBox_HOME.Text = 2
+elseif RadioBox_51.Checked then
+TextBox_HOME.Text = 3
+end if
+End Function
+Function RadioBox_51_CheckedChanged()
+if RadioBox_55.Checked then
+TextBox_HOME.Text = 0
+elseif RadioBox_54.Checked then
+TextBox_HOME.Text = 0.5
+elseif RadioBox_53.Checked then
+TextBox_HOME.Text = 1
+elseif RadioBox_52.Checked then
+TextBox_HOME.Text = 2
+elseif RadioBox_51.Checked then
+TextBox_HOME.Text = 3
+end if
+End Function
+Function RadioBox_57_CheckedChanged()
+if RadioBox_57.Checked then
+TextBox_PERSONAL.Text = 0
+elseif RadioBox_59.Checked then
+TextBox_PERSONAL.Text = 1
+elseif RadioBox_60.Checked then
+TextBox_PERSONAL.Text = 2
+elseif RadioBox_61.Checked then
+TextBox_PERSONAL.Text = 3
+end if
+End Function
+Function RadioBox_59_CheckedChanged()
+if RadioBox_57.Checked then
+TextBox_PERSONAL.Text = 0
+elseif RadioBox_59.Checked then
+TextBox_PERSONAL.Text = 1
+elseif RadioBox_60.Checked then
+TextBox_PERSONAL.Text = 2
+elseif RadioBox_61.Checked then
+TextBox_PERSONAL.Text = 3
+end if
+End Function
+Function RadioBox_60_CheckedChanged()
+if RadioBox_57.Checked then
+TextBox_PERSONAL.Text = 0
+elseif RadioBox_59.Checked then
+TextBox_PERSONAL.Text = 1
+elseif RadioBox_60.Checked then
+TextBox_PERSONAL.Text = 2
+elseif RadioBox_61.Checked then
+TextBox_PERSONAL.Text = 3
+end if
+End Function
+Function RadioBox_61_CheckedChanged()
+if RadioBox_57.Checked then
+TextBox_PERSONAL.Text = 0
+elseif RadioBox_59.Checked then
+TextBox_PERSONAL.Text = 1
+elseif RadioBox_60.Checked then
+TextBox_PERSONAL.Text = 2
+elseif RadioBox_61.Checked then
+TextBox_PERSONAL.Text = 3
+end if
+End Function
+Function RadioBox_145_CheckedChanged()
+if RadioBox_CT.Checked then 
+TextBox_144.Text = "正常"
+else
+TextBox_144.Text = "异常"
+end if
+End Function
+Function RadioBox_140_CheckedChanged()
+if RadioBox_XD.Checked then 
+TextBox_141.Text = "正常"
+else
+TextBox_141.Text = "异常"
+end if
+End Function
+Function RadioBox_142_CheckedChanged()
+if RadioBox_CSXD.Checked then 
+TextBox_142.Text = "正常"
+else
+TextBox_142.Text = "异常"
+end if
+End Function
+Function RadioBox_144_CheckedChanged()
+if RadioBox_ND.Checked then 
+TextBox_143.Text = "正常"
+else
+TextBox_143.Text = "异常"
+end if
+End Function
+Function RadioBox_146_CheckedChanged()
+if RadioBox_CT.Checked then 
+TextBox_144.Text = "正常"
+else
+TextBox_144.Text = "异常"
+end if
+End Function
+Function RadioBox_CT_CheckedChanged()
+if RadioBox_CT.Checked then 
+TextBox_144.Text = "正常"
+else
+TextBox_144.Text = "异常"
+end if
+End Function
+Function RadioBox_56_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+Function RadioBox_62_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+
+Function RadioBox_66_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+
+Function RadioBox_72_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+
+Function RadioBox_76_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+
+Function RadioBox_78_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+
+Function RadioBox_98_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+
+Function RadioBox_95_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+
+Function RadioBox_90_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+
+Function RadioBox_87_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+
+Function RadioBox_65_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+
+Function RadioBox_69_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+
+Function RadioBox_71_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+Function RadioBox_75_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+Function RadioBox_80_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+Function RadioBox_100_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+Function RadioBox_96_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+Function RadioBox_88_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+Function RadioBox_84_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+Function RadioBox_82_CheckedChanged()
+TextBox_C2E2.Text = - RadioBox_65.Checked - RadioBox_69.Checked - RadioBox_71.Checked - RadioBox_75.Checked - RadioBox_80.Checked - RadioBox_100.Checked - RadioBox_96.Checked - RadioBox_88.Checked - RadioBox_84.Checked - RadioBox_82.Checked 
+TextBox_C2E1.Text = - RadioBox_56.Checked - RadioBox_62.Checked - RadioBox_66.Checked - RadioBox_72.Checked - RadioBox_76.Checked  - RadioBox_78.Checked - RadioBox_98.Checked - RadioBox_95.Checked - RadioBox_90.Checked - RadioBox_87.Checked 
+End Function
+Function RadioBox_2_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_3_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_5_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_8_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_10_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_11_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_16_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_13_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_17_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_20_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_21_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_24_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_25_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_28_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function
+
+Function RadioBox_29_CheckedChanged()
+TextBox_GDSLB.Text = -RadioBox_1.Checked - RadioBox_4.Checked - RadioBox_6.Checked - RadioBox_7.Checked - RadioBox_9.Checked - RadioBox_12.Checked - RadioBox_15.Checked - RadioBox_14.Checked - RadioBox_18.Checked - RadioBox_19.Checked - RadioBox_22.Checked - RadioBox_23.Checked - RadioBox_26.Checked - RadioBox_27.Checked - RadioBox_30.Checked   
+End Function

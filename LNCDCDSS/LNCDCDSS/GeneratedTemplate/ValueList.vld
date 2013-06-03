@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Value_lists xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Value_list name="education" type="fixed">
+		<Item code="w" text="文盲"/>
+		<Item code="x" text="小学"/>
+		<Item code="c" text="初中"/>
+		<Item code="g" text="高中、中专"/>
+		<Item code="d" text="大专、大学及以上"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0004]_items[at0006]_value_value" type="fixed">
+		<Item code="NoCode" text="男"/>
+		<Item code="NoCode" text="女"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0013]_value_value" type="fixed">
+		<Item code="NoCode" text="未能完成"/>
+		<Item code="NoCode" text="正确完成"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0016]_value_value" type="fixed">
+		<Item code="NoCode" text="未能完成"/>
+		<Item code="NoCode" text="正确完成"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0019]_items[at0020]_value_value" type="fixed">
+		<Item code="NoCode" text="未能完成"/>
+		<Item code="NoCode" text="正确完成"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0019]_items[at0023]_value_value" type="fixed">
+		<Item code="NoCode" text="未能完成"/>
+		<Item code="NoCode" text="正确完成"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0019]_items[at0026]_value_value" type="fixed">
+		<Item code="NoCode" text="未能完成"/>
+		<Item code="NoCode" text="正确完成"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0034]_items[at0035]_value_value" type="fixed">
+		<Item code="NoCode" text="未能完成"/>
+		<Item code="NoCode" text="正确完成"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0034]_items[at0038]_value_value" type="fixed">
+		<Item code="NoCode" text="未能完成"/>
+		<Item code="NoCode" text="正确完成"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0034]_items[at0044]_value_value" type="fixed">
+		<Item code="NoCode" text="错误数大于或等于2"/>
+		<Item code="NoCode" text="错误数小于2"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0034]_items[at0047]_value_value" type="fixed">
+		<Item code="NoCode" text="全部错误"/>
+		<Item code="NoCode" text="1个正确"/>
+		<Item code="NoCode" text="2-3个正确"/>
+		<Item code="NoCode" text="4-5个正确"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0053]_items[at0054]_value_value" type="fixed">
+		<Item code="NoCode" text="未能完成"/>
+		<Item code="NoCode" text="正确完成"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0053]_items[at0057]_value_value" type="fixed">
+		<Item code="NoCode" text="未能完成"/>
+		<Item code="NoCode" text="正确完成"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.moca.v1__data[at0001]_events[at0002]_data[at0003]_items[at0053]_items[at0060]_value_value" type="fixed">
+		<Item code="NoCode" text="数目小于等于10"/>
+		<Item code="NoCode" text="数目大于等于11"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0004]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0010]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0016]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成 "/>
+		<Item code="NoCode" text="有些困难 "/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用 "/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0022]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0028]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助 "/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0034]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助 "/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0040]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用 "/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0046]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0052]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0058]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0064]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0070]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0076]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0082]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text=" 不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0088]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0094]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0100]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0106]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0112]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.adl.v1__data[at0001]_events[at0002]_data[at0003]_items[at0118]_value_value" type="fixed">
+		<Item code="NoCode" text="独立完成"/>
+		<Item code="NoCode" text="有些困难"/>
+		<Item code="NoCode" text="需要帮助"/>
+		<Item code="NoCode" text="无法完成"/>
+		<Item code="NoCode" text="不知道，不适用"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0005]_items[at0006]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0011]_items[at0012]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0017]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0021]_value_value" type="fixed">
+		<Item code="NoCode" text="无 "/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0025]_items[at0026]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0031]_items[at0032]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0037]_items[at0038]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0043]_items[at0044]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text=" 现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0049]_items[at0050]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0055]_items[at0056]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0063]_items[at0064]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0076]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0080]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0084]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0089]_items[at0090]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0089]_items[at0094]_value_value" type="fixed">
+		<Item code="NoCode" text="I"/>
+		<Item code="NoCode" text="II"/>
+		<Item code="NoCode" text="III"/>
+		<Item code="NoCode" text="IV"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0099]_items[at0100]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0105]_items[at0106]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0111]_items[at0112]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0117]_items[at0118]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患 "/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0117]_items[at0122]_value_value" type="fixed">
+		<Item code="NoCode" text="颈A狭窄"/>
+		<Item code="NoCode" text="上/下肢A狭窄"/>
+		<Item code="NoCode" text="肠缺血综合症"/>
+		<Item code="NoCode" text="动脉瘤"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0129]_items[at0130]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0129]_items[at0136]_value_value" type="fixed">
+		<Item code="NoCode" text="低血压"/>
+		<Item code="NoCode" text="高血压肾病"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0139]_items[at0140]_value_value" type="fixed">
+		<Item code="NoCode" text="无"/>
+		<Item code="NoCode" text="曾患"/>
+		<Item code="NoCode" text="现患"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0139]_items[at0144]_value_value" type="fixed">
+		<Item code="NoCode" text="空腹血糖受损（IFG)"/>
+		<Item code="NoCode" text="糖耐量受损（IGT）"/>
+		<Item code="NoCode" text="糖尿病"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0139]_items[at0149]_value_value" type="fixed">
+		<Item code="NoCode" text="饮食控制"/>
+		<Item code="NoCode" text="口服药物治疗"/>
+		<Item code="NoCode" text="胰岛素治疗"/>
+		<Item code="NoCode" text="胰岛素+口服药"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1__data[at0001]_events[at0002]_data[at0003]_items[at0139]_items[at0154]_value_value" type="fixed">
+		<Item code="NoCode" text="低血糖"/>
+		<Item code="NoCode" text="酸中毒"/>
+		<Item code="NoCode" text="眼底病变"/>
+		<Item code="NoCode" text="周围神经病"/>
+		<Item code="NoCode" text="糖尿病肾病"/>
+		<Item code="NoCode" text="大血管病变"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0013]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常 "/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0017]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0021]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0025]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0029]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0033]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0037]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0041]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0045]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text=" 异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0049]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text=" 异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0053]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0057]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0061]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0065]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0069]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text=" 正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0073]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0077]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text="异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0012]_items[at0081]_value_value" type="fixed">
+		<Item code="NoCode" text="未查"/>
+		<Item code="NoCode" text="正常"/>
+		<Item code="NoCode" text=" 异常"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.body_check.v1__data[at0001]_events[at0002]_data[at0003]_items[at0085]_items[at0086]_value_value" type="fixed">
+		<Item code="NoCode" text="B1"/>
+		<Item code="NoCode" text="B2"/>
+		<Item code="NoCode" text="B3"/>
+		<Item code="NoCode" text="B4"/>
+		<Item code="NoCode" text="B5"/>
+		<Item code="NoCode" text="B6"/>
+		<Item code="NoCode" text="B7"/>
+		<Item code="NoCode" text="B8"/>
+		<Item code="NoCode" text="B9"/>
+		<Item code="NoCode" text="B10"/>
+		<Item code="NoCode" text="B11"/>
+		<Item code="NoCode" text="B12"/>
+		<Item code="NoCode" text="B12a"/>
+		<Item code="NoCode" text="B12b"/>
+		<Item code="NoCode" text="B12c"/>
+		<Item code="NoCode" text="B12d"/>
+		<Item code="NoCode" text="B12e"/>
+		<Item code="NoCode" text="B12f"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0015]_value_value" type="fixed">
+		<Item code="NoCode" text="无痴呆 CDR 0"/>
+		<Item code="NoCode" text="可疑痴呆 CDR 0.5"/>
+		<Item code="NoCode" text="轻度痴呆 CDR 1.0"/>
+		<Item code="NoCode" text="中度痴呆 CDR 2.0"/>
+		<Item code="NoCode" text="重度痴呆 CDR 3.0"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0021]_value_value" type="fixed">
+		<Item code="NoCode" text="无痴呆 CDR 0"/>
+		<Item code="NoCode" text="可疑痴呆 CDR 0.5"/>
+		<Item code="NoCode" text="轻度痴呆 CDR 1.0"/>
+		<Item code="NoCode" text="中度痴呆 CDR 2.0"/>
+		<Item code="NoCode" text="重度痴呆 CDR 3.0"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0027]_value_value" type="fixed">
+		<Item code="NoCode" text="无痴呆 CDR 0"/>
+		<Item code="NoCode" text="可疑痴呆 CDR 0.5"/>
+		<Item code="NoCode" text="轻度痴呆 CDR 1.0"/>
+		<Item code="NoCode" text="中度痴呆 CDR 2.0"/>
+		<Item code="NoCode" text="重度痴呆 CDR 3.0"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0033]_value_value" type="fixed">
+		<Item code="NoCode" text="无痴呆 CDR 0"/>
+		<Item code="NoCode" text="可疑痴呆 CDR 0.5"/>
+		<Item code="NoCode" text="轻度痴呆 CDR 1.0"/>
+		<Item code="NoCode" text="中度痴呆 CDR 2.0"/>
+		<Item code="NoCode" text="重度痴呆 CDR 3.0"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0039]_value_value" type="fixed">
+		<Item code="NoCode" text="无痴呆 CDR 0"/>
+		<Item code="NoCode" text="可疑痴呆 CDR 0.5"/>
+		<Item code="NoCode" text="轻度痴呆 CDR 1.0"/>
+		<Item code="NoCode" text="中度痴呆 CDR 2.0"/>
+		<Item code="NoCode" text="重度痴呆 CDR 3.0"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0045]_value_value" type="fixed">
+		<Item code="NoCode" text="无痴呆CDR 0"/>
+		<Item code="NoCode" text="可疑痴呆 CDR 0.5"/>
+		<Item code="NoCode" text="轻度痴呆 CDR 1.0"/>
+		<Item code="NoCode" text="中度痴呆 CDR 2.0"/>
+		<Item code="NoCode" text="重度痴呆 CDR 3.0"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0051]_value_value" type="fixed">
+		<Item code="NoCode" text="0"/>
+		<Item code="NoCode" text="0.5"/>
+		<Item code="NoCode" text="1.0"/>
+		<Item code="NoCode" text="2.0"/>
+		<Item code="NoCode" text="3.0"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0058]_value_value" type="fixed">
+		<Item code="NoCode" text="0"/>
+		<Item code="NoCode" text="0.5"/>
+		<Item code="NoCode" text="1"/>
+		<Item code="NoCode" text="2"/>
+		<Item code="NoCode" text="3"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0064]_value_value" type="fixed">
+		<Item code="NoCode" text="0"/>
+		<Item code="NoCode" text="0.5"/>
+		<Item code="NoCode" text="1"/>
+		<Item code="NoCode" text="2"/>
+		<Item code="NoCode" text="3"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0070]_value_value" type="fixed">
+		<Item code="NoCode" text="0"/>
+		<Item code="NoCode" text="0.5"/>
+		<Item code="NoCode" text="1"/>
+		<Item code="NoCode" text="2"/>
+		<Item code="NoCode" text="3"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0076]_value_value" type="fixed">
+		<Item code="NoCode" text="0"/>
+		<Item code="NoCode" text="0.5"/>
+		<Item code="NoCode" text="1"/>
+		<Item code="NoCode" text="2"/>
+		<Item code="NoCode" text="3"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0082]_value_value" type="fixed">
+		<Item code="NoCode" text="0"/>
+		<Item code="NoCode" text="0.5"/>
+		<Item code="NoCode" text="1"/>
+		<Item code="NoCode" text="2"/>
+		<Item code="NoCode" text="3"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0088]_value_value" type="fixed">
+		<Item code="NoCode" text="0"/>
+		<Item code="NoCode" text="0.5"/>
+		<Item code="NoCode" text="1"/>
+		<Item code="NoCode" text="2"/>
+		<Item code="NoCode" text="3"/>
+	</Value_list>
+	<Value_list name="openEHR-EHR-OBSERVATION.cdr.v1__data[at0001]_events[at0002]_data[at0003]_items[at0094]_value_value" type="fixed">
+		<Item code="NoCode" text="0"/>
+		<Item code="NoCode" text="0.5"/>
+		<Item code="NoCode" text="1"/>
+		<Item code="NoCode" text="2"/>
+		<Item code="NoCode" text="3"/>
+	</Value_list>
+</Value_lists>
