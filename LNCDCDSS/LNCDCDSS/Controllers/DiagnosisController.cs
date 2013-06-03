@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LNCDCDSS.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 namespace LNCDCDSS.Controllers
 {
     public class DiagnosisController : Controller
@@ -48,21 +50,68 @@ namespace LNCDCDSS.Controllers
         public JsonResult Save()
         {
             VisitRecordOperation vr = new VisitRecordOperation();
+            DataFromReporterOperation dOp = new DataFromReporterOperation();
             string jsonStr = Request.Params["postjson"];
             string PatID = this.TempData["PatID"].ToString();
             try
             {
-                VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
+                //get DataFromReporter
+                //DataFromReporter obj = JsonHelper.JsonDeserialize<DataFromReporter>(jsonStr);
+                DataFromReporter obj = JsonConvert.DeserializeObject<DataFromReporter>(jsonStr);
 
-                vr.InsertPatADL(obj.pal, PatID);
-                vr.InsertPatDisease(obj.pds, PatID);
-                vr.InsertPatLabExam(obj.ple, PatID);
-                vr.InsertPatMMSE(obj.pme, PatID);
-                vr.InsertPatMoca(obj.pma, PatID);
-                vr.InsertPatotherTest(obj.pot, PatID);
-                vr.UpdateVisitRecord(obj.vsr, PatID);
-                vr.InsertPatPhysicaExam(obj.ppe, PatID);
-                vr.InsertPatRecentDrug(obj.prd, PatID);
+                //create a map to put DataFromReporter
+                java.util.Map results = new java.util.HashMap();
+
+                //get list of archetype
+                List<DataFromReporter.ArchetypeFromReporter> list_archetypesFromReporter = obj.archetypesFromReporter;
+                int nCountArchetypesFromReporter = list_archetypesFromReporter.Count;
+                for (int nIndexArchetypesFromReporter = 0; nIndexArchetypesFromReporter < nCountArchetypesFromReporter; ++nIndexArchetypesFromReporter)
+                {
+                    //create the map to put path and value of one archetype
+                    java.util.HashMap resultsInArchetype = new java.util.HashMap();
+
+                    //get one archetype
+                    DataFromReporter.ArchetypeFromReporter archetypeFromReporter = list_archetypesFromReporter.ElementAt(nIndexArchetypesFromReporter);
+                    //get the archetype ID
+                    String strArchetypeID = archetypeFromReporter.ArchetypeID;
+                    //get the list of value in the archetype
+                    List<DataFromReporter.ValueFromReporter> valuesFromReporter = archetypeFromReporter.valuesFromReporter;                    
+                    int nCountValuesInArchetype = valuesFromReporter.Count;
+                    for (int nIndexValuesInArchetype = 0; nIndexValuesInArchetype < nCountValuesInArchetype; ++nIndexValuesInArchetype)
+                    {
+                        DataFromReporter.ValueFromReporter valueFromReporter = valuesFromReporter.ElementAt(nIndexValuesInArchetype);
+                        if ("" != valueFromReporter.Value)
+                            resultsInArchetype.put(valueFromReporter.Path, valueFromReporter.Value);
+                    }
+
+                    //put this archetype into results
+                    results.put(resultsInArchetype, strArchetypeID);
+                }
+
+                AQLExecute.AQLExecuteImplService aqlImpl = new AQLExecute.AQLExecuteImplService();
+                try
+                {
+                    aqlImpl.insert(dOp.CreatedADL(results));
+                }
+                catch (System.Exception ex)
+                {
+                	
+                }
+
+                //save VisitRecord into patient basic
+                vr.SaveVisitRecordInPBInfo();
+
+                //VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
+
+                //vr.InsertPatADL(obj.pal, PatID);
+                //vr.InsertPatDisease(obj.pds, PatID);
+                //vr.InsertPatLabExam(obj.ple, PatID);
+                //vr.InsertPatMMSE(obj.pme, PatID);
+                //vr.InsertPatMoca(obj.pma, PatID);
+                //vr.InsertPatotherTest(obj.pot, PatID);
+                //vr.UpdateVisitRecord(obj.vsr, PatID);
+                //vr.InsertPatPhysicaExam(obj.ppe, PatID);
+                //vr.InsertPatRecentDrug(obj.prd, PatID);
 
                 //
 
