@@ -34,17 +34,27 @@ namespace LNCDCDSS.Models
             org.openehr.rm.common.archetyped.Locatable loc,
             Dictionary<string, object> values) 
 		{
+            java.util.Map map_values = new java.util.HashMap();
+            map_values.put(org.openehr.build.SystemValue.LANGUAGE, new org.openehr.rm.datatypes.text.CodePhrase("ISO_639-1", "en"));
+            map_values.put(org.openehr.build.SystemValue.CHARSET, new org.openehr.rm.datatypes.text.CodePhrase("IANA_character-sets",
+            "UTF-8"));
+            map_values.put(org.openehr.build.SystemValue.ENCODING, new org.openehr.rm.datatypes.text.CodePhrase("IANA_character-sets",
+            "UTF-8"));
+            map_values.put(org.openehr.build.SystemValue.TERMINOLOGY_SERVICE, org.openehr.terminology.SimpleTerminologyService.getInstance());
+            map_values.put(org.openehr.build.SystemValue.MEASUREMENT_SERVICE, org.openehr.rm.support.measurement.SimpleMeasurementService.getInstance());
+            org.openehr.build.RMObjectBuilder rmBuilder = new org.openehr.build.RMObjectBuilder(map_values);
+
             foreach (string strPath in values.Keys)
             {
 			    java.util.Map pathNodeMap = archetype.getPathNodeMap();
                 String nodePath = CreatedADLHelper.getArchetypeNodePath(archetype, strPath);
 			    org.openehr.am.archetype.constraintmodel.CObject node = pathNodeMap.get(nodePath) as org.openehr.am.archetype.constraintmodel.CObject;
 			    Object target = loc.itemAtPath(nodePath);
-                //if (target == null) 
-                //{
-                //    java.lang.Class klass = ArchetypeRepository.getRMBuilder().retrieveRMType(node.getRmTypeName());
-                //    target = klass.newInstance();
-                //}
+                if (target == null)
+                {
+                    java.lang.Class klass = rmBuilder.retrieveRMType(node.getRmTypeName());
+                    target = klass.newInstance();
+                }
 
                 String attributePath = strPath.Substring(nodePath.Length);
 			    String[] attributePathSegments = attributePath.Split('/');
