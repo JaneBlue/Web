@@ -64,9 +64,9 @@ namespace LNCDCDSS.Models
                         //set the value into loc
                         CreatedADLHelper.setArchetypeValue(archetype, loc, it_key);
                         //Generate uid for archetype
-                        //org.openehr.rm.support.identification.HierObjectID uid =
-                        //    new org.openehr.rm.support.identification.HierObjectID(System.Guid.NewGuid().ToString());
-                        //loc.setUid(uid);
+                        org.openehr.rm.support.identification.HierObjectID uid =
+                            new org.openehr.rm.support.identification.HierObjectID(System.Guid.NewGuid().ToString());
+                        loc.setUid(uid);
                         //change the loc into dADL
                         org.openehr.rm.binding.DADLBinding binding = new org.openehr.rm.binding.DADLBinding();
                         String strdADL = dADLtoString(binding.toDADL(loc));

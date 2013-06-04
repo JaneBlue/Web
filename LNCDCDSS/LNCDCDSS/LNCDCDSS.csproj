@@ -157,6 +157,9 @@
     <Reference Include="joda-time-1.3">
       <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\joda-time-1.3.dll</HintPath>
     </Reference>
+    <Reference Include="jsr-275-0.9.1">
+      <HintPath>DLL\jsr-275-0.9.1.dll</HintPath>
+    </Reference>
     <Reference Include="jsr-275-0.9.4">
       <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\jsr-275-0.9.4.dll</HintPath>
     </Reference>
@@ -194,11 +197,11 @@
     <Reference Include="openehr-ap-1.0.3-SNAPSHOT">
       <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\openehr-ap-1.0.3-SNAPSHOT.dll</HintPath>
     </Reference>
-    <Reference Include="openehr-rm-core-1.0.3-SNAPSHOT">
-      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\openehr-rm-core-1.0.3-SNAPSHOT.dll</HintPath>
+    <Reference Include="openehr-rm-core-1.0.3-SNAPSHOT, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>DLL\openehr-rm-core-1.0.3-SNAPSHOT.dll</HintPath>
     </Reference>
-    <Reference Include="openehr-rm-domain-1.0.3-SNAPSHOT">
-      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\openehr-rm-domain-1.0.3-SNAPSHOT.dll</HintPath>
+    <Reference Include="openehr-rm-domain-1.0.3-SNAPSHOT, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>DLL\openehr-rm-domain-1.0.3-SNAPSHOT.dll</HintPath>
     </Reference>
     <Reference Include="rm-builder-1.0.3-SNAPSHOT">
       <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\rm-builder-1.0.3-SNAPSHOT.dll</HintPath>
