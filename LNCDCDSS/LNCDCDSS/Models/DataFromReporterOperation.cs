@@ -112,7 +112,27 @@ namespace LNCDCDSS.Models
             foreach (string strPath in values.Keys)
             {
                 java.util.Map pathNodeMap = archetype.getPathNodeMap();
-                String nodePath = getArchetypeNodePath(archetype, strPath);
+                //String nodePath = getArchetypeNodePath(archetype, strPath);
+                String nodePath = "";
+                {
+                    java.util.Map patheNodeMap = archetype.getPathNodeMap();
+                    java.util.Set pathSet = patheNodeMap.keySet();
+                    
+                    for (java.util.Iterator it_key = pathSet.iterator(); it_key.hasNext(); )
+                    {
+                        String path = it_key.next() as String;
+                        if (strPath.StartsWith(path))
+                        {
+                            if (path.Length > nodePath.Length)
+                            {
+                                nodePath = path;
+                            }
+                        }
+                    }
+                }
+
+
+
                 org.openehr.am.archetype.constraintmodel.CObject node = pathNodeMap.get(nodePath) as org.openehr.am.archetype.constraintmodel.CObject;
                 Object target = loc.itemAtPath(nodePath);
                 if (target == null)
@@ -129,8 +149,10 @@ namespace LNCDCDSS.Models
                     if ("" != pathSegment)
                     {
                         Type tObjectType = tempTarget.GetType();
-                        PropertyInfo iPropertyInfo = tObjectType.GetProperty(pathSegment);
-                        Type tPropertyType = iPropertyInfo.GetType();
+
+                        //FieldInfo[] fields = tObjectType.GetFields(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static); 
+
+                        FieldInfo iFieldInfo = tObjectType.GetField(pathSegment, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static);
 
                         //Class klass = ReflectHelper.getter(tempTarget.getClass(), pathSegment).getReturnType();
                         //PropertyAccessor propertyAccessor = new ChainedPropertyAccessor(
@@ -140,17 +162,33 @@ namespace LNCDCDSS.Models
                         //        }
                         //);
                         //Setter setter = propertyAccessor.getSetter(tempTarget.getClass(), pathSegment);
-                        if (tPropertyType.IsPrimitive || tPropertyType == typeof(String))
+                        if (iFieldInfo.FieldType.IsPrimitive || iFieldInfo.FieldType == typeof(String))
                         {
                             //setter.set(tempTarget, values.get(path), null);
-                            tempTarget.GetType().GetProperty(pathSegment).SetValue(tempTarget, values[strPath], null);
+                            //tempTarget.GetType().GetField(pathSegment).SetValue(tempTarget, values[strPath], null);
+                            iFieldInfo.SetValue(tempTarget, Convert.ChangeType(values[strPath], iFieldInfo.FieldType));
                         }
                         else
                         {
-                            Object value = Activator.CreateInstance(tPropertyType);
+                            Object value = Activator.CreateInstance(iFieldInfo.FieldType);
                             //setter.set(tempTarget, value, null);
-                            tempTarget.GetType().GetProperty(pathSegment).SetValue(tempTarget, value, null);
+                            tempTarget.GetType().GetField(pathSegment).SetValue(tempTarget, value);
                             tempTarget = value;
+                        }
+                    }
+                    else
+                    {
+                        if (String.Compare(values[strPath].ToString(), "false") == 0)
+                        {
+                            loc.set(nodePath, false);
+                        }
+                        else if (String.Compare(values[strPath].ToString(), "true") == 0)
+                        {
+                            loc.set(nodePath, true);
+                        }
+                        else
+                        {
+                            loc.set(nodePath, values[strPath]);
                         }
                     }
                 }		

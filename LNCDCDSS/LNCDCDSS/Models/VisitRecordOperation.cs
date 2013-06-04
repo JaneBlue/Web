@@ -291,58 +291,43 @@ namespace LNCDCDSS.Models
         }
         public string[] GetExamContent(string PatID, string RecordID)
         {
-            int recordId = int.Parse(RecordID);
-            PatBasicInfor pt = context.PatBasicInforSet.Find(PatID);
-            VisitRecord vd = context.VisitRecordSet.Find(recordId);
-            string[] content = new string[17];
-            // string test = vd.PatADL.Total + vd.PatMMSE.Total;
-            for (int i = 0; i < 17; i++)
-            {
-                content[i] = "";
-            }
-            try
-            {
+            //select AQL
+            String query = "select "
+                    //+ "o#/uid/value as /uid/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0125]/value/magnitude, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0010]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0016]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0022]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0028]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0034]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0040]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0046]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0052]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0058]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0064]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0070]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0076]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0082]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0088]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0094]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0100]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0106]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0112]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0118]/value/value, "
+                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0126]/value/value "
+                    + "from openEHR-EHR-OBSERVATION.adl.v1 as o ";
 
-                if (vd.PatMMSE != null)
-                {
-                    content[0] = vd.PatMMSE.Total;
-                }
+            //AQLExecute.AQLExecuteImplService aqlImpl = new AQLExecute.AQLExecuteImplService();
+            LocalAQLExecute.AQLExecuteImplService aqlImpl = new LocalAQLExecute.AQLExecuteImplService();
 
-                if (vd.PatMoCA != null)
-                {
-                    content[1] = vd.PatMoCA.Total;
-                }
-                if (vd.PatADL != null)
-                {
-                    content[2] = vd.PatADL.Total;
-                }
 
-                if (vd.PatOtherTest != null)
-                {
-                    content[3] = vd.PatOtherTest.PatCDR;
-                    content[4] = vd.PatOtherTest.PatGDS;
-                    content[5] = vd.PatOtherTest.Vocabulary1;
-                    content[6] = vd.PatOtherTest.Vocabulary2;
-                    content[7] = vd.PatOtherTest.Vocabulary3;
-                    content[8] = vd.PatOtherTest.Vocabulary4;
-                    content[9] = vd.PatOtherTest.VocabularyAnalyse1;
-                    content[10] = vd.PatOtherTest.VocabularyAnalyse2;
-                    content[11] = vd.PatOtherTest.Picture1;
-                    content[12] = vd.PatOtherTest.Picture2;
-                    content[13] = vd.PatOtherTest.Picture3;
-                    content[14] = vd.PatOtherTest.ConnectNumber1;
-                    content[15] = vd.PatOtherTest.ConnectNumber2;
-                }
-                if(vd.RecordNote!=null)
-                {
-                    content[16] = vd.RecordNote;
-                }
+            //set VisitData
+            DataFromReporter oDataFromReporter = new DataFromReporter();
 
-            }
-            catch (Exception e)
-            {
-            }
-            return content;
+
+
+            return new string[17];
         }
         public List<PatBasicInfor> GetPat(List<string> Condition)
         {
