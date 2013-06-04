@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping package="@openEHR">
+	<class name="openEHR-EHR-OBSERVATION.adl.v1">
+		<id name="/uid/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0125]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0010]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0016]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0022]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0028]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0034]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0040]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0046]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0052]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0058]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0064]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0070]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0076]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0082]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0088]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0094]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0100]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0106]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0112]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0118]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0126]/value/value"/>
+	</class>
+</hibernate-mapping>

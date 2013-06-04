@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping package="@openEHR">
+	<class name="openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1">
+		<id name="/uid/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0005]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0006]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0007]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0008]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0015]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0013]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0012]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0011]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0018]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0019]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0021]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/value/magnitude"/>
+	</class>
+</hibernate-mapping>

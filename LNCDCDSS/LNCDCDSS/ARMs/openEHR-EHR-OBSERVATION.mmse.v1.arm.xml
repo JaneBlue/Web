@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping package="@openEHR">
+	<class name="openEHR-EHR-OBSERVATION.mmse.v1">
+		<id name="/uid/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0005]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0009]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0012]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0015]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0016]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/items[at0021]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/items[at0024]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/items[at0025]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/items[at0028]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0020]/items[at0031]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0034]/items[at0035]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0034]/items[at0038]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0034]/items[at0041]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0045]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0046]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0047]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0048]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0049]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0045]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0046]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0047]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0048]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0049]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0061]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0062]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0063]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0061]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0062]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0063]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0071]/items[at0072]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0071]/items[at0073]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0078]/items[at0079]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0082]/items[at0083]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0082]/items[at0084]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0082]/items[at0085]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0092]/items[at0093]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0097]/items[at0098]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0097]/items[at0101]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0102]/items[at0103]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0106]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0107]/value/value"/>
+	</class>
+</hibernate-mapping>
