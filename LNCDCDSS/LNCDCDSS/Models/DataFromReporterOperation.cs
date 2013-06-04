@@ -2,32 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Reflection;
 
 namespace LNCDCDSS.Models
 {
     public class DataFromReporterOperation
     {
-        public DataFromReporterOperation()
-        {
-            //String path = @"C:\Users\hudi\Documents\GitHub\";
-            //archetypes.put("openEHR-EHR-OBSERVATION.mmse.v1"
-            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.mmse.v1.adl"));
-            //archetypes.put("openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1"
-            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1.adl"));
-            //archetypes.put("openEHR-EHR-OBSERVATION.related_disease_and_drug.v1"
-            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.related_disease_and_drug.v1.adl"));
-            //archetypes.put("openEHR-EHR-OBSERVATION.adl.v1"
-            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.adl.v1.adl"));
-            //archetypes.put("openEHR-EHR-OBSERVATION.body_check.v1"
-            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.body_check.v1.adl"));
-            //archetypes.put("openEHR-EHR-OBSERVATION.cdr.v1"
-            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.cdr.v1.adl"));
-            //archetypes.put("openEHR-EHR-OBSERVATION.gds.v1"
-            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.gds.v1.adl"));
-            //archetypes.put("openEHR-EHR-OBSERVATION.moca.v1"
-            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.moca.v1.adl"));
-        }
-
         public String[] CreatedADL(Dictionary<Dictionary<string, object>, string> results)
         {
             //create the list of dADLs
@@ -61,10 +41,8 @@ namespace LNCDCDSS.Models
                     org.openehr.rm.common.archetyped.Locatable loc = result as org.openehr.rm.common.archetyped.Locatable;
                     if (null != loc)
                     {
-                        CreatedADLHelper oCreatedADLHelper = new CreatedADLHelper();
-
                         //set the value into loc
-                        oCreatedADLHelper.setArchetypeValue(archetype, loc, it_key);
+                        setArchetypeValue(archetype, loc, it_key);
                         //Generate uid for archetype
                         org.openehr.rm.support.identification.HierObjectID uid =
                             new org.openehr.rm.support.identification.HierObjectID(System.Guid.NewGuid().ToString());
@@ -96,24 +74,87 @@ namespace LNCDCDSS.Models
 		    return sb.toString();
         }
 
-        protected static String readLines(String name)
+        public String getArchetypeNodePath(org.openehr.am.archetype.Archetype archetype, String name)
         {
-            //java.lang.StringBuilder result = new java.lang.StringBuilder();
-            //java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(
-            //        java.lang.Thread.currentThread().getContextClassLoader().getResourceAsStream(name)));
+            java.util.Map patheNodeMap = archetype.getPathNodeMap();
+            java.util.Set pathSet = patheNodeMap.keySet();
+            String nodePath = "";
+            for (java.util.Iterator it_key = pathSet.iterator(); it_key.hasNext(); )
+            {
+                String path = it_key.next() as String;
+                if (name.StartsWith(path))
+                {
+                    if (path.Length > nodePath.Length)
+                    {
+                        nodePath = path;
+                    }
+                }
+            }
 
-            //String line = reader.readLine();
-            //while (line != null)
-            //{
-            //    result.append(line);
-            //    result.append("\n");
-            //    line = reader.readLine();
-            //}
-            //return result.toString();
-            String strtemp = System.IO.File.ReadAllText(name);
-            return strtemp;
+            return nodePath;
         }
 
-        //protected java.util.Map archetypes = new java.util.HashMap();
+        public void setArchetypeValue(
+            org.openehr.am.archetype.Archetype archetype,
+            org.openehr.rm.common.archetyped.Locatable loc,
+            Dictionary<string, object> values)
+        {
+            java.util.Map map_values = new java.util.HashMap();
+            map_values.put(org.openehr.build.SystemValue.LANGUAGE, new org.openehr.rm.datatypes.text.CodePhrase("ISO_639-1", "en"));
+            map_values.put(org.openehr.build.SystemValue.CHARSET, new org.openehr.rm.datatypes.text.CodePhrase("IANA_character-sets",
+            "UTF-8"));
+            map_values.put(org.openehr.build.SystemValue.ENCODING, new org.openehr.rm.datatypes.text.CodePhrase("IANA_character-sets",
+            "UTF-8"));
+            map_values.put(org.openehr.build.SystemValue.TERMINOLOGY_SERVICE, org.openehr.terminology.SimpleTerminologyService.getInstance());
+            map_values.put(org.openehr.build.SystemValue.MEASUREMENT_SERVICE, org.openehr.rm.support.measurement.SimpleMeasurementService.getInstance());
+            org.openehr.build.RMObjectBuilder rmBuilder = new org.openehr.build.RMObjectBuilder(map_values);
+
+            foreach (string strPath in values.Keys)
+            {
+                java.util.Map pathNodeMap = archetype.getPathNodeMap();
+                String nodePath = getArchetypeNodePath(archetype, strPath);
+                org.openehr.am.archetype.constraintmodel.CObject node = pathNodeMap.get(nodePath) as org.openehr.am.archetype.constraintmodel.CObject;
+                Object target = loc.itemAtPath(nodePath);
+                if (target == null)
+                {
+                    java.lang.Class klass = rmBuilder.retrieveRMType(node.getRmTypeName());
+                    target = klass.newInstance();
+                }
+
+                String attributePath = strPath.Substring(nodePath.Length);
+                String[] attributePathSegments = attributePath.Split('/');
+                Object tempTarget = target;
+                foreach (String pathSegment in attributePathSegments)
+                {
+                    if ("" != pathSegment)
+                    {
+                        Type tObjectType = tempTarget.GetType();
+                        PropertyInfo iPropertyInfo = tObjectType.GetProperty(pathSegment);
+                        Type tPropertyType = iPropertyInfo.GetType();
+
+                        //Class klass = ReflectHelper.getter(tempTarget.getClass(), pathSegment).getReturnType();
+                        //PropertyAccessor propertyAccessor = new ChainedPropertyAccessor(
+                        //        new PropertyAccessor[] {
+                        //                PropertyAccessorFactory.getPropertyAccessor(tempTarget.getClass(), null),
+                        //                PropertyAccessorFactory.getPropertyAccessor("field")
+                        //        }
+                        //);
+                        //Setter setter = propertyAccessor.getSetter(tempTarget.getClass(), pathSegment);
+                        if (tPropertyType.IsPrimitive || tPropertyType == typeof(String))
+                        {
+                            //setter.set(tempTarget, values.get(path), null);
+                            tempTarget.GetType().GetProperty(pathSegment).SetValue(tempTarget, values[strPath], null);
+                        }
+                        else
+                        {
+                            Object value = Activator.CreateInstance(tPropertyType);
+                            //setter.set(tempTarget, value, null);
+                            tempTarget.GetType().GetProperty(pathSegment).SetValue(tempTarget, value, null);
+                            tempTarget = value;
+                        }
+                    }
+                }		
+            }
+        }
     }
 }

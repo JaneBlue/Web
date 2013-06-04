@@ -160,9 +160,6 @@
     <Reference Include="jsr-275-0.9.1">
       <HintPath>DLL\jsr-275-0.9.1.dll</HintPath>
     </Reference>
-    <Reference Include="jsr-275-0.9.4">
-      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\jsr-275-0.9.4.dll</HintPath>
-    </Reference>
     <Reference Include="jsr173_api-1.0">
       <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\jsr173_api-1.0.dll</HintPath>
     </Reference>
@@ -279,7 +276,6 @@
     <Compile Include="Models\ComplexType1.cs">
       <DependentUpon>LNCDDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CreatedADLHelper.cs" />
     <Compile Include="Models\DataFromReporter.cs" />
     <Compile Include="Models\DataFromReporterOperation.cs" />
     <Compile Include="Models\Disease.cs">
