@@ -74,26 +74,6 @@ namespace LNCDCDSS.Models
 		    return sb.toString();
         }
 
-        public String getArchetypeNodePath(org.openehr.am.archetype.Archetype archetype, String name)
-        {
-            java.util.Map patheNodeMap = archetype.getPathNodeMap();
-            java.util.Set pathSet = patheNodeMap.keySet();
-            String nodePath = "";
-            for (java.util.Iterator it_key = pathSet.iterator(); it_key.hasNext(); )
-            {
-                String path = it_key.next() as String;
-                if (name.StartsWith(path))
-                {
-                    if (path.Length > nodePath.Length)
-                    {
-                        nodePath = path;
-                    }
-                }
-            }
-
-            return nodePath;
-        }
-
         public void setArchetypeValue(
             org.openehr.am.archetype.Archetype archetype,
             org.openehr.rm.common.archetyped.Locatable loc,
@@ -112,7 +92,6 @@ namespace LNCDCDSS.Models
             foreach (string strPath in values.Keys)
             {
                 java.util.Map pathNodeMap = archetype.getPathNodeMap();
-                //String nodePath = getArchetypeNodePath(archetype, strPath);
                 String nodePath = "";
                 {
                     java.util.Map patheNodeMap = archetype.getPathNodeMap();
@@ -131,67 +110,68 @@ namespace LNCDCDSS.Models
                     }
                 }
 
-
-
-                org.openehr.am.archetype.constraintmodel.CObject node = pathNodeMap.get(nodePath) as org.openehr.am.archetype.constraintmodel.CObject;
-                Object target = loc.itemAtPath(nodePath);
-                if (target == null)
+                if (nodePath.CompareTo(strPath) == 0)
                 {
-                    java.lang.Class klass = rmBuilder.retrieveRMType(node.getRmTypeName());
-                    target = klass.newInstance();
-                }
+                    int i = nodePath.LastIndexOf("/");
+                    if (i < 0 || i == nodePath.Length)
+                        continue;
 
-                String attributePath = strPath.Substring(nodePath.Length);
-                String[] attributePathSegments = attributePath.Split('/');
-                Object tempTarget = target;
-                foreach (String pathSegment in attributePathSegments)
-                {
-                    if ("" != pathSegment)
+                    String objPath = "/";
+                    if (i > 0)
                     {
-                        Type tObjectType = tempTarget.GetType();
-
-                        //FieldInfo[] fields = tObjectType.GetFields(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static); 
-
-                        FieldInfo iFieldInfo = tObjectType.GetField(pathSegment, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static);
-
-                        //Class klass = ReflectHelper.getter(tempTarget.getClass(), pathSegment).getReturnType();
-                        //PropertyAccessor propertyAccessor = new ChainedPropertyAccessor(
-                        //        new PropertyAccessor[] {
-                        //                PropertyAccessorFactory.getPropertyAccessor(tempTarget.getClass(), null),
-                        //                PropertyAccessorFactory.getPropertyAccessor("field")
-                        //        }
-                        //);
-                        //Setter setter = propertyAccessor.getSetter(tempTarget.getClass(), pathSegment);
-                        if (iFieldInfo.FieldType.IsPrimitive || iFieldInfo.FieldType == typeof(String))
-                        {
-                            //setter.set(tempTarget, values.get(path), null);
-                            //tempTarget.GetType().GetField(pathSegment).SetValue(tempTarget, values[strPath], null);
-                            iFieldInfo.SetValue(tempTarget, Convert.ChangeType(values[strPath], iFieldInfo.FieldType));
-                        }
-                        else
-                        {
-                            Object value = Activator.CreateInstance(iFieldInfo.FieldType);
-                            //setter.set(tempTarget, value, null);
-                            tempTarget.GetType().GetField(pathSegment).SetValue(tempTarget, value);
-                            tempTarget = value;
-                        }
+                        objPath = nodePath.Substring(0, i);
                     }
-                    else
+                    String attributeName = nodePath.Substring(i + 1);
+
+                    Object obj = loc.itemAtPath(objPath);
+                    if (obj != null)
                     {
+                        Type tObjectType = obj.GetType();
+                        FieldInfo iFieldInfo = tObjectType.GetField(attributeName, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static);
+
                         if (String.Compare(values[strPath].ToString(), "false") == 0)
                         {
-                            loc.set(nodePath, false);
+                            iFieldInfo.SetValue(obj, false);
                         }
-                        else if (String.Compare(values[strPath].ToString(), "true") == 0)
+                        if (String.Compare(values[strPath].ToString(), "true") == 0)
                         {
-                            loc.set(nodePath, true);
-                        }
-                        else
-                        {
-                            loc.set(nodePath, values[strPath]);
+                            iFieldInfo.SetValue(obj, true);
                         }
                     }
-                }		
+                }
+                else
+                {
+                    org.openehr.am.archetype.constraintmodel.CObject node = pathNodeMap.get(nodePath) as org.openehr.am.archetype.constraintmodel.CObject;
+                    Object target = loc.itemAtPath(nodePath);
+                    if (target == null)
+                    {
+                        java.lang.Class klass = rmBuilder.retrieveRMType(node.getRmTypeName());
+                        target = klass.newInstance();
+                    }
+
+                    String attributePath = strPath.Substring(nodePath.Length);
+                    String[] attributePathSegments = attributePath.Split('/');
+                    Object tempTarget = target;
+                    foreach (String pathSegment in attributePathSegments)
+                    {
+                        if ("" != pathSegment)
+                        {
+                            Type tObjectType = tempTarget.GetType();
+                            FieldInfo iFieldInfo = tObjectType.GetField(pathSegment, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static);
+
+                            if (iFieldInfo.FieldType.IsPrimitive || iFieldInfo.FieldType == typeof(String))
+                            {
+                                iFieldInfo.SetValue(tempTarget, Convert.ChangeType(values[strPath], iFieldInfo.FieldType));
+                            }
+                            else
+                            {
+                                Object value = Activator.CreateInstance(iFieldInfo.FieldType);
+                                tempTarget.GetType().GetField(pathSegment).SetValue(tempTarget, value);
+                                tempTarget = value;
+                            }
+                        }
+                    }		
+                }
             }
         }
     }
