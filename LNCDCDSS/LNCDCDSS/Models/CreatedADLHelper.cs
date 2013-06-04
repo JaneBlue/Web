@@ -29,7 +29,7 @@ namespace LNCDCDSS.Models
 		    return nodePath;
 	    }
 
-        public static void setArchetypeValue(
+        public void setArchetypeValue(
             org.openehr.am.archetype.Archetype archetype, 
             org.openehr.rm.common.archetyped.Locatable loc,
             Dictionary<string, object> values) 
@@ -63,7 +63,10 @@ namespace LNCDCDSS.Models
                 {
 				    if ("" != pathSegment) 
                     {
-                        Type tPropertyType = tempTarget.GetType().GetProperty(pathSegment).GetType();
+                        //tempTarget.GetType()
+                        Type tObjectType = tempTarget.GetType();
+                        PropertyInfo iPropertyInfo = tObjectType.GetProperty(pathSegment);
+                        Type tPropertyType = iPropertyInfo.GetType();
 
                         //Class klass = ReflectHelper.getter(tempTarget.getClass(), pathSegment).getReturnType();
                         //PropertyAccessor propertyAccessor = new ChainedPropertyAccessor(

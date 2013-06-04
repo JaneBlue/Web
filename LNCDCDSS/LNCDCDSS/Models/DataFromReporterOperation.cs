@@ -9,23 +9,23 @@ namespace LNCDCDSS.Models
     {
         public DataFromReporterOperation()
         {
-            String path = @"D:\";
-            archetypes.put("openEHR-EHR-OBSERVATION.mmse.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.mmse.v1.adl"));
-            archetypes.put("openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1.adl"));
-            archetypes.put("openEHR-EHR-OBSERVATION.related_disease_and_drug.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.related_disease_and_drug.v1.adl"));
-            archetypes.put("openEHR-EHR-OBSERVATION.adl.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.adl.v1.adl"));
-            archetypes.put("openEHR-EHR-OBSERVATION.body_check.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.body_check.v1.adl"));
-            archetypes.put("openEHR-EHR-OBSERVATION.cdr.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.cdr.v1.adl"));
-            archetypes.put("openEHR-EHR-OBSERVATION.gds.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.gds.v1.adl"));
-            archetypes.put("openEHR-EHR-OBSERVATION.moca.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.moca.v1.adl"));
+            //String path = @"C:\Users\hudi\Documents\GitHub\";
+            //archetypes.put("openEHR-EHR-OBSERVATION.mmse.v1"
+            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.mmse.v1.adl"));
+            //archetypes.put("openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1"
+            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1.adl"));
+            //archetypes.put("openEHR-EHR-OBSERVATION.related_disease_and_drug.v1"
+            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.related_disease_and_drug.v1.adl"));
+            //archetypes.put("openEHR-EHR-OBSERVATION.adl.v1"
+            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.adl.v1.adl"));
+            //archetypes.put("openEHR-EHR-OBSERVATION.body_check.v1"
+            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.body_check.v1.adl"));
+            //archetypes.put("openEHR-EHR-OBSERVATION.cdr.v1"
+            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.cdr.v1.adl"));
+            //archetypes.put("openEHR-EHR-OBSERVATION.gds.v1"
+            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.gds.v1.adl"));
+            //archetypes.put("openEHR-EHR-OBSERVATION.moca.v1"
+            //    , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.moca.v1.adl"));
         }
 
         public String[] CreatedADL(Dictionary<Dictionary<string, object>, string> results)
@@ -51,7 +51,7 @@ namespace LNCDCDSS.Models
                 //get SkeletonGenerator
                 org.openehr.rm.util.SkeletonGenerator generator = org.openehr.rm.util.SkeletonGenerator.getInstance();
                 //get the archetype instance
-                String strArchetypeString = archetypes.get(strArchetypeId) as String;
+                String strArchetypeString = LNCDCDSS.MvcApplication.archetypes.get(strArchetypeId) as String;
                 se.acode.openehr.parser.ADLParser parser = new se.acode.openehr.parser.ADLParser(strArchetypeString);
                 org.openehr.am.archetype.Archetype archetype = parser.parse();
                 //create the dADL object
@@ -61,8 +61,10 @@ namespace LNCDCDSS.Models
                     org.openehr.rm.common.archetyped.Locatable loc = result as org.openehr.rm.common.archetyped.Locatable;
                     if (null != loc)
                     {
+                        CreatedADLHelper oCreatedADLHelper = new CreatedADLHelper();
+
                         //set the value into loc
-                        CreatedADLHelper.setArchetypeValue(archetype, loc, it_key);
+                        oCreatedADLHelper.setArchetypeValue(archetype, loc, it_key);
                         //Generate uid for archetype
                         org.openehr.rm.support.identification.HierObjectID uid =
                             new org.openehr.rm.support.identification.HierObjectID(System.Guid.NewGuid().ToString());
@@ -80,7 +82,7 @@ namespace LNCDCDSS.Models
             return list_dADLs;
         }
 
-        protected static String dADLtoString(java.util.List results)
+        protected String dADLtoString(java.util.List results)
         {
             java.lang.StringBuilder sb = new java.lang.StringBuilder();
             int nCount = results.size();
@@ -112,6 +114,6 @@ namespace LNCDCDSS.Models
             return strtemp;
         }
 
-        protected java.util.Map archetypes = new java.util.HashMap();
+        //protected java.util.Map archetypes = new java.util.HashMap();
     }
 }

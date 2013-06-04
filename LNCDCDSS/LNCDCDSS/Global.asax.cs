@@ -29,11 +29,12 @@ namespace LNCDCDSS
 
         }
 
-        protected static java.util.Map archetypes = new java.util.HashMap();
-        protected static java.util.Map arms = new java.util.HashMap();
+        public static java.util.Map archetypes = new java.util.HashMap();
+        public static java.util.Map arms = new java.util.HashMap();
 
         public static void ReadArchetypes()
         {
+            //String path = @"C:\Users\hudi\Documents\GitHub\";
             String path = @"D:\";
             archetypes.put("openEHR-EHR-OBSERVATION.mmse.v1"
                 , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.mmse.v1.adl"));
@@ -55,6 +56,7 @@ namespace LNCDCDSS
 
         public static void ReadARMs()
         {
+            //String path = @"C:\Users\hudi\Documents\GitHub\";
             String path = @"D:\";
             arms.put("openEHR-EHR-OBSERVATION.body_check.v1"
                 , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\ARMs\openEHR-EHR-OBSERVATION.body_check.v1.arm.xml"));
