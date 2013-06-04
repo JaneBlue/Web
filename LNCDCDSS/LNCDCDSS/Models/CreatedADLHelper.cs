@@ -29,13 +29,13 @@ namespace LNCDCDSS.Models
 		    return nodePath;
 	    }
 
-        public static void setArchetypeValue(org.openehr.am.archetype.Archetype archetype, org.openehr.rm.common.archetyped.Locatable loc
-            , java.util.Map values) 
+        public static void setArchetypeValue(
+            org.openehr.am.archetype.Archetype archetype, 
+            org.openehr.rm.common.archetyped.Locatable loc,
+            Dictionary<string, object> values) 
 		{
-		    java.util.Set list_key = values.keySet();
-            for (java.util.Iterator it_key = list_key.iterator(); it_key.hasNext();) 
+            foreach (string strPath in values.Keys)
             {
-                String strPath = it_key.next() as String;
 			    java.util.Map pathNodeMap = archetype.getPathNodeMap();
                 String nodePath = CreatedADLHelper.getArchetypeNodePath(archetype, strPath);
 			    org.openehr.am.archetype.constraintmodel.CObject node = pathNodeMap.get(nodePath) as org.openehr.am.archetype.constraintmodel.CObject;
@@ -66,7 +66,7 @@ namespace LNCDCDSS.Models
                         if (tPropertyType.IsPrimitive || tPropertyType == typeof(String)) 
                         {
 						    //setter.set(tempTarget, values.get(path), null);
-                            tempTarget.GetType().GetProperty(pathSegment).SetValue(tempTarget, values.get(strPath), null);
+                            tempTarget.GetType().GetProperty(pathSegment).SetValue(tempTarget, values[strPath], null);
 					    } 
 					    else 
                         {

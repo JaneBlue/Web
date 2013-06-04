@@ -60,7 +60,8 @@ namespace LNCDCDSS.Controllers
                 DataFromReporter obj = JsonConvert.DeserializeObject<DataFromReporter>(jsonStr);
 
                 //create a map to put DataFromReporter
-                java.util.Map results = new java.util.HashMap();
+                Dictionary<Dictionary<string, object>, string> results = new Dictionary<Dictionary<string, object>, string>();
+                //java.util.Map results = new java.util.HashMap();
 
                 //get list of archetype
                 List<DataFromReporter.ArchetypeFromReporter> list_archetypesFromReporter = obj.archetypesFromReporter;
@@ -68,7 +69,8 @@ namespace LNCDCDSS.Controllers
                 for (int nIndexArchetypesFromReporter = 0; nIndexArchetypesFromReporter < nCountArchetypesFromReporter; ++nIndexArchetypesFromReporter)
                 {
                     //create the map to put path and value of one archetype
-                    java.util.HashMap resultsInArchetype = new java.util.HashMap();
+                    //java.util.HashMap resultsInArchetype = new java.util.HashMap();
+                    Dictionary<string, object> resultsInArchetype = new Dictionary<string, object>();
 
                     //get one archetype
                     DataFromReporter.ArchetypeFromReporter archetypeFromReporter = list_archetypesFromReporter.ElementAt(nIndexArchetypesFromReporter);
@@ -81,17 +83,21 @@ namespace LNCDCDSS.Controllers
                     {
                         DataFromReporter.ValueFromReporter valueFromReporter = valuesFromReporter.ElementAt(nIndexValuesInArchetype);
                         if ("" != valueFromReporter.Value)
-                            resultsInArchetype.put(valueFromReporter.Path, valueFromReporter.Value);
+                        {
+                            resultsInArchetype.Add(valueFromReporter.Path, valueFromReporter.Value);
+                        }
                     }
 
                     //put this archetype into results
-                    results.put(resultsInArchetype, strArchetypeID);
+                    results.Add(resultsInArchetype, strArchetypeID);
                 }
 
-                AQLExecute.AQLExecuteImplService aqlImpl = new AQLExecute.AQLExecuteImplService();
+                //AQLExecute.AQLExecuteImplService aqlImpl = new AQLExecute.AQLExecuteImplService();
+                LocalAQLExecute.AQLExecuteImplService aqlImpl = new LocalAQLExecute.AQLExecuteImplService();
                 try
                 {
-                    aqlImpl.insert(dOp.CreatedADL(results));
+                    string[] dadls = dOp.CreatedADL(results);
+                    aqlImpl.insert(dadls);
                 }
                 catch (System.Exception ex)
                 {

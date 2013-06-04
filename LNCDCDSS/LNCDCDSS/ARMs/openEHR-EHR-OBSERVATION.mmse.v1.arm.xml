@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="@openEHR">
 	<class name="openEHR-EHR-OBSERVATION.mmse.v1">
 		<id name="/uid/value"/>
@@ -20,14 +23,6 @@
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0047]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0048]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0049]/value/value"/>
-		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0045]/value/value"/>
-		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0046]/value/value"/>
-		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0047]/value/value"/>
-		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0048]/value/value"/>
-		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0044]/items[at0049]/value/value"/>
-		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0061]/value/value"/>
-		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0062]/value/value"/>
-		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0063]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0061]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0062]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0060]/items[at0063]/value/value"/>

@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="@openEHR">
 	<class name="openEHR-EHR-OBSERVATION.related_disease_and_drug.v1">
 		<id name="/uid/value"/>
@@ -7,7 +10,7 @@
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0037]/items[at0042]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0043]/items[at0048]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0049]/items[at0054]/value/value"/>
-		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0055]/items[at0061]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0055]/items[at0061]/value/magnitude"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0055]/items[at0062]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0063]/items[at0070]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0063]/items[at0068]/value/value"/>
@@ -17,8 +20,8 @@
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0117]/items[at0128]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0117]/items[at0127]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0129]/items[at0135]/value/value"/>
-		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0129]/items[at0134]/value/value"/>
-		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0139]/items[at0148]/value/value"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0129]/items[at0134]/value/magnitude"/>
+		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0139]/items[at0148]/value/magnitude"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0161]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0010]/value/value"/>
 		<property name="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/items[at0006]/value/value"/>

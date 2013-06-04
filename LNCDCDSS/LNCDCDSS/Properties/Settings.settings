@@ -8,5 +8,8 @@
     <Setting Name="LNCDCDSS_AQLExecute_AQLExecuteImplService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://192.168.1.61:9090/adr/AQLExecute</Value>
     </Setting>
+    <Setting Name="LNCDCDSS_LocalAQLExecute_AQLExecuteImplService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://127.0.0.1:9091/adr/AQLExecute</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
