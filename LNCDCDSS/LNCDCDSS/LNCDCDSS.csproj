@@ -40,12 +40,6 @@
     <Reference Include="adl-serializer-1.0.3-SNAPSHOT">
       <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\adl-serializer-1.0.3-SNAPSHOT.dll</HintPath>
     </Reference>
-    <Reference Include="commons-io-1.2">
-      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\commons-io-1.2.dll</HintPath>
-    </Reference>
-    <Reference Include="commons-io-1.4">
-      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\commons-io-1.4.dll</HintPath>
-    </Reference>
     <Reference Include="commons-io-2.3">
       <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\commons-io-2.3.dll</HintPath>
     </Reference>
@@ -157,8 +151,8 @@
     <Reference Include="joda-time-1.3">
       <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\joda-time-1.3.dll</HintPath>
     </Reference>
-    <Reference Include="jsr-275-0.9.1">
-      <HintPath>DLL\jsr-275-0.9.1.dll</HintPath>
+    <Reference Include="jsr-275-0.9.4">
+      <HintPath>DLL\jsr-275-0.9.4.dll</HintPath>
     </Reference>
     <Reference Include="jsr173_api-1.0">
       <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\jsr173_api-1.0.dll</HintPath>
@@ -169,11 +163,8 @@
     <Reference Include="junit-4.5">
       <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\junit-4.5.dll</HintPath>
     </Reference>
-    <Reference Include="log4j-1.2.13">
-      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\log4j-1.2.13.dll</HintPath>
-    </Reference>
-    <Reference Include="log4j-1.2.8">
-      <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\log4j-1.2.8.dll</HintPath>
+    <Reference Include="log4j-1.2.16">
+      <HintPath>DLL\log4j-1.2.16.dll</HintPath>
     </Reference>
     <Reference Include="measure-serv-1.0.3-SNAPSHOT">
       <HintPath>..\..\..\openehr-ikvm\openehr-net-ikvm\lib\measure-serv-1.0.3-SNAPSHOT.dll</HintPath>
