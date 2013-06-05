@@ -37,21 +37,21 @@ namespace LNCDCDSS
             //String path = @"C:\Users\hudi\Documents\GitHub\";
             String path = @"D:\";
             archetypes.put("openEHR-EHR-OBSERVATION.mmse.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.mmse.v1.adl"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.mmse.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1.adl"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.related_disease_and_drug.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.related_disease_and_drug.v1.adl"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.related_disease_and_drug.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.adl.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.adl.v1.adl"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.adl.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.body_check.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.body_check.v1.adl"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.body_check.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.cdr.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.cdr.v1.adl"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.cdr.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.gds.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.gds.v1.adl"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.gds.v1.adl"));
             archetypes.put("openEHR-EHR-OBSERVATION.moca.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\Archetypes\openEHR-EHR-OBSERVATION.moca.v1.adl"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.moca.v1.adl"));
         }
 
         public static void ReadARMs()
@@ -59,21 +59,21 @@ namespace LNCDCDSS
             //String path = @"C:\Users\hudi\Documents\GitHub\";
             String path = @"D:\";
             arms.put("openEHR-EHR-OBSERVATION.body_check.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\ARMs\openEHR-EHR-OBSERVATION.body_check.v1.arm.xml"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.body_check.v1.arm.xml"));
             arms.put("openEHR-EHR-OBSERVATION.related_disease_and_drug.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\ARMs\openEHR-EHR-OBSERVATION.related_disease_and_drug.v1.arm.xml"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.related_disease_and_drug.v1.arm.xml"));
             arms.put("openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\ARMs\openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1.arm.xml"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1.arm.xml"));
             arms.put("openEHR-EHR-OBSERVATION.moca.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\ARMs\openEHR-EHR-OBSERVATION.moca.v1.arm.xml"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.moca.v1.arm.xml"));
             arms.put("openEHR-EHR-OBSERVATION.mmse.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\ARMs\openEHR-EHR-OBSERVATION.mmse.v1.arm.xml"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.mmse.v1.arm.xml"));
             arms.put("openEHR-EHR-OBSERVATION.gds.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\ARMs\openEHR-EHR-OBSERVATION.gds.v1.arm.xml"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.gds.v1.arm.xml"));
             arms.put("openEHR-EHR-OBSERVATION.cdr.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\ARMs\openEHR-EHR-OBSERVATION.cdr.v1.arm.xml"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.cdr.v1.arm.xml"));
             arms.put("openEHR-EHR-OBSERVATION.adl.v1"
-                , System.IO.File.ReadAllText(path + @"Web\LNCDCDSS\LNCDCDSS\ARMs\openEHR-EHR-OBSERVATION.adl.v1.arm.xml"));
+                , System.IO.File.ReadAllText(path + @"CDRDocument\knowledge\archetype\ZJU\ad\openEHR-EHR-OBSERVATION.adl.v1.arm.xml"));
         }
 
         public static void RegisterCDR()
