@@ -24,10 +24,6 @@ namespace LNCDCDSS.Models
                 //get the value by the key
                 String strArchetypeId = results[it_key];
 
-                //temp escape "openEHR-EHR-OBSERVATION.body_check.v1"
-                if ("openEHR-EHR-OBSERVATION.body_check.v1" == strArchetypeId)
-                    continue;
-
                 //get SkeletonGenerator
                 org.openehr.rm.util.SkeletonGenerator generator = org.openehr.rm.util.SkeletonGenerator.getInstance();
                 //get the archetype instance
