@@ -499,7 +499,7 @@
 									<fill_style fill-type="none"/>
 									<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
 									<bindings>
-										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/value/value" RM="OBSERVATION"/>
+										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0005]/value/magnitude" RM="OBSERVATION"/>
 									</bindings>
 								</textbox>
 								<label name="Label_308" font-ref="Font4" alignment-ref="Align4">
@@ -521,7 +521,7 @@
 									<fill_style fill-type="none"/>
 									<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
 									<bindings>
-										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/value/value" RM="OBSERVATION"/>
+										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0006]/value/magnitude" RM="OBSERVATION"/>
 									</bindings>
 								</textbox>
 								<label name="Label_22" font-ref="Font4" alignment-ref="Align4">
@@ -543,7 +543,7 @@
 									<fill_style fill-type="none"/>
 									<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
 									<bindings>
-										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0007]/value/value" RM="OBSERVATION"/>
+										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0007]/value/magnitude" RM="OBSERVATION"/>
 									</bindings>
 								</textbox>
 								<label name="Label_24" font-ref="Font4" alignment-ref="Align4">
@@ -565,7 +565,7 @@
 									<fill_style fill-type="none"/>
 									<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
 									<bindings>
-										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0008]/value/value" RM="OBSERVATION"/>
+										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0008]/value/magnitude" RM="OBSERVATION"/>
 									</bindings>
 								</textbox>
 								<label name="Label_309" font-ref="Font4" alignment-ref="Align4">
@@ -587,7 +587,7 @@
 									<fill_style fill-type="none"/>
 									<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
 									<bindings>
-										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0010]/value/value" RM="OBSERVATION"/>
+										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0010]/value/magnitude" RM="OBSERVATION"/>
 									</bindings>
 								</textbox>
 								<label name="Label_74" font-ref="Font4" alignment-ref="Align4">
@@ -609,7 +609,7 @@
 									<fill_style fill-type="none"/>
 									<input_method keyboard-layout-code="" keyboard-layout-text="" conversion-mode=""/>
 									<bindings>
-										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0011]/value/value" RM="OBSERVATION"/>
+										<binding name="Text" archetypeId="openEHR-EHR-OBSERVATION.body_check.v1" path="/data[at0001]/events[at0002]/data[at0003]/items[at0009]/items[at0011]/value/magnitude" RM="OBSERVATION"/>
 									</bindings>
 								</textbox>
 								<label name="Label_310" font-ref="Font4" alignment-ref="Align4">
