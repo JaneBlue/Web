@@ -53,6 +53,7 @@ namespace LNCDCDSS.Controllers
             DataFromReporterOperation dOp = new DataFromReporterOperation();
             string jsonStr = Request.Params["postjson"];
             string PatID = this.TempData["PatID"].ToString();
+            string VisitRecordID = vr.GetLastVisitRecordID(PatID);
             try
             {
                 //get DataFromReporter
@@ -85,6 +86,22 @@ namespace LNCDCDSS.Controllers
                         if ("" != valueFromReporter.Value)
                         {
                             resultsInArchetype.Add(valueFromReporter.Path, valueFromReporter.Value);
+                        }
+
+                        //set visitID & patientID
+                        if ( ("openEHR-EHR-OBSERVATION.adl.v1" == strArchetypeID && "/data[at0001]/events[at0002]/data[at0003]/items[at0126]/value/value" == valueFromReporter.Path)
+                            || ("openEHR-EHR-OBSERVATION.cdr.v1" == strArchetypeID && "/data[at0001]/events[at0002]/data[at0003]/items[at0057]/value/value" == valueFromReporter.Path)
+                            || ("openEHR-EHR-OBSERVATION.gds.v1" == strArchetypeID && "/data[at0001]/events[at0002]/data[at0003]/items[at0020]/value/value" == valueFromReporter.Path)
+                            || ("openEHR-EHR-OBSERVATION.mmse.v1" == strArchetypeID && "/data[at0001]/events[at0002]/data[at0003]/items[at0107]/value/value" == valueFromReporter.Path)
+                            || ("openEHR-EHR-OBSERVATION.moca.v1" == strArchetypeID && "/data[at0001]/events[at0002]/data[at0003]/items[at0068]/value/value" == valueFromReporter.Path)
+                            || ("openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1" == strArchetypeID && "/data[at0001]/events[at0002]/data[at0003]/items[at0022]/value/value" == valueFromReporter.Path))
+                        {
+                            resultsInArchetype.Add(valueFromReporter.Path, VisitRecordID);
+                        }
+                        else if (("openEHR-EHR-OBSERVATION.body_check.v1" == strArchetypeID && "/data[at0001]/events[at0002]/data[at0003]/items[at0106]/value/value" == valueFromReporter.Path)
+                            || ("openEHR-EHR-OBSERVATION.related_disease_and_drug.v1" == strArchetypeID && "/data[at0001]/events[at0002]/data[at0003]/items[at0162]/value/value" == valueFromReporter.Path))
+                        {
+                            resultsInArchetype.Add(valueFromReporter.Path, PatID);
                         }
                     }
 
