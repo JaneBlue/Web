@@ -175,6 +175,23 @@
         });
     });
   
+    function DataFromReporter(archetypesFromReporter)
+    {
+        this.archetypesFromReporter = archetypesFromReporter;
+    }
+
+    function ArchetypeFromReporter(ArchetypeID, valuesFromReporter)
+    {
+        this.ArchetypeID = ArchetypeID;
+        this.valuesFromReporter = valuesFromReporter;
+    }
+
+    function ValueFromReporter(Path, Value)
+    {
+        this.Path = Path;
+        this.Value = Value;
+    }
+
     function GetReportData(stringFromReporterOCX, list_string) 
     {
         var FirIndex = stringFromReporterOCX.indexOf(",");
