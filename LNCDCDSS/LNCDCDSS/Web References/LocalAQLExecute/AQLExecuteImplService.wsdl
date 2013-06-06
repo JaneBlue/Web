@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.adr/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="AQLExecuteImplService" targetNamespace="http://ws.adr/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.adr/" name="AQLExecuteImplService" targetNamespace="http://ws.adr/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xs:schema xmlns:ns0="http://jaxb.dev.java.net/array" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.adr/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:import namespace="http://jaxb.dev.java.net/array" />
@@ -14,6 +14,8 @@
       <xs:element name="registerArm" type="tns:registerArm" />
       <xs:element name="registerArmResponse" type="tns:registerArmResponse" />
       <xs:element name="select" type="tns:select" />
+      <xs:element name="selectPara" type="tns:selectPara" />
+      <xs:element name="selectParaResponse" type="tns:selectParaResponse" />
       <xs:element name="selectResponse" type="tns:selectResponse" />
       <xs:element name="update" type="tns:update" />
       <xs:element name="updateResponse" type="tns:updateResponse" />
@@ -75,6 +77,31 @@
       <xs:complexType name="registerArmResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="selectPara">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element name="arg2">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element minOccurs="0" name="key" type="xs:string" />
+                      <xs:element minOccurs="0" name="value" type="xs:string" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="selectParaResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="registerArchetype">
@@ -147,6 +174,9 @@
       </xs:complexType>
     </xs:schema>
   </wsdl:types>
+  <wsdl:message name="selectPara">
+    <wsdl:part name="parameters" element="tns:selectPara" />
+  </wsdl:message>
   <wsdl:message name="reconfigureResponse">
     <wsdl:part name="parameters" element="tns:reconfigureResponse" />
   </wsdl:message>
@@ -189,6 +219,9 @@
   <wsdl:message name="Exception">
     <wsdl:part name="Exception" element="tns:Exception" />
   </wsdl:message>
+  <wsdl:message name="selectParaResponse">
+    <wsdl:part name="parameters" element="tns:selectParaResponse" />
+  </wsdl:message>
   <wsdl:message name="registerArchetype">
     <wsdl:part name="parameters" element="tns:registerArchetype" />
   </wsdl:message>
@@ -229,6 +262,11 @@
     <wsdl:operation name="registerArm">
       <wsdl:input name="registerArm" message="tns:registerArm" />
       <wsdl:output name="registerArmResponse" message="tns:registerArmResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="selectPara">
+      <wsdl:input name="selectPara" message="tns:selectPara" />
+      <wsdl:output name="selectParaResponse" message="tns:selectParaResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
     <wsdl:operation name="registerArchetype">
       <wsdl:input name="registerArchetype" message="tns:registerArchetype" />
@@ -309,6 +347,18 @@
       <wsdl:output name="registerArchetypeResponse">
         <soap:body use="literal" />
       </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectPara">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="selectPara">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="selectParaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="delete">
       <soap:operation soapAction="" style="document" />

@@ -12,53 +12,6 @@ namespace LNCDCDSS.Models
 {
     public class VisitRecordOperation
     {
-        //public List<Archetype> list_Archetype;
-        //public VisitRecordOperation()
-        //{
-        //    //
-        //    string adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.adl.v1.adl");
-        //    se.acode.openehr.parser.ADLParser parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    org.openehr.am.archetype.Archetype archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.body_check.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.cdr.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.gds.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.mmse.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.moca.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.related_disease_and_drug.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //}
-
-
-
         LNCDDataModelContainer context = new LNCDDataModelContainer();
 
         public void SaveVisitRecordInPBInfo()
@@ -133,6 +86,13 @@ namespace LNCDCDSS.Models
                 string a = e.InnerException.Message;
             }
         }
+
+        public String GetLastVisitRecordID(String patientID)
+        {
+            PatBasicInfor pt = context.PatBasicInforSet.Find(patientID);
+            return pt.VisitRecord.Last().Id.ToString();
+        }
+
         public void InsertPatADL(PatADL pl, string ID)
         {
             try
@@ -289,45 +249,84 @@ namespace LNCDCDSS.Models
             { }
             return conttext;
         }
-        public string[] GetExamContent(string PatID, string RecordID)
+        public DataFromReporter GetExamContent(string PatID, string RecordID)
         {
-            //select AQL
-            String query = "select "
-                    //+ "o#/uid/value as /uid/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0125]/value/magnitude, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0010]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0016]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0022]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0028]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0034]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0040]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0046]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0052]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0058]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0064]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0070]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0076]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0082]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0088]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0094]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0100]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0106]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0112]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0118]/value/value, "
-                    + "o#/data[at0001]/events[at0002]/data[at0003]/items[at0126]/value/value "
-                    + "from openEHR-EHR-OBSERVATION.adl.v1 as o ";
-
             //AQLExecute.AQLExecuteImplService aqlImpl = new AQLExecute.AQLExecuteImplService();
             LocalAQLExecute.AQLExecuteImplService aqlImpl = new LocalAQLExecute.AQLExecuteImplService();
 
-
-            //set VisitData
+            //create DataFromReporter
             DataFromReporter oDataFromReporter = new DataFromReporter();
+            foreach (List<string> keyPathsInArchetype in LNCDCDSS.MvcApplication.oPathsInArchetypes.Keys)
+            {
+                //every archetype
+                String strArchetypeID = LNCDCDSS.MvcApplication.oPathsInArchetypes[keyPathsInArchetype];
 
+                //write AQL
+                string aqlQuery = "select o from " + strArchetypeID + " as o ";
+                aqlQuery += "where o#";
+                if ("openEHR-EHR-OBSERVATION.adl.v1" == strArchetypeID)
+                {
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0126]/value/value" + " = :name";
+                }
+                else if ("openEHR-EHR-OBSERVATION.cdr.v1" == strArchetypeID)
+                {
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0057]/value/value" + " = :name";
+                }
+                else if ("openEHR-EHR-OBSERVATION.gds.v1" == strArchetypeID)
+                {
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0020]/value/value" + " = :name";
+                }
+                else if ("openEHR-EHR-OBSERVATION.mmse.v1" == strArchetypeID)
+                {
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0107]/value/value" + " = :name";
+                }
+                else if ("openEHR-EHR-OBSERVATION.moca.v1" == strArchetypeID)
+                {
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0068]/value/value" + " = :name";
+                }
+                else if ("openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1" == strArchetypeID)
+                {
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0022]/value/value" + " = :name";
+                }
+                else
+                    continue;
 
+                //get query results
+                //java.util.Map parameters = new java.util.HashMap();
+                //parameters.put("name", RecordID);
+                LocalAQLExecute.selectParaEntry[] paras = new LocalAQLExecute.selectParaEntry[1];
+                LocalAQLExecute.selectParaEntry para = new LocalAQLExecute.selectParaEntry();
+                para.key = "name";
+                para.value = RecordID;
+                paras[0] = para;
+                String[] selectResults = aqlImpl.selectPara(aqlQuery, "", paras);
+                if (selectResults.Length > 0)
+                {
+                    //set results into object
+                    org.openehr.am.parser.DADLParser dADLParser = new org.openehr.am.parser.DADLParser(selectResults[0]);
+                    org.openehr.am.parser.ContentObject dADLcontentObj = dADLParser.parse();
+                    org.openehr.rm.binding.DADLBinding binding = new org.openehr.rm.binding.DADLBinding();
+                    org.openehr.rm.common.archetyped.Locatable dADLloc = binding.bind(dADLcontentObj) as org.openehr.rm.common.archetyped.Locatable;
 
-            return new string[17];
+                    //get values in one archetype
+                    //create ArchetypeFromReporter
+                    DataFromReporter.ArchetypeFromReporter oArchetypeFromReporter = new DataFromReporter.ArchetypeFromReporter();
+                    oArchetypeFromReporter.ArchetypeID = strArchetypeID;
+                    foreach (string strPathInArchetype in keyPathsInArchetype)
+                    {
+                        //create ValueFromReporter
+                        DataFromReporter.ValueFromReporter oValueFromReporter = new DataFromReporter.ValueFromReporter();
+                        oValueFromReporter.Path = strPathInArchetype;
+                        oValueFromReporter.Value = dADLloc.itemAtPath(strPathInArchetype) as string;
+                        //add ValueFromReporter into ArchetypeFromReporter
+                        oArchetypeFromReporter.valuesFromReporter.Add(oValueFromReporter);
+                    }
+                    //add ArchetypeFromReporter into DataFromReporter
+                    oDataFromReporter.archetypesFromReporter.Add(oArchetypeFromReporter);
+                 }
+            }
+
+            return oDataFromReporter;
         }
         public List<PatBasicInfor> GetPat(List<string> Condition)
         {

@@ -22,29 +22,11 @@ namespace LNCDCDSS.Controllers
             this.TempData["PatID"] = IDs[0];
             this.TempData["ContinueVisitID"] = IDs[1];
             VisitRecordOperation vr = new VisitRecordOperation();
-            string[] exams = vr.GetExamContent(IDs[0], IDs[1]);
-            Dictionary<string, string> dict = new Dictionary<string, string>();
-            dict.Add("MMSE", exams[0]);
-            dict.Add("MoCA", exams[1]);
-            dict.Add("ADL", exams[2]);
-            dict.Add("PatCDR", exams[3]);
-            dict.Add("PatGDS", exams[4]);
-            dict.Add("Vocabulary1", exams[5]);
-            dict.Add("Vocabulary2", exams[6]);
-            dict.Add("Vocabulary3", exams[7]);
-            dict.Add("Vocabulary4", exams[8]);
-            dict.Add("VocabularyAnalyse1", exams[9]);
-            dict.Add("VocabularyAnalyse2", exams[10]);
-            dict.Add("Picture1", exams[11]);
-            dict.Add("Picture2", exams[12]);
-            dict.Add("Picture3", exams[13]);
-            dict.Add("ConnectNumber1", exams[14]);
-            dict.Add("ConnectNumber2", exams[15]);
-            dict.Add("RecordNote", exams[16]);
-            ViewData["data"] = Json(dict);
+            DataFromReporter oGetExamContent = vr.GetExamContent(IDs[0], IDs[1]);
+            System.Web.Script.Serialization.JavaScriptSerializer oSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            string sJSON = JsonHelper.JsonSerializer(oGetExamContent);
+            ViewData["data"] = sJSON;
             return View();
-
-
         }
         [HttpPost]
         public JsonResult Save()
@@ -59,6 +41,9 @@ namespace LNCDCDSS.Controllers
                 //get DataFromReporter
                 //DataFromReporter obj = JsonHelper.JsonDeserialize<DataFromReporter>(jsonStr);
                 DataFromReporter obj = JsonConvert.DeserializeObject<DataFromReporter>(jsonStr);
+
+                //clear the paths in archetypes list
+                LNCDCDSS.MvcApplication.oPathsInArchetypes.Clear();
 
                 //create a map to put DataFromReporter
                 Dictionary<Dictionary<string, object>, string> results = new Dictionary<Dictionary<string, object>, string>();
@@ -77,12 +62,18 @@ namespace LNCDCDSS.Controllers
                     DataFromReporter.ArchetypeFromReporter archetypeFromReporter = list_archetypesFromReporter.ElementAt(nIndexArchetypesFromReporter);
                     //get the archetype ID
                     String strArchetypeID = archetypeFromReporter.ArchetypeID;
+                    //create the list for paths in this archetype
+                    List<string> list_PathsOfArchetypeID = new List<string>();
                     //get the list of value in the archetype
                     List<DataFromReporter.ValueFromReporter> valuesFromReporter = archetypeFromReporter.valuesFromReporter;                    
                     int nCountValuesInArchetype = valuesFromReporter.Count;
                     for (int nIndexValuesInArchetype = 0; nIndexValuesInArchetype < nCountValuesInArchetype; ++nIndexValuesInArchetype)
                     {
                         DataFromReporter.ValueFromReporter valueFromReporter = valuesFromReporter.ElementAt(nIndexValuesInArchetype);
+                        
+                        //add paths into list
+                        list_PathsOfArchetypeID.Add(valueFromReporter.Path);
+
                         if ("" != valueFromReporter.Value)
                         {
                             resultsInArchetype.Add(valueFromReporter.Path, valueFromReporter.Value);
@@ -104,6 +95,9 @@ namespace LNCDCDSS.Controllers
                             resultsInArchetype.Add(valueFromReporter.Path, PatID);
                         }
                     }
+
+                    //put the paths of this archetype into oPathsInArchetypes
+                    LNCDCDSS.MvcApplication.oPathsInArchetypes.Add(list_PathsOfArchetypeID, strArchetypeID);
 
                     //put this archetype into results
                     results.Add(resultsInArchetype, strArchetypeID);
