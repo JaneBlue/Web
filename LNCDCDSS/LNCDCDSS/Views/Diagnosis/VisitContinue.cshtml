@@ -175,4 +175,16 @@
         });
     });
   
+    function GetReportData(stringFromReporterOCX, list_string) 
+    {
+        var FirIndex = stringFromReporterOCX.indexOf(",");
+        while(0 != FirIndex && -1 != FirIndex)
+        {
+            var oneString = stringFromReporterOCX.substring(0, FirIndex);
+            list_string.push(oneString);
+            stringFromReporterOCX = stringFromReporterOCX.substring(FirIndex + 1);
+            FirIndex = stringFromReporterOCX.indexOf(",");
+        }
+    }
+
 </script>
