@@ -31,6 +31,7 @@ namespace LNCDCDSS
 
         public static java.util.Map archetypes = new java.util.HashMap();
         public static java.util.Map arms = new java.util.HashMap();
+        public static Dictionary<List<string>, string> oPathsInArchetypes = new Dictionary<List<string>, string>();
 
         public static void ReadArchetypes()
         {
