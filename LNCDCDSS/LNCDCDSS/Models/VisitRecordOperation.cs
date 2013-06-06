@@ -8,6 +8,7 @@ using System.Data.Entity.Validation;
 
 using org.openehr.am.archetype;
 using org.openehr.am.archetype.constraintmodel;
+using System.Reflection;
 namespace LNCDCDSS.Models
 {
     public class VisitRecordOperation
@@ -266,41 +267,34 @@ namespace LNCDCDSS.Models
                 aqlQuery += "where o#";
                 if ("openEHR-EHR-OBSERVATION.adl.v1" == strArchetypeID)
                 {
-                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0126]/value/value" + " = :name";
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0126]/value/value" + " = '" + RecordID + "'";
                 }
                 else if ("openEHR-EHR-OBSERVATION.cdr.v1" == strArchetypeID)
                 {
-                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0057]/value/value" + " = :name";
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0057]/value/value" + " = '" + RecordID + "'";
                 }
                 else if ("openEHR-EHR-OBSERVATION.gds.v1" == strArchetypeID)
                 {
-                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0020]/value/value" + " = :name";
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0020]/value/value" + " = '" + RecordID + "'";
                 }
                 else if ("openEHR-EHR-OBSERVATION.mmse.v1" == strArchetypeID)
                 {
-                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0107]/value/value" + " = :name";
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0107]/value/value" + " = '" + RecordID + "'";
                 }
                 else if ("openEHR-EHR-OBSERVATION.moca.v1" == strArchetypeID)
                 {
-                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0068]/value/value" + " = :name";
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0068]/value/value" + " = '" + RecordID + "'";
                 }
                 else if ("openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1" == strArchetypeID)
                 {
-                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0022]/value/value" + " = :name";
+                    aqlQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0022]/value/value" + " = '" + RecordID + "'";
                 }
                 else
                     continue;
 
                 //get query results
-                //java.util.Map parameters = new java.util.HashMap();
-                //parameters.put("name", RecordID);
-                LocalAQLExecute.selectParaEntry[] paras = new LocalAQLExecute.selectParaEntry[1];
-                LocalAQLExecute.selectParaEntry para = new LocalAQLExecute.selectParaEntry();
-                para.key = "name";
-                para.value = RecordID;
-                paras[0] = para;
-                String[] selectResults = aqlImpl.selectPara(aqlQuery, "", paras);
-                if (selectResults.Length > 0)
+                String[] selectResults = aqlImpl.select(aqlQuery, "");
+                if (selectResults != null && selectResults.Length > 0)
                 {
                     //set results into object
                     org.openehr.am.parser.DADLParser dADLParser = new org.openehr.am.parser.DADLParser(selectResults[0]);
@@ -317,7 +311,29 @@ namespace LNCDCDSS.Models
                         //create ValueFromReporter
                         DataFromReporter.ValueFromReporter oValueFromReporter = new DataFromReporter.ValueFromReporter();
                         oValueFromReporter.Path = strPathInArchetype;
-                        oValueFromReporter.Value = dADLloc.itemAtPath(strPathInArchetype) as string;
+
+                        {
+                            int i = strPathInArchetype.LastIndexOf("/");
+                            if (i < 0 || i == strPathInArchetype.Length)
+                                continue;
+
+                            String objPath = "/";
+                            if (i > 0)
+                            {
+                                objPath = strPathInArchetype.Substring(0, i);
+                            }
+                            String attributeName = strPathInArchetype.Substring(i + 1);
+
+                            Object obj = dADLloc.itemAtPath(objPath);
+                            if (obj != null)
+                            {
+                                Type tObjectType = obj.GetType();
+                                FieldInfo iFieldInfo = tObjectType.GetField(attributeName, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static);
+
+                                oValueFromReporter.Value = iFieldInfo.GetValue(obj).ToString().ToLower();
+                            }
+                        }
+
                         //add ValueFromReporter into ArchetypeFromReporter
                         oArchetypeFromReporter.valuesFromReporter.Add(oValueFromReporter);
                     }
