@@ -39,7 +39,6 @@ namespace LNCDCDSS.Controllers
             try
             {
                 //get DataFromReporter
-                //DataFromReporter obj = JsonHelper.JsonDeserialize<DataFromReporter>(jsonStr);
                 DataFromReporter obj = JsonConvert.DeserializeObject<DataFromReporter>(jsonStr);
 
                 //clear the paths in archetypes list
@@ -47,7 +46,6 @@ namespace LNCDCDSS.Controllers
 
                 //create a map to put DataFromReporter
                 Dictionary<Dictionary<string, object>, string> results = new Dictionary<Dictionary<string, object>, string>();
-                //java.util.Map results = new java.util.HashMap();
 
                 //get list of archetype
                 List<DataFromReporter.ArchetypeFromReporter> list_archetypesFromReporter = obj.archetypesFromReporter;
@@ -114,24 +112,8 @@ namespace LNCDCDSS.Controllers
                 {
                 	
                 }
-
                 //save VisitRecord into patient basic
                 vr.SaveVisitRecordInPBInfo();
-
-                //VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
-
-                //vr.InsertPatADL(obj.pal, PatID);
-                //vr.InsertPatDisease(obj.pds, PatID);
-                //vr.InsertPatLabExam(obj.ple, PatID);
-                //vr.InsertPatMMSE(obj.pme, PatID);
-                //vr.InsertPatMoca(obj.pma, PatID);
-                //vr.InsertPatotherTest(obj.pot, PatID);
-                //vr.UpdateVisitRecord(obj.vsr, PatID);
-                //vr.InsertPatPhysicaExam(obj.ppe, PatID);
-                //vr.InsertPatRecentDrug(obj.prd, PatID);
-
-                //
-
             }
             catch (Exception e)
             {
@@ -149,12 +131,66 @@ namespace LNCDCDSS.Controllers
             string VisitID = this.TempData["ContinueVisitID"].ToString();
             try
             {
-                VisitData obj = JsonHelper.JsonDeserialize<VisitData>(jsonStr);//jsonStr.FromJsonTo<VisitData>();
+                LocalAQLExecute.AQLExecuteImplService aqlImpl = new LocalAQLExecute.AQLExecuteImplService();
+                DataFromReporter obj = JsonConvert.DeserializeObject<DataFromReporter>(jsonStr);
+                LNCDCDSS.MvcApplication.oPathsInArchetypes.Clear();
+                List<DataFromReporter.ArchetypeFromReporter> list_archetypesFromReporter = obj.archetypesFromReporter;
+                int nCountArchetypesFromReporter = list_archetypesFromReporter.Count;
+                for (int nIndexArchetypesFromReporter = 0; nIndexArchetypesFromReporter < nCountArchetypesFromReporter; ++nIndexArchetypesFromReporter)
+                {
+                    //get one archetype
+                    DataFromReporter.ArchetypeFromReporter archetypeFromReporter = list_archetypesFromReporter.ElementAt(nIndexArchetypesFromReporter);
+                    String strArchetypeID = archetypeFromReporter.ArchetypeID;
+                    List<string> list_PathsOfArchetypeID = new List<string>();
+                    List<DataFromReporter.ValueFromReporter> valuesFromReporter = archetypeFromReporter.valuesFromReporter;
+                    int nCountValuesInArchetype = valuesFromReporter.Count;
 
-                vr.SaveContinueRecord(PatID, VisitID, obj);
-               
-                //
+                    //write query string
+                    String strQuery = "update " + strArchetypeID + " as o set";
 
+                    for (int nIndexValuesInArchetype = 0; nIndexValuesInArchetype < nCountValuesInArchetype; ++nIndexValuesInArchetype)
+                    {
+                        DataFromReporter.ValueFromReporter valueFromReporter = valuesFromReporter.ElementAt(nIndexValuesInArchetype);
+                        list_PathsOfArchetypeID.Add(valueFromReporter.Path);
+                        //valueFromReporter.Path //valueFromReporter.Value
+                        strQuery += " o#" + valueFromReporter.Path + "=" + "'" + valueFromReporter.Value + "'" + ",";
+                    }
+                    if ("," == strQuery.Substring(strQuery.Length - 1))
+                    {
+                        strQuery = strQuery.Substring(0, strQuery.Length - 1);
+                    }
+                    strQuery += " where o#";
+                    if ("openEHR-EHR-OBSERVATION.adl.v1" == strArchetypeID)
+                    {
+                        strQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0126]/value/value" + " = '" + VisitID + "'";
+                    }
+                    else if ("openEHR-EHR-OBSERVATION.cdr.v1" == strArchetypeID)
+                    {
+                        strQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0057]/value/value" + " = '" + VisitID + "'";
+                    }
+                    else if ("openEHR-EHR-OBSERVATION.gds.v1" == strArchetypeID)
+                    {
+                        strQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0020]/value/value" + " = '" + VisitID + "'";
+                    }
+                    else if ("openEHR-EHR-OBSERVATION.mmse.v1" == strArchetypeID)
+                    {
+                        strQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0107]/value/value" + " = '" + VisitID + "'";
+                    }
+                    else if ("openEHR-EHR-OBSERVATION.moca.v1" == strArchetypeID)
+                    {
+                        strQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0068]/value/value" + " = '" + VisitID + "'";
+                    }
+                    else if ("openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1" == strArchetypeID)
+                    {
+                        strQuery += "/data[at0001]/events[at0002]/data[at0003]/items[at0022]/value/value" + " = '" + VisitID + "'";
+                    }
+                    else
+                        continue;
+
+                    aqlImpl.update(strQuery);
+
+                    LNCDCDSS.MvcApplication.oPathsInArchetypes.Add(list_PathsOfArchetypeID, strArchetypeID);
+                }
             }
             catch (Exception e)
             {
