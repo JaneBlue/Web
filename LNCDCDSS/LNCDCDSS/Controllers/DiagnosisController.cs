@@ -153,7 +153,10 @@ namespace LNCDCDSS.Controllers
                         DataFromReporter.ValueFromReporter valueFromReporter = valuesFromReporter.ElementAt(nIndexValuesInArchetype);
                         list_PathsOfArchetypeID.Add(valueFromReporter.Path);
                         //valueFromReporter.Path //valueFromReporter.Value
-                        strQuery += " o#" + valueFromReporter.Path + "=" + "'" + valueFromReporter.Value + "'" + ",";
+                        if ("true" != valueFromReporter.Value && "false" != valueFromReporter.Value)
+                            strQuery += " o#" + valueFromReporter.Path + "=" + "'" + valueFromReporter.Value + "'" + ",";
+                        else
+                            strQuery += " o#" + valueFromReporter.Path + "=" + valueFromReporter.Value + ",";
                     }
                     if ("," == strQuery.Substring(strQuery.Length - 1))
                     {
