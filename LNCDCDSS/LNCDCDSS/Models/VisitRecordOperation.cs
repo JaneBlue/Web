@@ -5,74 +5,11 @@ using System.Web;
 using System.Data.Entity;
 using System.Diagnostics;
 using System.Data.Entity.Validation;
-
-using org.openehr.am.archetype;
-using org.openehr.am.archetype.constraintmodel;
 namespace LNCDCDSS.Models
 {
     public class VisitRecordOperation
     {
-        //public List<Archetype> list_Archetype;
-        //public VisitRecordOperation()
-        //{
-        //    //
-        //    string adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.adl.v1.adl");
-        //    se.acode.openehr.parser.ADLParser parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    org.openehr.am.archetype.Archetype archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.body_check.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.cdr.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.gds.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.mmse.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.moca.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.other_cognitions_scale_exams.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //    //
-        //    adl = System.IO.File.ReadAllText(@"D:\Reporter2\NV\Dev-Branch\Debug\SysFiles\Template\openEHR-EHR-OBSERVATION.related_disease_and_drug.v1.adl");
-        //    parser = new se.acode.openehr.parser.ADLParser(adl);
-        //    archetype = parser.parse();
-        //    list_Archetype.Add(archetype);
-        //}
-
-
-
         LNCDDataModelContainer context = new LNCDDataModelContainer();
-
-        public void SaveVisitRecordInPBInfo()
-        {
-            try
-            {
-                context.SaveChanges();
-            }
-            catch (Exception e)
-            {
-                string a = e.InnerException.Message;
-            }
-        }
-
         public void InsertPatPhysicaExam(PatPhysicalExam PExam, string ID)
         {
             try
@@ -88,7 +25,6 @@ namespace LNCDCDSS.Models
                 string a = e.InnerException.Message;
             }
         }
-
         public void InsertPatDisease(PatDisease pdisease, string ID)
         {
             try

@@ -12,18 +12,18 @@
        
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
-        //try {
-            OCX.OpenReport("C:\\Users\\hudi\\Documents\\GitHub\\TemplateForReporter\\GeneratedTemplate");
-        //}
-//        catch (err) {
-//            var b = confirm("是否下载显示控件");
-//            if (b) {//download installer
-//                var strOCXURL;
-//            strOCXURL= "http://"+location.host+"/LNCDCDSS/CDSSOCX.exe";
-//            //window.alert(strOCXURL);
-//            window.location.href = strOCXURL;
-//            }
-//        }
+        try {
+            OCX.OpenReport("D:\\CDSSOCX");
+        }
+        catch (err) {
+            var b = confirm("是否下载显示控件");
+            if (b) {//download installer
+                var strOCXURL;
+            strOCXURL= "http://"+location.host+"/LNCDCDSS/CDSSOCX.exe";
+            //window.alert(strOCXURL);
+            window.location.href = strOCXURL;
+            }
+        }
         OCX.ShowReport();
         OCX.ShowThisPage("基本情况");
         // })
@@ -48,42 +48,881 @@
         $("#btn1").click(function () {
             //var thing = { pma: [ { Id: 2, MC1: 'jquery-json', MC2: 'jquery-json', MC3: 'jquery-json', MC4: 'jquery-json', MC5: 'jquery-json', MC6: 'jquery-json', MC7: 'jquery-json', MC8: 'jquery-json', MC9: 'jquery-json', Total: 'jquery-json' }, { Id: 3, MC1: 'jquery-json', MC2: 'jquery-json', MC3: 'jquery-json', MC4: 'jquery-json', MC5: 'jquery-json', MC6: 'jquery-json', MC7: 'jquery-json', MC8: 'jquery-json', MC9: 'jquery-json', Total: 'jquery-json'} ] };
             $("#btn2").show();
-            
-            //create valuesFromReporter list
-            var archetypesFromReporter = new Array();
-            //insert valuesFromReporter list
-            var strValuesFromReporter = "";
-            var strArchetypeIDs = OCX.GetArchetypeIDs();
-            var list_ArchetypeIDs = new Array();
-            GetReportData(strArchetypeIDs, list_ArchetypeIDs);
-            for(var indexArchetypeID = 0; indexArchetypeID < list_ArchetypeIDs.length; ++indexArchetypeID)
+            //get the data of PatMoCA
+            var nCountEmptyPatMoCA = 0;
+            var strMC1 = OCX.GetData("Data_source/PatMoCA/MC1");
+            var nMC1 = parseInt(strMC1);
+            if (isNaN(nMC1))
             {
-                //get archetype ID
-                var strArchetypeID = list_ArchetypeIDs[indexArchetypeID];
-                //create valuesFromReporter list
-                var valuesFromReporter = new Array();
-                //get valuesFromReporter list
-                var strArchetypePaths = OCX.GetArchetypePaths(strArchetypeID);
-                var list_ArchetypePaths = new Array();
-                GetReportData(strArchetypePaths, list_ArchetypePaths);
-                var lengthArchetypePaths = list_ArchetypePaths.length;
-                for(var indexArchetypePaths = 0; indexArchetypePaths < lengthArchetypePaths; ++indexArchetypePaths)
-                {
-                    var strArchetypePath = list_ArchetypePaths[indexArchetypePaths];
-                    var strOpenEHRData = OCX.GetOpenEHRData(strArchetypeID, strArchetypePath);
-                    var valueFromReporter = new ValueFromReporter(strArchetypePath, strOpenEHRData);
-                    valuesFromReporter.push(valueFromReporter);
-                }
-                //create ArchetypeFromReporter
-                var archetypeFromReporter = new ArchetypeFromReporter(strArchetypeID, valuesFromReporter);
-                //set the archetypeFromReporter into archetypesFromReporter
-                archetypesFromReporter.push(archetypeFromReporter);
+                ++nCountEmptyPatMoCA;
+                nMC1 = 0;
             }
 
-            //convert to javascript object
-            var thingDataFromReporter = new DataFromReporter(archetypesFromReporter);
-            //convert javascript object to json
-            var encoded = $.toJSON(thingDataFromReporter);
+            var strMC2 = OCX.GetData("Data_source/PatMoCA/MC2");
+            var nMC2 = parseInt(strMC2);
+            if (isNaN(nMC2))
+            {
+                ++nCountEmptyPatMoCA;
+                nMC2 = 0;
+            }
+
+            var strMC3 = OCX.GetData("Data_source/PatMoCA/MC3");
+            var nMC3 = parseInt(strMC3);
+            if (isNaN(nMC3))
+            {
+                ++nCountEmptyPatMoCA;
+                nMC3 = 0;
+            }
+
+            var strMC4 = OCX.GetData("Data_source/PatMoCA/MC4");
+            var nMC4 = parseInt(strMC4);
+            if (isNaN(nMC4))
+            {
+                ++nCountEmptyPatMoCA;
+                nMC4 = 0;
+            }
+
+            var strMC5 = OCX.GetData("Data_source/PatMoCA/MC5");
+            var nMC5 = parseInt(strMC5);
+            if (isNaN(nMC5))
+            {
+                ++nCountEmptyPatMoCA;
+                nMC5 = 0;
+            }
+
+            var strMC6 = OCX.GetData("Data_source/PatMoCA/MC6");
+            var nMC6 = parseInt(strMC6);
+            if (isNaN(nMC6))
+            {
+                ++nCountEmptyPatMoCA;
+                nMC6 = 0;
+            }
+
+            var strMC7 = OCX.GetData("Data_source/PatMoCA/MC7");
+            var nMC7 = parseInt(strMC7);
+            if (isNaN(nMC7))
+            {
+                ++nCountEmptyPatMoCA;
+                nMC7 = 0;
+            }
+
+            var strMC8 = OCX.GetData("Data_source/PatMoCA/MC8");
+            var nMC8 = parseInt(strMC8);
+            if (isNaN(nMC8))
+            {
+                ++nCountEmptyPatMoCA;
+                nMC8 = 0;
+            }
+
+            var strMC9 = OCX.GetData("Data_source/PatMoCA/MC9");
+            var nMC9 = parseInt(strMC9);
+            if (isNaN(nMC9))
+            {
+                ++nCountEmptyPatMoCA;
+                nMC9 = 0;
+            }
+
+            var nTotalpma = nMC1 + nMC2 + nMC3 + nMC4 + nMC5 + nMC6 + nMC7 + nMC8 + nMC9;
+            var strTotalpma = nTotalpma.toString();
+            if(9 == nCountEmptyPatMoCA)
+            {
+                strTotalpma = "";
+            }
+
+            //get the data of PatMMSE
+            var nCountEmptyPatMMSE = 0;
+            var strM1 = OCX.GetData("Data_source/PatMMSE/M1");
+            var nM1 = parseInt(strM1);
+            if (isNaN(nM1))
+            {
+                ++nCountEmptyPatMMSE;
+                nM1 = 0;
+            }
+
+            var strM2 = OCX.GetData("Data_source/PatMMSE/M2");
+            var nM2 = parseInt(strM2);
+            if (isNaN(nM2))
+            {
+                ++nCountEmptyPatMMSE;
+                nM2 = 0;
+            }
+
+            var strM3 = OCX.GetData("Data_source/PatMMSE/M3");
+            var nM3 = parseInt(strM3);
+            if (isNaN(nM3))
+            {
+                ++nCountEmptyPatMMSE;
+                nM3 = 0;
+            }
+
+            var strM4 = OCX.GetData("Data_source/PatMMSE/M4");
+            var nM4 = parseInt(strM4);
+            if (isNaN(nM4))
+            {
+                ++nCountEmptyPatMMSE;
+                nM4 = 0;
+            }
+
+            var strM5 = OCX.GetData("Data_source/PatMMSE/M5");
+            var nM5 = parseInt(strM5);
+            if (isNaN(nM5))
+            {
+                ++nCountEmptyPatMMSE;
+                nM5 = 0;
+            }
+
+            var strM6 = OCX.GetData("Data_source/PatMMSE/M6");
+            var nM6 = parseInt(strM6);
+            if (isNaN(nM6))
+            {
+                ++nCountEmptyPatMMSE;
+                nM6 = 0;
+            }
+
+            var strM7 = OCX.GetData("Data_source/PatMMSE/M7");
+            var nM7 = parseInt(strM7);
+            if (isNaN(nM7))
+            {
+                ++nCountEmptyPatMMSE;
+                nM7 = 0;
+            }
+
+            var strM8 = OCX.GetData("Data_source/PatMMSE/M8");
+            var nM8 = parseInt(strM8);
+            if (isNaN(nM8))
+            {
+                ++nCountEmptyPatMMSE;
+                nM8 = 0;
+            }
+
+            var strM9 = OCX.GetData("Data_source/PatMMSE/M9");
+            var nM9 = parseInt(strM9);
+            if (isNaN(nM9))
+            {
+                ++nCountEmptyPatMMSE;
+                nM9 = 0;
+            }
+
+            var strM10 = OCX.GetData("Data_source/PatMMSE/M10");
+            var nM10 = parseInt(strM10);
+            if (isNaN(nM10))
+            {
+                ++nCountEmptyPatMMSE;
+                nM10 = 0;
+            }
+
+            var strM11 = OCX.GetData("Data_source/PatMMSE/M11");
+            var nM11 = parseInt(strM11);
+            if (isNaN(nM11))
+            {
+                ++nCountEmptyPatMMSE;
+                nM11 = 0;
+            }
+
+            var nTotalpme = nM1 + nM2 + nM3 + nM4 + nM5 + nM6 + nM7 + nM8 + nM9 + nM10 + nM11;
+            var strTotalpme = nTotalpme.toString();
+            if(11 == nCountEmptyPatMMSE)
+            {
+                strTotalpme = "";
+            }
+
+            //get the data of PatADL
+            var strA1 = OCX.GetData("Data_source/PatADL/A1");
+            var strA2 = OCX.GetData("Data_source/PatADL/A2");
+            var strA3 = OCX.GetData("Data_source/PatADL/A3");
+            var strA4 = OCX.GetData("Data_source/PatADL/A4");
+            var strA5 = OCX.GetData("Data_source/PatADL/A5");
+            var strA6 = OCX.GetData("Data_source/PatADL/A6");
+            var strA7 = OCX.GetData("Data_source/PatADL/A7");
+            var strA8 = OCX.GetData("Data_source/PatADL/A8");
+            var strA9 = OCX.GetData("Data_source/PatADL/A9");
+            var strA10 = OCX.GetData("Data_source/PatADL/A10");
+            var strA11 = OCX.GetData("Data_source/PatADL/A11");
+            var strA12 = OCX.GetData("Data_source/PatADL/A12");
+            var strA13 = OCX.GetData("Data_source/PatADL/A13");
+            var strA14 = OCX.GetData("Data_source/PatADL/A14");
+            var strA15 = OCX.GetData("Data_source/PatADL/A15");
+            var strA16 = OCX.GetData("Data_source/PatADL/A16");
+            var strA17 = OCX.GetData("Data_source/PatADL/A17");
+            var strA18 = OCX.GetData("Data_source/PatADL/A18");
+            var strA19 = OCX.GetData("Data_source/PatADL/A19");
+            var strA20 = OCX.GetData("Data_source/PatADL/A20");
+
+            var strADLlist = new Array(strA1, strA2, strA3, strA4, strA5, strA6, strA7, strA8, strA9, strA10, strA11, strA12, strA13, strA14, strA15, strA16, strA17, strA18, strA19, strA20);
+            var nADLlist = new Array(20);
+            
+            var nTotalpal = 0;
+            var nEmptyCount = 0;
+            for(var nADLIndex = 0; nADLIndex < 20; ++nADLIndex)
+            {
+                if ("独立完成" == strADLlist[nADLIndex])
+                {
+                    strADLlist[nADLIndex] = "1";
+                    nADLlist[nADLIndex] = 1;
+                }
+                else if ("有些困难" == strADLlist[nADLIndex])
+                {
+                    strADLlist[nADLIndex] = "2";
+                    nADLlist[nADLIndex] = 2;
+                }
+                else if ("需要帮助" == strADLlist[nADLIndex])
+                {
+                    strADLlist[nADLIndex] = "3";
+                    nADLlist[nADLIndex] = 3;
+                }
+                else if ("无法完成" == strADLlist[nADLIndex])
+                {
+                    strADLlist[nADLIndex] = "4";
+                    nADLlist[nADLIndex] = 4;
+                }
+                else
+                {
+                    strADLlist[nADLIndex] = "0";
+                    nADLlist[nADLIndex] = 0;
+                    if("" == strADLlist[nADLIndex])
+                    {
+                        ++nEmptyCount;
+                    }
+                }
+
+                nTotalpal += nADLlist[nADLIndex];
+            }
+                
+            var strTotalpal = OCX.GetData("Data_source/PatADL/Total");
+            if(20 == nEmptyCount)
+            {
+                strTotalpal = "";
+            }
+
+            //get the data of pds
+            var strD1Situation = OCX.GetData("Data_source/PatDisease/D1/Situation");
+            var strD2Situation = OCX.GetData("Data_source/PatDisease/D2/Situation");
+            var strD3Situation = OCX.GetData("Data_source/PatDisease/D3/Situation");
+            var strD4Situation = OCX.GetData("Data_source/PatDisease/D4/Situation");
+            var strD5Situation = OCX.GetData("Data_source/PatDisease/D5/Situation");
+            var strD6Situation = OCX.GetData("Data_source/PatDisease/D6/Situation");
+            var strD7Situation = OCX.GetData("Data_source/PatDisease/D7/Situation");
+            var strD8Situation = OCX.GetData("Data_source/PatDisease/D8/Situation");
+            var strD9Situation = OCX.GetData("Data_source/PatDisease/D9/Situation");
+            var strD10Situation = OCX.GetData("Data_source/PatDisease/D10/Situation");
+            var strD11Situation = OCX.GetData("Data_source/PatDisease/D11/Situation");
+            var strD12Situation = OCX.GetData("Data_source/PatDisease/D12/Situation");
+            var strD13Situation = OCX.GetData("Data_source/PatDisease/D13/Situation");
+            var strD14Situation = OCX.GetData("Data_source/PatDisease/D14/Situation");
+            var strD15Situation = OCX.GetData("Data_source/PatDisease/D15/Situation");
+            var strD16Situation = OCX.GetData("Data_source/PatDisease/D16/Situation");
+            var strD17Situation = OCX.GetData("Data_source/PatDisease/D17/Situation");
+            var strD18Situation = OCX.GetData("Data_source/PatDisease/D18/Situation");
+            var strD19Situation = OCX.GetData("Data_source/PatDisease/D19/Situation");
+            var strD20Situation = OCX.GetData("Data_source/PatDisease/D20/Situation");
+            var strD21Situation = OCX.GetData("Data_source/PatDisease/D21/Situation");
+            var strImportantDSituation = OCX.GetData("Data_source/PatDisease/ImportantD/Situation");
+            var strDescription = OCX.GetData("Data_source/PatDisease/Description");
+
+            //get the data of pot
+            var strVocabulary1 = OCX.GetData("Data_source/PatOtherTest/Vocabulary1");
+            var strVocabulary2 = OCX.GetData("Data_source/PatOtherTest/Vocabulary2");
+            var strVocabulary3 = OCX.GetData("Data_source/PatOtherTest/Vocabulary3");
+            var strPicture1 = OCX.GetData("Data_source/PatOtherTest/Picture1");
+            var strPicture2 = OCX.GetData("Data_source/PatOtherTest/Picture2");
+            var strConnectNumber1 = OCX.GetData("Data_source/PatOtherTest/ConnectNumber1");
+            var strConnectNumber2 = OCX.GetData("Data_source/PatOtherTest/ConnectNumber2");
+            var strVocabulary4 = OCX.GetData("Data_source/PatOtherTest/Vocabulary4");
+            var strVocabularyAnalyse1 = OCX.GetData("Data_source/PatOtherTest/VocabularyAnalyse1");
+            var strPicture3 = OCX.GetData("Data_source/PatOtherTest/Picture3");
+            var strVocabularyAnalyse2 = OCX.GetData("Data_source/PatOtherTest/VocabularyAnalyse2");
+            var strPatCDR = OCX.GetData("Data_source/PatOtherTest/PatCDR");
+            var strPatGDS = OCX.GetData("Data_source/PatOtherTest/PatGDS2");
+            
+            if("" == strVocabularyAnalyse1 && "" != strVocabularyAnalyse2)
+                strVocabularyAnalyse1 = "0";
+            else if("" == strVocabularyAnalyse2 && "" != strVocabularyAnalyse1)
+                strVocabularyAnalyse2 = "0";
+
+            //get the data of ppe
+            var strHeight = OCX.GetData("Data_source/PatPhysicalExam/Height");
+            var strWeight = OCX.GetData("Data_source/PatPhysicalExam/Weight");
+            var strWaistline = OCX.GetData("Data_source/PatPhysicalExam/Waistline");
+            var strHipline = OCX.GetData("Data_source/PatPhysicalExam/Hipline");
+            var strBloodPressureH = OCX.GetData("Data_source/PatPhysicalExam/BloodPressureH");
+            var strBloodPressureL = OCX.GetData("Data_source/PatPhysicalExam/BloodPressureL");
+            var strB1Result = OCX.GetData("Data_source/PatPhysicalExam/B1/Result");
+            var strB1Note = OCX.GetData("Data_source/PatPhysicalExam/B1/Note");
+            var strB2Result = OCX.GetData("Data_source/PatPhysicalExam/B2/Result");
+            var strB2Note = OCX.GetData("Data_source/PatPhysicalExam/B2/Note");
+            var strB3Result = OCX.GetData("Data_source/PatPhysicalExam/B3/Result");
+            var strB3Note = OCX.GetData("Data_source/PatPhysicalExam/B3/Note");
+            var strB4Result = OCX.GetData("Data_source/PatPhysicalExam/B4/Result");
+            var strB4Note = OCX.GetData("Data_source/PatPhysicalExam/B4/Note");
+            var strB5Result = OCX.GetData("Data_source/PatPhysicalExam/B5/Result");
+            var strB5Note = OCX.GetData("Data_source/PatPhysicalExam/B5/Note");
+            var strB6Result = OCX.GetData("Data_source/PatPhysicalExam/B6/Result");
+            var strB6Note = OCX.GetData("Data_source/PatPhysicalExam/B6/Note");
+            var strB7Result = OCX.GetData("Data_source/PatPhysicalExam/B7/Result");
+            var strB7Note = OCX.GetData("Data_source/PatPhysicalExam/B7/Note");
+            var strB8Result = OCX.GetData("Data_source/PatPhysicalExam/B8/Result");
+            var strB8Note = OCX.GetData("Data_source/PatPhysicalExam/B8/Note");
+            var strB9Result = OCX.GetData("Data_source/PatPhysicalExam/B9/Result");
+            var strB9Note = OCX.GetData("Data_source/PatPhysicalExam/B9/Note");
+            var strB10Result = OCX.GetData("Data_source/PatPhysicalExam/B10/Result");
+            var strB10Note = OCX.GetData("Data_source/PatPhysicalExam/B10/Note");
+            var strB11Result = OCX.GetData("Data_source/PatPhysicalExam/B11/Result");
+            var strB11Note = OCX.GetData("Data_source/PatPhysicalExam/B11/Note");
+            var strB12Result = OCX.GetData("Data_source/PatPhysicalExam/B12/Result");
+            var strB12Note = OCX.GetData("Data_source/PatPhysicalExam/B12/Note");
+            var strB12aResult = OCX.GetData("Data_source/PatPhysicalExam/B12a/Result");
+            var strB12aNote = OCX.GetData("Data_source/PatPhysicalExam/B12a/Note");
+            var strB12bResult = OCX.GetData("Data_source/PatPhysicalExam/B12b/Result");
+            var strB12bNote = OCX.GetData("Data_source/PatPhysicalExam/B12b/Note");
+            var strB12cResult = OCX.GetData("Data_source/PatPhysicalExam/B12c/Result");
+            var strB12cNote = OCX.GetData("Data_source/PatPhysicalExam/B12c/Note");
+            var strB12dResult = OCX.GetData("Data_source/PatPhysicalExam/B12d/Result");
+            var strB12dNote = OCX.GetData("Data_source/PatPhysicalExam/B12d/Note");
+            var strB12eResult = OCX.GetData("Data_source/PatPhysicalExam/B12e/Result");
+            var strB12eNote = OCX.GetData("Data_source/PatPhysicalExam/B12e/Note");
+            var strB12fResult = OCX.GetData("Data_source/PatPhysicalExam/B12f/Result");
+            var strB12fNote = OCX.GetData("Data_source/PatPhysicalExam/B12f/Note");
+
+            //get the data of ppe
+            var strFT3 = OCX.GetData("Data_source/PatLabExam/FT3");
+            var strFT4 = OCX.GetData("Data_source/PatLabExam/FT4");
+            var strTT3 = OCX.GetData("Data_source/PatLabExam/TT3");
+            var strTT4 = OCX.GetData("Data_source/PatLabExam/TT4");
+            var strTSH = OCX.GetData("Data_source/PatLabExam/TSH");
+            var strFolacin = OCX.GetData("Data_source/PatLabExam/Folacin");
+            var strB12 = OCX.GetData("Data_source/PatLabExam/B12");
+            var strTBG = OCX.GetData("Data_source/PatLabExam/TBG");
+            var strEmptyG = OCX.GetData("Data_source/PatLabExam/EmptyG");
+            var strGAfter = OCX.GetData("Data_source/PatLabExam/GAfter");
+            var strHbAlc = OCX.GetData("Data_source/PatLabExam/HbAlc");
+            var strUricAcid = OCX.GetData("Data_source/PatLabExam/UricAcid");
+            var strCholesterol = OCX.GetData("Data_source/PatLabExam/Cholesterol");
+            var strGanEster = OCX.GetData("Data_source/PatLabExam/GanEster");
+            var strHDLC = OCX.GetData("Data_source/PatLabExam/HDLC");
+            var strLDLC = OCX.GetData("Data_source/PatLabExam/LDLC");
+            var strGOT = OCX.GetData("Data_source/PatLabExam/GOT");
+            var strGPT = OCX.GetData("Data_source/PatLabExam/GPT");
+            var strBUN = OCX.GetData("Data_source/PatLabExam/BUN");
+            var strCR = OCX.GetData("Data_source/PatLabExam/CR");
+            var strAlbumin = OCX.GetData("Data_source/PatLabExam/Albumin");
+            var strRBC = OCX.GetData("Data_source/PatLabExam/RBC");
+            var strHB = OCX.GetData("Data_source/PatLabExam/HB");
+            var strPLT = OCX.GetData("Data_source/PatLabExam/PLT");
+            var strWBC = OCX.GetData("Data_source/PatLabExam/WBC");
+            var strApoE = OCX.GetData("Data_source/PatLabExam/ApoE");
+            var strProtein = OCX.GetData("Data_source/PatLabExam/Protein");
+            var strElectrocardiogramDateOrg = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Date");
+            if ("/////" == strElectrocardiogramDateOrg) {
+                strElectrocardiogramDateOrg = "1753/01/01///";
+            }
+            var strElectrocardiogramDate = strElectrocardiogramDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
+
+            var strElectrocardiogramResult = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Result");
+
+            var strElectrocardiogramNote = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Note");
+            var strEchocardiagraphyDateOrg = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Date");
+            if ("/////" == strEchocardiagraphyDateOrg) {
+                strEchocardiagraphyDateOrg = "1753/01/01///";
+            }
+            var strEchocardiagraphyDate = strEchocardiagraphyDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
+
+            var strEchocardiagraphyResult = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Result");
+
+            var strEchocardiagraphyNote = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Note");
+            var strEEGDateOrg = OCX.GetData("Data_source/PatLabExam/EEG/Date");
+            if ("/////" == strEEGDateOrg) {
+                strEEGDateOrg = "1753/01/01///";
+            }
+            var strEEGDate = strEEGDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
+
+            var strEEGResult = OCX.GetData("Data_source/PatLabExam/EEG/Result");
+
+            var strEEGNote = OCX.GetData("Data_source/PatLabExam/EEG/Note");
+            var strCTDateOrg = OCX.GetData("Data_source/PatLabExam/CT/Date");
+            if ("/////" == strCTDateOrg) {
+                strCTDateOrg = "1753/01/01///";
+            }
+            var strCTDate = strCTDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
+
+            var strCTResult = OCX.GetData("Data_source/PatLabExam/CT/Result");
+
+            var strCTNote = OCX.GetData("Data_source/PatLabExam/CT/Note");
+
+            //get the data of drug
+            var strDrugCatogary1 = "抗抑郁/焦虑药";
+            var strDrugCatogary2 = "抗精神病药物";
+            var strDrugCatogary3 = "镇静安眠药";
+            var strDrugCatogary4 = "抗癫痫药物";
+            var strDrugCatogary5 = "帕金森药物";
+            var strDrugCatogary6 = "痴呆药药物";
+            var strDrugCatogary7 = "";
+            var strDrugCatogary7If = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary7");
+            if ("是" == strDrugCatogary7If) {
+                strDrugCatogary7 = "消炎镇痛药";
+            }
+            var strDrugCatogary8 = "促进血液循环药物";
+            var strDrugCatogary9 = "扩冠药物";
+            var strDrugCatogary10 = "抗血小板药物";
+            var strDrugCatogary11 = "抗凝药";
+            var strDrugCatogary1Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug1/Name");
+            var strDrugCatogary1Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug2/Name");
+            var strDrugCatogary1Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug3/Name");
+            var strDrugCatogary1Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug4/Name");
+            var strDrugCatogary1Drug5 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug5/Name");
+            var strDrugCatogary1Drug6 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug6/Name");
+            var strDrugCatogary1Drug7 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug7/Name");
+            var strDrugCatogary1Drug8 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary1/Drug8/Name");
+            if ("" == strDrugCatogary1Drug1 && "" == strDrugCatogary1Drug2 && "" == strDrugCatogary1Drug3
+            && "" == strDrugCatogary1Drug4 && "" == strDrugCatogary1Drug5 && "" == strDrugCatogary1Drug6
+            && "" == strDrugCatogary1Drug7 && "" == strDrugCatogary1Drug8) {
+                strDrugCatogary1 = "";
+            }
+            var strDrugCatogary2Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary2/Drug1/Name");
+            var strDrugCatogary2Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary2/Drug2/Name");
+            if ("" == strDrugCatogary2Drug1 && "" == strDrugCatogary2Drug2) {
+                strDrugCatogary2 = "";
+            }
+            var strDrugCatogary3Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary3/Drug1/Name");
+            var strDrugCatogary3Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary3/Drug2/Name");
+            var strDrugCatogary3Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary3/Drug3/Name");
+            var strDrugCatogary3Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary3/Drug4/Name");
+            var strDrugCatogary3Drug5 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary3/Drug5/Name");
+            if ("" == strDrugCatogary3Drug1 && "" == strDrugCatogary3Drug2 && "" == strDrugCatogary3Drug3
+            && "" == strDrugCatogary3Drug4 && "" == strDrugCatogary3Drug5) {
+                strDrugCatogary3 = "";
+            }
+            var strDrugCatogary4Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary4/Drug1/Name");
+            var strDrugCatogary4Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary4/Drug2/Name");
+            var strDrugCatogary4Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary4/Drug3/Name");
+            var strDrugCatogary4Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary4/Drug4/Name");
+            if ("" == strDrugCatogary4Drug1 && "" == strDrugCatogary4Drug2 && "" == strDrugCatogary4Drug3
+            && "" == strDrugCatogary4Drug4) {
+                strDrugCatogary4 = "";
+            }
+            var strDrugCatogary5Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary5/Drug1/Name");
+            var strDrugCatogary5Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary5/Drug2/Name");
+            var strDrugCatogary5Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary5/Drug3/Name");
+            var strDrugCatogary5Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary5/Drug4/Name");
+            var strDrugCatogary5Drug5 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary5/Drug5/Name");
+            if ("" == strDrugCatogary5Drug1 && "" == strDrugCatogary5Drug2 && "" == strDrugCatogary5Drug3
+            && "" == strDrugCatogary5Drug4 && "" == strDrugCatogary5Drug5) {
+                strDrugCatogary5 = "";
+            }
+            var strDrugCatogary6Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary6/Drug1/Name");
+            var strDrugCatogary6Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary6/Drug2/Name");
+            var strDrugCatogary6Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary6/Drug3/Name");
+            var strDrugCatogary6Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary6/Drug4/Name");
+            if ("" == strDrugCatogary6Drug1 && "" == strDrugCatogary6Drug2 && "" == strDrugCatogary6Drug3
+            && "" == strDrugCatogary6Drug4) {
+                strDrugCatogary6 = "";
+            }
+            var strDrugCatogary8Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary8/Drug1/Name");
+            var strDrugCatogary8Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary8/Drug2/Name");
+            var strDrugCatogary8Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary8/Drug3/Name");
+            if ("" == strDrugCatogary8Drug1 && "" == strDrugCatogary8Drug2 && "" == strDrugCatogary8Drug3) {
+                strDrugCatogary8 = "";
+            }
+            var strDrugCatogary9Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary9/Drug1/Name");
+            if ("" == strDrugCatogary9Drug1) {
+                strDrugCatogary9 = "";
+            }
+            var strDrugCatogary10Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary10/Drug1/Name");
+            var strDrugCatogary10Drug2 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary10/Drug2/Name");
+            var strDrugCatogary10Drug3 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary10/Drug3/Name");
+            var strDrugCatogary10Drug4 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary10/Drug4/Name");
+            if ("" == strDrugCatogary10Drug1 && "" == strDrugCatogary10Drug2 && "" == strDrugCatogary10Drug3
+            && "" == strDrugCatogary10Drug4) {
+                strDrugCatogary10 = "";
+            }
+            var strDrugCatogary11Drug1 = OCX.GetData("Data_source/PatRecentDrug/DrugCatogary11/Drug1/Name");
+            if ("" == strDrugCatogary11Drug1) {
+                strDrugCatogary11 = "";
+            }
+
+            //calculate the CDR score
+            var strPatCDRMemory = OCX.GetData("Data_source/PatOtherTest/PatCDR1/Merory");
+            var fMemory = 0;
+            if ("" != strPatCDRMemory) {
+                fMemory = parseFloat(strPatCDRMemory);
+            }
+            var strPatCDROrientation = OCX.GetData("Data_source/PatOtherTest/PatCDR1/Orientation");
+            var fOrientation = 0;
+            if ("" != strPatCDROrientation) {
+                fOrientation = parseFloat(strPatCDROrientation);
+            }
+            var strPatCDRJudgementPloblemSolving = OCX.GetData("Data_source/PatOtherTest/PatCDR1/JudgementPloblemSolving");
+            var fJudgementPloblemSolving = 0;
+            if ("" != strPatCDRJudgementPloblemSolving) {
+                fJudgementPloblemSolving = parseFloat(strPatCDRJudgementPloblemSolving);
+            }
+            var strPatCDRCommunityAffairs = OCX.GetData("Data_source/PatOtherTest/PatCDR1/CommunityAffairs");
+            var fCommunityAffairs = 0;
+            if ("" != strPatCDRCommunityAffairs) {
+                fCommunityAffairs = parseFloat(strPatCDRCommunityAffairs);
+            }
+            var strPatCDRHomeHobbies = OCX.GetData("Data_source/PatOtherTest/PatCDR1/HomeHobbies");
+            var fHomeHobbies = 0;
+            if ("" != strPatCDRHomeHobbies) {
+                fHomeHobbies = parseFloat(strPatCDRHomeHobbies);
+            }
+            var strPatCDRPersonalCare = OCX.GetData("Data_source/PatOtherTest/PatCDR1/PersonalCare");
+            var fPersonalCare = 0;
+            if ("" != strPatCDRPersonalCare) {
+                fPersonalCare = parseFloat(strPatCDRPersonalCare);
+            }
+            var nEquelM = 0;
+            var nGreaterM = 0;
+            var nLessM = 0;
+            var nZero = 0;
+
+            if (Math.abs(fOrientation - fMemory) < 0.1) {//if fOrientation is equel to fMemory
+                ++nEquelM;
+            }
+            else if (fOrientation - fMemory < 0) {//if fOrientation is less than fMemory
+                ++nLessM;
+            }
+            else {//if fOrientation is greater than fMemory
+                ++nGreaterM;
+            }
+
+            if (Math.abs(fJudgementPloblemSolving - fMemory) < 0.1) {
+                ++nEquelM;
+            }
+            else if (fJudgementPloblemSolving - fMemory < 0) {
+                ++nLessM;
+            }
+            else {
+                ++nGreaterM;
+            }
+
+            if (Math.abs(fCommunityAffairs - fMemory) < 0.1) {
+                ++nEquelM;
+            }
+            else if (fCommunityAffairs - fMemory < 0) {
+                ++nLessM;
+            }
+            else {
+                ++nGreaterM;
+            }
+
+            if (Math.abs(fHomeHobbies - fMemory) < 0.1) {
+                ++nEquelM;
+            }
+            else if (fHomeHobbies - fMemory < 0) {
+                ++nLessM;
+            }
+            else {
+                ++nGreaterM;
+            }
+
+            if (Math.abs(fPersonalCare - fMemory) < 0.1) {
+                ++nEquelM;
+            }
+            else if (fPersonalCare - fMemory < 0) {
+                ++nLessM;
+            }
+            else {
+                ++nGreaterM;
+            }
+
+            var fPatCDR = fMemory; //mostly, the score of the CDR is equel to Memory
+            if ((Math.abs(fMemory - 0.5) < 0.1) && (nGreaterM >= 3)) {//当M=0. 5时，如果至少有3个其他项目计分为1或以上，则CDR=1。
+                fPatCDR = 1;
+            }
+            else if ((Math.abs(fMemory) < 0.1) && (nGreaterM >= 2)) {//如果M=0，CDR=0，除非在 2个或以上次要项目存在损害（0. 5或以上），这时CDR=0. 5。
+                fPatCDR = 0.5;
+            }
+
+            if (0 == nGreaterM && nEquelM <= 2) {//次要项目集中在M一侧时，选择离M最近的计分为CDR得分
+                if (Math.abs(fMemory - 0.5) < 0.1) {
+                    fPatCDR = 0;
+                }
+                else if (Math.abs(fMemory - 1) < 0.1) {
+                    fPatCDR = 0.5;
+                }
+                else if (Math.abs(fMemory - 2) < 0.1) {
+                    fPatCDR = 1;
+                }
+                else if (Math.abs(fMemory - 3) < 0.1) {
+                    fPatCDR = 2;
+                }
+            }
+            else if (0 == nLessM && nEquelM <= 2) {//次要项目集中在M一侧时，选择离M最近的计分为CDR得分
+                if (Math.abs(fMemory) < 0.1) {
+                    fPatCDR = 0.5;
+                }
+                else if (Math.abs(fMemory - 0.5) < 0.1) {
+                    fPatCDR = 1;
+                }
+                else if (Math.abs(fMemory - 1) < 0.1) {
+                    fPatCDR = 2;
+                }
+                else if (Math.abs(fMemory - 2) < 0.1) {
+                    fPatCDR = 3;
+                }
+            }
+
+            if (Math.abs(fOrientation) < 0.1) {
+                ++nZero;
+            }
+            if (Math.abs(fJudgementPloblemSolving) < 0.1) {
+                ++nZero;
+            }
+            if (Math.abs(fCommunityAffairs) < 0.1) {
+                ++nZero;
+            }
+            if (Math.abs(fHomeHobbies) < 0.1) {
+                ++nZero;
+            }
+            if (Math.abs(fPersonalCare) < 0.1) {
+                ++nZero;
+            }
+            if (fMemory - 1 > 0.1 && nZero > 2) {//当M=1或以上，CDR不能为0；在这种情况下，当次要项目的大多数为0时，CDR= 0. 5。
+                fPatCDR = 0.5;
+            }
+
+            if(Math.abs(fMemory - 0.5) < 0.1 && Math.abs(fPatCDR) < 0.1){//如果M=0. 5，CDR不能为0，只能是0. 5或1
+                fPatCDR = 0.5;
+            }
+
+            strPatCDR = fPatCDR.toString();
+
+            if("" == strPatCDR) {
+                strPatCDR = "0";
+            }
+
+            if ("" == strPatCDRMemory && "" == strPatCDROrientation && "" == strPatCDRJudgementPloblemSolving 
+            && "" == strPatCDRHomeHobbies && "" == strPatCDRPersonalCare) {
+                strPatCDR = "";
+            }
+            
+            //get the record data
+            var strDiagnosisiResult = OCX.GetData("Data_source/VisitRecord/DiagnosisiResult");
+            var strRecordNote = OCX.GetData("Data_source/VisitRecord/RecordNote");
+            var strCDSSDiagnosis = OCX.GetData("Data_source/VisitRecord/CDSSDiagnosis");
+            if(strCDSSDiagnosis.replace(/[(^\s+)(\s+$)]/g,"")=="正在推理中。。。"){
+                strCDSSDiagnosis = "";
+            }
+
+//            //set OCX the data
+//            if ("0" == strTotalpme)
+//                strTotalpme = "";
+//            if ("0" == strTotalpma)
+//                strTotalpma = "";
+
+            OCX.SetData("Data_source/PatMMSE/Total", strTotalpme);
+            OCX.SetData("Data_source/PatMoCA/Total", strTotalpma);
+            OCX.SetData("Data_source/PatOtherTest/PatCDR1", strPatCDR);
+
+            var strDiagnosisMMSE, strDiagnosisMoCA, strDiagnosisADL, strDiagnosisVocabulary1, strDiagnosisVocabulary2, strDiagnosisVocabulary3;
+            var strDiagnosisVocabulary4, strDiagnosisPicture1, strDiagnosisPicture2, strDiagnosisPicture3, strDiagnosisConnectNumber1;
+            var strDiagnosisConnectNumber2, strDiagnosisVocabularyAnalyse1, strDiagnosisVocabularyAnalyse2, strDiagnosisPatCDR, strDiagnosisPatGDS;
+            strDiagnosisMMSE = OCX.GetData("Data_source/LastScore/MMSE");
+            strDiagnosisMoCA = OCX.GetData("Data_source/LastScore/MoCA");
+            strDiagnosisADL = OCX.GetData("Data_source/LastScore/ADL");
+            strDiagnosisVocabulary1 = OCX.GetData("Data_source/LastScore/Vocabulary1");
+            strDiagnosisVocabulary2 = OCX.GetData("Data_source/LastScore/Vocabulary2");
+            strDiagnosisVocabulary3 = OCX.GetData("Data_source/LastScore/Vocabulary3");
+            strDiagnosisVocabulary4 = OCX.GetData("Data_source/LastScore/Vocabulary4");
+            strDiagnosisPicture1 = OCX.GetData("Data_source/LastScore/Picture1");
+            strDiagnosisPicture2 = OCX.GetData("Data_source/LastScore/Picture2");
+            strDiagnosisPicture3 = OCX.GetData("Data_source/LastScore/Picture3");
+            strDiagnosisConnectNumber1 = OCX.GetData("Data_source/LastScore/ConnectNumber1");
+            strDiagnosisConnectNumber2 = OCX.GetData("Data_source/LastScore/ConnectNumber2");
+            strDiagnosisVocabularyAnalyse1 = OCX.GetData("Data_source/LastScore/VocabularyAnalyse1");
+            strDiagnosisVocabularyAnalyse2 = OCX.GetData("Data_source/LastScore/VocabularyAnalyse2");
+            strDiagnosisPatCDR = OCX.GetData("Data_source/LastScore/PatCDR");
+            strDiagnosisPatGDS = OCX.GetData("Data_source/LastScore/PatGDS");
+
+            if("" == strDiagnosisMMSE) {
+                strDiagnosisMMSE = OCX.GetData("Data_source/PatMMSE/Total");
+            }
+            OCX.SetData("Data_source/Diganosis/MMSE", strDiagnosisMMSE);
+
+            if("" == strDiagnosisMoCA) {
+                strDiagnosisMoCA = OCX.GetData("Data_source/PatMoCA/Total");
+            }
+            OCX.SetData("Data_source/Diganosis/MoCA", strDiagnosisMoCA);
+
+            if("" == strDiagnosisADL) {
+                strDiagnosisADL = OCX.GetData("Data_source/PatADL/Total");
+            }
+            OCX.SetData("Data_source/Diganosis/ADL", strDiagnosisADL);
+
+            if("" == strDiagnosisVocabulary1) {
+                strDiagnosisVocabulary1 = OCX.GetData("Data_source/PatOtherTest/Vocabulary1");
+            }
+            OCX.SetData("Data_source/Diganosis/Vocabulary1", strDiagnosisVocabulary1);
+
+            if("" == strDiagnosisVocabulary2) {
+                strDiagnosisVocabulary2 = OCX.GetData("Data_source/PatOtherTest/Vocabulary2");
+            }
+            OCX.SetData("Data_source/Diganosis/Vocabulary2", strDiagnosisVocabulary2);
+
+            if("" == strDiagnosisVocabulary3) {
+                strDiagnosisVocabulary3 = OCX.GetData("Data_source/PatOtherTest/Vocabulary3");
+            }
+            OCX.SetData("Data_source/Diganosis/Vocabulary3", strDiagnosisVocabulary3);
+
+            if("" == strDiagnosisVocabulary4) {
+                strDiagnosisVocabulary4 = OCX.GetData("Data_source/PatOtherTest/Vocabulary4");
+            }
+            OCX.SetData("Data_source/Diganosis/Vocabulary4", strDiagnosisVocabulary4);
+
+            if("" == strDiagnosisPicture1) {
+                strDiagnosisPicture1 = OCX.GetData("Data_source/PatOtherTest/Picture1");
+            }
+            OCX.SetData("Data_source/Diganosis/Picture1", strDiagnosisPicture1);
+
+            if("" == strDiagnosisPicture2) {
+                strDiagnosisPicture2 = OCX.GetData("Data_source/PatOtherTest/Picture2");
+            }
+            OCX.SetData("Data_source/Diganosis/Picture2", strDiagnosisPicture2);
+
+            if("" == strDiagnosisPicture3) {
+                strDiagnosisPicture3 = OCX.GetData("Data_source/PatOtherTest/Picture3");
+            }
+            OCX.SetData("Data_source/Diganosis/Picture3", strDiagnosisPicture3);
+
+            if("" == strDiagnosisConnectNumber1) {
+                strDiagnosisConnectNumber1 = OCX.GetData("Data_source/PatOtherTest/ConnectNumber1");
+            }
+            OCX.SetData("Data_source/Diganosis/ConnectNumber1", strDiagnosisConnectNumber1);
+
+            if("" == strDiagnosisConnectNumber2) {
+                strDiagnosisConnectNumber2 = OCX.GetData("Data_source/PatOtherTest/ConnectNumber2");
+            }
+            OCX.SetData("Data_source/Diganosis/ConnectNumber2", strDiagnosisConnectNumber2);
+
+            if("" == strDiagnosisVocabularyAnalyse1) {
+                strDiagnosisVocabularyAnalyse1 = OCX.GetData("Data_source/PatOtherTest/VocabularyAnalyse1");
+            }
+            OCX.SetData("Data_source/Diganosis/VocabularyAnalyse1", strDiagnosisVocabularyAnalyse1);
+
+            if("" == strDiagnosisVocabularyAnalyse2) {
+                strDiagnosisVocabularyAnalyse2 = OCX.GetData("Data_source/PatOtherTest/VocabularyAnalyse2");
+            }
+            OCX.SetData("Data_source/Diganosis/VocabularyAnalyse2", strDiagnosisVocabularyAnalyse2);
+
+            if("" == strDiagnosisPatCDR) {
+                strDiagnosisPatCDR = OCX.GetData("Data_source/PatOtherTest/PatCDR1");
+            }
+            OCX.SetData("Data_source/Diganosis/PatCDR", strDiagnosisPatCDR);
+
+            if("" == strDiagnosisPatGDS) {
+                strDiagnosisPatGDS = OCX.GetData("Data_source/PatOtherTest/PatGDS2");
+            }
+            OCX.SetData("Data_source/Diganosis/PatGDS", strDiagnosisPatGDS);
+
+            var thing = { pma: { MC1: strMC1, MC2: strMC2
+            , MC3: strMC3, MC4: strMC4, MC5: strMC5
+            , MC6: strMC6, MC7: strMC7, MC8: strMC8
+            , MC9: strMC9, Total: strTotalpma
+            },
+                pme: { M1: strM1, M2: strM2
+            , M3: strM3, M4: strM4, M5: strM5
+            , M6: strM6, M7: strM7, M8: strM8
+            , M9: strM9, M10: strM10, M11: strM11
+            , Total: strTotalpme
+                },
+                pal: { A1: strADLlist[0], A2: strADLlist[1]
+            , A3: strADLlist[2], A4: strADLlist[3], A5: strADLlist[4]
+            , A6: strADLlist[5], A7: strADLlist[6], A8: strADLlist[7]
+            , A9: strADLlist[8], A10: strADLlist[9], A11: strADLlist[10]
+            , A12: strADLlist[11], A13: strADLlist[12], A14: strADLlist[13]
+            , A15: strADLlist[14], A16: strADLlist[15], A17: strADLlist[16]
+            , A18: strADLlist[17], A19: strADLlist[18], A20: strADLlist[19]
+            , Total: strTotalpal
+                },
+                pds: { D1: { Situation: strD1Situation }, D2: { Situation: strD2Situation }
+            , D3: { Situation: strD3Situation }, D4: { Situation: strD4Situation }, D5: { Situation: strD5Situation }
+            , D6: { Situation: strD6Situation }, D7: { Situation: strD7Situation }, D8: { Situation: strD8Situation }
+            , D9: { Situation: strD9Situation }, D10: { Situation: strD10Situation }, D11: { Situation: strD11Situation }
+            , D12: { Situation: strD12Situation }, D13: { Situation: strD13Situation }, D14: { Situation: strD14Situation }
+            , D15: { Situation: strD15Situation }, D16: { Situation: strD16Situation }, D17: { Situation: strD17Situation }
+            , D18: { Situation: strD18Situation }, D19: { Situation: strD19Situation }, D20: { Situation: strD20Situation }
+            , D21: { Situation: strD21Situation }, ImportantD: { Situation: strImportantDSituation }, Description: strDescription
+                },
+                pot: { Vocabulary1: strVocabulary1, Vocabulary2: strVocabulary2
+            , Vocabulary3: strVocabulary3, Picture1: strPicture1, Picture2: strPicture2
+            , ConnectNumber1: strConnectNumber1, ConnectNumber2: strConnectNumber2, Vocabulary4: strVocabulary4
+            , VocabularyAnalyse1: strVocabularyAnalyse1, Picture3: strPicture3, VocabularyAnalyse2: strVocabularyAnalyse2
+            , PatCDR: strPatCDR, PatGDS: strPatGDS
+                },
+                ppe: { Height: strHeight, Weight: strWeight
+            , Waistline: strWaistline, Hipline: strHipline, BloodPressureH: strBloodPressureH
+            , BloodPressureL: strBloodPressureL, B1: { Result: strB1Result, Note: strB1Note }
+            , B2: { Result: strB2Result, Note: strB2Note }, B3: { Result: strB3Result, Note: strB3Note }
+            , B4: { Result: strB4Result, Note: strB4Note }, B5: { Result: strB5Result, Note: strB5Note }
+            , B6: { Result: strB6Result, Note: strB6Note }, B7: { Result: strB7Result, Note: strB7Note }
+            , B8: { Result: strB8Result, Note: strB8Note }, B9: { Result: strB9Result, Note: strB9Note }
+            , B10: { Result: strB10Result, Note: strB10Note }, B11: { Result: strB11Result, Note: strB11Note }
+            , B12: { Result: strB12Result, Note: strB12Note }, B12a: { Result: strB12aResult, Note: strB12aNote }
+            , B12b: { Result: strB12bResult, Note: strB12bNote }, B12c: { Result: strB12cResult, Note: strB12cNote }
+            , B12d: { Result: strB12dResult, Note: strB12dNote }, B12e: { Result: strB12eResult, Note: strB12eNote }
+            , B12f: { Result: strB12fResult, Note: strB12fNote }
+                },
+                ple: { FT3: strFT3, FT4: strFT4, TT3: strTT3, TT4: strTT4, TSH: strTSH
+            , Folacin: strFolacin, B12: strB12, TBG: strTBG, EmptyG: strEmptyG, GAfter: strGAfter
+            , HbAlc: strHbAlc, UricAcid: strUricAcid, Cholesterol: strCholesterol
+            , GanEster: strGanEster, HDLC: strHDLC, LDLC: strLDLC, GOT: strGOT
+            , GPT: strGPT, BUN: strBUN, CR: strCR
+            , Albumin: strAlbumin, RBC: strRBC, HB: strHB
+            , PLT: strPLT, WBC: strWBC, ApoE: strApoE, Protein: strProtein
+            , Electrocardiogram: { Date: strElectrocardiogramDate, Result: strElectrocardiogramResult, Note: strElectrocardiogramNote }
+            , Echocardiagraphy: { Date: strEchocardiagraphyDate, Result: strEchocardiagraphyResult, Note: strEchocardiagraphyNote }
+            , EEG: { Date: strEEGDate, Result: strEEGResult, Note: strEEGNote }
+            , CT: { Date: strCTDate, Result: strCTResult, Note: strCTNote }
+                },
+                prd: [
+                { Drugcatogary: strDrugCatogary1, Drug: [{ Name: strDrugCatogary1Drug1 }, { Name: strDrugCatogary1Drug2 }
+                , { Name: strDrugCatogary1Drug3 }, { Name: strDrugCatogary1Drug4 }, { Name: strDrugCatogary1Drug5 }
+                , { Name: strDrugCatogary1Drug6 }, { Name: strDrugCatogary1Drug7 }, { Name: strDrugCatogary1Drug8}]
+                }
+                ,
+                { Drugcatogary: strDrugCatogary2, Drug: [{ Name: strDrugCatogary2Drug1 }, { Name: strDrugCatogary2Drug2}]
+                }
+                ,
+                { Drugcatogary: strDrugCatogary3, Drug: [{ Name: strDrugCatogary3Drug1 }, { Name: strDrugCatogary3Drug2 }
+                , { Name: strDrugCatogary3Drug3 }, { Name: strDrugCatogary3Drug4 }, { Name: strDrugCatogary3Drug5}]
+                }
+                ,
+                { Drugcatogary: strDrugCatogary4, Drug: [{ Name: strDrugCatogary4Drug1 }, { Name: strDrugCatogary4Drug2 }
+                , { Name: strDrugCatogary4Drug3 }, { Name: strDrugCatogary4Drug4}]
+                }
+                ,
+                { Drugcatogary: strDrugCatogary5, Drug: [{ Name: strDrugCatogary5Drug1 }, { Name: strDrugCatogary5Drug2 }
+                , { Name: strDrugCatogary5Drug3 }, { Name: strDrugCatogary5Drug4 }, { Name: strDrugCatogary5Drug5}]
+                }
+                ,
+                { Drugcatogary: strDrugCatogary6, Drug: [{ Name: strDrugCatogary6Drug1 }, { Name: strDrugCatogary6Drug2 }
+                , { Name: strDrugCatogary6Drug3 }, { Name: strDrugCatogary6Drug4}]
+                }
+                ,
+                { Drugcatogary: strDrugCatogary7
+                }
+                ,
+                { Drugcatogary: strDrugCatogary8, Drug: [{ Name: strDrugCatogary8Drug1 }, { Name: strDrugCatogary8Drug2 }
+                , { Name: strDrugCatogary8Drug3}]
+                }
+                ,
+                { Drugcatogary: strDrugCatogary9, Drug: [{ Name: strDrugCatogary9Drug1}]
+                }
+                ,
+                { Drugcatogary: strDrugCatogary10, Drug: [{ Name: strDrugCatogary10Drug1 }, { Name: strDrugCatogary10Drug2 }
+                , { Name: strDrugCatogary10Drug3 }, { Name: strDrugCatogary10Drug4}]
+                }
+                ,
+                { Drugcatogary: strDrugCatogary11, Drug: [{ Name: strDrugCatogary11Drug1}]
+                }
+                    ],
+                vsr: { DiagnosisiResult: strDiagnosisiResult, CDSSDiagnosis: strCDSSDiagnosis
+                , RecordNote: strRecordNote
+                }
+            };
+
+            var encoded = $.toJSON(thing);
+
 
             if ($(".selected").last().attr("id") == "辅助诊断") {
                 $("#ocx").hide();
@@ -151,33 +990,4 @@
         });
     });
   
-    function DataFromReporter(archetypesFromReporter)
-    {
-        this.archetypesFromReporter = archetypesFromReporter;
-    }
-
-    function ArchetypeFromReporter(ArchetypeID, valuesFromReporter)
-    {
-        this.ArchetypeID = ArchetypeID;
-        this.valuesFromReporter = valuesFromReporter;
-    }
-
-    function ValueFromReporter(Path, Value)
-    {
-        this.Path = Path;
-        this.Value = Value;
-    }
-
-    function GetReportData(stringFromReporterOCX, list_string) 
-    {
-        var FirIndex = stringFromReporterOCX.indexOf(",");
-        while(0 != FirIndex && -1 != FirIndex)
-        {
-            var oneString = stringFromReporterOCX.substring(0, FirIndex);
-            list_string.push(oneString);
-            stringFromReporterOCX = stringFromReporterOCX.substring(FirIndex + 1);
-            FirIndex = stringFromReporterOCX.indexOf(",");
-        }
-    }
-
 </script>
