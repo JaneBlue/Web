@@ -68,6 +68,7 @@ namespace LNCDCDSS.Controllers
 
         public ActionResult Query()
         {
+            string user= HttpContext.Request.Cookies["username"].Value.ToString();
             string patname = Request["name"];
             string patsex = Request["sex"];
             string date = Request["date"];
@@ -77,13 +78,13 @@ namespace LNCDCDSS.Controllers
             query.Add(patsex);
             query.Add(date);
             query.Add(diagnosisresult);
-
+            query.Add(user);
             List<PatBasicInfor> pts = visitop.GetPat(query);
 
             //  return Json(pts, JsonRequestBehavior.AllowGet);
             return PartialView("PatList", pts);
         }
-
+        [OutputCache(Location = System.Web.UI.OutputCacheLocation.None)]
         public ActionResult ViewRecord(string ID)
         {
             string t = ID;

@@ -246,6 +246,10 @@ namespace LNCDCDSS.Controllers
                 {
                     InputDataValue.CDR = System.Convert.ToDouble(obj.pot.PatCDR);
                 }
+                else
+                {
+                    InputDataValue.CDR = -1;
+                }
 
                 WebReference.InferenceService b = new WebReference.InferenceService();
 
@@ -423,8 +427,10 @@ namespace LNCDCDSS.Controllers
                 {
                     InputDataValue.CDR = System.Convert.ToDouble(obj.pot.PatCDR);
                 }
-
-
+                else
+                {
+                    InputDataValue.CDR = -1;
+                }
 
                 WebReference.InferenceService b = new WebReference.InferenceService();
 

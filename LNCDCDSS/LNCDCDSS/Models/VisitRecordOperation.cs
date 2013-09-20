@@ -287,6 +287,7 @@ namespace LNCDCDSS.Models
             var pats = from p in context.PatBasicInforSet.ToList()
                        where (string.IsNullOrEmpty(Condition[0]) ? true : p.Name == Condition[0])
                       && (string.IsNullOrEmpty(Condition[1]) ? true : p.Sex == Condition[1])
+                      && (string.IsNullOrEmpty(Condition[4]) ? true : p.DoctorAccount.UserName == Condition[4])
                       && (string.IsNullOrEmpty(Condition[2]) ? true : p.VisitRecord.Last().VisitDate == DateTime.Parse(Condition[2]))
                       && (string.IsNullOrEmpty(Condition[3]) ? true : p.VisitRecord.Last().DiagnosisiResult == Condition[3])
                        select p;
