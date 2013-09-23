@@ -443,7 +443,7 @@
             var strMonth = OCX.GetObjectInfo("TextBox_197", "text");
             var nYear = parseInt(strYear, 10);
             var nMonth = parseInt(strMonth, 10);
-            if(NaN == nYear || NaN == nMonth || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
+            if(isNaN(nYear) || isNaN(nMonth) || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
                 strElectrocardiogramDateOrg = "1753/01/01///";
             else
             {
@@ -467,7 +467,7 @@
             strMonth = OCX.GetObjectInfo("TextBox_198", "text");
             nYear = parseInt(strYear, 10);
             nMonth = parseInt(strMonth, 10);
-            if(NaN == nYear || NaN == nMonth || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
+            if(isNaN(nYear) || isNaN(nMonth) || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
                 strEchocardiagraphyDateOrg = "1753/01/01///";
             else
             {
@@ -491,7 +491,7 @@
             strMonth = OCX.GetObjectInfo("TextBox_200", "text");
             nYear = parseInt(strYear, 10);
             nMonth = parseInt(strMonth, 10);
-            if(NaN == nYear || NaN == nMonth || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
+            if(isNaN(nYear) || isNaN(nMonth) || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
                 strEEGDateOrg = "1753/01/01///";
             else
             {
@@ -515,7 +515,7 @@
             strMonth = OCX.GetObjectInfo("TextBox_202", "text");
             nYear = parseInt(strYear, 10);
             nMonth = parseInt(strMonth, 10);
-            if(NaN == nYear || NaN == nMonth || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
+            if(isNaN(nYear) || isNaN(nMonth) || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
                 strCTDateOrg = "1753/01/01///";
             else
             {
