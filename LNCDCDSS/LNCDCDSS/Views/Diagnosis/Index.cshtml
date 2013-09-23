@@ -415,6 +415,20 @@
             if ("/////" == strElectrocardiogramDateOrg) {
                 strElectrocardiogramDateOrg = "1753/01/01///";
             }
+            //
+            var strYear = OCX.GetObjectInfo("TextBox_196", "text");
+            var strMonth = OCX.GetObjectInfo("TextBox_197", "text");
+            var nYear = parseInt(strYear, 10);
+            var nMonth = parseInt(strMonth, 10);
+            if(NaN == nYear || NaN == nMonth || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
+                strElectrocardiogramDateOrg = "1753/01/01///";
+            else
+            {
+                strYear=nYear.toString();
+                strMonth=nMonth.toString();
+                strElectrocardiogramDateOrg = strYear+"/"+strMonth+"/01///";
+            }
+
             var strElectrocardiogramDate = strElectrocardiogramDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
 
             var strElectrocardiogramResult = OCX.GetData("Data_source/PatLabExam/Electrocardiogram/Result");
@@ -424,6 +438,21 @@
             if ("/////" == strEchocardiagraphyDateOrg) {
                 strEchocardiagraphyDateOrg = "1753/01/01///";
             }
+
+            //
+            strYear = OCX.GetObjectInfo("TextBox_199", "text");
+            strMonth = OCX.GetObjectInfo("TextBox_198", "text");
+            nYear = parseInt(strYear, 10);
+            nMonth = parseInt(strMonth, 10);
+            if(NaN == nYear || NaN == nMonth || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
+                strEchocardiagraphyDateOrg = "1753/01/01///";
+            else
+            {
+                strYear=nYear.toString();
+                strMonth=nMonth.toString();
+                strEchocardiagraphyDateOrg = strYear+"/"+strMonth+"/01///";
+            }
+
             var strEchocardiagraphyDate = strEchocardiagraphyDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
 
             var strEchocardiagraphyResult = OCX.GetData("Data_source/PatLabExam/Echocardiagraphy/Result");
@@ -433,6 +462,21 @@
             if ("/////" == strEEGDateOrg) {
                 strEEGDateOrg = "1753/01/01///";
             }
+
+            //
+            strYear = OCX.GetObjectInfo("TextBox_201", "text");
+            strMonth = OCX.GetObjectInfo("TextBox_200", "text");
+            nYear = parseInt(strYear, 10);
+            nMonth = parseInt(strMonth, 10);
+            if(NaN == nYear || NaN == nMonth || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
+                strEEGDateOrg = "1753/01/01///";
+            else
+            {
+                strYear=nYear.toString();
+                strMonth=nMonth.toString();
+                strEEGDateOrg = strYear+"/"+strMonth+"/01///";
+            }
+
             var strEEGDate = strEEGDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
 
             var strEEGResult = OCX.GetData("Data_source/PatLabExam/EEG/Result");
@@ -442,6 +486,21 @@
             if ("/////" == strCTDateOrg) {
                 strCTDateOrg = "1753/01/01///";
             }
+
+            //
+            strYear = OCX.GetObjectInfo("TextBox_203", "text");
+            strMonth = OCX.GetObjectInfo("TextBox_202", "text");
+            nYear = parseInt(strYear, 10);
+            nMonth = parseInt(strMonth, 10);
+            if(NaN == nYear || NaN == nMonth || nYear<1753 || nYear>3000 || nMonth<1 || nMonth>12)
+                strCTDateOrg = "1753/01/01///";
+            else
+            {
+                strYear=nYear.toString();
+                strMonth=nMonth.toString();
+                strCTDateOrg = strYear+"/"+strMonth+"/01///";
+            }
+
             var strCTDate = strCTDateOrg.slice(0, 10).replace("/", "-").replace("/", "-") + " 00:00:00";
 
             var strCTResult = OCX.GetData("Data_source/PatLabExam/CT/Result");
