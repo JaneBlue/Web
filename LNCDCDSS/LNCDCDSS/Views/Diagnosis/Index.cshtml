@@ -13,7 +13,7 @@
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
         try {
-            OCX.OpenReport("D:\\D:\\LNCDCDSS");
+            OCX.OpenReport("D:\\LNCDCDSS");
         }
         catch (err) {
             var b = confirm("是否下载显示控件");
@@ -426,6 +426,8 @@
             {
                 strYear=nYear.toString();
                 strMonth=nMonth.toString();
+                if(strMonth.length == 1)
+                    strMonth="0"+strMonth;
                 strElectrocardiogramDateOrg = strYear+"/"+strMonth+"/01///";
             }
 
@@ -450,6 +452,8 @@
             {
                 strYear=nYear.toString();
                 strMonth=nMonth.toString();
+                if(strMonth.length == 1)
+                    strMonth="0"+strMonth;
                 strEchocardiagraphyDateOrg = strYear+"/"+strMonth+"/01///";
             }
 
@@ -474,6 +478,8 @@
             {
                 strYear=nYear.toString();
                 strMonth=nMonth.toString();
+                if(strMonth.length == 1)
+                    strMonth="0"+strMonth;
                 strEEGDateOrg = strYear+"/"+strMonth+"/01///";
             }
 
@@ -498,6 +504,8 @@
             {
                 strYear=nYear.toString();
                 strMonth=nMonth.toString();
+                if(strMonth.length == 1)
+                    strMonth="0"+strMonth;
                 strCTDateOrg = strYear+"/"+strMonth+"/01///";
             }
 
