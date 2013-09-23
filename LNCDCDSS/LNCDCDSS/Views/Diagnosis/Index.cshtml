@@ -13,7 +13,7 @@
         //$(".button").click(function () {
         var OCX = document.getElementById('Reporter2');
         try {
-            OCX.OpenReport("D:\\LNCDOCX");
+            OCX.OpenReport("D:\\D:\\LNCDCDSS");
         }
         catch (err) {
             var b = confirm("是否下载显示控件");
@@ -41,7 +41,7 @@
             if (name == "基本情况") {
                 $("#btn2").hide();
             }
-            if (name == "影像检查") {
+            if (name == "认知检查") {
                 $("#b1").html("下一步");
             }
         });
@@ -993,7 +993,7 @@
                     success: function (data) {
                         if (data.OK) {
                           $(".demo").html("本次问诊信息保存成功！");
-                            var t = setTimeout("  window.location.href = '@Url.Action("Index", "EnterPatInfor")'", 6000);
+                            var t = setTimeout("  window.location.href = '@Url.Action("Index", "EnterPatInfor")'", 3000);
 
                         
                         }
